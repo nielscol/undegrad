@@ -1,0 +1,63 @@
+***** HSPICE -- I-2013.12-SP2-1 32-BIT (Jun 10 2014) RHEL32 ******
+ Input File: runsim.sp
+ lic:
+ lic: FLEXlm: v10.9.8
+ lic: USER:   niels538             HOSTNAME: ece-brunnen
+ lic: HOSTID: 1803734581ca         PID:      33923
+ lic: Using FLEXlm license file:
+ lic: 27020@synopsys.cse.umn.edu
+ lic: Checkout 1 hspice
+ lic: License/Maintenance for hspice will expire on 19-dec-2016/2015.06
+ lic: 1(in_use)/50(total) FLOATING license(s) on SERVER 27020@synopsys.cse.umn.edu
+ lic:
+ init: begin read circuit files,  cpu clock=  1.23E+00
+       option search = /home/vlsilab/synopsys/hspice_2013.12-SP2/hspice
+                         /parts/ad
+       option search = /home/vlsilab/synopsys/hspice_2013.12-SP2/hspice
+                         /parts/ad
+       option search = /home/vlsilab/synopsys/hspice_2013.12-SP2/hspice
+                         /parts/behave
+       option search = /home/vlsilab/synopsys/hspice_2013.12-SP2/hspice
+                         /parts/bjt
+       option search = /home/vlsilab/synopsys/hspice_2013.12-SP2/hspice
+                         /parts/burr_brn
+       option search = /home/vlsilab/synopsys/hspice_2013.12-SP2/hspice
+                         /parts/comlinear
+       option search = /home/vlsilab/synopsys/hspice_2013.12-SP2/hspice
+                         /parts/dio
+       option search = /home/vlsilab/synopsys/hspice_2013.12-SP2/hspice
+                         /parts/fet
+       option search = /home/vlsilab/synopsys/hspice_2013.12-SP2/hspice
+                         /parts/lin_tech
+       option search = /home/vlsilab/synopsys/hspice_2013.12-SP2/hspice
+                         /parts/pci
+       option search = /home/vlsilab/synopsys/hspice_2013.12-SP2/hspice
+                         /parts/signet
+       option search = /home/vlsilab/synopsys/hspice_2013.12-SP2/hspice
+                         /parts/ti
+       option search = /home/vlsilab/synopsys/hspice_2013.12-SP2/hspice
+                         /parts/tline
+       option search = /home/vlsilab/synopsys/hspice_2013.12-SP2/hspice
+                         /parts/xilinx
+       option runlvl
+       option artist =     2.00
+       option ingold =     2.00
+       option measout =     1.00
+       option parhier = local
+       option psf =     2.00
+       option list
+       option node
+       option post
+       option dccap =     1.00
+ init: end read circuit files,  cpu clock=  1.23E+00 peak memory=       118 mb
+ init: begin check errors,  cpu clock=  1.23E+00
+ init: end check errors,  cpu clock=  1.23E+00 peak memory=       119 mb
+ init: begin setup matrix, pivot=     0 cpu clock=  1.23E+00
+       establish matrix -- done,  cpu clock=  1.23E+00 peak memory=       119 mb
+       re-order matrix -- done,  cpu clock=  1.23E+00 peak memory=       119 mb
+ init: end setup matrix,  cpu clock=  1.23E+00 peak memory=       119 mb
+ output: runsim.sw0
+ sweep: dc dc0    begin, #sweeps=  52 cpu clock=  1.24E+00
+ sweep: dc dc0    end,  cpu clock=  1.26E+00 peak memory=       120 mb
+>info:         ***** hspice job concluded
+ lic: Release hspice token(s)

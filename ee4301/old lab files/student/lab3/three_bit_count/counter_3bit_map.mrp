@@ -1,0 +1,75 @@
+Release 13.2 Map O.61xd (nt64)
+Xilinx Mapping Report File for Design 'counter_3bit'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off
+-c 100 -o counter_3bit_map.ncd counter_3bit.ngd counter_3bit.pcf 
+Target Device  : xc3s100e
+Target Package : cp132
+Target Speed   : -4
+Mapper Version : spartan3e -- $Revision: 1.55 $
+Mapped Date    : Fri Oct 09 14:22:57 2015
+
+Design Summary
+--------------
+Number of errors   :   3
+Number of warnings :   0
+
+Section 1 - Errors
+------------------
+ERROR:Pack:2811 - Directed packing was unable to obey the user design
+   constraints (LOC=L14) which requires the combination of the symbols listed
+   below to be packed into a single IOB component.
+
+   The directed pack was not possible because: There is more than one pad
+   symbol.
+   The symbols involved are:
+   	BUF symbol "c_OBUF" (Output Signal = c)
+   	PAD symbol "c" (Pad Signal = c)
+   	PAD symbol "f_" (Pad Signal = f_)
+ERROR:Pack:2811 - Directed packing was unable to obey the user design
+   constraints (LOC=M12) which requires the combination of the symbols listed
+   below to be packed into a single IOB component.
+
+   The directed pack was not possible because: There is more than one pad
+   symbol.
+   The symbols involved are:
+   	BUF symbol "b_OBUF" (Output Signal = b)
+   	PAD symbol "b" (Pad Signal = b)
+   	PAD symbol "e" (Pad Signal = e)
+ERROR:Pack:2811 - Directed packing was unable to obey the user design
+   constraints (LOC=N11) which requires the combination of the symbols listed
+   below to be packed into a single IOB component.
+
+   The directed pack was not possible because: There is more than one pad
+   symbol.
+   The symbols involved are:
+   	BUF symbol "a_OBUF" (Output Signal = a)
+   	PAD symbol "a" (Pad Signal = a)
+   	PAD symbol "d" (Pad Signal = d)
+   	PAD symbol "g_" (Pad Signal = g_)
+
+Section 2 - Warnings
+--------------------
+WARNING:Security:43 - No license file was found in the standard Xilinx license
+directory.
+WARNING:Security:44 - No license file was found.
+WARNING:Security:42 - Your software subscription period has lapsed. Your current
+version of Xilinx tools will continue to function, but you no longer qualify for
+Xilinx software updates or new releases.
+
+Section 3 - Informational
+-------------------------
+INFO:Security:50 - The XILINXD_LICENSE_FILE environment variable is set to
+'2100@ece-lmxilinx.oit.umn.edu'.
+INFO:Security:52 - The LM_LICENSE_FILE environment variable is set to
+'1711@swlicense.ad.umn.edu;C:\Modeltech_xe_starter\win32xoem\license.dat;27001@d
+ilbert.cselabs.umn.edu;it3-keysrv.cselabs.umn.edu:27001;27002@ece-forms.ad.umn.e
+du:27000@ansoft.cselabs.umn.edu:27001@labview.cselabs.umn.edu;2100@ece-lmxilinx.
+ad.umn.edu'.
+INFO:Security:54 - 'xc3s100e' is a WebPack part.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.

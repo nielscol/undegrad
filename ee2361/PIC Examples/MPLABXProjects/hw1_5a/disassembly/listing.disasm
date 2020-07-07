@@ -1,0 +1,84 @@
+Disassembly Listing for test
+Generated From:
+/home/cole/MPLABXProjects/test.X/dist/default/production/test.X.production.elf
+Jun 25, 2015 7:11:43 PM
+
+---  /home/cole/Desktop/t1_first.c  ---------------------------------------------------------------------
+1:                 
+2:                 #include <p24Fxxxx.h>
+3:                 
+4:                 #include <xc.h>
+5:                 
+6:                 
+7:                 
+8:                 // PIC24FJ64GA002 Configuration Bit Settings
+9:                 
+10:                // 'C' source line config statements
+11:                
+12:                #include <xc.h>
+13:                
+14:                // CONFIG2
+15:                #pragma config POSCMOD = NONE           // Primary Oscillator Select (Primary oscillator disabled)
+16:                #pragma config I2C1SEL = PRI            // I2C1 Pin Location Select (Use default SCL1/SDA1 pins)
+17:                #pragma config IOL1WAY = OFF            // IOLOCK Protection (IOLOCK may be changed via unlocking seq)
+18:                #pragma config OSCIOFNC = OFF           // Primary Oscillator Output Function (OSC2/CLKO/RC15 functions as CLKO (FOSC/2))
+19:                #pragma config FCKSM = CSECME           // Clock Switching and Monitor (Clock switching is enabled, Fail-Safe Clock Monitor is enabled)
+20:                #pragma config FNOSC = FRCPLL           // Oscillator Select (Fast RC Oscillator with PLL module (FRCPLL))
+21:                #pragma config SOSCSEL = SOSC           // Sec Oscillator Select (Default Secondary Oscillator (SOSC))
+22:                #pragma config WUTSEL = LEG             // Wake-up timer Select (Legacy Wake-up Timer)
+23:                #pragma config IESO = ON                // Internal External Switch Over Mode (IESO mode (Two-Speed Start-up) enabled)
+24:                
+25:                // CONFIG1
+26:                #pragma config WDTPS = PS32768          // Watchdog Timer Postscaler (1:32,768)
+27:                #pragma config FWPSA = PR128            // WDT Prescaler (Prescaler ratio of 1:128)
+28:                #pragma config WINDIS = ON              // Watchdog Timer Window (Standard Watchdog Timer enabled,(Windowed-mode is disabled))
+29:                #pragma config FWDTEN = OFF             // Watchdog Timer Enable (Watchdog Timer is disabled)
+30:                #pragma config ICS = PGx1               // Comm Channel Select (Emulator EMUC1/EMUD1 pins are shared with PGC1/PGD1)
+31:                #pragma config GWRP = OFF               // General Code Segment Write Protect (Writes to program memory are allowed)
+32:                #pragma config GCP = OFF                // General Code Segment Code Protect (Code protection is disabled)
+33:                #pragma config JTAGEN = OFF             // JTAG Port Enable (JTAG port is disabled)
+34:                
+35:                
+36:                int main(void)
+37:                {
+00029E  FA0006     LNK #0x6
+38:                    int a = 1000;
+0002A0  203E84     MOV #0x3E8, W4
+0002A2  980724     MOV W4, [W14+4]
+39:                    unsigned long int count = 0;
+0002A4  B82260     MUL.UU W4, #0, W4
+0002A6  BE8F04     MOV.D W4, [W14]
+40:                
+41:                    T1CON = 0;
+0002A8  EB0200     CLR W4
+0002AA  880824     MOV W4, T1CON
+42:                    PR1 = 5000;
+0002AC  213884     MOV #0x1388, W4
+0002AE  880814     MOV W4, PR1
+43:                    IFS0bits.T1IF = 0;
+0002B0  A96084     BCLR IFS0, #3
+44:                    TMR1 = 0;
+0002B2  EB0200     CLR W4
+0002B4  880804     MOV W4, TMR1
+45:                    T1CONbits.TON = 1;
+0002B6  A8E105     BSET 0x105, #7
+46:                    while (1) {
+47:                        while (IFS0bits.T1IF==0);
+0002B8  000000     NOP
+0002BA  800424     MOV IFS0, W4
+0002BC  620268     AND W4, #0x8, W4
+0002BE  520FE0     SUB W4, #0x0, [W15]
+0002C0  32FFFC     BRA Z, 0x2BA
+0002CE  37FFF5     BRA 0x2BA
+48:                        IFS0bits.T1IF = 0;
+0002C2  A96084     BCLR IFS0, #3
+49:                        ++count;
+0002C4  200014     MOV #0x1, W4
+0002C6  200005     MOV #0x0, W5
+0002C8  420F1E     ADD W4, [W14], [W14]
+0002CA  4A975E     ADDC W5, [++W14], [W14--]
+50:                
+51:                    }
+0002CC  000000     NOP
+52:                
+53:                }

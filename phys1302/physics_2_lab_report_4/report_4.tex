@@ -1,0 +1,115 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{authblk}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=0.8in,right=0.8in,top=0.8in,bottom=0.8in]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{adforn}
+\usepackage{subcaption}
+
+\begin{document}
+\title{Lab VI, Problem IV: The Magnitude\\ of the
+Induced Potential Difference}
+\author{\adforn{21}\\\vspace{12pt}Cole \textsc{Nielsen}}
+\date{}
+\affil[]{Physics 1302W \vspace{6pt} TA: Santosh Adhikari}
+
+\maketitle
+\vspace{-12pt}\hrule
+\begin{abstract}
+\hspace{-16.5pt}A cart with an attached bar magnet was allowed to roll down an inclined ramp and enter a coil at varying velocities. The motion of the cart through the coil resulted in a changing flux through the coil, which induced an EMF $\mathcal{E}$ across its terminals. The magnitude of the induced EMF was predicted and confirmed experimentally to be proportional to velocity of the cart when passing through the coil, or to the square root of the vertical distance traversed (assuming a zero initial velocity). Mathematically: \\
+\begin{equation}
+\mathcal{E}_{induced} \propto \sqrt{\Delta h}\propto v
+\end{equation}
+\end{abstract}
+\hrulefill
+\vspace{-6pt}\section*{Introduction}
+A scenario shown in \textit{Figure 1} was considered. In this scenario, a ramp inclined to an angle 5.6$^\circ$ above the horizontal passed through a coil with 200 turns and a radius of 10.6 cm. The coil's terminals were connected to a data acquisition device to monitor the induced voltage. A cart with an attached bar magnet was placed at varying heights on the ramp and then was allowed from an initial state of rest to roll down the ramp, developing a velocity $v$ dependent on the cart's change in height $\Delta h$. The motion of the cart resulted in a change in magnetic flux through the coil as it traversed the ramp, inducing a measurable EMF (electromotive force) across the coil. The relationship between magnitude  of the EMF and the cart's velocity (and vertical displacement) while it is passing through the coil was unknown, therefore this experiment sought to determine this relationship.
+\begin{center}
+\includegraphics[scale=0.4]{./graphics/physics2lr4.png}
+\\\textbf{Figure 1.} The experimental setup.
+\end{center}%
+\section*{Prediction}
+The EMF $\mathcal{E}$ induced across a coil subject to a changing flux is described by Faraday's Law, which describes the EMF as the negative signed derivative of flux (given by $\Phi$):
+\begin{equation}
+\mathcal{E}_{induced}=-\frac{d\Phi}{dt}
+\end{equation}
+Magnetic flux is simply considered as the product of the B field normal to some surface and the area of the surface. This is given as follows:
+\begin{equation}
+\Phi = \int \vec{B}\cdot d \vec{A}
+\end{equation}
+In this case the surface is given by the plane enclosing the coil, having an area $A$ given by $\pi r^2$, with the surface normal pointing out horizontally. The B field is assumed to be uniform to simplify this derivation. Since the cart moves on the ramp which is fixed at an angle $\theta $ of 5.6$^\circ$ above the horizontal, the B field component in the direction of the coil's normal vector (which is horizontal) is simply $B\cos \theta$, found using trigonometry. Due to the simple geometry and assumed uniform field, the equation for flux can be simplified to $\Phi = B_\perp A$. Plugging this into Faraday's law gives:
+\begin{equation}
+\mathcal{E} = -\frac{d}{dt}(B_\perp A) = -\frac{d}{dt}(B \cos \theta A) = -A \cos \theta \frac{dB}{dt}
+\end{equation} 
+Using chain rule, $\frac{dB}{dt}$ can be expanded using $x$ (position along ramp) as an intermediary variable:
+\begin{equation}
+\mathcal{E}=-A\cos \theta \frac{dB}{dT} = -A \cos\theta \frac{dB}{dx}\frac{dx}{dt}
+\end{equation}
+$\frac{dx}{dt}$ is the velocity of the cart along the track, so it can be rewritten as $v$. This velocity can be calculated using conservation of energy if $\Delta h$ is known and plugged into \textit{Equation 6}:
+\begin{equation}
+\frac{1}{2}mv^2=mg\sin\theta\Delta h \longrightarrow v=\sqrt{2g\Delta h\sin\theta}
+\end{equation}
+\begin{equation}
+\mathcal{E}=-A\cos\theta\frac{dB}{dt}v=-A\cos\theta\frac{dB}{dt}\sqrt{2g\Delta h\sin\theta}
+\end{equation}
+Since $\frac{dB}{dt}$ is too complex to calculate for in this scenario, it is assumed to take constant value. Since all variables other than $\Delta h$ are constants, this means they can be merged into one constant multiplied by the root of $\Delta h$. This value of the constant is unknown, so the relationship between the induced EMF and $\Delta h$ can alternatively be written as a proportionality:
+\begin{equation}
+\mathcal{E}\propto\sqrt{\Delta h}
+\end{equation} 
+Therefore, it is predicted that the induced EMF will be proportional to the change in height of the cart at the time it passes through the coil. Since the root of change in height is also proportional to change in velocity, it is expected that the EMF will be proportional to velocity of the cart.
+\pagebreak
+\section*{Procedure}
+First, the angle $\theta$ formed between the ramp and the horizontal was found by measuring the length of the hypotenuse and rise of the ramp. The angle was then calculated using trigonometry. Next, the voltage DAQ device was connected to the terminals of the coil, and a bar magnet was taped to the cart such that one end of the magnet was flush to the front face of the cart. The cart was then put on the track at a position where its front face was 110 cm along the track (up the slope) from the coil. Data acquisition was started on the computer, the cart was released to roll down the ramp, and the acquisition was stopped when the cart had completely passed through the coil. From the acquired data, the peak value for EMF was determined and recorded. This process was again repeated for a distance of 100cm down to 50 cm in 10 cm increments.
+\section*{Data}
+Below are a table that contains the data for cart displacement and peak EMF observed over each trial and a plot of the change in height versus induced EMF.\vspace{12pt}\\
+\title{\textbf{Table 1.}Experimental Displacement and EMF.}
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline 
+Trial & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\ 
+\hline 
+$\Delta x$ & 110 cm & 100 cm & 90 cm & 80 cm & 70 cm & 60 cm & 50 cm \\ 
+\hline 
+$\Delta h$ & 10.7 cm & 9.8 cm & 8.8 cm & 7.8 cm & 6.8 cm & 5.9 cm & 4.9 cm \\ 
+\hline 
+$\mathcal{E}$ & 0.0675 V & 0.0675 V & 0.0625 V & 0.0575 V & 0.055 V & 0.05 V& 0.0475 V\\ 
+\hline 
+\end{tabular} 
+\end{center}\vspace{6pt}
+\title{\textbf{Figure 2.} Induced EMF vs. Change in Height of Cart.}
+\begin{center}
+    	\resizebox{0.6\textwidth}{!}{\input{./graphics/data.tex}}
+\end{center}
+\pagebreak
+\section*{Analysis}
+To validate the prediction, it must be shown that the experimental data agrees with the prediction. In this case, it is as simple as showing that the induced EMF has a dependence on the root of $\Delta h$ as predicted. The easiest way of doing this is generating a line of best fit for the data and comparing it to what was expected. A line of best fit was generated using a computer based power regression algorithm. Power regression was used because the relationship is expected to take the form a power function (root). Below is the best fit function and corresponding coefficient of determination for the data:
+\begin{equation}
+V(\Delta h) = 0.0215\cdot\Delta h^{0.4877}
+\end{equation}
+\begin{equation}
+R^2=0.9797
+\end{equation}
+From the above R$^2$ value, it is apparent that the line of best fit is a good match for the data, as it is very close to 1. This gives high certainty in the function being a power function and the fit being accurate. Below in \textit{Figure 3} is a plot containing the experimental data points and the best fit line to show the closeness of fit.\vspace{6pt}\\
+\title{\textbf{Figure 3.}Best fit line and Experimental Data.}
+\begin{center}
+    	\resizebox{0.6\textwidth}{!}{\input{./graphics/fit.tex}}
+\end{center}
+The above plot shows that the best fit line agrees with the data well, given some degree of uncertainty due to only having data in a finite range (50-110 cm) and a small number of data points. This will be talked in greater depth in the following \textit{Uncertainties and Error} section. \par
+\vspace{12pt}\noindent An important trend to notice is the power that $\Delta h$ is exponentiated to in the best fit function. Looking at \textit{Equation 10}, it is seen this power is 0.4877, which is extremely close to $\frac{1}{2}$, which would correspond to a square root. This is significant because the predicted equation is the square root of $\Delta h$, or in other words is to the $\frac{1}{2}$ power, suggesting the experimental function agrees with the prediction as they are both essentially to the half power. The general closeness of the prediction to the experimental values and high $R^2$ value leads to the conclusion that the experimental data validates the prediction.
+\subsection*{Uncertainty and Error}
+There are several uncertainties and sources of potential error that may have affected the results of this experiment. A significant one is the limitation of how accurately the data for peak EMF could be obtained from the voltage DAQ software. The graph of voltage vs. time generated by the software labelled the voltage in large divisions compared to the span of the experimental data, making it difficult to accurately determine the peak voltage for each trial. This leads to the possibility of a significant level of uncertainty that is difficult to quantify. Another issue is due to ignoring the $\frac{dB}{dx}$ part of the prediction equation. It is possibly that this term of the equation could have a non-linear effect on the equation as a whole, deviating the equation from the one that was predicted. The actual effect of this neglection is unknown as exact nature of the change in field relative to change in position of the cart is not known. A possible source of error in this experiment is due the neglection of forces opposing the motion of the cart such as friction and air drag, which would almost certainly slow the cart down. A slower speed would be expected to lower the rate of flux change, and accordingly the EMF. This lowering of the values likely contributed to the experimental exponent being lower than expected. A final possible source of error is due to the use of a human to release the cart from rest position because it is probable that some unintentional momentum may have been imparted on the cart upon release, causing it to have a non zero initial velocity. A way to circumvent this would be to use a mechanical release system designed carefully to release an object from rest. Overall, these sources of error seem to be mostly insignificant due to the closeness to prediction and high coefficient of determination of the data. 
+\section*{Conclusion}
+The dependence of the induced EMF of a coil on the displacement in height of a magnet attached to a cart accelerating down a ramp through the coil was found to be proportional to the root of the change in height $\Delta h$, mathematically:
+\begin{equation}
+\mathcal{E}_{induced} \propto \sqrt{\Delta h}
+\end{equation}
+This relationship successfully was confirmed in experiment by showing that the EMF induced in a coil follows this predicted trend within reasonable certainty, as it was expected $\Delta h$ to be exponentiated to $\frac{1}{2}$ and it was found experimentally to be 0.4877. The minor discrepancy in values between expected and predicted is likely explained by friction and air drag losses and limitations of equipment and techniques used. \par\vspace{12pt}
+
+\noindent From the results of this experiment it can also be inferred that the induced EMF in this scenario is proportional to the velocity of the cart through the coil. \textit{Equation 7} of the \textit{Prediction} section gave the relation between velocity of the cart and change in height of the cart as some velocity equals some constants times the root of $\Delta h$. This can be restated as the velocity is proportional to $\sqrt{\Delta h}$. If the induced EMF is proportional to $\sqrt{\Delta h}$ and so is the velocity, it can be inferred that the $\mathcal{E}\propto v$.
+\end{document}

@@ -1,0 +1,43 @@
+time,latitude,longitude,depth,mag,magType,nst,gap,dmin,rms,net,id,updated,place,type
+2014-10-22T00:17:08.300Z,19.359,-155.0122,6.1,2.6,Ml,,194.4,0.07186522,0.37,hv,hv60792796,2014-10-22T00:23:22.162Z,"15km SW of Leilani Estates, Hawaii",earthquake
+2014-10-22T00:15:17.460Z,27.5107,128.4277,41.58,5.8,mb,,39,0.686,0.95,us,usb000spn6,2014-10-22T00:42:27.290Z,"111km NNE of Nago, Japan",earthquake
+2014-10-21T23:11:06.590Z,-11.6805,-14.2858,10,5,mb,,55,3.724,1.16,us,usb000spmu,2014-10-21T23:30:27.061Z,"Ascension Island region",earthquake
+2014-10-21T23:01:18.910Z,-63.446,169.7318,10,5.4,mb,,70,14.36,1.01,us,usb000spms,2014-10-21T23:22:01.000Z,"Balleny Islands region",earthquake
+2014-10-21T22:46:59.720Z,27.5117,57.3492,10,4.3,mb,,107,2.754,0.79,us,usb000spmm,2014-10-21T23:14:34.000Z,"48km NNE of Minab, Iran",earthquake
+2014-10-21T22:12:54.000Z,59.3371,-153.6828,111.3,3.1,ml,,,,0.73,ak,ak11425430,2014-10-21T23:14:38.652Z,"83km ESE of Old Iliamna, Alaska",earthquake
+2014-10-21T22:04:16.400Z,19.1847,-66.583,24,3.2,Md,6,295.2,0.7051775,0.1,pr,pr14294002,2014-10-22T00:14:04.150Z,"80km N of Arecibo, Puerto Rico",earthquake
+2014-10-21T20:55:53.830Z,27.0263,127.4172,108.09,4.7,mb,,49,0.786,1.19,us,usb000spl9,2014-10-22T00:35:04.881Z,"73km NW of Nago, Japan",earthquake
+2014-10-21T20:26:43.790Z,36.1803,77.9306,60.05,4.1,mb,,112,4.586,1.21,us,usb000spki,2014-10-21T21:44:00.000Z,"176km NE of Thang, India",earthquake
+2014-10-21T20:08:00.496Z,38.2874,-116.4368,0,2.99,ml,7,79.36,0.653,0.1943,nn,nn00464773,2014-10-21T20:34:22.000Z,"12km NNW of Warm Springs, Nevada",earthquake
+2014-10-21T19:50:34.820Z,64.5467,-17.9033,8.51,4.6,mb,,128,1.487,0.97,us,usb000spjr,2014-10-21T21:32:19.000Z,"127km S of Akureyri, Iceland",earthquake
+2014-10-21T19:06:04.810Z,12.4186,-88.43,59.69,4.6,mb,,169,1.014,0.91,us,usb000spj2,2014-10-21T22:55:22.055Z,"94km SSW of Chirilagua, El Salvador",earthquake
+2014-10-21T17:49:36.950Z,7.0585,94.6698,135.5,4.3,mb,,173,2.903,1.08,us,usb000spih,2014-10-21T21:07:35.000Z,"147km NNW of Sabang, Indonesia",earthquake
+2014-10-21T17:35:25.190Z,36.3467,70.5296,168.9,4.3,mb,,75,0.778,0.58,us,usb000spi8,2014-10-21T20:56:31.611Z,"41km NNW of `Alaqahdari-ye Kiran wa Munjan, Afghanistan",earthquake
+2014-10-21T17:23:44.490Z,0.5542,-77.9184,2.45,4.6,mb,,82,0.618,1.25,us,usb000spi3,2014-10-21T20:20:09.000Z,"7km SSE of El Angel, Ecuador",earthquake
+2014-10-21T16:34:02.700Z,36.5087,-99.0396,5,2.6,ml,,201,,0.42,us,usb000spl5,2014-10-22T00:36:38.564Z,"16km ENE of Mooreland, Oklahoma",earthquake
+2014-10-21T16:18:32.500Z,36.5064,-99.0302,5.914,2.7,ml,,194,,0.32,us,usb000sphy,2014-10-21T22:59:45.752Z,"17km ENE of Mooreland, Oklahoma",earthquake
+2014-10-21T15:53:54.000Z,65.1453,-149.006,15.8,2.5,ml,,,,0.3,ak,ak11424986,2014-10-21T23:54:00.841Z,"57km NW of Ester, Alaska",earthquake
+2014-10-21T15:44:30.760Z,-15.3288,-173.203,10,4.8,mb,,84,4.866,1.15,us,usb000sph8,2014-10-21T23:46:59.766Z,"90km NE of Hihifo, Tonga",earthquake
+2014-10-21T13:39:00.460Z,30.3739,138.2592,434.65,4.2,mb,,86,3.037,0.53,us,usb000spgj,2014-10-21T21:41:27.368Z,"Izu Islands, Japan region",earthquake
+2014-10-21T13:27:12.100Z,36.7376,-98.0956,3.728,2.5,ml,,116,,0.77,us,usb000sphj,2014-10-21T21:29:45.419Z,"23km E of Cherokee, Oklahoma",earthquake
+2014-10-21T13:13:03.060Z,-2.8693,130.0094,34.33,4.4,mb,,84,2.237,0.67,us,usb000spew,2014-10-21T21:15:37.760Z,"131km ENE of Amahai, Indonesia",earthquake
+2014-10-21T12:47:03.670Z,-2.9965,130.0746,46.73,4.3,mb,,81,2.172,0.71,us,usb000speu,2014-10-21T20:49:34.371Z,"133km ENE of Amahai, Indonesia",earthquake
+2014-10-21T12:11:05.000Z,60.3387,-152.4372,103.5,2.5,ml,,,,0.65,ak,ak11424860,2014-10-21T20:13:50.174Z,"23km SE of Redoubt Volcano, Alaska",earthquake
+2014-10-21T11:55:44.110Z,37.0454,-97.8899,7.64,3,mb_lg,,45,0.064,0.78,us,usb000spel,2014-10-21T13:54:14.343Z,"17km SE of Anthony, Kansas",earthquake
+2014-10-21T10:45:31.070Z,0.4521,122.402,125,4.3,mb,,91,1.529,0.62,us,usb000speg,2014-10-21T18:48:05.788Z,"10km SE of Tilamuta, Indonesia",earthquake
+2014-10-21T08:55:46.200Z,36.6352,-97.7001,3.93,3.1,ml,,70,,0.81,us,usb000spe4,2014-10-21T23:20:01.000Z,"19km S of Medford, Oklahoma",earthquake
+2014-10-21T08:36:41.070Z,64.4963,-16.9889,10,5.2,mb,,67,11.208,1.27,us,usb000spe3,2014-10-21T16:39:16.888Z,"90km WNW of Hofn, Iceland",earthquake
+2014-10-21T08:34:49.970Z,64.6154,-17.4978,8.02,4.6,mb,,69,1.651,0.87,us,usb000spe2,2014-10-21T22:51:45.820Z,"117km WNW of Hofn, Iceland",earthquake
+2014-10-21T08:22:50.200Z,41.6675,-124.9697,5,2.6,Md,,248.4,0.80848376,1.56,uw,uw60906331,2014-10-21T17:30:02.555Z,"64km W of Crescent City, California",earthquake
+2014-10-21T08:20:49.360Z,3.8704,128.5931,52.59,4.8,mb,,113,3.312,1.08,us,usb000spdz,2014-10-21T16:23:28.033Z,"245km NNE of Tobelo, Indonesia",earthquake
+2014-10-21T06:30:40.210Z,-4.5167,100.7714,12.31,4.6,mb,,178,2.183,0.71,us,usb000spdr,2014-10-21T14:33:18.280Z,"183km WSW of Bengkulu, Indonesia",earthquake
+2014-10-21T06:10:32.150Z,37.4731667,-118.7886667,6.52,2.98,md,38,61,0.121,0.04,nc,nc72331006,2014-10-21T23:21:07.187Z,"25km SE of Mammoth Lakes, California",earthquake
+2014-10-21T04:41:45.000Z,59.9458,-153.3226,135.8,3.8,ml,,,,1.1,ak,ak11424625,2014-10-21T12:44:14.382Z,"68km SSW of Redoubt Volcano, Alaska",earthquake
+2014-10-21T04:33:24.980Z,37.0842,-104.9483,6.28,2.7,ml,,77,0.433,0.41,us,usb000spd3,2014-10-21T12:36:01.698Z,"40km WSW of Trinidad, Colorado",earthquake
+2014-10-21T04:26:39.240Z,36.1529,-96.9656,5,2.5,mb_lg,,62,0.209,0.52,us,usb000spdf,2014-10-21T14:25:39.097Z,"9km ENE of Stillwater, Oklahoma",earthquake
+2014-10-21T04:25:53.700Z,18.8791,-66.2965,6,2.6,Md,3,349.2,1.02407942,0.01,pr,pr14294000,2014-10-21T12:28:24.954Z,"45km N of Brenas, Puerto Rico",earthquake
+2014-10-21T04:02:10.000Z,65.1604,-149.0854,10.1,2.5,ml,,,,0.68,ak,ak11424588,2014-10-21T12:04:45.632Z,"61km NW of Ester, Alaska",earthquake
+2014-10-21T04:00:16.000Z,69.1985,-144.2608,52.6,2.8,ml,,,,0.33,ak,ak11424590,2014-10-21T12:02:55.860Z,"107km SSW of Kaktovik, Alaska",earthquake
+2014-10-21T03:17:31.000Z,61.4498,-146.4103,29.9,3.5,ml,,,,0.6,ak,ak11424546,2014-10-21T12:23:40.233Z,"35km N of Valdez, Alaska",earthquake
+2014-10-21T03:03:55.930Z,38.1667,27.1073,14.6,4.1,ml,,,,1.36,us,usb000spcx,2014-10-21T11:06:35.456Z,"9km SSW of Cumaovasi, Turkey",earthquake
+2014-10-21T00:57:21.000Z,65.1284,-148.9761,10.9,2.5,ml,,,,0.69,ak,ak11424441,2014-10-21T08:59:56.407Z,"55km NW of Ester, Alaska",earthquake

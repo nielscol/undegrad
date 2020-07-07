@@ -1,0 +1,27 @@
+Running: C:\Xilinx\13.2\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o F:/4301/lab7/tb_isim_beh.exe -prj F:/4301/lab7/tb_beh.prj work.tb work.glbl 
+ISim O.61xd (signature 0x1cce1bb2)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file \"F:/4301/lab7/s_clock_divider.v\" into library work
+Analyzing Verilog file \"F:/4301/lab7/dff.v\" into library work
+Analyzing Verilog file \"F:/4301/lab7/clock_divider.v\" into library work
+Analyzing Verilog file \"F:/4301/lab7/rng.v\" into library work
+Analyzing Verilog file \"F:/4301/lab7/tb.v\" into library work
+Analyzing Verilog file \"C:/Xilinx/13.2/ISE_DS/ISE//verilog/src/glbl.v\" into library work
+Starting static elaboration
+WARNING:HDLCompiler:189 - "F:/4301/lab7/tb.v" Line 25: Size mismatch in connection of port <s>. Formal port size is 7-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "F:/4301/lab7/tb.v" Line 26: Size mismatch in connection of port <d>. Formal port size is 4-bit while actual signal size is 1-bit.
+Completed static elaboration
+Compiling module clock_divider
+Compiling module s_clock_divider
+Compiling module dff
+Compiling module rng
+Compiling module tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 6 Verilog Units
+Built simulation executable F:/4301/lab7/tb_isim_beh.exe
+Fuse Memory Usage: 18404 KB
+Fuse CPU Usage: 46 ms

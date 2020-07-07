@@ -1,0 +1,116 @@
+; Installation file for mchpusb driver
+; Copyright (C) 2007 by Microchip Technology, Inc.
+; All rights reserved
+; DEBUG VERSION ONLY -- NOT FOR DISTRIBUTION
+
+[Version]
+Signature=$CHICAGO$
+Class=CustomUSBDevices
+ClassGuid={251bccb7-39ac-41ec-a724-f624f41d5749}
+Provider=%MFGNAME%
+CatalogFile=mchpusb.cat
+DriverVer=05/20/2007
+
+[Manufacturer]
+%MFGNAME%=DeviceList
+
+[DestinationDirs]
+DefaultDestDir=10,System32\Drivers
+TraceCopyFiles.ntx86=11
+TraceCopyFiles=11
+
+[SourceDisksFiles]
+mchpusb.sys=1
+wdmstub.sys=1
+traceflags.dll=1
+trcflg16.dll=1
+
+[SourceDisksNames]
+1=%INSTDISK%,,,
+
+[ClassInstall32]
+AddReg=ClassInstall.AddReg
+
+[ClassInstall.AddReg]
+HKR,,,,"Custom USB Devices"
+HKR,,Icon,,"-20"
+
+[DeviceList]
+; When developing your custom USB device, the VID and PID used in the PC side
+; application program and the firmware on the microcontroller must match.
+; Modify the below line to use your VID and PID.  Use the format as shown below.
+; Note: One INF file can be used for multiple devices with different VID and PIDs.
+; For each supported device, append ",USB\VID_xxxx&PID_yyyy" to the end of the line.
+ 
+%DESCRIPTION%=DriverInstall,USB\VID_04D8&PID_000B, USB\VID_04D8&PID_000C
+
+;------------------------------------------------------------------------------
+;  Windows 2000/XP Sections
+;------------------------------------------------------------------------------
+
+[DriverInstall.ntx86]
+CopyFiles=DriverCopyFiles,TraceCopyFiles.ntx86
+AddReg=InitTrace.ntx86
+
+[DriverCopyFiles]
+mchpusb.sys,,,2
+
+[DriverInstall.ntx86.Services]
+AddService=MCHPUSB,2,DriverService
+
+[DriverService]
+ServiceType=1
+StartType=3
+ErrorControl=1
+ServiceBinary=%10%\system32\drivers\mchpusb.sys
+AddReg=TraceFlags
+
+[InitTrace.ntx86]
+HKR,,EnumPropPages32,,"TraceFlags.dll,EnumPropPages"
+
+[TraceCopyFiles.ntx86]
+TraceFlags.dll,,,2
+
+[TraceFlags]
+HKR,,CustomTraceName1,,"I/O Operations"
+HKR,,CustomTraceFlag1,0x00010001, 01,00,00,00
+HKR,,CustomTraceName2,,"Configuration Information"
+HKR,,CustomTraceFlag2,0x00010001, 02,00,00,00
+;HKR,,CustomTraceName3,,"custom3"
+;HKR,,CustomTraceFlag3,0x00010001, 04,00,00,00
+
+[DriverInstall.ntx86.hw]
+AddReg=DriverHwAddReg
+
+[DriverHwAddReg]
+
+;------------------------------------------------------------------------------
+;  Windows 98/Me Sections
+;------------------------------------------------------------------------------
+
+[DriverInstall]
+AddReg=DriverAddReg,InitTrace,TraceFlags
+CopyFiles=DriverCopyFiles,StubCopyFiles,TraceCopyFiles
+DriverVer=01/01/2003		; TODO replace with real info
+
+[DriverAddReg]
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,"wdmstub.sys,mchpusb.sys"
+
+[StubCopyFiles]
+wdmstub.sys,,,2
+
+[TraceCopyFiles]
+trcflg16.dll,,,2
+
+[DriverInstall.HW]
+AddReg=DriverHwAddReg
+
+;------------------------------------------------------------------------------
+;  String Definitions
+;------------------------------------------------------------------------------
+
+[Strings]
+MFGNAME="Microchip Technology, Inc."
+INSTDISK="Microchip Technology, Inc. Installation Disc"
+DESCRIPTION="Microchip Custom USB Device - Debug"

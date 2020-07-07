@@ -1,0 +1,72 @@
+% Cole Nielsen niels538@umn.edu
+% EE 2002 Spring 2015
+% Formal Lab Report 1
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[12pt]{article}
+
+\usepackage{circuitikz}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage[top=1in, bottom= 1in, left=1in, right= 1in]{geometry}
+\setlength\parindent{0pt}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{textcomp}
+\usepackage{tikz}
+%\usepackage{cmbright}
+%\usepackage[T1]{fontenc}
+\usepackage{siunitx}
+\usepackage{placeins}
+\usepackage{titlesec}
+\usepackage{cancel} 
+\usepackage{adforn}
+\ctikzset{tripoles/mos style/arrows}
+\tikzset{srail/.style={sground,yscale=-1}}
+\fancyfoot{} % clear all footer fields
+\renewcommand{\footrulewidth}{0.4pt}
+\fancyfoot[LE,CO]{\thepage}
+\fancyfoot[LE,LO]{High Speed Camera Proposal} %DOCUMENT NUMBER
+\fancyfoot[LE,RO]{\today} %REVISION DATE - FORMAT: CN####-X
+\setlength{\parskip}{0.75em} 
+%----------------------------------------------------------------------------------------
+%	DOCUMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title{\LARGE Low-Cost High-Speed Video Camera\\\adforn{21}\\Envision Fund Proposal}
+
+
+\date{}
+
+\begin{document}
+\maketitle 
+\begin{center}
+ \begin{tabular}{l r}
+   Cole \textsc{Nielsen} & niels538@umn.edu\\ 
+   Mason \textsc{Tran}: & tranx801@umn.edu\\ 
+\end{tabular}
+\end{center}
+\pagebreak
+%----------------------------------------------------------------------------------------
+%	Abstract
+%----------------------------------------------------------------------------------------
+%\begin{abstract}
+%\noindent 
+
+%\end{abstract}
+%\hrulefill
+%----------------------------------------------------------------------------------------
+%	Introduction
+%----------------------------------------------------------------------------------------
+\section{Introduction}
+High speed video cameras have typically been high cost devices, due to requirements for speed data storage systems and imaging sensors required to build them. This has essentially prohibited access to high-video equipment to those outside of research environments. In the last decade, however, cost for high speed data storage has dropped significantly due to introduction of relatively cheap and high speed DDR3 RAM. The availability of cheap FPGAs supporting DDR3 RAM has further spurred the possibility of implementing a data storage system capable of the speeds needed for affordable high speed video. Despite this, the cost of high speed imaging sensors have remained prohibitively expensive until recently. In 2015, ON Semiconductor introduced the PYTHON series of high speed imaging sensors, with the low end VGA (640x480) resolution PYTHON300 costing under \$60, yet is capable of delivering 2235 FPS (frames per second) of video aquisiton at 256x256 resolution. At lower resolutions the PYTHON300 is capable of even higher frame rates, for example at 64x64 resolution 16,500 FPS is achievable. Viewed at 30 FPS, the 16,500 FPS video is effectively slowed down by 550x. Finally, with the availability of these low cost sensors, the possibily of constructing high speed video camera has become possible. \\\par
+
+Therefore, we are making this proposal to the Envision Fund in order to design and construct a high speed video camera utilizing PYTHON300 sensor, with a DDR3 RAM and Cyclone IV FPGA based memory system. We are also proposing to integrate a Raspberry Pi Zero with LCD into the camera as the user interface, allowing video playback to be directly viewed on the camera. We believe this project is an excellent cantidate for Envision Fund funding, as it is a challanging design, as well as an innovative one, bringing high speed video at low costs. From a DIY standpoint this project is attractive as few DIY high speed cameras have been built, so it stands as a way to open the electronics community to this technology. The further sections of this proposal lay out a more detailed plan for the technical design and timeline for the project.
+
+\section{Technical Details}
+content
+
+\end{document}

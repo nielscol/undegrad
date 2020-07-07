@@ -1,0 +1,28 @@
+Command line:
+   fourbit_addsub_fourbit_addsub_sch_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  56865
+
+Fri Sep 25 14:11:25 2015
+
+
+ Elaboration Time: 0.0468 sec
+
+ Current Memory Usage: 811.11 Meg
+
+ Total Signals          : 192
+ Total Nets             : 59
+ Total Signal Drivers   : 52
+ Total Blocks           : 45
+ Total Primitive Blocks : 39
+ Total Processes        : 54
+ Total Traceable Variables  : 27
+ Total Scalar Nets and Variables : 148
+
+ Total Simulation Time: 0.078 sec
+
+ Current Memory Usage: 653.824 Meg
+
+Fri Sep 25 14:50:31 2015
+

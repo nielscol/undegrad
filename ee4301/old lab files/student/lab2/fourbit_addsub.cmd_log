@@ -1,0 +1,30 @@
+xst -intstyle ise -ifn "Z:/lab1_adder_verilog/fourbit_addsub.xst" -ofn "Z:/lab1_adder_verilog/fourbit_addsub.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fourbit_addsub.ucf -p xc3s100e-cp132-4 fourbit_addsub.ngc fourbit_addsub.ngd  
+xst -intstyle ise -ifn "Z:/lab1_adder_verilog/fourbit_addsub.xst" -ofn "Z:/lab1_adder_verilog/fourbit_addsub.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim fourbit_addsub.ngc fourbit_addsub_synthesis.v 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fourbit_addsub.ucf -p xc3s100e-cp132-4 fourbit_addsub.ngc fourbit_addsub.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o fourbit_addsub_map.ncd fourbit_addsub.ngd fourbit_addsub.pcf 
+par -w -intstyle ise -ol high -t 1 fourbit_addsub_map.ncd fourbit_addsub.ncd fourbit_addsub.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml fourbit_addsub.twx fourbit_addsub.ncd -o fourbit_addsub.twr fourbit_addsub.pcf -ucf fourbit_addsub.ucf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml fourbit_addsub.twx fourbit_addsub.ncd -o fourbit_addsub.twr fourbit_addsub.pcf -ucf fourbit_addsub.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fourbit_addsub.ucf -p xc3s100e-cp132-4 fourbit_addsub.ngc fourbit_addsub.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o fourbit_addsub_map.ncd fourbit_addsub.ngd fourbit_addsub.pcf 
+par -w -intstyle ise -ol high -t 1 fourbit_addsub_map.ncd fourbit_addsub.ncd fourbit_addsub.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml fourbit_addsub.twx fourbit_addsub.ncd -o fourbit_addsub.twr fourbit_addsub.pcf -ucf fourbit_addsub.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fourbit_addsub.ucf -p xc3s100e-cp132-4 fourbit_addsub.ngc fourbit_addsub.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o fourbit_addsub_map.ncd fourbit_addsub.ngd fourbit_addsub.pcf 
+par -w -intstyle ise -ol high -t 1 fourbit_addsub_map.ncd fourbit_addsub.ncd fourbit_addsub.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml fourbit_addsub.twx fourbit_addsub.ncd -o fourbit_addsub.twr fourbit_addsub.pcf -ucf fourbit_addsub.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fourbit_addsub.ucf -p xc3s100e-cp132-4 fourbit_addsub.ngc fourbit_addsub.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o fourbit_addsub_map.ncd fourbit_addsub.ngd fourbit_addsub.pcf 
+par -w -intstyle ise -ol high -t 1 fourbit_addsub_map.ncd fourbit_addsub.ncd fourbit_addsub.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml fourbit_addsub.twx fourbit_addsub.ncd -o fourbit_addsub.twr fourbit_addsub.pcf -ucf fourbit_addsub.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fourbit_addsub.ucf -p xc3s100e-cp132-4 fourbit_addsub.ngc fourbit_addsub.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o fourbit_addsub_map.ncd fourbit_addsub.ngd fourbit_addsub.pcf 
+par -w -intstyle ise -ol high -t 1 fourbit_addsub_map.ncd fourbit_addsub.ncd fourbit_addsub.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml fourbit_addsub.twx fourbit_addsub.ncd -o fourbit_addsub.twr fourbit_addsub.pcf -ucf fourbit_addsub.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fourbit_addsub.ucf -p xc3s100e-cp132-4 fourbit_addsub.ngc fourbit_addsub.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o fourbit_addsub_map.ncd fourbit_addsub.ngd fourbit_addsub.pcf 
+par -w -intstyle ise -ol high -t 1 fourbit_addsub_map.ncd fourbit_addsub.ncd fourbit_addsub.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml fourbit_addsub.twx fourbit_addsub.ncd -o fourbit_addsub.twr fourbit_addsub.pcf -ucf fourbit_addsub.ucf 
+bitgen -intstyle ise -f fourbit_addsub.ut fourbit_addsub.ncd 

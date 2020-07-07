@@ -1,0 +1,16 @@
+Error[1224] C:\MCHPFSUSB\fw\Demo\main.c 105 : configuration setting 'PLLDIV' not recognized
+Error[1224] C:\MCHPFSUSB\fw\Demo\main.c 106 : configuration setting 'CPUDIV' not recognized
+Error[1224] C:\MCHPFSUSB\fw\Demo\main.c 107 : configuration setting 'USBDIV' not recognized
+Error[1224] C:\MCHPFSUSB\fw\Demo\main.c 108 : configuration setting 'FOSC' not recognized
+Error[1224] C:\MCHPFSUSB\fw\Demo\main.c 109 : configuration setting 'FCMEN' not recognized
+Error[1224] C:\MCHPFSUSB\fw\Demo\main.c 110 : configuration setting 'IESO' not recognized
+Error[1225] C:\MCHPFSUSB\fw\Demo\main.c 113 : configuration value '3' not recognized for configuration setting 'BORV'
+Error[1224] C:\MCHPFSUSB\fw\Demo\main.c 114 : configuration setting 'VREGEN' not recognized
+Error[1225] C:\MCHPFSUSB\fw\Demo\main.c 116 : configuration value '32768' not recognized for configuration setting 'WDTPS'
+Error[1224] C:\MCHPFSUSB\fw\Demo\main.c 117 : configuration setting 'MCLRE' not recognized
+Error[1224] C:\MCHPFSUSB\fw\Demo\main.c 118 : configuration setting 'LPT1OSC' not recognized
+Error[1224] C:\MCHPFSUSB\fw\Demo\main.c 119 : configuration setting 'PBADEN' not recognized
+Error[1224] C:\MCHPFSUSB\fw\Demo\main.c 120 : configuration setting 'CCP2MX' not recognized
+Error[1224] C:\MCHPFSUSB\fw\Demo\main.c 121 : configuration setting 'STVREN' not recognized
+Error[1224] C:\MCHPFSUSB\fw\Demo\main.c 123 : configuration setting 'ICPRT' not recognized
+Error[1224] C:\MCHPFSUSB\fw\Demo\main.c 124 : configuration setting 'XINST' not recognized

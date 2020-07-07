@@ -1,0 +1,283 @@
+Using: /usr/local/apps/synopsys/hspice/linux/hspice cascode.sp
+ ****** HSPICE -- I-2013.12-SP2-1 32-BIT (Jun 10 2014) RHEL32 ******            
+  Copyright (C) 2014 Synopsys, Inc. All Rights Reserved.                        
+  Unpublished-rights reserved under US copyright laws.
+  This program is protected by law and is subject to the
+  terms and conditions of the license agreement from Synopsys.
+  Use of this program is your acceptance to be bound by the
+  license agreement. HSPICE is the trademark of Synopsys, Inc.
+  Input File: cascode.sp                                                        
+  Command line options: cascode.sp
+ lic:  
+ lic: FLEXlm: v10.9.8 
+ lic: USER:   niels538             HOSTNAME: ECE-Thun 
+ lic: HOSTID: 1803734580b4         PID:      25509 
+ lic: Using FLEXlm license file: 
+ lic: 27020@synopsys.cse.umn.edu 
+ lic: Checkout 1 hspice 
+ lic: License/Maintenance for hspice will expire on 19-dec-2016/2015.06 
+ lic: 18(in_use)/50(total) FLOATING license(s) on SERVER 27020@synopsys.cse.umn.edu 
+ lic:   
+ Init: read install configuration file: /usr/local/apps/synopsys/hspice/meta.cfg
+  **warning** (cascode.sp:13) c        is not level=   3 model parameter. Parameter has been ignored.
+ scientific notation:
+ a=10**-18  f=10**-15  p=10**-12  n=10**-9  u=10**-6
+ m=10**-3   k=10**3    x=10**6    g=10**9 
+
+
+ circuit parameter definitions
+  parameter          =  value 
+
+
+
+
+
+ constants  - tnom         kt           vt           gapsi        ni
+            298.15000    4.1163e-21    25.69184m     1.11562    1.2565e+16 
+1****** HSPICE -- I-2013.12-SP2-1 32-BIT (Jun 10 2014) RHEL32 ******            
+ ******  
+ active cascode
+
+ ****** mos   model parameters tnom=  25.000 temp=  25.000 ******
+ ***************************************************************************
+ *** common model parameters  model name:   0:cmosn    model type:nmos   ***
+ ***************************************************************************
+     names  values   units     names  values   units     names  values   units
+     -----  ------   -----     -----  ------   -----     -----  ------   -----
+
+   1*** geometry parameters ***
+       ld= 100.00f meters      lmlt=   1.00                wd= 233.48n meters 
+     wmlt=   1.00                xl=   0.    meters        xw=   0.    meters 
+     lref=   0.    meters      wref=   0.    meters      lref=   0.    meters 
+     wref=   0.    meters     xlref=   0.    meters     xwref=   0.    meters 
+     lmin=   0.    meters      wmin=   0.    meters      lmax=   0.    meters 
+     wmax=   0.    meters 
+
+   2*** threshold voltage parameters ***
+      vto= 764.09m volts        nss=   0.    1/cm**2      tpg=   1.00         
+      phi= 700.00m volts      gamma= 548.36m v**0.5      bulk=  gnd           
+    ngate=   0.    cm**3       nsub= 1.0e+17 1/cm**3   delvto=   0.    volts  
+
+   3*** gate overlap capacitance parameters ***
+     cgbo= 100.00p f/meter     cgdo= 215.00p f/meter     cgso= 215.00p f/meter
+     meto=   0.    meters 
+
+   4*** gate capacitance parameters ***
+    capop=   2.00               cf1=   0.    volts        cf2= 100.00m volts  
+      cf3=   1.00  volts        cf4=  50.00               cf5= 666.67m        
+      cf6= 500.00               xqc= 500.00m              tox=  14.00n meters 
+      cox=   2.47m f/m**2 
+
+   5*** diffusion parasitic parameters ***
+      acm=   0.                  is=  10.00f amps          js=   0.    a/m**2 
+      jsw=   0.    amp/m        nds=   1.00               cbd=   0.    farad  
+      cbs=   0.    farad         cj= 952.86u f/m**2      cjsw= 314.75p f/m    
+   cjgate= 314.75p f/m           mj= 435.90m             mjsw= 197.77m        
+       pb= 914.04m volts        php= 914.04m volts         tt=   0.    secs   
+     hdif=   0.    meters      ldif=   0.    meters        rd=   0.    ohms   
+       rs=   0.    ohms         rsh=   7.51m ohms/sq       fc=   0.           
+    alpha=   0.                 vcr=   0.    volts      iirat=   0.           
+      rdc=   0.    ohms         rsc=   0.    ohms           n=   1.00         
+     vnds=  -1.00  volts  
+
+   6*** temperature effect parameters ***
+     tlev=   0.               tlevc=   0.                  eg=   1.11  ev     
+     gap1= 702.00u ev/deg      gap2=   1.11k deg          xti=   0.           
+      bex=  -1.50               tcv=   0.    v/deg k      trd=   0.    /deg   
+      trs=   0.    /deg         cta=   0.    /deg         ctp=   0.    /deg   
+
+   7*** noise parameters ***
+       kf=   0.                  af=   1.00              nlev=   2.00         
+   gdsnoi=   1.00         
+
+   ***  level  3  model parameters  ***
+
+    delta=   3.05               eta=   3.16u            kappa= 300.00m /v     
+      nfs= 1.0e+12 1/cm**2    theta= 101.40m /v          vmax= 144.22k m/sec  
+       xj= 300.00n meters        uo= 662.70 cm**2/vs       kp= 125.94u a/v**2 
+    deriv=   1.00         
+1****** HSPICE -- I-2013.12-SP2-1 32-BIT (Jun 10 2014) RHEL32 ******            
+ ******  
+ active cascode
+
+ ****** circuit element summary tnom=  25.000 temp=  25.000 ******
+
+
+ **** voltage-controlled voltage sources
+      name        +             -          dimension  function  scale
+        0:eopamp          0:n3              0:0              1      poly       1.    
+
+
+ **** independent sources
+
+     name         node1        node2      dc volt    ac mag    ac phase    type
+  vbias  n5                0                    1.6000     0.         0.      dc   
+  vdd  n4                0                    8.0000     0.         0.      dc   
+  vi  n1                0                    2.2500     0.         0.      dc   
+
+
+ **** mosfets
+  
+  
+                                        
+ element name        0:m1       0:m2    
+ drain               0:n2       0:n4    
+ gate                0:n1       0:n3    
+ source              0:0        0:n2    
+ bulk                0:0        0:0     
+ model               0:cmosn    0:cmosn 
+ w eff               9.5330u    9.5330u 
+ l eff               1.5000u    1.5000u 
+ rd eff              0.         0.      
+ rs eff              0.         0.      
+ cdsat              10.0000f   10.0000f 
+ cssat              10.0000f   10.0000f 
+ capbd               0.         0.      
+ capbs               0.         0.      
+ temp               25.0000    25.0000  
+ aic                                    
+ m                   1.0000     1.0000  
+ w drawn            10.0000u   10.0000u 
+ l drawn             1.5000u    1.5000u 
+  
+  
+1****** HSPICE -- I-2013.12-SP2-1 32-BIT (Jun 10 2014) RHEL32 ******            
+ ******  
+ active cascode
+
+ ****** element node table
+                                                                                      
+ 0                eopamp           vbias            vdd              vi               
+                  m1:s             m1:b             m2:b                              
+ n1               vi               m1:g                                               
+ n2               m1:d             m2:s             eopamp:-                          
+ n3               eopamp           m2:g                                               
+ n4               vdd              m2:d                                               
+ n5               vbias            eopamp:+                                           
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2         
+ **info** dc convergence successful at Newton-Raphson method 
+1****** HSPICE -- I-2013.12-SP2-1 32-BIT (Jun 10 2014) RHEL32 ******            
+ ******  
+ active cascode
+
+ ****** operating point information tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is     0.     
+    node    =voltage      node    =voltage      node    =voltage
+
+ +0:n1      =   2.2500  0:n2      =   1.6000  0:n3      =   4.1078 
+ +0:n4      =   8.0000  0:n5      =   1.6000 
+
+
+ **** voltage sources
+
+ subckt                                   
+ element  0:vbias    0:vdd      0:vi      
+  volts      1.6000     8.0000     2.2500 
+  current    0.      -503.0331u    0.     
+  power      0.         4.0243m    0.     
+
+     total voltage source power dissipation=    4.0243m       watts
+
+
+
+ **** voltage-controlled voltage sources
+
+
+ subckt             
+ element  0:eopamp  
+  volts      4.1078 
+  current    0.     
+
+
+
+
+
+ **** mosfets
+
+
+ subckt                        
+ element  0:m1       0:m2      
+ model    0:cmosn    0:cmosn   
+ region     Saturati   Saturati
+  id       508.1523u  503.0331u
+  ibs        0.       -16.0000f
+  ibd      -16.0000f  -80.0000f
+  vgs        2.2500     2.5078 
+  vds        1.6000     6.4000 
+  vbs        0.        -1.6000 
+  vth      750.7243m    1.1050 
+  vdsat      1.0655     1.0611 
+  vod        1.4993     1.4028 
+  beta     541.3695u  545.4733u
+  gam eff  514.7031m  495.2495m
+  gm       561.4416u  601.1679u
+  gds        7.6704u    4.2889u
+  gmb        0.        95.8735u
+  cdtot      2.2252f    2.4510f
+  cgtot     28.1535f   28.3405f
+  cstot     25.6637f   25.6637f
+  cbtot    264.6000a  225.9071a
+  cgs       25.6637f   25.6637f
+  cgd        2.2252f    2.4510f
+
+
+
+
+          ***** job concluded
+1****** HSPICE -- I-2013.12-SP2-1 32-BIT (Jun 10 2014) RHEL32 ******            
+ ******  
+ active cascode
+
+ ****** job statistics summary tnom=  25.000 temp=  25.000 ******
+  
+  
+ ******  Machine Information  ******
+ CPU:
+ model name	: Intel(R) Xeon(R) CPU           E5603  @ 1.60GHz
+ cpu MHz	: 1596.001
+  
+ OS:
+ Linux version 2.6.32-573.12.1.el6.x86_64 (mockbuild@x86-031.build.eng.bos.redhat.com) (gcc version 4.4.7 20120313 (Red Hat 4.4.7-16) (GCC) ) #1 SMP Mon Nov 23 12:55:32 EST 2015
+
+
+  ******  HSPICE Threads Information  ******
+
+  Command Line Threads Count :     1
+  Available CPU Count        :     8
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =       6 # elements   =       6
+  # resistors   =       0 # capacitors =       0 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       1
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       3
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =       2 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.00           1           6
+  readin             0.01
+  errchk             0.00
+  setup              0.00
+  output             0.00
+
+
+           peak memory used        119.62 megabytes
+           total cpu time            0.01 seconds
+           total elapsed time        1.52 seconds
+           job started at     21:37:04 02/12/2016
+           job ended   at     21:37:05 02/12/2016
+
+
+ lic: Release hspice token(s) 
+ lic: total license checkout elapse time:        1.49(s)

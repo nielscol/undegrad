@@ -1,0 +1,4 @@
+verilog work "tff.v"
+verilog work "seven_seg.v"
+verilog work "clock_divider.v"
+verilog work "counter_3bit.v"

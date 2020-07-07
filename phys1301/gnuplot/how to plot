@@ -1,0 +1,7 @@
+set terminal postscript eps
+set output "[file name].eps"
+set xlabel "[xlabel name]"
+set ylabel "[ylabel name]"
+# set constants (a,b,c...) equal to the coefficients in the function
+# define the function (ex f(x)) equal to the function with with coefficient replaced with constants (a,b,c...)
+plot [function], "[datafile].data" using 1:2 with points

@@ -1,0 +1,229 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  5323_project
+* Top Cell Name: adder
+* View Name:     schematic
+* Netlisted on:  Dec  9 13:41:07 2016
+************************************************************************
+
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+*.GLOBAL VDD!
++        GND!
+
+*.PIN VDD!
+*+    GND!
+
+************************************************************************
+* Library Name: 5323_project
+* Cell Name:    inv
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT inv A Y
+*.PININFO A:I Y:O
+MM0 Y A GND! GND! NMOS_VTL W=100n L=50n
+MM1 Y A VDD! VDD! PMOS_VTL W=200n L=50n
+.ENDS
+
+************************************************************************
+* Library Name: 5323_project
+* Cell Name:    PG_buffer
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT PG_buffer Gi Go Pi Po
+*.PININFO Gi:I Pi:I Go:O Po:O
+XI7 net5 Po / inv
+XI6 net6 Go / inv
+XI4 Pi net5 / inv
+XI5 Gi net6 / inv
+.ENDS
+
+************************************************************************
+* Library Name: 5323_project
+* Cell Name:    generate
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT generate A B C Y
+*.PININFO A:I B:I C:I Y:O
+MM3 Y net11 GND! GND! NMOS_VTL W=100n L=50n
+MM2 net11 A GND! GND! NMOS_VTL W=100n L=50n
+MM1 net22 C GND! GND! NMOS_VTL W=100n L=50n
+MM0 net11 B net22 GND! NMOS_VTL W=100n L=50n
+MM7 Y net11 VDD! VDD! PMOS_VTL W=200n L=50n
+MM6 net13 C VDD! VDD! PMOS_VTL W=200n L=50n
+MM5 net13 B VDD! VDD! PMOS_VTL W=200n L=50n
+MM4 net11 A net13 VDD! PMOS_VTL W=200n L=50n
+.ENDS
+
+************************************************************************
+* Library Name: 5323_project
+* Cell Name:    Group_G
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT Group_G N0 N1 N2 N3
+*.PININFO N1:I N2:I N3:I N0:O
+XI5 N1 N3 N2 N0 / generate
+.ENDS
+
+************************************************************************
+* Library Name: 5323_project
+* Cell Name:    nand
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT nand A B Y
+*.PININFO A:I B:I Y:O
+MM1 Y B VDD! VDD! PMOS_VTL W=200n L=50n
+MM0 Y A VDD! VDD! PMOS_VTL W=200n L=50n
+MM3 net13 A GND! GND! NMOS_VTL W=100n L=50n
+MM2 Y B net13 GND! NMOS_VTL W=100n L=50n
+.ENDS
+
+************************************************************************
+* Library Name: 5323_project
+* Cell Name:    xor
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT xor A B Y
+*.PININFO A:I B:I Y:O
+MM4 Y B net18 GND! NMOS_VTL W=100n L=50n
+MM3 net18 A GND! GND! NMOS_VTL W=100n L=50n
+MM2 Y net8 GND! GND! NMOS_VTL W=100n L=50n
+MM1 net8 B GND! GND! NMOS_VTL W=100n L=50n
+MM0 net8 A GND! GND! NMOS_VTL W=100n L=50n
+MM9 net14 B VDD! VDD! PMOS_VTL W=200n L=50n
+MM8 net14 A VDD! VDD! PMOS_VTL W=200n L=50n
+MM7 Y net8 net14 VDD! PMOS_VTL W=200n L=50n
+MM6 net19 A VDD! VDD! PMOS_VTL W=200n L=50n
+MM5 net8 B net19 VDD! PMOS_VTL W=200n L=50n
+.ENDS
+
+************************************************************************
+* Library Name: 5323_project
+* Cell Name:    init_PG
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT init_PG A B G P
+*.PININFO A:I B:I G:O P:O
+XI0 A B net5 / nand
+XI1 A B P / xor
+XI2 net5 G / inv
+.ENDS
+
+************************************************************************
+* Library Name: 5323_project
+* Cell Name:    Group_PG
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT Group_PG N0 N1 N2 N3 N4 N5
+*.PININFO N1:I N2:I N4:I N5:I N0:O N3:O
+XI0 N5 N4 net16 / nand
+XI3 net16 N3 / inv
+XI7 N1 N4 N2 N0 / generate
+.ENDS
+
+************************************************************************
+* Library Name: 5323_project
+* Cell Name:    adder
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT adder A_0 A_1 A_2 A_3 A_4 A_5 A_6 A_7 A_8 A_9 A_10 A_11 A_12 A_13 A_14 
++ A_15 B_0 B_1 B_2 B_3 B_4 B_5 B_6 B_7 B_8 B_9 B_10 B_11 B_12 B_13 B_14 B_15 
++ Cout S_0 S_1 S_2 S_3 S_4 S_5 S_6 S_7 S_8 S_9 S_10 S_11 S_12 S_13 S_14 S_15
+*.PININFO A_0:I A_1:I A_2:I A_3:I A_4:I A_5:I A_6:I A_7:I A_8:I A_9:I A_10:I 
+*.PININFO A_11:I A_12:I A_13:I A_14:I A_15:I B_0:I B_1:I B_2:I B_3:I B_4:I 
+*.PININFO B_5:I B_6:I B_7:I B_8:I B_9:I B_10:I B_11:I B_12:I B_13:I B_14:I 
+*.PININFO B_15:I Cout:O S_0:O S_1:O S_2:O S_3:O S_4:O S_5:O S_6:O S_7:O S_8:O 
+*.PININFO S_9:O S_10:O S_11:O S_12:O S_13:O S_14:O S_15:O
+XI66 net168 Go13 P13 Po12 / PG_buffer
+XI65 net169 Go11 P11 Po10 / PG_buffer
+XI64 net170 Go9 P9 Po8 / PG_buffer
+XI52 net77 Go7 P7 Po6 / PG_buffer
+XI41 net84 Go5 P5 Po4 / PG_buffer
+XI37 net104 Go3 P3 Po2 / PG_buffer
+XI33 G14 net152 P14 Po13 / PG_buffer
+XI29 G12 net154 P12 Po11 / PG_buffer
+XI25 G10 net156 P10 Po9 / PG_buffer
+XI21 G8 net158 P8 Po7 / PG_buffer
+XI17 G6 net160 P6 Po5 / PG_buffer
+XI13 G4 net162 P4 Po3 / PG_buffer
+XI10 G2 net164 P2 Po1 / PG_buffer
+XI2 net114 Go1 P1 S_0 / PG_buffer
+XI63 Go14 net152 net168 Po13 / Group_G
+XI62 Go12 net154 net169 Po11 / Group_G
+XI61 Go10 net156 net170 Po9 / Group_G
+XI60 Go8 net158 Go7 Po7 / Group_G
+XI59 Go6 net160 Go5 Po5 / Group_G
+XI58 Go4 net162 Go3 Po3 / Group_G
+XI57 Go2 net164 Go1 Po1 / Group_G
+XI56 Go15 net119 net77 net0138 / Group_G
+XI55 net168 net120 net84 net121 / Group_G
+XI54 net169 net123 Go3 net122 / Group_G
+XI53 net170 net124 Go1 net125 / Group_G
+XI47 net77 net92 net104 net89 / Group_G
+XI39 net84 net99 Go1 net96 / Group_G
+XI36 net104 net111 net114 net108 / Group_G
+XI1 net114 G1 GND! P1 / Group_G
+XI34 A_13 B_13 G14 P14 / init_PG
+XI31 A_14 B_14 G15 P15 / init_PG
+XI35 A_15 B_15 G16 P16 / init_PG
+XI30 A_11 B_11 G12 P12 / init_PG
+XI27 A_12 B_12 G13 P13 / init_PG
+XI26 A_9 B_9 G10 P10 / init_PG
+XI23 A_10 B_10 G11 P11 / init_PG
+XI22 A_7 B_7 G8 P8 / init_PG
+XI19 A_8 B_8 G9 P9 / init_PG
+XI18 A_5 B_5 G6 P6 / init_PG
+XI15 A_6 B_6 G7 P7 / init_PG
+XI14 A_3 B_3 G4 P4 / init_PG
+XI11 A_4 B_4 G5 P5 / init_PG
+XI9 A_1 B_1 G2 P2 / init_PG
+XI8 A_2 B_2 G3 P3 / init_PG
+XI6 A_0 B_0 G1 P1 / init_PG
+XI51 net119 net126 net78 net0138 net127 net75 / Group_PG
+XI50 net120 net128 net85 net121 net129 net82 / Group_PG
+XI49 net123 net78 net92 net122 net75 net89 / Group_PG
+XI48 net124 net85 net99 net125 net82 net96 / Group_PG
+XI46 net126 net130 net76 net127 net131 net73 / Group_PG
+XI45 net128 net76 net83 net129 net73 net80 / Group_PG
+XI44 net78 net83 net90 net75 net80 net87 / Group_PG
+XI43 net85 net90 net97 net82 net87 net94 / Group_PG
+XI42 net92 net97 net105 net89 net94 net102 / Group_PG
+XI38 net99 net105 net111 net96 net102 net108 / Group_PG
+XI32 net130 G15 G14 net131 P15 P14 / Group_PG
+XI28 net76 G13 G12 net73 P13 P12 / Group_PG
+XI24 net83 G11 G10 net80 P11 P10 / Group_PG
+XI20 net90 G9 G8 net87 P9 P8 / Group_PG
+XI16 net97 G7 G6 net94 P7 P6 / Group_PG
+XI12 net105 G5 G4 net102 P5 P4 / Group_PG
+XI7 net111 G3 G2 net108 P3 P2 / Group_PG
+XI81 Go15 P16 S_15 / xor
+XI80 Go14 P15 S_14 / xor
+XI79 Go13 Po13 S_13 / xor
+XI78 Go12 Po12 S_12 / xor
+XI77 Go11 Po11 S_11 / xor
+XI76 Go10 Po10 S_10 / xor
+XI75 Go9 Po9 S_9 / xor
+XI74 Go8 Po8 S_8 / xor
+XI73 Go7 Po7 S_7 / xor
+XI72 Go6 Po6 S_6 / xor
+XI71 Go5 Po5 S_5 / xor
+XI70 Go4 Po4 S_4 / xor
+XI69 Go3 Po3 S_3 / xor
+XI68 Go2 Po2 S_2 / xor
+XI67 Go1 Po1 S_1 / xor
+XI86 G16 P16 Go15 Cout / generate
+.ENDS
+

@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      niels538
+HostName                       ece-spiez
+ProcessIdentifier              26158
+ProcessCreationTime_UTC        1481293058
+ProcessCreationTime_Readable   Fri Dec  9 08:17:38 2016 CST
+AppIdentifier                  OA File System Design Manager
+OSType                         unix
+ReasonForPlacingEditLock       OpenAccess edit lock
+FilePathUsedToEditLock         /home/class/niels538/cds_ncsu45/5323_project/adder/layout/layout.oa.cdslck
+TimeEditLocked                 Fri Dec  9 08:20:32 2016 CST

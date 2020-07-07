@@ -1,0 +1,4 @@
+verilog work "s_clock_divider.v"
+verilog work "dff.v"
+verilog work "clock_divider.v"
+verilog work "rng.v"

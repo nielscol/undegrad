@@ -1,0 +1,219 @@
+xst -intstyle ise -ifn "C:/Users/niels538/Downloads/lab5/craps/craps.xst" -ofn "C:/Users/niels538/Downloads/lab5/craps/craps.syr" 
+xst -intstyle ise -ifn "C:/Users/niels538/Downloads/lab5/craps/craps.xst" -ofn "C:/Users/niels538/Downloads/lab5/craps/craps.syr" 
+xst -intstyle ise -ifn "C:/Users/niels538/Downloads/lab5/craps/craps.xst" -ofn "C:/Users/niels538/Downloads/lab5/craps/craps.syr" 
+xst -intstyle ise -ifn "C:/Users/niels538/Downloads/lab5/craps/craps.xst" -ofn "C:/Users/niels538/Downloads/lab5/craps/craps.syr" 
+xst -intstyle ise -ifn "C:/Users/niels538/Downloads/lab5/craps/craps.xst" -ofn "C:/Users/niels538/Downloads/lab5/craps/craps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-4 craps.ngc craps.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o craps_map.ncd craps.ngd craps.pcf 
+par -w -intstyle ise -ol high -t 1 craps_map.ncd craps.ncd craps.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml craps.twx craps.ncd -o craps.twr craps.pcf 
+bitgen -intstyle ise -f craps.ut craps.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pin_constrain.ucf -p xc3s100e-cp132-4 craps.ngc craps.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o craps_map.ncd craps.ngd craps.pcf 
+par -w -intstyle ise -ol high -t 1 craps_map.ncd craps.ncd craps.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pin_constrain.ucf -p xc3s100e-cp132-4 craps.ngc craps.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o craps_map.ncd craps.ngd craps.pcf 
+par -w -intstyle ise -ol high -t 1 craps_map.ncd craps.ncd craps.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pin_constrain.ucf -p xc3s100e-cp132-4 craps.ngc craps.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o craps_map.ncd craps.ngd craps.pcf 
+par -w -intstyle ise -ol high -t 1 craps_map.ncd craps.ncd craps.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pin_constrain.ucf -p xc3s100e-cp132-4 craps.ngc craps.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o craps_map.ncd craps.ngd craps.pcf 
+par -w -intstyle ise -ol high -t 1 craps_map.ncd craps.ncd craps.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml craps.twx craps.ncd -o craps.twr craps.pcf -ucf pin_constrain.ucf 
+bitgen -intstyle ise -f craps.ut craps.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pin_constrain.ucf -p xc3s100e-cp132-4 craps.ngc craps.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o craps_map.ncd craps.ngd craps.pcf 
+par -w -intstyle ise -ol high -t 1 craps_map.ncd craps.ncd craps.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml craps.twx craps.ncd -o craps.twr craps.pcf -ucf pin_constrain.ucf 
+bitgen -intstyle ise -f craps.ut craps.ncd 
+xst -intstyle ise -ifn "C:/Users/niels538/Downloads/lab5/craps/craps.xst" -ofn "C:/Users/niels538/Downloads/lab5/craps/craps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pin_constrain.ucf -p xc3s100e-cp132-4 craps.ngc craps.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o craps_map.ncd craps.ngd craps.pcf 
+par -w -intstyle ise -ol high -t 1 craps_map.ncd craps.ncd craps.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml craps.twx craps.ncd -o craps.twr craps.pcf -ucf pin_constrain.ucf 
+bitgen -intstyle ise -f craps.ut craps.ncd 
+xst -intstyle ise -ifn "C:/Users/niels538/Downloads/lab5/craps/craps.xst" -ofn "C:/Users/niels538/Downloads/lab5/craps/craps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pin_constrain.ucf -p xc3s100e-cp132-4 craps.ngc craps.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o craps_map.ncd craps.ngd craps.pcf 
+par -w -intstyle ise -ol high -t 1 craps_map.ncd craps.ncd craps.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml craps.twx craps.ncd -o craps.twr craps.pcf -ucf pin_constrain.ucf 
+bitgen -intstyle ise -f craps.ut craps.ncd 
+xst -intstyle ise -ifn "C:/Users/niels538/Downloads/lab5/craps/craps.xst" -ofn "C:/Users/niels538/Downloads/lab5/craps/craps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pin_constrain.ucf -p xc3s100e-cp132-4 craps.ngc craps.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o craps_map.ncd craps.ngd craps.pcf 
+par -w -intstyle ise -ol high -t 1 craps_map.ncd craps.ncd craps.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml craps.twx craps.ncd -o craps.twr craps.pcf -ucf pin_constrain.ucf 
+bitgen -intstyle ise -f craps.ut craps.ncd 
+xst -intstyle ise -ifn "C:/Users/niels538/Downloads/lab5/craps/craps.xst" -ofn "C:/Users/niels538/Downloads/lab5/craps/craps.syr" 
+xst -intstyle ise -ifn "C:/Users/niels538/Downloads/lab5/craps/craps.xst" -ofn "C:/Users/niels538/Downloads/lab5/craps/craps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pin_constrain.ucf -p xc3s100e-cp132-4 craps.ngc craps.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o craps_map.ncd craps.ngd craps.pcf 
+par -w -intstyle ise -ol high -t 1 craps_map.ncd craps.ncd craps.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml craps.twx craps.ncd -o craps.twr craps.pcf -ucf pin_constrain.ucf 
+bitgen -intstyle ise -f craps.ut craps.ncd 
+xst -intstyle ise -ifn "C:/Users/niels538/Downloads/lab5/craps/craps.xst" -ofn "C:/Users/niels538/Downloads/lab5/craps/craps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pin_constrain.ucf -p xc3s100e-cp132-4 craps.ngc craps.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o craps_map.ncd craps.ngd craps.pcf 
+par -w -intstyle ise -ol high -t 1 craps_map.ncd craps.ncd craps.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml craps.twx craps.ncd -o craps.twr craps.pcf -ucf pin_constrain.ucf 
+bitgen -intstyle ise -f craps.ut craps.ncd 
+xst -intstyle ise -ifn "C:/Users/niels538/Downloads/lab5/craps/craps.xst" -ofn "C:/Users/niels538/Downloads/lab5/craps/craps.syr" 
+xst -intstyle ise -ifn "C:/Users/niels538/Downloads/lab5/craps/craps.xst" -ofn "C:/Users/niels538/Downloads/lab5/craps/craps.syr" 
+xst -intstyle ise -ifn "C:/Users/niels538/Downloads/lab5/craps/craps.xst" -ofn "C:/Users/niels538/Downloads/lab5/craps/craps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pin_constrain.ucf -p xc3s100e-cp132-4 craps.ngc craps.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o craps_map.ncd craps.ngd craps.pcf 
+par -w -intstyle ise -ol high -t 1 craps_map.ncd craps.ncd craps.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml craps.twx craps.ncd -o craps.twr craps.pcf -ucf pin_constrain.ucf 
+bitgen -intstyle ise -f craps.ut craps.ncd 
+xst -intstyle ise -ifn "C:/Users/niels538/Downloads/lab5/craps/craps.xst" -ofn "C:/Users/niels538/Downloads/lab5/craps/craps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pin_constrain.ucf -p xc3s100e-cp132-4 craps.ngc craps.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o craps_map.ncd craps.ngd craps.pcf 
+par -w -intstyle ise -ol high -t 1 craps_map.ncd craps.ncd craps.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml craps.twx craps.ncd -o craps.twr craps.pcf -ucf pin_constrain.ucf 
+bitgen -intstyle ise -f craps.ut craps.ncd 
+xst -intstyle ise -ifn "C:/Users/niels538/Downloads/lab5/craps/craps.xst" -ofn "C:/Users/niels538/Downloads/lab5/craps/craps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pin_constrain.ucf -p xc3s100e-cp132-4 craps.ngc craps.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o craps_map.ncd craps.ngd craps.pcf 
+par -w -intstyle ise -ol high -t 1 craps_map.ncd craps.ncd craps.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml craps.twx craps.ncd -o craps.twr craps.pcf -ucf pin_constrain.ucf 
+bitgen -intstyle ise -f craps.ut craps.ncd 
+xst -intstyle ise -ifn "C:/Users/niels538/Downloads/lab5/craps/craps.xst" -ofn "C:/Users/niels538/Downloads/lab5/craps/craps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pin_constrain.ucf -p xc3s100e-cp132-4 craps.ngc craps.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o craps_map.ncd craps.ngd craps.pcf 
+par -w -intstyle ise -ol high -t 1 craps_map.ncd craps.ncd craps.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml craps.twx craps.ncd -o craps.twr craps.pcf -ucf pin_constrain.ucf 
+bitgen -intstyle ise -f craps.ut craps.ncd 
+xst -intstyle ise -ifn "C:/Users/niels538/Downloads/lab5/craps/craps.xst" -ofn "C:/Users/niels538/Downloads/lab5/craps/craps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pin_constrain.ucf -p xc3s100e-cp132-4 craps.ngc craps.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o craps_map.ncd craps.ngd craps.pcf 
+par -w -intstyle ise -ol high -t 1 craps_map.ncd craps.ncd craps.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml craps.twx craps.ncd -o craps.twr craps.pcf -ucf pin_constrain.ucf 
+bitgen -intstyle ise -f craps.ut craps.ncd 
+xst -intstyle ise -ifn "C:/Users/niels538/Downloads/lab5/craps/craps.xst" -ofn "C:/Users/niels538/Downloads/lab5/craps/craps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pin_constrain.ucf -p xc3s100e-cp132-4 craps.ngc craps.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o craps_map.ncd craps.ngd craps.pcf 
+par -w -intstyle ise -ol high -t 1 craps_map.ncd craps.ncd craps.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml craps.twx craps.ncd -o craps.twr craps.pcf -ucf pin_constrain.ucf 
+bitgen -intstyle ise -f craps.ut craps.ncd 
+xst -intstyle ise -ifn "C:/Users/niels538/Downloads/lab5/craps/craps.xst" -ofn "C:/Users/niels538/Downloads/lab5/craps/craps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pin_constrain.ucf -p xc3s100e-cp132-4 craps.ngc craps.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o craps_map.ncd craps.ngd craps.pcf 
+par -w -intstyle ise -ol high -t 1 craps_map.ncd craps.ncd craps.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml craps.twx craps.ncd -o craps.twr craps.pcf -ucf pin_constrain.ucf 
+bitgen -intstyle ise -f craps.ut craps.ncd 
+xst -intstyle ise -ifn "C:/Users/niels538/Downloads/lab5/craps/craps.xst" -ofn "C:/Users/niels538/Downloads/lab5/craps/craps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pin_constrain.ucf -p xc3s100e-cp132-4 craps.ngc craps.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o craps_map.ncd craps.ngd craps.pcf 
+par -w -intstyle ise -ol high -t 1 craps_map.ncd craps.ncd craps.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml craps.twx craps.ncd -o craps.twr craps.pcf -ucf pin_constrain.ucf 
+bitgen -intstyle ise -f craps.ut craps.ncd 
+xst -intstyle ise -ifn "C:/Users/niels538/Downloads/lab5/craps/craps.xst" -ofn "C:/Users/niels538/Downloads/lab5/craps/craps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pin_constrain.ucf -p xc3s100e-cp132-4 craps.ngc craps.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o craps_map.ncd craps.ngd craps.pcf 
+par -w -intstyle ise -ol high -t 1 craps_map.ncd craps.ncd craps.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml craps.twx craps.ncd -o craps.twr craps.pcf -ucf pin_constrain.ucf 
+bitgen -intstyle ise -f craps.ut craps.ncd 
+xst -intstyle ise -ifn "C:/Users/niels538/Downloads/lab5/craps/craps.xst" -ofn "C:/Users/niels538/Downloads/lab5/craps/craps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pin_constrain.ucf -p xc3s100e-cp132-4 craps.ngc craps.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o craps_map.ncd craps.ngd craps.pcf 
+par -w -intstyle ise -ol high -t 1 craps_map.ncd craps.ncd craps.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml craps.twx craps.ncd -o craps.twr craps.pcf -ucf pin_constrain.ucf 
+bitgen -intstyle ise -f craps.ut craps.ncd 
+xst -intstyle ise -ifn "C:/Users/niels538/Downloads/lab5/craps/craps.xst" -ofn "C:/Users/niels538/Downloads/lab5/craps/craps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pin_constrain.ucf -p xc3s100e-cp132-4 craps.ngc craps.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o craps_map.ncd craps.ngd craps.pcf 
+par -w -intstyle ise -ol high -t 1 craps_map.ncd craps.ncd craps.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml craps.twx craps.ncd -o craps.twr craps.pcf -ucf pin_constrain.ucf 
+bitgen -intstyle ise -f craps.ut craps.ncd 
+xst -intstyle ise -ifn "C:/Users/niels538/Downloads/lab5/craps/craps.xst" -ofn "C:/Users/niels538/Downloads/lab5/craps/craps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pin_constrain.ucf -p xc3s100e-cp132-4 craps.ngc craps.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o craps_map.ncd craps.ngd craps.pcf 
+par -w -intstyle ise -ol high -t 1 craps_map.ncd craps.ncd craps.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml craps.twx craps.ncd -o craps.twr craps.pcf -ucf pin_constrain.ucf 
+bitgen -intstyle ise -f craps.ut craps.ncd 
+xst -intstyle ise -ifn "C:/Users/niels538/Downloads/lab5/craps/craps.xst" -ofn "C:/Users/niels538/Downloads/lab5/craps/craps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pin_constrain.ucf -p xc3s100e-cp132-4 craps.ngc craps.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o craps_map.ncd craps.ngd craps.pcf 
+par -w -intstyle ise -ol high -t 1 craps_map.ncd craps.ncd craps.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml craps.twx craps.ncd -o craps.twr craps.pcf -ucf pin_constrain.ucf 
+bitgen -intstyle ise -f craps.ut craps.ncd 
+xst -intstyle ise -ifn "C:/Users/niels538/Downloads/lab5/craps/craps.xst" -ofn "C:/Users/niels538/Downloads/lab5/craps/craps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pin_constrain.ucf -p xc3s100e-cp132-4 craps.ngc craps.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o craps_map.ncd craps.ngd craps.pcf 
+par -w -intstyle ise -ol high -t 1 craps_map.ncd craps.ncd craps.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml craps.twx craps.ncd -o craps.twr craps.pcf -ucf pin_constrain.ucf 
+bitgen -intstyle ise -f craps.ut craps.ncd 
+xst -intstyle ise -ifn "C:/Users/niels538/Downloads/lab5/craps/craps.xst" -ofn "C:/Users/niels538/Downloads/lab5/craps/craps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pin_constrain.ucf -p xc3s100e-cp132-4 craps.ngc craps.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o craps_map.ncd craps.ngd craps.pcf 
+par -w -intstyle ise -ol high -t 1 craps_map.ncd craps.ncd craps.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml craps.twx craps.ncd -o craps.twr craps.pcf -ucf pin_constrain.ucf 
+bitgen -intstyle ise -f craps.ut craps.ncd 
+xst -intstyle ise -ifn "C:/Users/niels538/Downloads/lab5/craps/craps.xst" -ofn "C:/Users/niels538/Downloads/lab5/craps/craps.syr" 
+xst -intstyle ise -ifn "C:/Users/niels538/Downloads/lab5/craps/craps.xst" -ofn "C:/Users/niels538/Downloads/lab5/craps/craps.syr" 
+xst -intstyle ise -ifn "C:/Users/niels538/Downloads/lab5/craps/craps.xst" -ofn "C:/Users/niels538/Downloads/lab5/craps/craps.syr" 
+xst -intstyle ise -ifn "C:/Users/niels538/Downloads/lab5/craps/craps.xst" -ofn "C:/Users/niels538/Downloads/lab5/craps/craps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pin_constrain.ucf -p xc3s100e-cp132-4 craps.ngc craps.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o craps_map.ncd craps.ngd craps.pcf 
+par -w -intstyle ise -ol high -t 1 craps_map.ncd craps.ncd craps.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml craps.twx craps.ncd -o craps.twr craps.pcf -ucf pin_constrain.ucf 
+bitgen -intstyle ise -f craps.ut craps.ncd 
+xst -intstyle ise -ifn "C:/Users/niels538/Downloads/lab5/craps/craps.xst" -ofn "C:/Users/niels538/Downloads/lab5/craps/craps.syr" 
+xst -intstyle ise -ifn "C:/Users/niels538/Downloads/lab5/craps/craps.xst" -ofn "C:/Users/niels538/Downloads/lab5/craps/craps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pin_constrain.ucf -p xc3s100e-cp132-4 craps.ngc craps.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o craps_map.ncd craps.ngd craps.pcf 
+par -w -intstyle ise -ol high -t 1 craps_map.ncd craps.ncd craps.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml craps.twx craps.ncd -o craps.twr craps.pcf -ucf pin_constrain.ucf 
+bitgen -intstyle ise -f craps.ut craps.ncd 
+xst -intstyle ise -ifn "C:/Users/niels538/Downloads/lab5/craps/craps.xst" -ofn "C:/Users/niels538/Downloads/lab5/craps/craps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pin_constrain.ucf -p xc3s100e-cp132-4 craps.ngc craps.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o craps_map.ncd craps.ngd craps.pcf 
+par -w -intstyle ise -ol high -t 1 craps_map.ncd craps.ncd craps.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml craps.twx craps.ncd -o craps.twr craps.pcf -ucf pin_constrain.ucf 
+bitgen -intstyle ise -f craps.ut craps.ncd 
+xst -intstyle ise -ifn "C:/Users/niels538/Downloads/lab5/craps/craps.xst" -ofn "C:/Users/niels538/Downloads/lab5/craps/craps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pin_constrain.ucf -p xc3s100e-cp132-4 craps.ngc craps.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o craps_map.ncd craps.ngd craps.pcf 
+par -w -intstyle ise -ol high -t 1 craps_map.ncd craps.ncd craps.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml craps.twx craps.ncd -o craps.twr craps.pcf -ucf pin_constrain.ucf 
+bitgen -intstyle ise -f craps.ut craps.ncd 
+xst -intstyle ise -ifn "C:/Users/niels538/Downloads/lab5/craps/craps.xst" -ofn "C:/Users/niels538/Downloads/lab5/craps/craps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pin_constrain.ucf -p xc3s100e-cp132-4 craps.ngc craps.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o craps_map.ncd craps.ngd craps.pcf 
+par -w -intstyle ise -ol high -t 1 craps_map.ncd craps.ncd craps.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml craps.twx craps.ncd -o craps.twr craps.pcf -ucf pin_constrain.ucf 
+bitgen -intstyle ise -f craps.ut craps.ncd 
+xst -intstyle ise -ifn "C:/Users/niels538/Downloads/lab5/craps/craps.xst" -ofn "C:/Users/niels538/Downloads/lab5/craps/craps.syr" 
+xst -intstyle ise -ifn "C:/Users/niels538/Downloads/lab5/craps/craps.xst" -ofn "C:/Users/niels538/Downloads/lab5/craps/craps.syr" 
+xst -intstyle ise -ifn "C:/Users/niels538/Downloads/lab5/craps/craps.xst" -ofn "C:/Users/niels538/Downloads/lab5/craps/craps.syr" 
+xst -intstyle ise -ifn "C:/Users/niels538/Downloads/lab5/craps/craps.xst" -ofn "C:/Users/niels538/Downloads/lab5/craps/craps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pin_constrain.ucf -p xc3s100e-cp132-4 craps.ngc craps.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o craps_map.ncd craps.ngd craps.pcf 
+par -w -intstyle ise -ol high -t 1 craps_map.ncd craps.ncd craps.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml craps.twx craps.ncd -o craps.twr craps.pcf -ucf pin_constrain.ucf 
+bitgen -intstyle ise -f craps.ut craps.ncd 
+xst -intstyle ise -ifn "C:/Users/niels538/Downloads/lab5/craps/craps.xst" -ofn "C:/Users/niels538/Downloads/lab5/craps/craps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pin_constrain.ucf -p xc3s100e-cp132-4 craps.ngc craps.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o craps_map.ncd craps.ngd craps.pcf 
+par -w -intstyle ise -ol high -t 1 craps_map.ncd craps.ncd craps.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml craps.twx craps.ncd -o craps.twr craps.pcf -ucf pin_constrain.ucf 
+bitgen -intstyle ise -f craps.ut craps.ncd 
+xst -intstyle ise -ifn "C:/Users/niels538/Downloads/lab5/craps/craps.xst" -ofn "C:/Users/niels538/Downloads/lab5/craps/craps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pin_constrain.ucf -p xc3s100e-cp132-4 craps.ngc craps.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o craps_map.ncd craps.ngd craps.pcf 
+par -w -intstyle ise -ol high -t 1 craps_map.ncd craps.ncd craps.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml craps.twx craps.ncd -o craps.twr craps.pcf -ucf pin_constrain.ucf 
+bitgen -intstyle ise -f craps.ut craps.ncd 
+xst -intstyle ise -ifn "C:/Users/niels538/Downloads/lab5/craps/craps.xst" -ofn "C:/Users/niels538/Downloads/lab5/craps/craps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pin_constrain.ucf -p xc3s100e-cp132-4 craps.ngc craps.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o craps_map.ncd craps.ngd craps.pcf 
+par -w -intstyle ise -ol high -t 1 craps_map.ncd craps.ncd craps.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml craps.twx craps.ncd -o craps.twr craps.pcf -ucf pin_constrain.ucf 
+bitgen -intstyle ise -f craps.ut craps.ncd 
+xst -intstyle ise -ifn "C:/Users/niels538/Downloads/lab5/craps/craps.xst" -ofn "C:/Users/niels538/Downloads/lab5/craps/craps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pin_constrain.ucf -p xc3s100e-cp132-4 craps.ngc craps.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o craps_map.ncd craps.ngd craps.pcf 
+par -w -intstyle ise -ol high -t 1 craps_map.ncd craps.ncd craps.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml craps.twx craps.ncd -o craps.twr craps.pcf -ucf pin_constrain.ucf 
+bitgen -intstyle ise -f craps.ut craps.ncd 

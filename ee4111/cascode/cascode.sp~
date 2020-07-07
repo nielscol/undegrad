@@ -1,0 +1,30 @@
+active cascode
+.OPTIONS LIST NODE POST
+.DC Vdd 0.5V 3V 0.1V	Vgain 1 1001V 250V
+*.DC Vdd 10 15 1
+.OP
+.PRINT DC V(1) I1(M2)
+
+Vdd 4 0 DC 10V
+Vbias 5 0 DC 1.5V
+Vi 1 0 DC 2.25V
+Vgain 6 0 DC 100V
+R1 6 0 1000000000
+M1 2 1 0 0 CMOSN W = 10U L = 1.5U
+M2 4 3 2 0 CMOSN W = 10U L = 1.5U
+*Eopamp 3 0 OPAMP 5 2 
+Eopamp 3 0 VOL = 'V(6,0)*(V(5,0) - V(2,0))'
+
+.MODEL CMOSN NMOS ( LEVEL = 3 
++ TOX = 1.4E-8  NSUB   = 1E17 GAMMA  = 0.5483559          
++ PHI = 0.7 VTO = 0.7640855 DELTA = 3.0541177 
++ UO = 662.6984452 ETA = 3.162045E-6 THETA  = 0.1013999          
++ KP  = 1.259355E-4 VMAX   = 1.442228E5 KAPPA  = 0.3             
++ RSH = 7.513418E-3  NFS = 1E12      TPG    = 1                     
++ XJ     = 3E-7  LD  = 1E-13  WD = 2.334779E-7
++ CGD = 2.15E-10 CGSO   = 2.15E-10   CGBO   = 1E-10        
++ C = 4.258447E-4 PB  = 0.914037   MJ     = 0.435903 
++ CJSW   = 3.147465E-10    MJSW   = 0.1977689       )                                     
+*
+
+.END

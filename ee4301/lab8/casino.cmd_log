@@ -1,0 +1,45 @@
+xst -intstyle ise -ifn "C:/Users/colen/Desktop/4301/lab8/casino.xst" -ofn "C:/Users/colen/Desktop/4301/lab8/casino.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xa7a100t-csg324-2I casino.ngc casino.ngd  
+map -intstyle ise -p xa7a100t-csg324-2I -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o casino_map.ncd casino.ngd casino.pcf 
+par -w -intstyle ise -ol high -mt off casino_map.ncd casino.ncd casino.pcf 
+trce -intstyle ise -v 3 -s 2I -n 3 -fastpaths -xml casino.twx casino.ncd -o casino.twr casino.pcf 
+bitgen -intstyle ise -f casino.ut casino.ncd 
+xst -intstyle ise -ifn "C:/Users/colen/Desktop/4301/lab8/casino.xst" -ofn "C:/Users/colen/Desktop/4301/lab8/casino.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pins.ucf -p xa7a100t-csg324-2I casino.ngc casino.ngd  
+map -intstyle ise -p xa7a100t-csg324-2I -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o casino_map.ncd casino.ngd casino.pcf 
+xst -intstyle ise -ifn "C:/Users/colen/Desktop/4301/lab8/casino.xst" -ofn "C:/Users/colen/Desktop/4301/lab8/casino.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pins.ucf -p xc3s100e-cp132-4 casino.ngc casino.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o casino_map.ncd casino.ngd casino.pcf 
+par -w -intstyle ise -ol high -t 1 casino_map.ncd casino.ncd casino.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml casino.twx casino.ncd -o casino.twr casino.pcf -ucf pins.ucf 
+bitgen -intstyle ise -f casino.ut casino.ncd 
+xst -intstyle ise -ifn "C:/Users/colen/Desktop/4301/lab8/casino.xst" -ofn "C:/Users/colen/Desktop/4301/lab8/casino.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pins.ucf -p xc3s100e-cp132-4 casino.ngc casino.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o casino_map.ncd casino.ngd casino.pcf 
+par -w -intstyle ise -ol high -t 1 casino_map.ncd casino.ncd casino.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml casino.twx casino.ncd -o casino.twr casino.pcf -ucf pins.ucf 
+bitgen -intstyle ise -f casino.ut casino.ncd 
+xst -intstyle ise -ifn "C:/Users/colen/Desktop/4301/lab8/casino.xst" -ofn "C:/Users/colen/Desktop/4301/lab8/casino.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pins.ucf -p xc3s100e-cp132-4 casino.ngc casino.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o casino_map.ncd casino.ngd casino.pcf 
+par -w -intstyle ise -ol high -t 1 casino_map.ncd casino.ncd casino.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml casino.twx casino.ncd -o casino.twr casino.pcf -ucf pins.ucf 
+bitgen -intstyle ise -f casino.ut casino.ncd 
+xst -intstyle ise -ifn "C:/Users/colen/Desktop/4301/lab8/casino.xst" -ofn "C:/Users/colen/Desktop/4301/lab8/casino.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pins.ucf -p xc3s100e-cp132-4 casino.ngc casino.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o casino_map.ncd casino.ngd casino.pcf 
+par -w -intstyle ise -ol high -t 1 casino_map.ncd casino.ncd casino.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml casino.twx casino.ncd -o casino.twr casino.pcf -ucf pins.ucf 
+bitgen -intstyle ise -f casino.ut casino.ncd 
+xst -intstyle ise -ifn "C:/Users/colen/Desktop/4301/lab8/casino.xst" -ofn "C:/Users/colen/Desktop/4301/lab8/casino.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pins.ucf -p xc3s100e-cp132-4 casino.ngc casino.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o casino_map.ncd casino.ngd casino.pcf 
+par -w -intstyle ise -ol high -t 1 casino_map.ncd casino.ncd casino.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml casino.twx casino.ncd -o casino.twr casino.pcf -ucf pins.ucf 
+bitgen -intstyle ise -f casino.ut casino.ncd 
+xst -intstyle ise -ifn "C:/Users/colen/Desktop/4301/lab8/casino.xst" -ofn "C:/Users/colen/Desktop/4301/lab8/casino.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pins.ucf -p xc3s100e-cp132-4 casino.ngc casino.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o casino_map.ncd casino.ngd casino.pcf 
+par -w -intstyle ise -ol high -t 1 casino_map.ncd casino.ncd casino.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml casino.twx casino.ncd -o casino.twr casino.pcf -ucf pins.ucf 
+bitgen -intstyle ise -f casino.ut casino.ncd 

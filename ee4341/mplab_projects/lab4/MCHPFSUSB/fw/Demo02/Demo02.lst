@@ -1,0 +1,392 @@
+MP2COD 4.12, COFF to COD File Converter
+Copyright (c) 2007 Microchip Technology Inc.
+Listing File Generated: Tue Aug 21 21:32:38 2007
+
+
+Address  Value    Disassembly              Source                                                                           File
+-------  -------  -----------------------  -------------------------------------------------------------------------------  -----
+                                           /* $Id: c018i.c,v 1.7 2006/11/15 22:53:12 moshtaa Exp $ */                       C:\MCC18\src\traditional\startup\c018i.c
+                                                                                                                            C:\MCC18\src\traditional\startup\c018i.c
+                                           /* Copyright (c)1999 Microchip Technology */                                     C:\MCC18\src\traditional\startup\c018i.c
+                                                                                                                            C:\MCC18\src\traditional\startup\c018i.c
+                                           /* MPLAB-C18 startup code, including initialized data */                         C:\MCC18\src\traditional\startup\c018i.c
+                                                                                                                            C:\MCC18\src\traditional\startup\c018i.c
+                                           /* external reference to __init() function */                                    C:\MCC18\src\traditional\startup\c018i.c
+                                           extern void __init (void);                                                       C:\MCC18\src\traditional\startup\c018i.c
+                                           /* external reference to the user's main routine */                              C:\MCC18\src\traditional\startup\c018i.c
+                                           extern void main (void);                                                         C:\MCC18\src\traditional\startup\c018i.c
+                                           /* prototype for the startup function */                                         C:\MCC18\src\traditional\startup\c018i.c
+                                           void _entry (void);                                                              C:\MCC18\src\traditional\startup\c018i.c
+                                           void _startup (void);                                                            C:\MCC18\src\traditional\startup\c018i.c
+                                           /* prototype for the initialized data setup */                                   C:\MCC18\src\traditional\startup\c018i.c
+                                           void _do_cinit (void);                                                           C:\MCC18\src\traditional\startup\c018i.c
+                                                                                                                            C:\MCC18\src\traditional\startup\c018i.c
+                                           extern volatile near unsigned long short TBLPTR;                                 C:\MCC18\src\traditional\startup\c018i.c
+                                           extern near unsigned FSR0;                                                       C:\MCC18\src\traditional\startup\c018i.c
+                                           extern near char __FPFLAGS;                                                      C:\MCC18\src\traditional\startup\c018i.c
+                                           #define RND 6                                                                    C:\MCC18\src\traditional\startup\c018i.c
+                                                                                                                            C:\MCC18\src\traditional\startup\c018i.c
+                                           #pragma code _entry_scn=0x000000                                                 C:\MCC18\src\traditional\startup\c018i.c
+                                           void                                                                             C:\MCC18\src\traditional\startup\c018i.c
+                                           _entry (void)                                                                    C:\MCC18\src\traditional\startup\c018i.c
+                                           {                                                                                C:\MCC18\src\traditional\startup\c018i.c
+000000   ef65     GOTO      0x8ca          _asm goto _startup _endasm                                                       C:\MCC18\src\traditional\startup\c018i.c
+000002   f004                                                                                                               
+                                                                                                                            C:\MCC18\src\traditional\startup\c018i.c
+000004   0012     RETURN    0x0            }                                                                                C:\MCC18\src\traditional\startup\c018i.c
+                                           #pragma code _startup_scn                                                        C:\MCC18\src\traditional\startup\c018i.c
+                                           void                                                                             C:\MCC18\src\traditional\startup\c018i.c
+                                           _startup (void)                                                                  C:\MCC18\src\traditional\startup\c018i.c
+                                           {                                                                                C:\MCC18\src\traditional\startup\c018i.c
+                                             _asm                                                                           C:\MCC18\src\traditional\startup\c018i.c
+                                               // Initialize the stack pointer                                              C:\MCC18\src\traditional\startup\c018i.c
+0008ca   ee13     LFSR      0x1,0x300          lfsr 1, _stack                                                               C:\MCC18\src\traditional\startup\c018i.c
+0008cc   f000                                                                                                               
+0008ce   ee23     LFSR      0x2,0x300          lfsr 2, _stack                                                               C:\MCC18\src\traditional\startup\c018i.c
+0008d0   f000                                                                                                               
+                                                                                                                            C:\MCC18\src\traditional\startup\c018i.c
+0008d2   6af8     CLRF      0xf8,0x0           clrf TBLPTRU, 0 // 1st silicon doesn't do this on POR                        C:\MCC18\src\traditional\startup\c018i.c
+                                                                                                                            C:\MCC18\src\traditional\startup\c018i.c
+0008d4   9c01     BCF       0x1,0x6,0x0        bcf __FPFLAGS,RND,0 // Initialize rounding flag for floating point libs      C:\MCC18\src\traditional\startup\c018i.c
+                                                                                                                            C:\MCC18\src\traditional\startup\c018i.c
+                                               _endasm                                                                      C:\MCC18\src\traditional\startup\c018i.c
+0008d6   ec16     CALL      0x82c,0x0          _do_cinit ();                                                                C:\MCC18\src\traditional\startup\c018i.c
+0008d8   f004                                                                                                               
+                                                                                                                            C:\MCC18\src\traditional\startup\c018i.c
+                                           loop:                                                                            C:\MCC18\src\traditional\startup\c018i.c
+                                                                                                                            C:\MCC18\src\traditional\startup\c018i.c
+                                             // If user defined __init is not found, the one in clib.lib will be used       C:\MCC18\src\traditional\startup\c018i.c
+0008da   ec88     CALL      0x910,0x0        __init ();                                                                     C:\MCC18\src\traditional\startup\c018i.c
+0008dc   f004                                                                                                               
+                                                                                                                            C:\MCC18\src\traditional\startup\c018i.c
+                                             // Call the user's main routine                                                C:\MCC18\src\traditional\startup\c018i.c
+0008de   ec73     CALL      0x8e6,0x0        main ();                                                                       C:\MCC18\src\traditional\startup\c018i.c
+0008e0   f004                                                                                                               
+                                                                                                                            C:\MCC18\src\traditional\startup\c018i.c
+0008e2   d7fb     BRA       0x8da            goto loop;                                                                     C:\MCC18\src\traditional\startup\c018i.c
+0008e4   0012     RETURN    0x0            }                               /* end _startup() */                             C:\MCC18\src\traditional\startup\c018i.c
+                                                                                                                            C:\MCC18\src\traditional\startup\c018i.c
+                                           /* MPLAB-C18 initialized data memory support */                                  C:\MCC18\src\traditional\startup\c018i.c
+                                           /* The linker will populate the _cinit table */                                  C:\MCC18\src\traditional\startup\c018i.c
+                                           extern far rom struct                                                            C:\MCC18\src\traditional\startup\c018i.c
+                                           {                                                                                C:\MCC18\src\traditional\startup\c018i.c
+                                             unsigned short num_init;                                                       C:\MCC18\src\traditional\startup\c018i.c
+                                             struct _init_entry                                                             C:\MCC18\src\traditional\startup\c018i.c
+                                             {                                                                              C:\MCC18\src\traditional\startup\c018i.c
+                                               unsigned long from;                                                          C:\MCC18\src\traditional\startup\c018i.c
+                                               unsigned long to;                                                            C:\MCC18\src\traditional\startup\c018i.c
+                                               unsigned long size;                                                          C:\MCC18\src\traditional\startup\c018i.c
+                                             }                                                                              C:\MCC18\src\traditional\startup\c018i.c
+                                             entries[];                                                                     C:\MCC18\src\traditional\startup\c018i.c
+                                           }                                                                                C:\MCC18\src\traditional\startup\c018i.c
+                                           _cinit;                                                                          C:\MCC18\src\traditional\startup\c018i.c
+                                                                                                                            C:\MCC18\src\traditional\startup\c018i.c
+                                           #pragma code _cinit_scn                                                          C:\MCC18\src\traditional\startup\c018i.c
+                                           void                                                                             C:\MCC18\src\traditional\startup\c018i.c
+                                           _do_cinit (void)                                                                 C:\MCC18\src\traditional\startup\c018i.c
+                                           {                                                                                C:\MCC18\src\traditional\startup\c018i.c
+                                             /* we'll make the assumption in the following code that these statics          C:\MCC18\src\traditional\startup\c018i.c
+                                              * will be allocated into the same bank.                                       C:\MCC18\src\traditional\startup\c018i.c
+                                              */                                                                            C:\MCC18\src\traditional\startup\c018i.c
+                                             static short long prom;                                                        C:\MCC18\src\traditional\startup\c018i.c
+                                             static unsigned short curr_byte;                                               C:\MCC18\src\traditional\startup\c018i.c
+                                             static unsigned short curr_entry;                                              C:\MCC18\src\traditional\startup\c018i.c
+                                             static short long data_ptr;                                                    C:\MCC18\src\traditional\startup\c018i.c
+                                                                                                                            C:\MCC18\src\traditional\startup\c018i.c
+                                             // Initialized data...                                                         C:\MCC18\src\traditional\startup\c018i.c
+00082c   0e2a     MOVLW     0x2a             TBLPTR = (short long)&_cinit;                                                  C:\MCC18\src\traditional\startup\c018i.c
+00082e   6ef6     MOVWF     0xf6,0x0                                                                                        
+000830   0e08     MOVLW     0x8                                                                                             
+000832   6ef7     MOVWF     0xf7,0x0                                                                                        
+000834   0e00     MOVLW     0x0                                                                                             
+000836   6ef8     MOVWF     0xf8,0x0                                                                                        
+                                             _asm                                                                           C:\MCC18\src\traditional\startup\c018i.c
+000838   0100     MOVLB     0x0                movlb data_ptr                                                               C:\MCC18\src\traditional\startup\c018i.c
+00083a   0009     TBLRDPOSTINC                 tblrdpostinc                                                                 C:\MCC18\src\traditional\startup\c018i.c
+00083c   50f5     MOVF      0xf5,0x0,0x0       movf TABLAT, 0, 0                                                            C:\MCC18\src\traditional\startup\c018i.c
+00083e   6f65     MOVWF     0x65,0x1           movwf curr_entry, 1                                                          C:\MCC18\src\traditional\startup\c018i.c
+000840   0009     TBLRDPOSTINC                 tblrdpostinc                                                                 C:\MCC18\src\traditional\startup\c018i.c
+000842   50f5     MOVF      0xf5,0x0,0x0       movf TABLAT, 0, 0                                                            C:\MCC18\src\traditional\startup\c018i.c
+000844   6f66     MOVWF     0x66,0x1           movwf curr_entry+1, 1                                                        C:\MCC18\src\traditional\startup\c018i.c
+                                             _endasm                                                                        C:\MCC18\src\traditional\startup\c018i.c
+                                               //while (curr_entry)                                                         C:\MCC18\src\traditional\startup\c018i.c
+                                               //{                                                                          C:\MCC18\src\traditional\startup\c018i.c
+                                               test:                                                                        C:\MCC18\src\traditional\startup\c018i.c
+                                               _asm                                                                         C:\MCC18\src\traditional\startup\c018i.c
+000846   e103     BNZ       0x84e               bnz 3                                                                       C:\MCC18\src\traditional\startup\c018i.c
+000848   6765     TSTFSZ    0x65,0x1           tstfsz curr_entry, 1                                                         C:\MCC18\src\traditional\startup\c018i.c
+00084a   d001     BRA       0x84e              bra 1                                                                        C:\MCC18\src\traditional\startup\c018i.c
+                                               _endasm                                                                      C:\MCC18\src\traditional\startup\c018i.c
+00084c   d03d     BRA       0x8c8              goto done;                                                                   C:\MCC18\src\traditional\startup\c018i.c
+                                                 /* Count down so we only have to look up the data in _cinit                C:\MCC18\src\traditional\startup\c018i.c
+                                                  * once.                                                                   C:\MCC18\src\traditional\startup\c018i.c
+                                                  *                                                                         C:\MCC18\src\traditional\startup\c018i.c
+                                                  * At this point we know that TBLPTR points to the top of the current      C:\MCC18\src\traditional\startup\c018i.c
+                                                  * entry in _cinit, so we can just start reading the from, to, and         C:\MCC18\src\traditional\startup\c018i.c
+                                                  * size values.                                                            C:\MCC18\src\traditional\startup\c018i.c
+                                                  */                                                                        C:\MCC18\src\traditional\startup\c018i.c
+                                                 _asm                                                                       C:\MCC18\src\traditional\startup\c018i.c
+                                           	/* read the source address */                                                   C:\MCC18\src\traditional\startup\c018i.c
+00084e   0009     TBLRDPOSTINC             	tblrdpostinc                                                                    C:\MCC18\src\traditional\startup\c018i.c
+000850   50f5     MOVF      0xf5,0x0,0x0   	movf TABLAT, 0, 0                                                               C:\MCC18\src\traditional\startup\c018i.c
+000852   6f60     MOVWF     0x60,0x1       	movwf prom, 1                                                                   C:\MCC18\src\traditional\startup\c018i.c
+000854   0009     TBLRDPOSTINC             	tblrdpostinc                                                                    C:\MCC18\src\traditional\startup\c018i.c
+000856   50f5     MOVF      0xf5,0x0,0x0   	movf TABLAT, 0, 0                                                               C:\MCC18\src\traditional\startup\c018i.c
+000858   6f61     MOVWF     0x61,0x1       	movwf prom+1, 1                                                                 C:\MCC18\src\traditional\startup\c018i.c
+00085a   0009     TBLRDPOSTINC             	tblrdpostinc                                                                    C:\MCC18\src\traditional\startup\c018i.c
+00085c   50f5     MOVF      0xf5,0x0,0x0   	movf TABLAT, 0, 0                                                               C:\MCC18\src\traditional\startup\c018i.c
+00085e   6f62     MOVWF     0x62,0x1       	movwf prom+2, 1                                                                 C:\MCC18\src\traditional\startup\c018i.c
+                                           	/* skip a byte since it's stored as a 32bit int */                              C:\MCC18\src\traditional\startup\c018i.c
+000860   0009     TBLRDPOSTINC             	tblrdpostinc                                                                    C:\MCC18\src\traditional\startup\c018i.c
+                                           	/* read the destination address directly into FSR0 */                           C:\MCC18\src\traditional\startup\c018i.c
+000862   0009     TBLRDPOSTINC             	tblrdpostinc                                                                    C:\MCC18\src\traditional\startup\c018i.c
+000864   50f5     MOVF      0xf5,0x0,0x0   	movf TABLAT, 0, 0                                                               C:\MCC18\src\traditional\startup\c018i.c
+000866   6ee9     MOVWF     0xe9,0x0       	movwf FSR0L, 0                                                                  C:\MCC18\src\traditional\startup\c018i.c
+000868   0009     TBLRDPOSTINC             	tblrdpostinc                                                                    C:\MCC18\src\traditional\startup\c018i.c
+00086a   50f5     MOVF      0xf5,0x0,0x0   	movf TABLAT, 0, 0                                                               C:\MCC18\src\traditional\startup\c018i.c
+00086c   6eea     MOVWF     0xea,0x0       	movwf FSR0H, 0                                                                  C:\MCC18\src\traditional\startup\c018i.c
+                                           	/* skip two bytes since it's stored as a 32bit int */                           C:\MCC18\src\traditional\startup\c018i.c
+00086e   0009     TBLRDPOSTINC             	tblrdpostinc                                                                    C:\MCC18\src\traditional\startup\c018i.c
+000870   0009     TBLRDPOSTINC             	tblrdpostinc                                                                    C:\MCC18\src\traditional\startup\c018i.c
+                                           	/* read the destination address directly into FSR0 */                           C:\MCC18\src\traditional\startup\c018i.c
+000872   0009     TBLRDPOSTINC             	tblrdpostinc                                                                    C:\MCC18\src\traditional\startup\c018i.c
+000874   50f5     MOVF      0xf5,0x0,0x0   	movf TABLAT, 0, 0                                                               C:\MCC18\src\traditional\startup\c018i.c
+000876   6f63     MOVWF     0x63,0x1       	movwf curr_byte, 1                                                              C:\MCC18\src\traditional\startup\c018i.c
+000878   0009     TBLRDPOSTINC             	tblrdpostinc                                                                    C:\MCC18\src\traditional\startup\c018i.c
+00087a   50f5     MOVF      0xf5,0x0,0x0   	movf TABLAT, 0, 0                                                               C:\MCC18\src\traditional\startup\c018i.c
+00087c   6f64     MOVWF     0x64,0x1       	movwf curr_byte+1, 1                                                            C:\MCC18\src\traditional\startup\c018i.c
+                                           	/* skip two bytes since it's stored as a 32bit int */                           C:\MCC18\src\traditional\startup\c018i.c
+00087e   0009     TBLRDPOSTINC             	tblrdpostinc                                                                    C:\MCC18\src\traditional\startup\c018i.c
+000880   0009     TBLRDPOSTINC             	tblrdpostinc                                                                    C:\MCC18\src\traditional\startup\c018i.c
+                                                 _endasm                                                                    C:\MCC18\src\traditional\startup\c018i.c
+                                                 //prom = data_ptr->from;                                                   C:\MCC18\src\traditional\startup\c018i.c
+                                                 //FSR0 = data_ptr->to;                                                     C:\MCC18\src\traditional\startup\c018i.c
+                                                 //curr_byte = (unsigned short) data_ptr->size;                             C:\MCC18\src\traditional\startup\c018i.c
+                                                 /* the table pointer now points to the next entry. Save it                 C:\MCC18\src\traditional\startup\c018i.c
+                                                  * off since we'll be using the table pointer to do the copying            C:\MCC18\src\traditional\startup\c018i.c
+                                                  * for the entry.                                                          C:\MCC18\src\traditional\startup\c018i.c
+                                                  */                                                                        C:\MCC18\src\traditional\startup\c018i.c
+000882   cff6     MOVFF     0xff6,0x67           data_ptr = TBLPTR;                                                         C:\MCC18\src\traditional\startup\c018i.c
+000884   f067                                                                                                               
+000886   cff7     MOVFF     0xff7,0x68                                                                                      
+000888   f068                                                                                                               
+00088a   cff8     MOVFF     0xff8,0x69                                                                                      
+00088c   f069                                                                                                               
+                                                                                                                            C:\MCC18\src\traditional\startup\c018i.c
+                                                 /* now assign the source address to the table pointer */                   C:\MCC18\src\traditional\startup\c018i.c
+00088e   c060     MOVFF     0x60,0xff6           TBLPTR = prom;                                                             C:\MCC18\src\traditional\startup\c018i.c
+000890   fff6                                                                                                               
+000892   c061     MOVFF     0x61,0xff7                                                                                      
+000894   fff7                                                                                                               
+000896   c062     MOVFF     0x62,0xff8                                                                                      
+000898   fff8                                                                                                               
+                                                                                                                            C:\MCC18\src\traditional\startup\c018i.c
+                                                 /* do the copy loop */                                                     C:\MCC18\src\traditional\startup\c018i.c
+                                                 _asm                                                                       C:\MCC18\src\traditional\startup\c018i.c
+                                                   // determine if we have any more bytes to copy                           C:\MCC18\src\traditional\startup\c018i.c
+00089a   0100     MOVLB     0x0            	movlb curr_byte                                                                 C:\MCC18\src\traditional\startup\c018i.c
+00089c   5363     MOVF      0x63,0x1,0x1   	movf curr_byte, 1, 1                                                            C:\MCC18\src\traditional\startup\c018i.c
+                                           copy_loop:                                                                       C:\MCC18\src\traditional\startup\c018i.c
+00089e   e102     BNZ       0x8a4          	bnz 2 // copy_one_byte                                                          C:\MCC18\src\traditional\startup\c018i.c
+0008a0   5364     MOVF      0x64,0x1,0x1   	movf curr_byte + 1, 1, 1                                                        C:\MCC18\src\traditional\startup\c018i.c
+0008a2   e007     BZ        0x8b2          	bz 7 // done_copying                                                            C:\MCC18\src\traditional\startup\c018i.c
+                                                                                                                            C:\MCC18\src\traditional\startup\c018i.c
+                                           copy_one_byte:                                                                   C:\MCC18\src\traditional\startup\c018i.c
+0008a4   0009     TBLRDPOSTINC             	tblrdpostinc                                                                    C:\MCC18\src\traditional\startup\c018i.c
+0008a6   50f5     MOVF      0xf5,0x0,0x0   	movf TABLAT, 0, 0                                                               C:\MCC18\src\traditional\startup\c018i.c
+0008a8   6eee     MOVWF     0xee,0x0       	movwf POSTINC0, 0                                                               C:\MCC18\src\traditional\startup\c018i.c
+                                                                                                                            C:\MCC18\src\traditional\startup\c018i.c
+                                           	// decrement byte counter                                                       C:\MCC18\src\traditional\startup\c018i.c
+0008aa   0763     DECF      0x63,0x1,0x1   	decf curr_byte, 1, 1                                                            C:\MCC18\src\traditional\startup\c018i.c
+0008ac   e2f8     BC        0x89e          	bc -8 // copy_loop                                                              C:\MCC18\src\traditional\startup\c018i.c
+0008ae   0764     DECF      0x64,0x1,0x1           decf curr_byte + 1, 1, 1                                                 C:\MCC18\src\traditional\startup\c018i.c
+0008b0   d7f9     BRA       0x8a4          	bra -7 // copy_one_byte                                                         C:\MCC18\src\traditional\startup\c018i.c
+                                                                                                                            C:\MCC18\src\traditional\startup\c018i.c
+                                           done_copying:                                                                    C:\MCC18\src\traditional\startup\c018i.c
+                                                                                                                            C:\MCC18\src\traditional\startup\c018i.c
+                                                 _endasm                                                                    C:\MCC18\src\traditional\startup\c018i.c
+                                                 /* restore the table pointer for the next entry */                         C:\MCC18\src\traditional\startup\c018i.c
+0008b2   c067     MOVFF     0x67,0xff6           TBLPTR = data_ptr;                                                         C:\MCC18\src\traditional\startup\c018i.c
+0008b4   fff6                                                                                                               
+0008b6   c068     MOVFF     0x68,0xff7                                                                                      
+0008b8   fff7                                                                                                               
+0008ba   c069     MOVFF     0x69,0xff8                                                                                      
+0008bc   fff8                                                                                                               
+                                                 /* next entry... */                                                        C:\MCC18\src\traditional\startup\c018i.c
+0008be   0100     MOVLB     0x0                  curr_entry--;                                                              C:\MCC18\src\traditional\startup\c018i.c
+0008c0   0765     DECF      0x65,0x1,0x1                                                                                    
+0008c2   0e00     MOVLW     0x0                                                                                             
+0008c4   5b66     SUBWFB    0x66,0x1,0x1                                                                                    
+0008c6   d7bf     BRA       0x846                goto test;                                                                 C:\MCC18\src\traditional\startup\c018i.c
+                                           done:                                                                            C:\MCC18\src\traditional\startup\c018i.c
+                                           ;                                                                                C:\MCC18\src\traditional\startup\c018i.c
+0008c8   0012     RETURN    0x0            }                                                                                C:\MCC18\src\traditional\startup\c018i.c
+                                           /*********************************************************************           C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            *                                                                               C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            *      Example User Program to be used with resident Bootloader                 C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            *                                                                               C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            *********************************************************************           C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            * FileName:        Demo02.c                                                     C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            * Dependencies:    See INCLUDES section below                                   C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            * Processor:       PIC18                                                        C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            * Compiler:        C18 2.30.01+                                                 C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            * Company:         Microchip Technology, Inc.                                   C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            *                                                                               C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            * Software License Agreement                                                    C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            *                                                                               C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            * The software supplied herewith by Microchip Technology Incorporated           C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            * (the “Company”) for its PICmicro® Microcontroller is intended and             C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            * supplied to you, the Company’s customer, for use solely and                   C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            * exclusively on Microchip PICmicro Microcontroller products. The               C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            * software is owned by the Company and/or its supplier, and is                  C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            * protected under applicable copyright laws. All rights are reserved.           C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            * Any use in violation of the foregoing restrictions may subject the            C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            * user to criminal sanctions under applicable laws, as well as to               C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            * civil liability for the breach of the terms and conditions of this            C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            * license.                                                                      C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            *                                                                               C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            * THIS SOFTWARE IS PROVIDED IN AN “AS IS” CONDITION. NO WARRANTIES,             C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            * WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING, BUT NOT LIMITED             C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            * TO, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A                   C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            * PARTICULAR PURPOSE APPLY TO THIS SOFTWARE. THE COMPANY SHALL NOT,             C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            * IN ANY CIRCUMSTANCES, BE LIABLE FOR SPECIAL, INCIDENTAL OR                    C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            * CONSEQUENTIAL DAMAGES, FOR ANY REASON WHATSOEVER.                             C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            *                                                                               C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            * Author               Date        Comment                                      C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~           C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            * Rawin Rojvanit       11/15/04    Original.                                    C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            ********************************************************************/           C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                                                                                                            C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           /** I N C L U D E S **********************************************************/  C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           #include <p18cxxx.h>                                                             C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                                                                                                            C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           /** V A R I A B L E S ********************************************************/  C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           #pragma udata                                                                    C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                                                                                                            C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           /** P R I V A T E  P R O T O T Y P E S ***************************************/  C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                                                                                                            C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           /** V E C T O R  R E M A P P I N G *******************************************/  C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                                                                                                            C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           extern void _startup (void);        // See c018i.c in your C18 compiler dir      C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           #pragma code _RESET_INTERRUPT_VECTOR = 0x000800                                  C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           void _reset (void)                                                               C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           {                                                                                C:\MCHPFSUSB\fw\Demo02\Demo02.c
+000800   ef65     GOTO      0x8ca              _asm goto _startup _endasm                                                   C:\MCHPFSUSB\fw\Demo02\Demo02.c
+000802   f004                                                                                                               
+000804   0012     RETURN    0x0            }                                                                                C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           #pragma code                                                                     C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                                                                                                            C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           #pragma code _HIGH_INTERRUPT_VECTOR = 0x000808                                   C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           void _high_ISR (void)                                                            C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           {                                                                                C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                               ;                                                                            C:\MCHPFSUSB\fw\Demo02\Demo02.c
+000808   0012     RETURN    0x0            }                                                                                C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                                                                                                            C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           #pragma code _LOW_INTERRUPT_VECTOR = 0x000818                                    C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           void _low_ISR (void)                                                             C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           {                                                                                C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                               ;                                                                            C:\MCHPFSUSB\fw\Demo02\Demo02.c
+000818   0012     RETURN    0x0            }                                                                                C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           #pragma code                                                                     C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                                                                                                            C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           /** D E C L A R A T I O N S **************************************************/  C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           #pragma code                                                                     C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           /******************************************************************************  C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            * Function:        void main(void)                                              C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            *                                                                               C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            * PreCondition:    None                                                         C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            *                                                                               C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            * Input:           None                                                         C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            *                                                                               C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            * Output:          None                                                         C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            *                                                                               C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            * Side Effects:    None                                                         C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            *                                                                               C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            * Overview:        Main program entry point.                                    C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            *                                                                               C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            * Note:            None                                                         C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                            *****************************************************************************/  C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           /** L E D ***********************************************************/           C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           #define mInitAllLEDs()      LATD &= 0xF0; TRISD &= 0xF0;                         C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                                                                                                            C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           #define mLED_1              LATDbits.LATD0                                       C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           #define mLED_2              LATDbits.LATD1                                       C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           #define mLED_3              LATDbits.LATD2                                       C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           #define mLED_4              LATDbits.LATD3                                       C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                                                                                                            C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           #define mLED_1_On()         mLED_1 = 1;                                          C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           #define mLED_2_On()         mLED_2 = 1;                                          C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           #define mLED_3_On()         mLED_3 = 1;                                          C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           #define mLED_4_On()         mLED_4 = 1;                                          C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                                                                                                            C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           #define mLED_1_Off()        mLED_1 = 0;                                          C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           #define mLED_2_Off()        mLED_2 = 0;                                          C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           #define mLED_3_Off()        mLED_3 = 0;                                          C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           #define mLED_4_Off()        mLED_4 = 0;                                          C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                                                                                                            C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           #define mLED_1_Toggle()     mLED_1 = !mLED_1;                                    C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           #define mLED_2_Toggle()     mLED_2 = !mLED_2;                                    C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           #define mLED_3_Toggle()     mLED_3 = !mLED_3;                                    C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           #define mLED_4_Toggle()     mLED_4 = !mLED_4;                                    C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                                                                                                            C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           /** S W I T C H *****************************************************/           C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           #define mInitAllSwitches()  TRISBbits.TRISB4=1;TRISBbits.TRISB5=1;               C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           #define mInitSwitch2()      TRISBbits.TRISB4=1;                                  C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           #define mInitSwitch3()      TRISBbits.TRISB5=1;                                  C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           #define sw2                 PORTBbits.RB4                                        C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           #define sw3                 PORTBbits.RB5                                        C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                                                                                                            C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           void main(void)                                                                  C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           {                                                                                C:\MCHPFSUSB\fw\Demo02\Demo02.c
+0008e6   0e0f     MOVLW     0xf                ADCON1 |= 0x0F;                 // Default all pins to digital               C:\MCHPFSUSB\fw\Demo02\Demo02.c
+0008e8   12c1     IORWF     0xc1,0x1,0x0                                                                                    
+0008ea   8893     BSF       0x93,0x4,0x0       mInitAllSwitches();                                                          C:\MCHPFSUSB\fw\Demo02\Demo02.c
+0008ec   8a93     BSF       0x93,0x5,0x0                                                                                    
+0008ee   0ef0     MOVLW     0xf0               mInitAllLEDs();                                                              C:\MCHPFSUSB\fw\Demo02\Demo02.c
+0008f0   168c     ANDWF     0x8c,0x1,0x0                                                                                    
+0008f2   1695     ANDWF     0x95,0x1,0x0                                                                                    
+0008fe   d7fa     BRA       0x8f4              while(1)                                                                     C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                               {                                                                            C:\MCHPFSUSB\fw\Demo02\Demo02.c
+0008f4   b881     BTFSC     0x81,0x4,0x0           if(sw2 == 0)                                                             C:\MCHPFSUSB\fw\Demo02\Demo02.c
+0008f6   d002     BRA       0x8fc                                                                                           
+                                                   {                                                                        C:\MCHPFSUSB\fw\Demo02\Demo02.c
+0008f8   828c     BSF       0x8c,0x1,0x0               mLED_2_On();                                                         C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                                   }                                                                        C:\MCHPFSUSB\fw\Demo02\Demo02.c
+0008fa   d001     BRA       0x8fe                  else                                                                     C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                                   {                                                                        C:\MCHPFSUSB\fw\Demo02\Demo02.c
+0008fc   928c     BCF       0x8c,0x1,0x0               mLED_2_Off();                                                        C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                                   }//end if else                                                           C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                               }//end while                                                                 C:\MCHPFSUSB\fw\Demo02\Demo02.c
+000900   0012     RETURN    0x0            }//end main                                                                      C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                                                                                                            C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                           /** EOF Demo02.c *************************************************************/  C:\MCHPFSUSB\fw\Demo02\Demo02.c
+                                                   LIST P=18F4550                                                           C:\MCC18\SRC\TRADIT~1\PROC\p18f4550.asm
+                                                   LIST                                                                     C:\MCC18\SRC\TRADIT~1\PROC\p18f4550.asm
+                                                   END                                                                      C:\MCC18\SRC\TRADIT~1\PROC\p18f4550.asm
+                                           ;	RCS Header $Id: cmath18.asm,v 1.5 2006/01/12 23:16:38 rhinec Exp $             C:\MCC18\SRC\TRADIT~1\MATH\cmath18.asm
+                                                                                                                            C:\MCC18\SRC\TRADIT~1\MATH\cmath18.asm
+                                           ;       CMATH18 DATA DEFINITION FILE                                             C:\MCC18\SRC\TRADIT~1\MATH\cmath18.asm
+                                                                                                                            C:\MCC18\SRC\TRADIT~1\MATH\cmath18.asm
+                                           ;******************************************************************************* C:\MCC18\SRC\TRADIT~1\MATH\cmath18.asm
+                                           ;   VARIABLE ALLOCATION - Core math library routines                             C:\MCC18\SRC\TRADIT~1\MATH\cmath18.asm
+                                           ;******************************************************************************* C:\MCC18\SRC\TRADIT~1\MATH\cmath18.asm
+                                                                                                                            C:\MCC18\SRC\TRADIT~1\MATH\cmath18.asm
+                                           MATH_DATA      UDATA_ACS                                                         C:\MCC18\SRC\TRADIT~1\MATH\cmath18.asm
+                                                                                                                            C:\MCC18\SRC\TRADIT~1\MATH\cmath18.asm
+                                           SIGN		RES 1       ; save location for sign in MSB                                C:\MCC18\SRC\TRADIT~1\MATH\cmath18.asm
+                                           __FPFLAGSbits                                                                    C:\MCC18\SRC\TRADIT~1\MATH\cmath18.asm
+                                           __FPFLAGS		RES 1       ; floating point library exception flags                  C:\MCC18\SRC\TRADIT~1\MATH\cmath18.asm
+                                                                                                                            C:\MCC18\SRC\TRADIT~1\MATH\cmath18.asm
+                                                   GLOBAL  SIGN, __FPFLAGS, __FPFLAGSbits                                   C:\MCC18\SRC\TRADIT~1\MATH\cmath18.asm
+                                           	                                                                                C:\MCC18\SRC\TRADIT~1\MATH\cmath18.asm
+                                                   END                                                                      C:\MCC18\SRC\TRADIT~1\MATH\cmath18.asm
+                                                                                                                            C:\MCC18\src\TRADIT~1\stdclib\__init.c
+                                           /** @name __init                                                                 C:\MCC18\src\TRADIT~1\stdclib\__init.c
+                                            * The {\bf __init} is called if the linker can not find a                       C:\MCC18\src\TRADIT~1\stdclib\__init.c
+                                            * user defined version for it                                                   C:\MCC18\src\TRADIT~1\stdclib\__init.c
+                                            */                                                                              C:\MCC18\src\TRADIT~1\stdclib\__init.c
+                                                                                                                            C:\MCC18\src\TRADIT~1\stdclib\__init.c
+                                           void __init (void)                                                               C:\MCC18\src\TRADIT~1\stdclib\__init.c
+                                           {                                                                                C:\MCC18\src\TRADIT~1\stdclib\__init.c
+000910   0012     RETURN    0x0            }                                                                                C:\MCC18\src\TRADIT~1\stdclib\__init.c
+                                                                                                                            C:\MCC18\src\TRADIT~1\stdclib\__init.c

@@ -1,0 +1,246 @@
+\documentclass[12pt, letterpaper]{article}
+
+\usepackage{setspace}
+\usepackage[version=3]{mhchem} % Package for chemical equation typesetting
+\usepackage{siunitx} % Provides the \SI{}{} and \si{} command for typesetting SI units
+\usepackage{graphicx} % Required for the inclusion of images
+\usepackage{amsmath} % Required for some math elements 
+\usepackage{subcaption}
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+\usepackage[top=0.8in, bottom= 0.8in, left= 0.8in, right= 0.8in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{array}
+\usepackage{adforn}
+\usepackage{textcomp}
+\usepackage{placeins}
+\newcolumntype{L}{>{\centering\arraybackslash}m{3cm}}
+
+\pagestyle{fancy}
+\renewcommand{\labelenumi}{\alph{enumi}.} % Make numbering in the enumerate environment by letter rather than number (e.g. section 6)
+
+%----------------------------------------------------------------------------------------
+%	Cover Page
+%----------------------------------------------------------------------------------------
+
+\title{Evaluation of Sodium Chloride \\ Deicer via Enthalpy of Dissolution \\ and Freezing Point Depression \\ \adforn{21} \\  Chemistry 1066} % Title
+
+\author{Author: Cole \textsc{Nielsen}} % Author name
+\date{Fall 2015} % Date for the report
+
+
+\begin{document}
+
+\maketitle % Insert the title, author and date
+
+\begin{center}
+ \begin{tabular}{l r}
+  Dates Performed: & Sept. 24, Oct. 1 \& 8, 2015 \\ % Date the experiment was performed
+  Partners: & Maile Anthony \\ 
+  & Marianna Swanson \\ 
+  &Joshua Widman \\ % Partner names
+  Instructor: & Subhasree Kal % Instructor/supervisor
+ \end{tabular}
+\end{center}
+
+\pagebreak
+%-----------------------------------------------------------------------------------------
+%   Abstract
+%-----------------------------------------------------------------------------------------
+\begin{abstract}\doublespacing
+\noindent	Several common salts (NaCl, KCl, \ce{MgCl2} and \ce{CaCl2}) were tested to determine which is the best deicer. In particular, sodium chloride was given most attention in its analysis. First, the ability of NaCl to depress the freezing point of water was determined by finding the van't Hoff factor for NaCl experimentally. The experimental van't Hoff factor for NaCl was found to be $i$ = 1.6. Next, the enthalpy of dissolution $\Delta H_{diss}$ of NaCl was found using a coffee cup calorimeter. The calorimetry constant of the coffee cup calorimeter was determined as the energy discrepancy per degree Celsius of two known masses of water mixed in it. The coffee cup calorimetry constant was found to be 19.51 $\frac{J}{\textnormal{\textdegree} C}$. With this, $\Delta H_{diss}$ of NaCl in water was determined by dissolving a mass of NaCl in water, and then measuring the temperature changes in order to solve a calorimetry equation for the enthalpy in question. Over four trials $\Delta H_{diss}$ of NaCl was found to be +6.06 kJ/mol, which is undesirable for a deicer. Finally, the freezing point depression of each salt per gram masss was tested, by dissolving an equal mass of each salt in 10 mL of water, and then finding the freezing point of each. NaCl and \ce{MgCl2} were found to have the highest efficacy per mass, at 8.3\space\textdegree C and 8.7\space\textdegree C degrees per gram of depression. Finally environmental and cost factors were weighed for each, finding each to have about the same environmental impact, and NaCl being cheapest by a factor of three. Overall, due to its temperature depression ability and cost, NaCl was determined to be the best deicer of the tested salts.
+\end{abstract}
+\hrulefill
+
+%-----------------------------------------------------------------------------------------
+%  Introduction
+%-----------------------------------------------------------------------------------------
+\section{Introduction}\doublespacing
+The objective of this experiment was to determine the most effective deicer of the following salts:  NaCl, KCl, \ce{MgCl2} and \ce{CaCl2}, with an emphasis on NaCl. Finding the most effective deicers is of significance as road safety in snow prone locations depends on how well roads are deiced, and deicing capabilities depend on the properties of the chemicals used. This importance is reflected on by the fact that 154,800 icy road related accidents occurred, with 580 people killed and 45,133 injured per annum between 2002-2012 in the US \cite{icy}, many of which could have been prevented . Characterizing these chemicals allows for an understanding of how to develop the best deicers. In particular, the most important parameters of deicers tend to be their ability to depress the freezing point of water, and the enthalpy of dissolution of the deicer. This is so because they determine to how low of a temperature a deicer is effective, and how readily a deicer will dissolve ice. These parameters will be found for NaCl and other salts in the \textit{Experimental} and \textit{Discussion} sections. It is predicted that sodium chloride and magnesium chloride will be the most effective deicers, as they have the most ions produced per mass due to their relatively low molar masses. Furthermore, the environmental and cost factors of each deicer along with the experimental data in the \textit{Results} section will considered in the \textit{Discussion} section to determine the best deicer. Finally, the outcomes of the experiment will be discussed in the \textit{Conclusions} section.
+%-----------------------------------------------------------------------------------------
+%  Experimental
+%-----------------------------------------------------------------------------------------
+\section{Experimental}
+The experiment was performed and will be discussed in three parts below: (1) the determination of NaCl's van't Hoff factor for freezing point depression, (2) the enthalpy of dissolution of NaCl and (3) the efficacy of each salt by mass in freezing point depression.
+\subsection{Freezing Point Depression}
+In general, the freezing point depression was determined by placing a NaCl solution of known molality into an ice bath, and then finding the freezing point with a temperature probe. Procedurally this was done by preparing four sodium chloride solutions in test tubes with molalities of  0.427 m, 0.845 m, 1.28 m and 1.71 m. Each solution was made with 10.0 mL of deionized water and 0.250g, 0.500g, 0.750g and 1.000g respectively, stirred with a glass rod until the salt was fully dissolved. Next, an ice bath was prepared in a large 500 mL beaker initially filled to the top with ice. Water and rock salt were added and the mixture was stirred until a ice-slush mixture resulted. The temperature was measured with a digital thermometer, and ice was continually mixed in until a temperature of -10\space\textdegree C was seen. A Vernier Go!Temp USB thermometer was connected to a computer running Logger Pro in order to record temperature. The 1.71 m solution was then taken, placed into the ice bath with the Go!Temp probe placed into the solution. Temperature data was then logged while the solution was stirred. Temperature data was recorded until a the following pattern was recorded: a slow decrease in temperature, a sudden rise in temperature, and then a long plateau in temperature. This process was then repeated for the three other solutions until such data for each solution was recorded.
+\subsection{Enthalpy of Dissolution}
+The enthalpy of dissolution for NaCl was determined by finding the energy released or absorbed by the salt upon dissolution in a coffee cup calorimeter, via temperature changes. The first step performed was to build a coffee cup calorimeter and to determines its calorimeter constant. The calorimeter was constructed by taking two foam coffee cups (one with the rim partially cut off) and stacking them opening to opening, creating a cavity relatively isolated from the outside world. The calorimetry constant was determined by mixing two 20.0 mL masses of water of known temperature, one hot and the other cold, in the calorimeter, and recording the temperature to obtain the final temperature. The constant was then found as the energy per degree discrepancy determined by the final temperature and from what was ideally expected using calorimetry equations.\\\par
+
+With a characterized calorimeter, the enthalpy of dissolution for NaCl was found in four trials. In the first two trials, one gram of anhydrous NaCl was dissolved in 40 mL of deionized water in the calorimeter. 1g was chosen because it was found to fully dissolve in the calorimeter in a test run. Procedurally, 1.000g of NaCl was measured out, and 40 mL of deionized water. The room temperature (used for the initial temperature of the calorimeter and salt) and the initial water temperature prior to dissolution was recorded. The dissolution was then performed by pouring the water and salt into the calorimeter. The Go!Temp probe was then placed into the calorimeter through a hole in the top to log the temperature and to stir the contents. The mixture was stirred and the temperature logged until a steady state for temperature was achieved. The calorimeter was cleaned and dried, and then the second trial was performed. Finally, the third and forth trials were performed in the same way as the first two, except 0.5 gram of solute was used.
+\subsection{Efficacy of Deicers by Mass}
+Experimentally the efficacy of each salt to depress the freezing point of water relative was found the same was as the freezing point depression. The primary difference was that the solutes used were 1 gram of each NaCl, KCl, \ce{MgCl2} and \ce{CaCl2}, dissolved in 10.0 mL of deionized water and stored in a test tube. The same method to producing an ice bath was used, yielding a bath of approximately -10\space\textdegree C. The first sample, NaCl was then loaded into the ice bath, and the temperature was logged while stirring the solution in the tube until the slow fall, fast rise and then plateau in temperature was recorded. This process was then repeated for the other three solutions.
+%-----------------------------------------------------------------------------------------
+%  Results
+%-----------------------------------------------------------------------------------------
+\section{Results}\singlespacing
+\FloatBarrier
+\subsection{Freezing Point Depression}
+\begin{figure}[h!]
+  \begin{center}
+    	\resizebox{0.6\textwidth}{!}{\input{./plotdata/depr.tex}}
+  \end	{center}
+  \caption{NaCl freezing point depression versus molality}
+\end {figure}
+\FloatBarrier
+\begin{equation}
+\Delta T_f(m) = 2.984336m 
+\end{equation}
+\begin{equation}
+R^2 = 0.9912089
+\end{equation}
+\subsection{Enthalpy of Dissolution}
+\subsubsection{Cup Calorimeter Constant}
+\FloatBarrier
+\begin{figure}[h!]
+	\begin{center}
+	\renewcommand\arraystretch{1.5}
+	\renewcommand\tabcolsep{12pt}
+		\begin{tabular}{|c|c|c|c|}
+			\hline 
+			Trial & 1 & 2& Average \\
+			\hline 
+			$C_{cal}$ & 18.22 $\frac{J}{\textnormal{\textdegree} C}$  & 20.80 $\frac{J}{\textnormal{\textdegree} C}$& 19.51 $\frac{J}{\textnormal{\textdegree} C}$ \\
+			\hline 
+		\end{tabular}
+	\end{center}
+	\caption{Measured Cup Calorimetry Constants (in [J]/[\textdegree\space C])}
+\end{figure}
+\FloatBarrier
+\subsubsection{NaCl Enthalpy of Dissolution}
+\FloatBarrier
+\begin{figure}[h!]
+	\begin{center}
+	\renewcommand\arraystretch{1.5}
+	\renewcommand\tabcolsep{12pt}
+		\begin{tabular}{|c|c|c|c|}
+			\hline 
+			Trial & NaCl Molarity & $E_{diss}$ & $\Delta H_{diss}$ \\
+			\hline 
+			1  & 0.0171 mol  & 87.8 J & 5.13 kJ/mol \\
+			\hline
+			2  & 0.0171 mol & 99.9 J  & 5.84 kJ/mol \\
+			\hline
+			3  & 0.00855 mol & 46.3 J  & 5.41 kJ/mol \\
+			\hline
+			4  & 0.00855 mol & 67.3 J & 7.86 kJ/mol  \\
+			\hline 
+			Average & - & - & 6.06 kJ/mol\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\caption{Measured Enthalpy of dissolution ($\Delta H_{diss}$) for NaCl }
+\end{figure}
+\FloatBarrier
+\subsection{Efficacy of Deicers by Mass}
+\FloatBarrier
+\begin{figure}[h!]
+	\begin{center}
+	\renewcommand\arraystretch{1.5}
+	\renewcommand\tabcolsep{12pt}
+		\begin{tabular}{|c|c|c|c|c|}
+			\hline 
+			Salt & MgCl$_{\textnormal{2}}$ & NaCl & CaCl$_{\textnormal{2}}$ &KCl \\
+			\hline 
+			$\Delta T_f$  & 8.7\space\textdegree C & 8.3\space\textdegree C & 6.4\space\textdegree C& 5.1\space\textdegree C\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\caption{Measured freezing point depression for 1 gram of various salts in 10mL of water}
+\end{figure}
+\FloatBarrier
+%-----------------------------------------------------------------------------------------
+%  Discussion
+%-----------------------------------------------------------------------------------------
+\section{Discussion}\doublespacing
+To evaluate the effectiveness of sodium chloride and the other salt deicers, it was determined that the freezing point depressions and enthalpy of dissolution (only done for NaCl) needed to be found. Once known, these parameters make it easily to compare the deicers in a numerical manner. The freezing point is of significance because it quantifies how low of a temperature a deicer will melt ice and keep it melted. Freezing point depression was found using the method discussed in \textit{Section 2.1}, where a solution was placed in an ice bath and its temperature monitored, giving a plot of temperature versus time such as follows:
+\begin{figure}[h!]
+  \begin{center}
+    	\resizebox{0.6\textwidth}{!}{\input{./plotdata/428.tex}}
+  \end	{center}
+  \caption{0.428 m NaCl solution freezing point depression}
+\end {figure}
+\FloatBarrier
+The freezing point can be determined by this type of plot as the temperature of the plateau immediately after the slight rise seen around 70 seconds. This value is the freezing point (and not the lowest value seen) because the initial drop in temperature keeps going until the equilibrium of the solution becomes out of equilibrium for the liquid phase, that is the temperature is lower than the freezing point. The system then returns to equilibrium by starting to freeze, and the temperature rises to the freezing temperature. Since the process of freezing has a non zero enthalpy (negative heat of fusion), it takes time for the energy to transfer away from the solution to fully freeze it, and thus the temperature of the solution plateaus while this energy is siphoned away. Exploiting this fact, we can easily find the freezing point from the experimental data by finding the value for temperature at the plateau. In \textit{Figure 1}, the values for freezing point of the four tested solutions have already been found by these means, and then plotted against their respective molalities. These data were then line fitted in order to find the correlation between molality and freezing point depression of a solution of NaCl and water. The results of this fitting are given in \textit{Equation 1}, having a very high coefficient of determination (\textgreater 0.99), meaning the line is a good fit for the data. It is well known that the colligative property freezing point depression is modelled by the following equation for ionic compounds:
+\begin{equation}
+\Delta T_f = iK_f m
+\end{equation}
+Where $\Delta T_f$ is the freezing point depression, $K_f$ is a proportionality constant for the solvent, being 1.86 for water, m being the molality of the solution, and i being the van't Hoff factor. The van't Hoff factor is simply a number that represents the number of ions formed by the dissolution of one formula unit of some ionic compound. This number is included because it can be observed that the freezing point depression is directly dependent on the number of ions dissolved in a volume of solution, so when calculating it is necessary to add some factor to account for this if the concentrations are considered in the amounts a formula units (not ions). Thus the van't Hoff factor is used. One should note that this equation takes the same form as the best fit line from the data, meaning it can be set as equal to the best fit line to find the experimental van't Hoff Factor:
+\begin{equation}
+2.984336 m = \Delta T_f = i K_f m 
+\end{equation}
+Plugging $K_f$ for water and solving gives:
+\begin{equation}
+i = \frac{2.984336}{K_f}= \frac{2.984336}{1.86} = 1.60
+\end{equation}
+Therefore the van't Hoff factor is 1.60, close to the 2 expected as 2 ions should dissolved per formula unit of sodium chloride. The value for i should be expected to be somewhat lower than theoretical as in reality ionic compounds will not always fully dissolve, as the ions will associate with each other, weakening the attraction to water molecules. This result implies, however, that the van't Hoff factor given purely by the ions per formula unit is a fairly good estimation as to freezing point depression. This can be applied to predict which of the given salts will be the best deicer. Applying it the salts, it is found that \ce{MgCl2} and \ce{CaCl2} have an i of 3, and KCl and NaCl have a i of 2. This means that the first two should behave better as a deicer per mole. However, in practice a more effective way to consider a deicer is by mass, as that is how deicers are sold. Conveniently, the ions generated per mass of solute can be found easily. One method is to find the moles of 1 gram of solute, and then from that the number of moles of ions per gram. Applying this we see that NaCl produces 0.034 moles of ions per gram, \ce{MgCl2} 0.032 moles of ions per gram, \ce{CaCl2} 0.027 mols of ions per gram and KCl having 0.027 moles of of ions per gram. Practically speaking this means that NaCl should be the best deicer by weight, closely followed by magnesium chloride. This prediction was verified experimentally as described in \textit{Section 2.3} by repeating the freezing point depression experiment, but with a 1 gram of each salt dissolved in 10.0 mL of deionized water. The results of this experiment in  \textit{Section 3.3}, showing that \ce{MgCl2} was the best deicer, closely followed by NaCl which is consistent with the prediction given some uncertainty to the model (perhaps due to association between the ions).  A source of uncertainty and likely error in this sub experiment is due to the fact that only one trial for each salt was tested, giving essentially no statistical data to give certainty to the found results. As a consequence, this experiment could be extended by performing more trials.\\\par
+
+Having analyzed the freezing point depression, the enthalpy of dissolution can additionally be considered as a factor for deicer efficacy. The enthalpy of dissolution $\Delta H_{diss}$ is simply defined as the energy cost per mole to dissolve some solute. In the case of deicers, it is ideal for this enthalpy to be negative, meaning that heat is released in its dissolution, aiding the deicing process. It also can be viewed that a deicer having a negative $\Delta H_{diss}$ is enthalpically favored, meaning it is more likely to work as a deicer. This enthalpy for NaCl was found experimentally as outlined in \textit{Section 2.2}, using a coffee cup calorimeter to determine this energy change. Mathematically, this enthalpy was determined using a calorimetry equation, given as follows for the used scenario:
+\begin{equation}
+\Delta Q_{water} + \Delta Q_{salt} + \Delta Q_{cup} + Q_{dissolution} = m_w c_w \Delta T_w + m_s c_s \Delta T_s + C_{cup}\Delta T_{cup} + Q_{diss} = 0
+\end{equation}
+Which is easily solved for energy of dissolution ($Q_{diss}$). The $m$ variables represent masses, the $c$s specific heat, and $\Delta T$s the change in temperature for each mass. The enthalpy is then found by dividing this energy by the number of moles of solute used, to get the energy of dissolution per mole, in other words $\Delta H_{diss}$:
+\begin{equation}
+\Delta H_{diss} = \frac{-[m_w c_w \Delta T_w + m_s c_s \Delta T_s + C_{cup}\Delta T_{cup}]}{\textnormal{moles solute}}
+\end{equation}
+Using this equation, and the experimental data found for the changes in temperature using the Go!Temp probe and the experimental $C_{cup}$, the values for $\Delta H_{diss}$ of each of the four performed trials was calculated, given in \textit{Section 3.2}. The overall average of these was then found to obtain an approximate value for this enthalpy, being calculated as +6.06 kJ / mol. This result implies that sodium chloride \textit{takes} energy to dissolve, meaning it is not enthalpically favored, and its usage will actually decrease the temperature of ice it is trying to melt, which is not desired. For comparison, the $\Delta H_{diss}$ of the other three salts are given below in the table  \cite{kcl}. Also, the enthalpy is given relative to mass again as this is a better reference for deicer quantity.
+\FloatBarrier
+\begin{figure}[h!]
+\begin{center}
+	\renewcommand\arraystretch{1.5}
+	\renewcommand\tabcolsep{12pt}
+\begin{tabular}{|c|c|c|c|c|}
+
+\hline
+Salt & \ce{MgCl2} & \ce{CaCl2} & NaCl & KCl\\
+\hline
+$\Delta H_{diss}$ & -156 kJ/mol& -82.9 kJ/mol & 6.06 kJ/mol & 17.22 kJ/mol \\
+\hline
+$Q_{diss} / gram$ & -1.64 kJ/g &-747 J/g &103 J/g & 231 J/g \\
+\hline
+\end{tabular}
+\caption{Enthalpy of Dissolution for tested salts}
+\end{center}
+\end{figure}
+\FloatBarrier
+\vspace{-24pt}
+From the table it is visible that \ce{MgCl2} and \ce{CaCl2} are the best in terms of this enthalpy, as they are negative, and \ce{MgCl2} is best in terms of mass.  A limitations of this sub experiment involve the cup calorimeter, which is non ideal in the sense that it will dissipate and absorb heat, making it difficult to pinpoint the stable temperature state of some event in the calorimeter as heat will leached out or added to the system after equilibrium is achieved. Another limitation of the calorimeter is that it is difficult to know the (average) initial temperature of the cup as it is such a good insulator that really only the surface temperature can be effectively known without letting it sit for a very long time to equalize with the room temperature. A possible source of error is due to the limited resolution of the thermometer used, which only resolved to 0.1 degree. This limitation was significant in this  experiment because the measured change in temperature happened in relatively small scale (tenths of a degree), on the same order of magnitude as the resolution, meaning large uncertainties, especially for the lower concentration trials. This may explain the discrepancy of the forth trial being far greater than the other trials. This work could be extended in a number of ways, first being to perform it on all the salts so the enthalpy of dissolution can be used to compare them as deicers. Another extension would be to re-perform the experiment with a more ideal calorimeter to eliminate heat transfer issues, and a higher resolution temperature probe to reduce uncertainties in the measurement.\\\par 
+\vspace{-24pt}
+Some factors that may be considered in evaluation deicers outside of the experimental considerations may be the cost of the deicer and the environmental impact of the deicer.
+Regarding cost, NaCl represents the most effective option, costing approximately \$42 per ton, compared to \$111 for the next lowest, which is \ce{MgCl2} \cite{cost}. This is a 2.6 times difference in price, for a marginally different temperature depression. Considering environmental factors, all of the tested salts have been found to have similar negative impacts on the environment as they are all chloride salts \cite{bad}, causing damage to vegetation, soil quality, aquatic life and increased salt exposure to wildlife, which can be lethal for birds \cite{birds}. This research implies that none of the salts have a significant enough environmental advantage to be considered better than the others. This leads to the conclusion that NaCl is the best deicer of all the tested ones, primarily based on its temperature depression ability relative to mass, as well as low cost, followed by \ce{MgCl2} for its high depression and negative enthalpy of dissolution.
+
+%-----------------------------------------------------------------------------------------
+%  Conculusion
+%-----------------------------------------------------------------------------------------
+\section{Conclusion}
+Overall, it was found that NaCl behaved as the best deicer of the four tested (NaCl, KCl, \ce{MgCl2} and \ce{CaCl2}).This judgement was based on its high freezing point temperature depression per mass, as well as having the lowest cost. Its freezing point depression was determined to be 2.98 degrees Celsius per molal, corresponding to a van't Hoff factor of 1.60, and had the second highest number of ions produced per mass of the tested salts at 0.032 mol ions per gram of solute. It was also determined that NaCl is not enthalpically favored, having a found $\Delta H_{diss}$ of +6.06 kJ/mol, which implies it takes energy (lowers temperature of system) to dissolve. This is non ideal for deicer, however the cost benefit of the salt makes up for this discrepancy. The significance of determining the best deicer allows to minimize as much as possible the amount of ice that develops on roads in the winter by most effectively melting that ice, leading to safer roads and less icy-road related accidents, injuries and deaths. The result of this experiment showing NaCl as a more effective deicer than the other salts tested is a move forward in the goal of finding the best deicer so a decrease in road accidents can occur.
+%  References
+%-----------------------------------------------------------------------------------------
+\pagebreak
+\begin{thebibliography}{11}
+\raggedright
+ \bibitem{icy}
+ Road Weather Management Program.
+	How Do Weather Events Impact Roads?
+	http://www.ops.fhwa.dot.gov/weather/q1\_roadimpact.htm
+	(accessed Oct 21, 2015).
+ \bibitem{kcl}
+  Parker, V. B.
+   Thermal Properties of Uni-Univalent Electrolytes.
+   Natl. Stand. Ref. Data Series. 1965, No.2.
+
+\bibitem{cost}
+	Michagen DOT. 
+Effects of Deicing Materials on Natural Resources, Vehicles and Highway Infrastructure. 
+Ch. 3.
+	
+\bibitem{bad}
+	The Environmental Literacy Council.
+	Deicing.
+	http://enviroliteracy.org/environment-society/transportation/deicing/
+	(accessed Oct 21, 2015).
+	
+\bibitem{birds}
+	Kelting, D.; Laxson, C. Review of Effects and Costs of Road De-icing with Recommendations for Winter Road Management in the Adirondack Park. Adk Action, 2010, 42.
+	
+\end{thebibliography}
+\end{document}

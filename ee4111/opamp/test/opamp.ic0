@@ -1,0 +1,23 @@
+* "simulator" "HSPICE" 
+* "version" "I-2013.12-SP2-1 32-BIT"
+* "format" "HSP"
+* "rundate" "19:32:22 03/25/2016 "
+* "netlist" "opamp.sp "
+* "runtitle" "opamp! schhweeeet"
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ n1 =   0.            
++ n2 =   0.            
++ n3 = 760.8143m       
++ n4 =  -1.4833        
++ n5 =  -1.4833        
++ n6 =   1.4847        
++ n7 =-606.8697m       
++ n8 =-606.8697m       
++ nvdd =   2.0000        
++ nvss =  -2.0000        
+***   END: Saved Operating Point ***                     

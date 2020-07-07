@@ -1,0 +1,2 @@
+verilog work "full_adder.vf"
+verilog work "fourbit_addsub.vf"

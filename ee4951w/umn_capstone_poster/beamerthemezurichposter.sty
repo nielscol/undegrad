@@ -1,0 +1,163 @@
+\ProvidesPackage{beamerthemezurichposter}
+
+\RequirePackage{tikz}
+\RequirePackage{placeins}
+\usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,calc}
+\RequirePackage{amsmath,amssymb,bm,amsthm}
+\usefonttheme{default}
+
+\setbeamertemplate{itemize items}[circle]
+\setbeamertemplate{navigation symbols}{}  % no navigation on a poster
+
+%umn maroon 122,0,25
+%umn gold 255,204,51
+
+\definecolor{UMN-gold}{RGB}{255,204,51}
+\definecolor{UMN-maroon}{RGB}{122,0,25}
+
+\definecolor{SNLCorpRed}{RGB}{158,0,0}
+\definecolor{SNLCorpBlue}{RGB}{12,59,107}
+\definecolor{SNLCorpBeige}{RGB}{176,158,136}
+\definecolor{SNLTitleBlue}{RGB}{16,46,84}
+\definecolor{SNLPictureGray}{RGB}{203,203,203}
+\definecolor{Green}{HTML}{4E9A06}
+\definecolor{LightGray}{HTML}{e6e6e4}
+\definecolor{SNLText}{HTML}{00365d}
+
+\setbeamercolor{red bar}{bg=UMN-gold}
+\setbeamercolor{beige bar}{bg=UMN-maroon, fg=white}
+\setbeamercolor{title box}{bg=UMN-maroon, fg=white}
+\setbeamercolor{page box}{fg=black}
+\setbeamercolor{title}{bg=white, fg=umn-maroon}
+\setbeamercolor{subtitle}{bg=white, fg=black}
+\setbeamercolor{date}{bg=white, fg=black}
+
+
+\newcommand{\stdfootline}{
+%        \begin{beamercolorbox}[wd=\textwidth]{page box}
+%                \hspace{\beamer@marginwidth}
+%                 \insertdate\hspace{\fill}\insertpagenumber\hspace{\beamer@marginwidth}
+%        \end{beamercolorbox}
+		\hspace{4cm}
+         \begin{beamercolorbox}{red bar}%
+               \vrule width0pt height 0.4cm%
+           \end{beamercolorbox}%
+          \vspace{0.75cm}
+         \begin{beamercolorbox}[ht=1.5cm,wd=\paperwidth]{beige bar}%
+%            \hspace{\beamer@marginwidth}
+%            \hspace{\fill}\raisebox{3pt}{\insert@footer}\hspace{\fill}\hspace{\beamer@marginwidth}
+          \end{beamercolorbox}%
+}
+
+
+% body colors and fonts
+\setbeamercolor*{normal text}{fg=black,bg=white} %white tangocolorlightaluminium
+
+% headline colors and fonts
+\setbeamercolor{headline}{fg=white,bg=UMN-maroon}
+\setbeamercolor{title in headline}{fg=white}
+
+% TODO: modify the bullet color for the example and alert blocks!
+
+% block environment
+\setbeamercolor*{block body}{bg=LightGray,fg=black} %snl gray
+\setbeamercolor*{block title}{fg=white,bg=UMN-gold}
+\setbeamerfont{block title}{size=\large,series=\bf}
+
+% example environment
+\setbeamercolor{block title example}{fg=white,bg=UMN-maroon}
+\setbeamercolor{block body example}{bg=LightGray,fg=black}
+
+% alerted environment
+%\setbeamercolor{block title alerted}{fg=white,bg=tangocolordarkplum}
+\setbeamercolor{block title alerted}{fg=white,bg=UMN-maroon}
+\setbeamercolor{block body alerted}{bg=LightGray,fg=black}
+
+% headline
+\setbeamertemplate{headline}{  
+  \leavevmode
+
+  \begin{beamercolorbox}[wd=\paperwidth]{headline}
+    \begin{columns}[T]
+      \begin{column}{.09\paperwidth}
+      \end{column}
+      \begin{column}{.65\paperwidth}
+        \vskip10ex
+        \raggedleft
+        \usebeamercolor{title in headline}{\color{fg}\textbf{\LARGE{\inserttitle}}\\[2ex]}
+        \usebeamercolor{institute in headline}{\color{fg}\large{\insertinstitute}\\[1ex]} 
+        \usebeamercolor{author in headline}{\color{fg}\large{\insertauthor}\\[1ex]}           
+      \end{column}
+      \begin{column}{.23\paperwidth}
+        \vskip3.5cm
+        \begin{center}
+          \includegraphics[width=.5\linewidth]{umn-logo.png}
+        \end{center}
+        \FloatBarrier
+        %\vskip2.5cm      
+      \end{column}
+      \begin{column}{.03\paperwidth}
+      \end{column}
+    \end{columns}
+          \vspace{2.5cm} 
+  \end{beamercolorbox}
+  
+  \begin{beamercolorbox}[wd=\paperwidth]{lower separation line head}
+    \rule{0pt}{2pt}
+  \end{beamercolorbox}
+}
+
+
+\setbeamertemplate{block begin}{
+  \vskip0ex
+  \begin{beamercolorbox}[rounded=true,leftskip=1cm,colsep*=.75ex]{block title}%
+    \usebeamerfont*{block title}\insertblocktitle
+  \end{beamercolorbox}%
+  {\ifbeamercolorempty[bg]{block body}{}{\nointerlineskip\vskip-0.5pt}}%
+  \usebeamerfont{block body}%
+  \begin{beamercolorbox}[rounded=true,colsep*=.75ex,sep=.75ex,vmode]{block body}%
+    \ifbeamercolorempty[bg]{block body}{\vskip-.25ex}{\vskip-.75ex}\vbox{}%
+  }
+  \setbeamertemplate{block end}{
+  \end{beamercolorbox}
+}
+
+\setbeamertemplate{block alerted begin}{
+  \vskip.75ex
+  \begin{beamercolorbox}[rounded=true,leftskip=1cm,colsep*=.75ex]{block title alerted}%
+    \usebeamerfont*{block title alerted}\insertblocktitle
+  \end{beamercolorbox}%
+  {\ifbeamercolorempty[bg]{block alerted body}{}{\nointerlineskip\vskip-0.5pt}}%
+  \usebeamerfont{block body alerted}%
+  \begin{beamercolorbox}[rounded=true,colsep*=.75ex,sep=.75ex,vmode]{block body alerted}%
+    \ifbeamercolorempty[bg]{block body alerted}{\vskip-.25ex}{\vskip-.75ex}\vbox{}%
+  }
+
+\setbeamertemplate{block alerted end}{
+  \end{beamercolorbox}
+}
+
+\setbeamertemplate{block example begin}{
+  \vskip.75ex
+  \begin{beamercolorbox}[rounded=true,leftskip=1cm,colsep*=.75ex]{block title example}%
+    \usebeamerfont*{block title example}\insertblocktitle
+  \end{beamercolorbox}%
+  {\ifbeamercolorempty[bg]{block example body}{}{\nointerlineskip\vskip-0.5pt}}%
+  \usebeamerfont{block body example}%
+  \begin{beamercolorbox}[rounded=true,colsep*=.75ex,sep=.75ex,vmode]{block body example}%
+    \ifbeamercolorempty[bg]{block body example}{\vskip-.25ex}{\vskip-.75ex}\vbox{}%
+  }
+
+\setbeamertemplate{block example end}{
+  \end{beamercolorbox}
+}
+
+\setbeamertemplate{footline}
+{
+        % This footer will only be shown on the first slide of the presentation.
+       \vspace{-2.5in}
+          \FloatBarrier
+         \vspace{0.25cm}
+        \stdfootline
+        \vspace{\fill}
+}

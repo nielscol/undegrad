@@ -1,0 +1,21 @@
+Running: C:\Xilinx\13.2\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o Z:/lab1_adder_verilog/tb_isim_beh.exe -prj Z:/lab1_adder_verilog/tb_beh.prj work.tb work.glbl 
+ISim O.61xd (signature 0x1cce1bb2)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file \"Z:/lab1_adder_verilog/full_adder.v\" into library work
+Analyzing Verilog file \"Z:/lab1_adder_verilog/fourbit_addsub.v\" into library work
+Analyzing Verilog file \"Z:/lab1_adder_verilog/tb.v\" into library work
+Analyzing Verilog file \"C:/Xilinx/13.2/ISE_DS/ISE//verilog/src/glbl.v\" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module full_adder
+Compiling module fourbit_addsub
+Compiling module tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 4 Verilog Units
+Built simulation executable Z:/lab1_adder_verilog/tb_isim_beh.exe
+Fuse Memory Usage: 18612 KB
+Fuse CPU Usage: 170 ms

@@ -1,0 +1,20 @@
+Release 13.2 - netgen O.61xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Command Line: netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis
+-ofmt verilog -sim counter_3bit.ngc counter_3bit_synthesis.v  
+
+Reading design 'counter_3bit.ngc' ...
+Flattening design ...
+Processing design ... 
+  Preping design's networks ...
+  Preping design's macros ...
+Writing Verilog netlist file
+'\\ece-squid.ad.umn.edu\ee-labs$\niels538\lab3\three_bit_count\netgen\synthesis\
+counter_3bit_synthesis.v' ...
+INFO:NetListWriters:633 - The generated Verilog netlist contains Xilinx UNISIM
+   simulation primitives and has to be used with UNISIM simulation library for
+   correct compilation and simulation. 
+Number of warnings: 0
+Number of info messages: 1
+Total memory usage is 120836 kilobytes

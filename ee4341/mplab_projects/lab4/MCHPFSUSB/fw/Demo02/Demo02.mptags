@@ -1,0 +1,35 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.5.4	//
+!_TAG_REVISION_NAME	MCHPTags	//
+!_TAG_REVISION_VERSION	6.0.1	//
+_high_ISR	C:\MCHPFSUSB\fw\Demo02\Demo02.c	56;"	f	line:56	signature:(void)
+_low_ISR	C:\MCHPFSUSB\fw\Demo02\Demo02.c	62;"	f	line:62	signature:(void)
+_reset	C:\MCHPFSUSB\fw\Demo02\Demo02.c	49;"	f	line:49	signature:(void)
+_startup	C:\MCHPFSUSB\fw\Demo02\Demo02.c	47;"	p	line:47	file:	signature:(void)
+mInitAllLEDs::LATD&=0xF0;TRISD&=0xF0;	C:\MCHPFSUSB\fw\Demo02\Demo02.c	86;"	d	line:86	file:
+mInitAllSwitches::TRISBbits.TRISB4=1;TRISBbits.T	C:\MCHPFSUSB\fw\Demo02\Demo02.c	109;"	d	line:109	file:
+mInitSwitch2::TRISBbits.TRISB4=1;	C:\MCHPFSUSB\fw\Demo02\Demo02.c	110;"	d	line:110	file:
+mInitSwitch3::TRISBbits.TRISB5=1;	C:\MCHPFSUSB\fw\Demo02\Demo02.c	111;"	d	line:111	file:
+mLED_1::LATDbits.LATD0	C:\MCHPFSUSB\fw\Demo02\Demo02.c	88;"	d	line:88	file:
+mLED_1_Off::mLED_1=0;	C:\MCHPFSUSB\fw\Demo02\Demo02.c	98;"	d	line:98	file:
+mLED_1_On::mLED_1=1;	C:\MCHPFSUSB\fw\Demo02\Demo02.c	93;"	d	line:93	file:
+mLED_1_Toggle::mLED_1=!mLED_1;	C:\MCHPFSUSB\fw\Demo02\Demo02.c	103;"	d	line:103	file:
+mLED_2::LATDbits.LATD1	C:\MCHPFSUSB\fw\Demo02\Demo02.c	89;"	d	line:89	file:
+mLED_2_Off::mLED_2=0;	C:\MCHPFSUSB\fw\Demo02\Demo02.c	99;"	d	line:99	file:
+mLED_2_On::mLED_2=1;	C:\MCHPFSUSB\fw\Demo02\Demo02.c	94;"	d	line:94	file:
+mLED_2_Toggle::mLED_2=!mLED_2;	C:\MCHPFSUSB\fw\Demo02\Demo02.c	104;"	d	line:104	file:
+mLED_3::LATDbits.LATD2	C:\MCHPFSUSB\fw\Demo02\Demo02.c	90;"	d	line:90	file:
+mLED_3_Off::mLED_3=0;	C:\MCHPFSUSB\fw\Demo02\Demo02.c	100;"	d	line:100	file:
+mLED_3_On::mLED_3=1;	C:\MCHPFSUSB\fw\Demo02\Demo02.c	95;"	d	line:95	file:
+mLED_3_Toggle::mLED_3=!mLED_3;	C:\MCHPFSUSB\fw\Demo02\Demo02.c	105;"	d	line:105	file:
+mLED_4::LATDbits.LATD3	C:\MCHPFSUSB\fw\Demo02\Demo02.c	91;"	d	line:91	file:
+mLED_4_Off::mLED_4=0;	C:\MCHPFSUSB\fw\Demo02\Demo02.c	101;"	d	line:101	file:
+mLED_4_On::mLED_4=1;	C:\MCHPFSUSB\fw\Demo02\Demo02.c	96;"	d	line:96	file:
+mLED_4_Toggle::mLED_4=!mLED_4;	C:\MCHPFSUSB\fw\Demo02\Demo02.c	106;"	d	line:106	file:
+main	C:\MCHPFSUSB\fw\Demo02\Demo02.c	115;"	f	line:115	signature:(void)
+sw2::PORTBbits.RB4	C:\MCHPFSUSB\fw\Demo02\Demo02.c	112;"	d	line:112	file:
+sw3::PORTBbits.RB5	C:\MCHPFSUSB\fw\Demo02\Demo02.c	113;"	d	line:113	file:

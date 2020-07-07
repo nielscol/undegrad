@@ -1,0 +1,5 @@
+set -tmpdir "Z:/lab7/xst/projnav.tmp"
+set -xsthdpdir "Z:/lab7/xst"
+elaborate
+-ifn rng.prj
+-ifmt mixed

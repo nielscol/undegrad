@@ -1,0 +1,9 @@
+MODULE fourbit_addsub
+	SUBMODULE full_adder
+		INSTANCE XLXI_1
+	SUBMODULE full_adder
+		INSTANCE XLXI_2
+	SUBMODULE full_adder
+		INSTANCE XLXI_3
+	SUBMODULE full_adder
+		INSTANCE XLXI_4

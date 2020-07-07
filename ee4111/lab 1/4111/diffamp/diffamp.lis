@@ -1,0 +1,354 @@
+Using: /usr/local/apps/synopsys/hspice/linux/hspice diffamp.sp
+ ****** HSPICE -- I-2013.12-SP2-1 32-BIT (Jun 10 2014) RHEL32 ******            
+  Copyright (C) 2014 Synopsys, Inc. All Rights Reserved.                        
+  Unpublished-rights reserved under US copyright laws.
+  This program is protected by law and is subject to the
+  terms and conditions of the license agreement from Synopsys.
+  Use of this program is your acceptance to be bound by the
+  license agreement. HSPICE is the trademark of Synopsys, Inc.
+  Input File: diffamp.sp                                                        
+  Command line options: diffamp.sp
+ lic:  
+ lic: FLEXlm: v10.9.8 
+ lic: USER:   niels538             HOSTNAME: ECE-Thun 
+ lic: HOSTID: 1803734580b4         PID:      25066 
+ lic: Using FLEXlm license file: 
+ lic: 27020@synopsys.cse.umn.edu 
+ lic: Checkout 1 hspice 
+ lic: License/Maintenance for hspice will expire on 19-dec-2016/2015.06 
+ lic: 19(in_use)/50(total) FLOATING license(s) on SERVER 27020@synopsys.cse.umn.edu 
+ lic:   
+ Init: read install configuration file: /usr/local/apps/synopsys/hspice/meta.cfg
+  **warning** (diffamp.sp:17) c        is not level=   3 model parameter. Parameter has been ignored.
+ scientific notation:
+ a=10**-18  f=10**-15  p=10**-12  n=10**-9  u=10**-6
+ m=10**-3   k=10**3    x=10**6    g=10**9 
+
+
+ circuit parameter definitions
+  parameter          =  value 
+
+
+
+
+
+ constants  - tnom         kt           vt           gapsi        ni
+            298.15000    4.1163e-21    25.69184m     1.11562    1.2565e+16 
+1****** HSPICE -- I-2013.12-SP2-1 32-BIT (Jun 10 2014) RHEL32 ******            
+ ******  
+ differential amplifier
+
+ ****** mos   model parameters tnom=  25.000 temp=  25.000 ******
+ ***************************************************************************
+ *** common model parameters  model name:   0:cmosn    model type:nmos   ***
+ ***************************************************************************
+     names  values   units     names  values   units     names  values   units
+     -----  ------   -----     -----  ------   -----     -----  ------   -----
+
+   1*** geometry parameters ***
+       ld= 100.00f meters      lmlt=   1.00                wd= 233.48n meters 
+     wmlt=   1.00                xl=   0.    meters        xw=   0.    meters 
+     lref=   0.    meters      wref=   0.    meters      lref=   0.    meters 
+     wref=   0.    meters     xlref=   0.    meters     xwref=   0.    meters 
+     lmin=   0.    meters      wmin=   0.    meters      lmax=   0.    meters 
+     wmax=   0.    meters 
+
+   2*** threshold voltage parameters ***
+      vto= 764.09m volts        nss=   0.    1/cm**2      tpg=   1.00         
+      phi= 700.00m volts      gamma= 548.36m v**0.5      bulk=  gnd           
+    ngate=   0.    cm**3       nsub= 1.0e+17 1/cm**3   delvto=   0.    volts  
+
+   3*** gate overlap capacitance parameters ***
+     cgbo= 100.00p f/meter     cgdo= 215.00p f/meter     cgso= 215.00p f/meter
+     meto=   0.    meters 
+
+   4*** gate capacitance parameters ***
+    capop=   2.00               cf1=   0.    volts        cf2= 100.00m volts  
+      cf3=   1.00  volts        cf4=  50.00               cf5= 666.67m        
+      cf6= 500.00               xqc= 500.00m              tox=  14.00n meters 
+      cox=   2.47m f/m**2 
+
+   5*** diffusion parasitic parameters ***
+      acm=   0.                  is=  10.00f amps          js=   0.    a/m**2 
+      jsw=   0.    amp/m        nds=   1.00               cbd=   0.    farad  
+      cbs=   0.    farad         cj= 952.86u f/m**2      cjsw= 314.75p f/m    
+   cjgate= 314.75p f/m           mj= 435.90m             mjsw= 197.77m        
+       pb= 914.04m volts        php= 914.04m volts         tt=   0.    secs   
+     hdif=   0.    meters      ldif=   0.    meters        rd=   0.    ohms   
+       rs=   0.    ohms         rsh=   7.51m ohms/sq       fc=   0.           
+    alpha=   0.                 vcr=   0.    volts      iirat=   0.           
+      rdc=   0.    ohms         rsc=   0.    ohms           n=   1.00         
+     vnds=  -1.00  volts  
+
+   6*** temperature effect parameters ***
+     tlev=   0.               tlevc=   0.                  eg=   1.11  ev     
+     gap1= 702.00u ev/deg      gap2=   1.11k deg          xti=   0.           
+      bex=  -1.50               tcv=   0.    v/deg k      trd=   0.    /deg   
+      trs=   0.    /deg         cta=   0.    /deg         ctp=   0.    /deg   
+
+   7*** noise parameters ***
+       kf=   0.                  af=   1.00              nlev=   2.00         
+   gdsnoi=   1.00         
+
+   ***  level  3  model parameters  ***
+
+    delta=   3.05               eta=   3.16u            kappa= 300.00m /v     
+      nfs= 1.0e+12 1/cm**2    theta= 101.40m /v          vmax= 144.22k m/sec  
+       xj= 300.00n meters        uo= 662.70 cm**2/vs       kp= 125.94u a/v**2 
+    deriv=   1.00         
+1****** HSPICE -- I-2013.12-SP2-1 32-BIT (Jun 10 2014) RHEL32 ******            
+ ******  
+ differential amplifier
+
+ ****** circuit element summary tnom=  25.000 temp=  25.000 ******
+
+
+ **** resistors
+
+  
+  
+                                        
+ element name        0:rd1      0:rd2   
+ node1               0:n1       0:n1    
+ node2               0:n4       0:n5    
+ model                                  
+ res eff            25.0000k   25.0000k 
+ tc1                 0.         0.      
+ tc2                 0.         0.      
+ scale               1.0000     1.0000  
+ m                   1.0000     1.0000  
+ ac                 25.0000k   25.0000k 
+ temp               25.0000    25.0000  
+ l                   0.         0.      
+ w                   0.         0.      
+ cap                 0.         0.      
+ noise            1.000e+00  1.000e+00  
+
+
+ **** voltage-controlled voltage sources
+      name        +             -          dimension  function  scale
+        0:ei1             0:n2              0:0              1      poly       1.    
+        0:ei2             0:n3              0:0              1      poly       1.    
+
+
+ **** independent sources
+
+     name         node1        node2      dc volt    ac mag    ac phase    type
+  vdd  n1                0                    5.0000     0.         0.      dc   
+  vdiff  n10               0                    0.         0.         0.      dc   
+  vss  0                 n7                   5.0000     0.         0.      dc   
+  itail  n6                n7                 200.0000u    0.         0.      dc   
+
+
+ **** mosfets
+  
+  
+                                        
+ element name        0:m1       0:m2    
+ drain               0:n4       0:n5    
+ gate                0:n2       0:n3    
+ source              0:n6       0:n6    
+ bulk                0:n7       0:n7    
+ model               0:cmosn    0:cmosn 
+ w eff               9.5330u    9.5330u 
+ l eff               1.5000u    1.5000u 
+ rd eff              0.         0.      
+ rs eff              0.         0.      
+ cdsat              10.0000f   10.0000f 
+ cssat              10.0000f   10.0000f 
+ capbd               0.         0.      
+ capbs               0.         0.      
+ temp               25.0000    25.0000  
+ aic                                    
+ m                   1.0000     1.0000  
+ w drawn            10.0000u   10.0000u 
+ l drawn             1.5000u    1.5000u 
+  
+  
+1****** HSPICE -- I-2013.12-SP2-1 32-BIT (Jun 10 2014) RHEL32 ******            
+ ******  
+ differential amplifier
+
+ ****** element node table
+                                                                                      
+ 0                ei1              ei2              vdd              vdiff            
+                  vss              ei1:-            ei2:-                             
+ n1               rd1              rd2              vdd                               
+ n10              vdiff            ei1:+            ei2:+                             
+ n2               ei1              m1:g                                               
+ n3               ei2              m2:g                                               
+ n4               rd1              m1:d                                               
+ n5               rd2              m2:d                                               
+ n6               itail            m1:s             m2:s                              
+ n7               vss              itail            m1:b             m2:b             
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2         
+ ******  
+ differential amplifier
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+x
+
+        volt    param        param        current      current    
+                v(n3)-v(n2)     v(n5) -       rd1          rd2    
+ -500.00000m     -1.0000       4.9996     199.9921u      7.9448n  
+ -490.00000m   -980.0000m      4.9994     199.9877u     12.2877n  
+ -480.00000m   -960.0000m      4.9991     199.9810u     19.0056n  
+ -470.00000m   -940.0000m      4.9985     199.9706u     29.3936n  
+ -460.00000m   -920.0000m      4.9977     199.9546u     45.4472n  
+ -450.00000m   -900.0000m      4.9965     199.9298u     70.2354n  
+ -440.00000m   -880.0000m      4.9946     199.8916u    108.4616n  
+ -430.00000m   -860.0000m      4.9916     199.8327u    167.2979n  
+ -420.00000m   -840.0000m      4.9871     199.7424u    257.5953n  
+ -410.00000m   -820.0000m      4.9802     199.6044u    395.5769n  
+ -400.00000m   -800.0000m      4.9697     199.3950u    605.0666n  
+ -390.00000m   -780.0000m      4.9472     198.9444u      1.0556u  
+ -380.00000m   -760.0000m      4.9065     198.1292u      1.8708u  
+ -370.00000m   -740.0000m      4.8559     197.1186u      2.8814u  
+ -360.00000m   -720.0000m      4.7965     195.9302u      4.0698u  
+ -350.00000m   -700.0000m      4.7290     194.5793u      5.4207u  
+ -340.00000m   -680.0000m      4.6540     193.0795u      6.9206u  
+ -330.00000m   -660.0000m      4.5721     191.4425u      8.5575u  
+ -320.00000m   -640.0000m      4.4840     189.6790u     10.3210u  
+ -310.00000m   -620.0000m      4.3899     187.7986u     12.2014u  
+ -300.00000m   -600.0000m      4.2905     185.8097u     14.1903u  
+ -290.00000m   -580.0000m      4.1860     183.7202u     16.2798u  
+ -280.00000m   -560.0000m      4.0769     181.5371u     18.4629u  
+ -270.00000m   -540.0000m      3.9633     179.2669u     20.7331u  
+ -260.00000m   -520.0000m      3.8458     176.9156u     23.0844u  
+ -250.00000m   -500.0000m      3.7244     174.4885u     25.5115u  
+ -240.00000m   -480.0000m      3.5995     171.9908u     28.0092u  
+ -230.00000m   -460.0000m      3.4714     169.4272u     30.5728u  
+ -220.00000m   -440.0000m      3.3401     166.8021u     33.1979u  
+ -210.00000m   -420.0000m      3.2060     164.1195u     35.8805u  
+ -200.00000m   -400.0000m      3.0692     161.3834u     38.6166u  
+ -190.00000m   -380.0000m      2.9299     158.5974u     41.4026u  
+ -180.00000m   -360.0000m      2.7882     155.7650u     44.2350u  
+ -170.00000m   -340.0000m      2.6445     152.8894u     47.1107u  
+ -160.00000m   -320.0000m      2.4987     149.9736u     50.0264u  
+ -150.00000m   -300.0000m      2.3510     147.0208u     52.9792u  
+ -140.00000m   -280.0000m      2.2017     144.0337u     55.9663u  
+ -130.00000m   -260.0000m      2.0508     141.0150u     58.9850u  
+ -120.00000m   -240.0000m      1.8984     137.9675u     62.0326u  
+ -110.00000m   -220.0000m      1.7447     134.8935u     65.1065u  
+ -100.00000m   -200.0000m      1.5898     131.7956u     68.2044u  
+  -90.00000m   -180.0000m      1.4338     128.6762u     71.3238u  
+  -80.00000m   -160.0000m      1.2769     125.5375u     74.4625u  
+  -70.00000m   -140.0000m      1.1191     122.3819u     77.6181u  
+  -60.00000m   -120.0000m    960.5794m    119.2116u     80.7884u  
+  -50.00000m   -100.0000m    801.4344m    116.0287u     83.9713u  
+  -40.00000m    -80.0000m    641.7688m    112.8354u     87.1646u  
+  -30.00000m    -60.0000m    481.6882m    109.6338u     90.3662u  
+  -20.00000m    -40.0000m    321.2974m    106.4260u     93.5741u  
+  -10.00000m    -20.0000m    160.7002m    103.2140u     96.7860u  
+    0.            0.        -415.1071p    100.0000u    100.0000u  
+   10.00000m     20.0000m   -160.7002m     96.7860u    103.2140u  
+   20.00000m     40.0000m   -321.2974m     93.5741u    106.4260u  
+   30.00000m     60.0000m   -481.6882m     90.3662u    109.6338u  
+   40.00000m     80.0000m   -641.7688m     87.1646u    112.8354u  
+   50.00000m    100.0000m   -801.4344m     83.9713u    116.0287u  
+   60.00000m    120.0000m   -960.5794m     80.7884u    119.2116u  
+   70.00000m    140.0000m     -1.1191      77.6181u    122.3819u  
+   80.00000m    160.0000m     -1.2769      74.4625u    125.5375u  
+   90.00000m    180.0000m     -1.4338      71.3238u    128.6762u  
+  100.00000m    200.0000m     -1.5898      68.2044u    131.7956u  
+  110.00000m    220.0000m     -1.7447      65.1065u    134.8935u  
+  120.00000m    240.0000m     -1.8984      62.0326u    137.9675u  
+  130.00000m    260.0000m     -2.0508      58.9850u    141.0150u  
+  140.00000m    280.0000m     -2.2017      55.9663u    144.0337u  
+  150.00000m    300.0000m     -2.3510      52.9792u    147.0208u  
+  160.00000m    320.0000m     -2.4987      50.0264u    149.9736u  
+  170.00000m    340.0000m     -2.6445      47.1107u    152.8894u  
+  180.00000m    360.0000m     -2.7882      44.2350u    155.7650u  
+  190.00000m    380.0000m     -2.9299      41.4026u    158.5975u  
+  200.00000m    400.0000m     -3.0692      38.6166u    161.3834u  
+  210.00000m    420.0000m     -3.2060      35.8805u    164.1195u  
+  220.00000m    440.0000m     -3.3401      33.1979u    166.8021u  
+  230.00000m    460.0000m     -3.4714      30.5728u    169.4272u  
+  240.00000m    480.0000m     -3.5995      28.0092u    171.9908u  
+  250.00000m    500.0000m     -3.7244      25.5115u    174.4885u  
+  260.00000m    520.0000m     -3.8458      23.0844u    176.9156u  
+  270.00000m    540.0000m     -3.9633      20.7331u    179.2669u  
+  280.00000m    560.0000m     -4.0769      18.4629u    181.5371u  
+  290.00000m    580.0000m     -4.1860      16.2798u    183.7202u  
+  300.00000m    600.0000m     -4.2905      14.1903u    185.8097u  
+  310.00000m    620.0000m     -4.3899      12.2014u    187.7986u  
+  320.00000m    640.0000m     -4.4840      10.3210u    189.6790u  
+  330.00000m    660.0000m     -4.5721       8.5575u    191.4425u  
+  340.00000m    680.0000m     -4.6540       6.9206u    193.0795u  
+  350.00000m    700.0000m     -4.7290       5.4207u    194.5793u  
+  360.00000m    720.0000m     -4.7965       4.0698u    195.9302u  
+  370.00000m    740.0000m     -4.8559       2.8814u    197.1186u  
+  380.00000m    760.0000m     -4.9065       1.8708u    198.1292u  
+  390.00000m    780.0000m     -4.9472       1.0556u    198.9444u  
+  400.00000m    800.0000m     -4.9697     605.0665n    199.3950u  
+  410.00000m    820.0000m     -4.9802     395.5769n    199.6044u  
+  420.00000m    840.0000m     -4.9871     257.5953n    199.7424u  
+  430.00000m    860.0000m     -4.9916     167.2979n    199.8327u  
+  440.00000m    880.0000m     -4.9946     108.4616n    199.8916u  
+  450.00000m    900.0000m     -4.9965      70.2354n    199.9298u  
+  460.00000m    920.0000m     -4.9977      45.4472n    199.9546u  
+  470.00000m    940.0000m     -4.9985      29.3936n    199.9706u  
+  480.00000m    960.0000m     -4.9991      19.0056n    199.9810u  
+  490.00000m    980.0000m     -4.9994      12.2877n    199.9877u  
+  500.00000m      1.0000      -4.9996       7.9448n    199.9921u  
+y
+
+          ***** job concluded
+1****** HSPICE -- I-2013.12-SP2-1 32-BIT (Jun 10 2014) RHEL32 ******            
+ ******  
+ differential amplifier
+
+ ****** job statistics summary tnom=  25.000 temp=  25.000 ******
+  
+  
+ ******  Machine Information  ******
+ CPU:
+ model name	: Intel(R) Xeon(R) CPU           E5603  @ 1.60GHz
+ cpu MHz	: 1596.001
+  
+ OS:
+ Linux version 2.6.32-573.12.1.el6.x86_64 (mockbuild@x86-031.build.eng.bos.redhat.com) (gcc version 4.4.7 20120313 (Red Hat 4.4.7-16) (GCC) ) #1 SMP Mon Nov 23 12:55:32 EST 2015
+
+
+  ******  HSPICE Threads Information  ******
+
+  Command Line Threads Count :     1
+  Available CPU Count        :     8
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =       9 # elements   =      10
+  # resistors   =       2 # capacitors =       0 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       2
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       3
+  # curr_srcs   =       1 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =       2 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.00           1           0
+  dc sweep           0.00         101         257
+  readin             0.01
+  errchk             0.00
+  setup              0.00
+  output             0.00
+
+
+           peak memory used        120.18 megabytes
+           total cpu time            0.01 seconds
+           total elapsed time        1.53 seconds
+           job started at     21:13:16 02/12/2016
+           job ended   at     21:13:18 02/12/2016
+
+
+ lic: Release hspice token(s) 
+ lic: total license checkout elapse time:        1.49(s)

@@ -1,0 +1,11 @@
+set logscale x 10
+set title "MOS Cascode Amplifier Magnitude vs Frequency"
+set xlabel "Frequency (Hz)"
+set ylabel "Amplitude (dB)"
+set yrange [10:30]
+set xrange [100:1000000]
+unset key
+plot "5" with lines lt -1, "5" lt -1, "5sl" with lines lt 2
+
+
+

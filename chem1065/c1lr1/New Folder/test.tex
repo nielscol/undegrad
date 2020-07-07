@@ -1,0 +1,21 @@
+\documentclass{article} 
+\usepackage[style=chem-acs]{biblatex}
+\addbibresource{refs.bib} 
+\begin{document} 
+Hello\cite{KandR}
+\nocite{*}
+\printbibliography 
+\printbibheading[
+heading=bibintoc, % bibintoc adds the Bibliography to the table of contents
+title={Resources} % If we want to override the default title "Bibliography"
+]
+\phantomsection % Requires hyperref package
+\printbibliography[title={Printed sources}, heading=subbibliography, prefixnumbers={a}, type=book, type=article]
+\phantomsection
+\printbibliography[title={Online resources}, heading=subbibliography, prefixnumbers={c}, subtype=inet]
+\phantomsection
+\printbibliography[title={Other}, heading=subbibliography, prefixnumbers={c}, nottype=article, nottype=book, notsubtype=inet]
+
+
+
+\end{document} 

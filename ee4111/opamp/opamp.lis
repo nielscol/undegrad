@@ -1,0 +1,527 @@
+Using: /usr/local/apps/synopsys/hspice/linux/hspice opamp.sp
+ ****** HSPICE -- I-2013.12-SP2-1 32-BIT (Jun 10 2014) RHEL32 ******            
+  Copyright (C) 2014 Synopsys, Inc. All Rights Reserved.                        
+  Unpublished-rights reserved under US copyright laws.
+  This program is protected by law and is subject to the
+  terms and conditions of the license agreement from Synopsys.
+  Use of this program is your acceptance to be bound by the
+  license agreement. HSPICE is the trademark of Synopsys, Inc.
+  Input File: opamp.sp                                                          
+  Command line options: opamp.sp
+ lic:  
+ lic: FLEXlm: v10.9.8 
+ lic: USER:   niels538             HOSTNAME: ece-zug 
+ lic: HOSTID: 1803734586b4         PID:      13256 
+ lic: Using FLEXlm license file: 
+ lic: 27020@synopsys.cse.umn.edu 
+ lic: Checkout 1 hspice 
+ lic: License/Maintenance for hspice will expire on 19-dec-2016/2015.06 
+ lic: 2(in_use)/50(total) FLOATING license(s) on SERVER 27020@synopsys.cse.umn.edu 
+ lic:   
+ Init: read install configuration file: /usr/local/apps/synopsys/hspice/meta.cfg
+  **warning** (opamp.sp:5) Unrecognized output type av on line above; The line is ignored.
+ scientific notation:
+ a=10**-18  f=10**-15  p=10**-12  n=10**-9  u=10**-6
+ m=10**-3   k=10**3    x=10**6    g=10**9 
+
+
+ circuit parameter definitions
+  parameter          =  value 
+
+     0:length                                                  = 250.0000n      
+     0:vic                                                     =   0.           
+     0:vid                                                     =   0.           
+
+
+
+
+ constants  - tnom         kt           vt           gapsi        ni
+            298.15000    4.1163e-21    25.69184m     1.11562    1.2565e+16 
+1****** HSPICE -- I-2013.12-SP2-1 32-BIT (Jun 10 2014) RHEL32 ******            
+ ******  
+ opamp! schhweeeet
+
+ ****** mos   model parameters tnom=  25.000 temp=  25.000 ******
+ ***************************************************************************
+ ***        model parameters  model name:   0:cmosn    model type:nmos   ***
+ ***************************************************************************
+
+   *** general parameters ***
+    deriv=   0.           
+
+   ***  level 49  model parameters  ***
+
+      hspver=    2006.03               level=         49         
+     version=        3.1            paramchk=          0         
+      apwarn=          1                lite=          0         
+      vgslim=          0             binUnit=          1         
+      capMod=          2               xpart=        0.4         
+      mobMod=          1              nqsMod=          0         
+      stiMod=          0                 elm=          5         
+    sfvtflag=          0                 tox=    5.7e-09 meter   
+          xj=      1e-07 meter       binflag=          0         
+        lmin=          0 meter          lmax=          0 meter   
+        wmin=          0 meter          wmax=          0 meter   
+        lref=          0 meter          wref=          0 meter   
+        lint=1.11652e-09 meter          wint=1.64571e-09 meter   
+       lmult=          1               wmult=          1         
+          ll=          0                 lln=          1         
+          lw=          0                 lwn=          1         
+         lwl=          0                  wl=          0         
+         wln=          1                  ww=-1.22182e-16         
+         wwn=     1.2127                 wwl=          0         
+         dwg=-1.49414e-09 m/V             dwb= 1.4591e-08 m/V^1/2 
+          xl=      3e-08                  xw=          0         
+          a0=    1.31893                 ags=   0.271172 V^-1    
+          b0=3.29171e-08 meter            b1=     -1e-07 meter   
+        keta= 0.00464575 V^-1           voff=  -0.102605 V       
+       ngate=          0 cm^-3           vbx=          0 V       
+         vbm=         -3 V                xt=   1.55e-07 meter   
+        vth0=    0.43655 V               nch= 2.3549e+17 cm^-3   
+        nsub=      6e+16 cm^-3           nlx=1.11146e-07 meter   
+      gamma1=          0 V^-1/2       gamma2=          0 V^-1/2  
+          k1=   0.391562 V^1/2            k2=  0.0175145         
+          k3=      0.001                 k3b=    2.65883 V^-1    
+          w0=      1e-07 meter          dvt0= -0.0408321         
+        dvt1=  0.0746768                dvt2=   0.307109 V^-1    
+       dvt0w=          0 meter^-1      dvt1w=          0 meter^-1
+       dvt2w=          0 V^-1           dsub=  0.0214865         
+        eta0= 0.00193031                etab=0.000294616 V^-1    
+          u0=    407.118 cm^2/V/sec         ua=9.44271e-11 m/V     
+          ub=1.09299e-18 (m/V)^2          uc=1.63196e-11 V^-1    
+        vsat=     136509 m/sec            a1=          0 v^-1    
+          a2=          1               delta=       0.01 V       
+        rdsw=    439.956 ohm-um         prwg=  0.0345487 V^-1    
+        prwb= -0.0441065 V^-1/2           wr=          1         
+        pclm=    1.33879             pdiblc1=   0.480652         
+     pdiblc2= 0.00903499             pdiblcb=     -0.001 V^-1    
+      pscbe1=9.84329e+09 V/m          pscbe2=2.10878e-09 V/m     
+       drout=   0.559322                pvag=    1.00331         
+     nfactor=   0.134489                cdsc= 0.00152751 f/m^2   
+       cdscb=          0 f/V/m^2       cdscd=          0 f/V/m^2 
+         cit=          0 f/m^2        alpha0=          0 m/V     
+       beta0=         30 V               dlc=1.11652e-09 meter   
+         dwc=1.64571e-09 meter           clc=      1e-07 meter   
+         cle=        0.6                cgso=   3.11e-10 f/m     
+        cgdo=   3.11e-10 f/m            cgbo=      1e-11 f/m     
+        cgsl=          0 f/m            cgdl=          0 f/m     
+      ckappa=        0.6                  cf=9.37621e-11 f/m     
+        tnom=     300.15 K               kt1=      -0.11 V       
+        kt1l=          0                 kt2=      0.022         
+         ute=       -1.5                 ua1=   4.31e-09 m/V     
+         ub1=  -7.61e-18 (m/V)^2         uc1=   -5.6e-11 m/V^2   
+          at=      33000 m/s             prt=          0         
+         using Berkeley noise model       noiMod=          1         
+        noia=      1e+20                noib=      50000         
+        noic=   -1.4e-12                  em=    4.1e+07         
+          ef=          1                  af=          1         
+          kf=          0              gdsnoi=-1.23457e-29         
+         using Hspice diodes            using ACM 
+         acm=         3                 hdif=   3.5e-07 meter    
+        ldif=         0 meter             js=         0 amp/m^2  
+         jsw=         0 amp/m            xti=         0          
+           n=         1                   cj=0.00175852 f/m^2    
+          mj=  0.457547                   pb=      0.99 V        
+        cjsw=4.08506e-10 f/m             mjsw=  0.337407          
+         php=      0.99 V               pbsw (not used)           
+      cjgate=4.08506e-10 f/m            cjswg (not used)           
+       mjswg (not used)                 pbswg (not used)           
+        lags=    -0.3012               lketa= -0.0090406         
+       wketa= 0.00303597               pvth0=7.14752e-05         
+         pk2= -0.0013446               prdsw=   -67.2162         
+ ***************************************************************************
+ ***        model parameters  model name:   0:cmosp    model type:pmos   ***
+ ***************************************************************************
+
+   *** general parameters ***
+    deriv=   0.           
+
+   ***  level 49  model parameters  ***
+
+      hspver=    2006.03               level=         49         
+     version=        3.1            paramchk=          0         
+      apwarn=          1                lite=          0         
+      vgslim=          0             binUnit=          1         
+      capMod=          2               xpart=        0.4         
+      mobMod=          1              nqsMod=          0         
+      stiMod=          0                 elm=          5         
+    sfvtflag=          0                 tox=    5.7e-09 meter   
+          xj=      1e-07 meter       binflag=          0         
+        lmin=          0 meter          lmax=          0 meter   
+        wmin=          0 meter          wmax=          0 meter   
+        lref=          0 meter          wref=          0 meter   
+        lint=1.25451e-08 meter          wint=2.52729e-09 meter   
+       lmult=          1               wmult=          1         
+          ll=          0                 lln=          1         
+          lw=          0                 lwn=          1         
+         lwl=          0                  wl=          0         
+         wln=          1                  ww=          0         
+         wwn=          1                 wwl=          0         
+         dwg=-3.25395e-08 m/V             dwb=4.92072e-08 m/V^1/2 
+          xl=      3e-08                  xw=          0         
+          a0=   0.239871                 ags=  0.0943234 V^-1    
+          b0=3.21184e-06 meter            b1=      5e-06 meter   
+        keta=  0.0312217 V^-1           voff=      -0.15 V       
+       ngate=          0 cm^-3           vbx=          0 V       
+         vbm=         -3 V                xt=   1.55e-07 meter   
+        vth0=  -0.658639 V               nch= 4.1589e+17 cm^-3   
+        nsub=      6e+16 cm^-3           nlx=      1e-09 meter   
+      gamma1=          0 V^-1/2       gamma2=          0 V^-1/2  
+          k1=    0.51999 V^1/2            k2=  0.0357513         
+          k3=          0                 k3b=    15.5614 V^-1    
+          w0=      1e-06 meter          dvt0=    2.61002         
+        dvt1=   0.436314                dvt2=  -0.042436 V^-1    
+       dvt0w=          0 meter^-1      dvt1w=          0 meter^-1
+       dvt2w=          0 V^-1           dsub=    1.08136         
+        eta0=   0.724124                etab=  -0.240523 V^-1    
+          u0=    196.025 cm^2/V/sec         ua=2.76711e-09 m/V     
+          ub=1.90709e-18 (m/V)^2          uc=6.16687e-11 V^-1    
+        vsat=     197506 m/sec            a1=          0 v^-1    
+          a2=          1               delta=       0.01 V       
+        rdsw=    997.073 ohm-um         prwg=  -0.191611 V^-1    
+        prwb=     -0.495 V^-1/2           wr=          1         
+        pclm=    2.07721             pdiblc1=0.000431459         
+     pdiblc2=  0.0252121             pdiblcb=-0.000996072 V^-1    
+      pscbe1=3.19105e+10 V/m          pscbe2=1.32322e-08 V/m     
+       drout=  0.0432774                pvag=  0.0420525         
+     nfactor=    1.54605                cdsc=0.000141332 f/m^2   
+       cdscb=          0 f/V/m^2       cdscd=          0 f/V/m^2 
+         cit=          0 f/m^2        alpha0=          0 m/V     
+       beta0=         30 V               dlc=1.25451e-08 meter   
+         dwc=2.52729e-09 meter           clc=      1e-07 meter   
+         cle=        0.6                cgso=   2.68e-10 f/m     
+        cgdo=   2.68e-10 f/m            cgbo=      1e-11 f/m     
+        cgsl=          0 f/m            cgdl=          0 f/m     
+      ckappa=        0.6                  cf=9.37621e-11 f/m     
+        tnom=     300.15 K               kt1=      -0.11 V       
+        kt1l=          0                 kt2=      0.022         
+         ute=       -1.5                 ua1=   4.31e-09 m/V     
+         ub1=  -7.61e-18 (m/V)^2         uc1=   -5.6e-11 m/V^2   
+          at=      33000 m/s             prt=          0         
+         using Berkeley noise model       noiMod=          1         
+        noia=    9.9e+18                noib=       2400         
+        noic=    1.4e-12                  em=    4.1e+07         
+          ef=          1                  af=          1         
+          kf=          0              gdsnoi=-1.23457e-29         
+         using Hspice diodes            using ACM 
+         acm=         3                 hdif=   3.5e-07 meter    
+        ldif=         0 meter             js=         0 amp/m^2  
+         jsw=         0 amp/m            xti=         0          
+           n=         1                   cj=0.00190249 f/m^2    
+          mj=  0.464436                   pb=  0.981028 V        
+        cjsw=3.14274e-10 f/m             mjsw=  0.330445          
+         php=  0.981028 V               pbsw (not used)           
+      cjgate=3.14274e-10 f/m            cjswg (not used)           
+       mjswg (not used)                 pbswg (not used)           
+       lketa= -0.0208318               wketa= -0.0079135         
+       pvth0= 0.00495298                 pk2= 0.00338337         
+       prdsw=    29.8169         
+ 
+
+1****** HSPICE -- I-2013.12-SP2-1 32-BIT (Jun 10 2014) RHEL32 ******            
+ ******  
+ opamp! schhweeeet
+
+ ****** circuit element summary tnom=  25.000 temp=  25.000 ******
+
+
+ **** capacitors
+  
+  
+                             
+ element name        0:c1    
+ node1               0:n5    
+ node2               0:n7    
+ model                       
+ cap eff           300.0000p 
+ tc1                 0.      
+ tc2                 0.      
+ scale               1.0000  
+ ic                  0.      
+ m                   1.0000  
+ w                   0.      
+ l                   0.      
+ temp               25.0000  
+
+
+ **** independent sources
+
+     name         node1        node2      dc volt    ac mag    ac phase    type
+  vdd  nvdd              0                    2.0000     0.         0.      dc   
+  vi1  n1                0                    0.         0.         0.      dc   
+  vi2  n2                0                    0.         1.0000     0.      dc   
+  vss  0                 nvss                 2.0000     0.         0.      dc   
+  ibias  n6                nvss                10.0000u    0.         0.      dc   
+
+
+ **** mosfets
+
+
+ **** BSIM3v3 Model (Level49 or Level53)
+  
+  
+                                                              
+ element name        0:m1       0:m2       0:m3       0:m4    
+ drain               0:n4       0:n5       0:n4       0:n5    
+ gate                0:n1       0:n2       0:n4       0:n4    
+ source              0:n3       0:n3       0:nvss     0:nvss  
+ bulk                0:nvss     0:nvss     0:nvss     0:nvss  
+ model               0:cmosp    0:cmosp    0:cmosn    0:cmosn 
+ w eff              39.9949u   39.9949u    9.9970u    9.9970u 
+ l eff             254.9097n  254.9097n  277.7670n  277.7670n 
+ rd eff              0.         0.         0.         0.      
+ rs eff              0.         0.         0.         0.      
+ cdsat               0.         0.         0.         0.      
+ cssat               0.         0.         0.         0.      
+ capbd              78.8402f   78.8402f   21.0479f   21.0479f 
+ capbs              78.8402f   78.8402f   21.0479f   21.0479f 
+ temp               25.0000    25.0000    25.0000    25.0000  
+ aic                                                          
+ nf                  1.0000     1.0000     1.0000     1.0000  
+ sa                  0.         0.         0.         0.      
+ sb                  0.         0.         0.         0.      
+ sd                  0.         0.         0.         0.      
+ saeff               0.         0.         0.         0.      
+ sbeff               0.         0.         0.         0.      
+ mulu0               1.0000     1.0000     1.0000     1.0000  
+ mulua               1.0000     1.0000     1.0000     1.0000  
+ mulub               1.0000     1.0000     1.0000     1.0000  
+ m                   1.0000     1.0000     1.0000     1.0000  
+ w drawn            40.0000u   40.0000u   10.0000u   10.0000u 
+ l drawn           250.0000n  250.0000n  250.0000n  250.0000n 
+  
+  
+                                                              
+ element name        0:m5       0:m6       0:m7       0:m8    
+ drain               0:n3       0:n7       0:n7       0:n6    
+ gate                0:n6       0:n5       0:n6       0:n6    
+ source              0:nvdd     0:nvss     0:nvdd     0:nvdd  
+ bulk                0:nvss     0:nvss     0:nvss     0:nvss  
+ model               0:cmosp    0:cmosn    0:cmosp    0:cmosp 
+ w eff              79.9949u    9.9970u   39.9949u    7.9949u 
+ l eff             254.9097n  277.7670n  254.9097n  254.9097n 
+ rd eff              0.         0.         0.         0.      
+ rs eff              0.         0.         0.         0.      
+ cdsat               0.         0.         0.         0.      
+ cssat               0.         0.         0.         0.      
+ capbd             157.2404f   21.0479f   78.8402f   16.1200f 
+ capbs             157.2404f   21.0479f   78.8402f   16.1200f 
+ temp               25.0000    25.0000    25.0000    25.0000  
+ aic                                                          
+ nf                  1.0000     1.0000     1.0000     1.0000  
+ sa                  0.         0.         0.         0.      
+ sb                  0.         0.         0.         0.      
+ sd                  0.         0.         0.         0.      
+ saeff               0.         0.         0.         0.      
+ sbeff               0.         0.         0.         0.      
+ mulu0               1.0000     1.0000     1.0000     1.0000  
+ mulua               1.0000     1.0000     1.0000     1.0000  
+ mulub               1.0000     1.0000     1.0000     1.0000  
+ m                   1.0000     1.0000     1.0000     1.0000  
+ w drawn            80.0000u   10.0000u   40.0000u    8.0000u 
+ l drawn           250.0000n  250.0000n  250.0000n  250.0000n 
+  
+  
+1****** HSPICE -- I-2013.12-SP2-1 32-BIT (Jun 10 2014) RHEL32 ******            
+ ******  
+ opamp! schhweeeet
+
+ ****** element node table
+                                                                                      
+ 0                vdd              vi1              vi2              vss              
+ n1               vi1              m1:g                                               
+ n2               vi2              m2:g                                               
+ n3               m1:s             m2:s             m5:d                              
+ n4               m1:d             m3:d             m3:g             m4:g             
+ n5               c1               m2:d             m4:d             m6:g             
+ n6               ibias            m5:g             m7:g             m8:d             
+                  m8:g                                                                
+ n7               c1               m6:d             m7:d                              
+ nvdd             vdd              m5:s             m7:s             m8:s             
+ nvss             vss              ibias            m1:b             m2:b             
+                  m3:s             m3:b             m4:s             m4:b             
+                  m5:b             m6:s             m6:b             m7:b             
+                  m8:b                                                                
+ **info** set option symb=1 internally to help for convergence.
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2         
+1****** HSPICE -- I-2013.12-SP2-1 32-BIT (Jun 10 2014) RHEL32 ******            
+ ******  
+ opamp! schhweeeet
+
+ ****** temperature-adjusted values tnom=  25.000 temp=  25.000 ******
+
+ constants  - temp             kt               vt               gapsi            ni
+            298.1500         4.116e-21         25.6918m          1.1156         1.256e+16      
+
+ *** capacitors
+    name        eff val
+
+
+
+ *** mosfet element parameters
+ name             rd eff           rs eff           cdsat            cssat              vto                beta
+
+
+        0:m1                  0.               0.               0.               0.            -658.1533m         24.0024m      
+        0:m2                  0.               0.               0.               0.            -658.1533m         24.0024m      
+        0:m3                  0.               0.               0.               0.             436.5754m         13.2136m      
+        0:m4                  0.               0.               0.               0.             436.5754m         13.2136m      
+        0:m5                  0.               0.               0.               0.            -658.3962m         48.0077m      
+        0:m6                  0.               0.               0.               0.             436.5754m         13.2136m      
+        0:m7                  0.               0.               0.               0.            -658.1533m         24.0024m      
+        0:m8                  0.               0.               0.               0.            -656.2088m          4.7980m      
+ **info** dc convergence successful at Newton-Raphson method 
+1****** HSPICE -- I-2013.12-SP2-1 32-BIT (Jun 10 2014) RHEL32 ******            
+ ******  
+ opamp! schhweeeet
+
+ ****** operating point information tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is     0.     
+    node    =voltage      node    =voltage      node    =voltage
+
+ +0:n1      =   0.      0:n2      =   0.      0:n3      = 372.0143m
+ +0:n4      =  -1.3447  0:n5      =  -1.3447  0:n6      =   1.7047 
+ +0:n7      =-946.8624m 0:nvdd    =   2.0000  0:nvss    =  -2.0000 
+
+
+ **** voltage sources
+
+ subckt                                              
+ element  0:vdd      0:vi1      0:vi2      0:vss     
+  volts      2.0000     0.         0.         2.0000 
+  current -321.8408u    0.         0.      -321.8408u
+  power    643.6816u    0.         0.       643.6816u
+
+     total voltage source power dissipation=    1.2874m       watts
+
+
+
+ **** current sources
+
+ subckt             
+ element  0:ibias   
+  volts      3.7047 
+  current   10.0000u
+  power    -37.0473u
+
+
+     total current source power dissipation= -37.0473u       watts
+
+
+ **** mosfets
+
+
+ subckt                                                                    
+ element  0:m1       0:m2       0:m3       0:m4       0:m5       0:m6      
+ model    0:cmosp    0:cmosp    0:cmosn    0:cmosn    0:cmosp    0:cmosn   
+ region     Saturati   Saturati   Saturati   Saturati   Saturati   Saturati
+  id       -99.4077u  -99.4077u   99.4077u   99.4077u -198.8153u  113.0255u
+  ibs        0.         0.         0.         0.         0.         0.     
+  ibd        0.         0.         0.         0.         0.         0.     
+  vgs     -372.0143m -372.0143m  655.3079m  655.3079m -295.2740m  655.3079m
+  vds       -1.7167    -1.7167   655.3079m  655.3079m   -1.6280     1.0531 
+  vbs       -2.3720    -2.3720     0.         0.        -4.0000     0.     
+  vth     -278.3634m -278.3634m  512.2299m  512.2299m -173.5458m  510.2356m
+  vdsat   -110.1725m -110.1725m  147.3527m  147.3527m  -97.8659m  148.7498m
+  vod      -93.6508m  -93.6508m  143.0780m  143.0780m -121.7283m  145.0723m
+  beta      13.8991m   13.8991m    8.4523m    8.4523m   30.2631m    8.4538m
+  gam eff  490.8635m  490.8635m  359.9970m  359.9970m  499.1682m  359.9970m
+  gm         1.1626m    1.1626m    1.0992m    1.0992m    2.1830m    1.2111m
+  gds       16.4126u   16.4126u   34.2411u   34.2411u   30.8526u   34.4272u
+  gmb       65.9093u   65.9093u  241.4390u  241.4390u   80.3992u  266.4435u
+  cdtot    115.3093f  115.3093f   21.1372f   21.1372f  345.6787f   19.6969f
+  cgtot     77.8089f   77.8089f   21.6775f   21.6775f  160.9782f   21.6847f
+  cstot    195.6278f  195.6278f   33.1765f   33.1765f  500.2203f   33.1865f
+  cbtot    261.5443f  261.5443f   41.1520f   41.1520f  744.4222f   39.7127f
+  cgs       64.0847f   64.0847f   17.1757f   17.1757f  134.9615f   17.1920f
+  cgd       14.3939f   14.3939f    3.9825f    3.9825f   28.9400f    3.9800f
+
+
+
+ subckt                        
+ element  0:m7       0:m8      
+ model    0:cmosp    0:cmosp   
+ region     Saturati   Saturati
+  id      -113.0255u  -10.0000u
+  ibs        0.         0.     
+  ibd        0.         0.     
+  vgs     -295.2740m -295.2740m
+  vds       -2.9469  -295.2740m
+  vbs       -4.0000    -4.0000 
+  vth     -176.4350m -196.5282m
+  vdsat    -94.1546m  -75.6527m
+  vod     -118.8390m  -98.7458m
+  beta      15.1177m    3.0057m
+  gam eff  499.0720m  498.3020m
+  gm         1.2063m  119.7846u
+  gds       14.2007u    3.4204u
+  gmb       43.6959u    3.4511u
+  cdtot    128.7490f   44.4491f
+  cgtot     80.5426f   16.0776f
+  cstot    250.4696f   50.6818f
+  cbtot    328.6377f   85.2389f
+  cgs       67.4981f   13.3983f
+  cgd       14.4687f    2.9036f
+
+
+
+
+          ***** job concluded
+1****** HSPICE -- I-2013.12-SP2-1 32-BIT (Jun 10 2014) RHEL32 ******            
+ ******  
+ opamp! schhweeeet
+
+ ****** job statistics summary tnom=  25.000 temp=  25.000 ******
+  
+  
+ ******  Machine Information  ******
+ CPU:
+ model name	: Intel(R) Xeon(R) CPU           E5603  @ 1.60GHz
+ cpu MHz	: 1596.093
+  
+ OS:
+ Linux version 2.6.32-573.12.1.el6.x86_64 (mockbuild@x86-031.build.eng.bos.redhat.com) (gcc version 4.4.7 20120313 (Red Hat 4.4.7-16) (GCC) ) #1 SMP Mon Nov 23 12:55:32 EST 2015
+
+
+  ******  HSPICE Threads Information  ******
+
+  Command Line Threads Count :     1
+  Available CPU Count        :     8
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =      11 # elements   =      15
+  # resistors   =       0 # capacitors =       1 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       5
+  # curr_srcs   =       1 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =       8 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.02           1          12
+  ac analysis        0.00          61          61
+  readin             0.01
+  errchk             0.00
+  setup              0.00
+  output             0.00
+
+
+           peak memory used        120.17 megabytes
+           total cpu time            0.02 seconds
+           total elapsed time        4.76 seconds
+           job started at     15:22:23 02/22/2016
+           job ended   at     15:22:28 02/22/2016
+
+
+ lic: Release hspice token(s) 
+ lic: total license checkout elapse time:        4.71(s)

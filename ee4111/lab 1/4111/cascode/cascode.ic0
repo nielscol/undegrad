@@ -1,0 +1,18 @@
+* "simulator" "HSPICE" 
+* "version" "I-2013.12-SP2-1 32-BIT"
+* "format" "HSP"
+* "rundate" "15:06:54 02/08/2016 "
+* "netlist" "cascode.sp "
+* "runtitle" "active cascode"
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ 1 =   2.2500        
++ 2 =   1.5959        
++ 3 =   4.1115        
++ 4 =   8.0000        
++ 5 =   1.6000        
+***   END: Saved Operating Point ***                     

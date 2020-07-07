@@ -1,0 +1,80 @@
+header
+"PSFversion" "1.00" 
+"simulator" "HSPICE"
+"version" "I-2013.12-SP2-1 32-BIT" 
+"rundate" "16:56:49 12/08/2016 " 
+"runtitle" "**han-carlson adder - 16 bit                                      " 
+"runtype" "logFile"
+TYPE
+"analysisInst" STRUCT(
+"analysisType" STRING *
+"dataFile" STRING *
+"format" STRING *
+"parent" STRING *
+"sweepVariable" ARRAY ( * ) STRING *
+"description" STRING * )
+VALUE
+"element" "analysisInst" ( 
+"Element Information"
+"sim.el0"
+"PSF"
+""
+()
+"Element Information"
+)
+"opBegin" "analysisInst" ( 
+"info"
+"sim.op0"
+"PSF"
+""
+()
+"info"
+)
+"timeSweep" "analysisInst" ( 
+"Transient Analysis"
+"sim.tr0"
+"PSF"
+""
+()
+"Transient Analysis"
+)
+"opEnd" "analysisInst" ( 
+"Operating Point"
+"sim.op0@1e-09"
+"PSF"
+""
+()
+"Operating Point"
+)
+"sim.op1" "analysisInst" ( 
+"Operating Point"
+"sim.op1"
+"PSF"
+""
+()
+"Operating Point"
+)
+"timeSweep1" "analysisInst" ( 
+"Transient Analysis"
+"sim.tr1"
+"PSF"
+""
+()
+"Transient Analysis"
+)
+"opEnd" "analysisInst" ( 
+"Operating Point"
+"sim.op1@1e-09"
+"PSF"
+""
+()
+"Operating Point"
+)
+"summary" "analysisInst" ( 
+"Summary Information"
+"sim.su0"
+"PSF"
+""
+()
+"Summary Information"
+)

@@ -1,0 +1,403 @@
+***  Installation Started 03/01/2010 15:18  ***
+Title: MCHPFSUSB v1.2 Installation
+Source: E:\MCHPFSUSB_Setup_v1.2.exe | 08-30-2007 | 18:34:24 | 4279467
+Made Dir: C:\MCHPFSUSB
+File Copy: C:\MCHPFSUSB\UNWISE.EXE | 06-25-1999 | 10:55:30 | | 149504 | 30fdd633
+RegDB Key: Software\Microsoft\Windows\CurrentVersion\Uninstall\MCHPFSUSB v1.2
+RegDB Val: MCHPFSUSB v1.2
+RegDB Name: DisplayName
+RegDB Root: 2
+RegDB Key: Software\Microsoft\Windows\CurrentVersion\Uninstall\MCHPFSUSB v1.2
+RegDB Val: C:\MCHPFS~1\UNWISE.EXE C:\MCHPFS~1\INSTALL.LOG
+RegDB Name: UninstallString
+RegDB Root: 2
+Made Dir: C:\MCHPFSUSB\Documents
+File Copy: C:\MCHPFSUSB\Documents\MCHPFSUSB Firmware Users Guide 51679a.pdf | 08-16-2007 | 17:51:42 | | 537943 | a511839b
+File Copy: C:\MCHPFSUSB\Documents\Online Links to Other Useful Documents.htm | 08-30-2007 | 13:08:06 | | 6600 | 26939b6f
+Made Dir: C:\MCHPFSUSB\fw
+File Copy: C:\MCHPFSUSB\fw\Abbreviation List.txt | 12-01-2004 | 09:47:50 | | 2432 | 73194588
+Made Dir: C:\MCHPFSUSB\fw\Boot
+File Copy: C:\MCHPFSUSB\fw\Boot\18f4550.lkr | 07-27-2004 | 14:36:46 | | 1418 | 2ed586ed
+Made Dir: C:\MCHPFSUSB\fw\Boot\autofiles
+File Copy: C:\MCHPFSUSB\fw\Boot\autofiles\usbcfg.h | 11-15-2004 | 23:29:24 | | 2870 | fc950e4f
+File Copy: C:\MCHPFSUSB\fw\Boot\autofiles\usbdsc.c | 05-16-2007 | 15:51:54 | | 11073 | e9485456
+File Copy: C:\MCHPFSUSB\fw\Boot\autofiles\usbdsc.err | 08-27-2007 | 13:25:04 | | 95 | 4f838f03
+File Copy: C:\MCHPFSUSB\fw\Boot\autofiles\usbdsc.h | 11-15-2004 | 20:13:08 | | 2562 | 44b8ce59
+File Copy: C:\MCHPFSUSB\fw\Boot\autofiles\usbdsc.i | 08-27-2007 | 13:25:06 | | 12225 | 4b13b388
+File Copy: C:\MCHPFSUSB\fw\Boot\CleanUp.bat | 06-30-2004 | 17:08:06 | | 1048 | 5d23e4dc
+File Copy: C:\MCHPFSUSB\fw\Boot\io_cfg.h | 11-19-2004 | 17:49:08 | | 4778 | a3546b41
+File Copy: C:\MCHPFSUSB\fw\Boot\main.c | 08-27-2007 | 13:25:04 | | 6095 | f66d9976
+File Copy: C:\MCHPFSUSB\fw\Boot\MCHPUSB.mcp | 08-21-2007 | 14:31:14 | | 1757 | e6712935
+File Copy: C:\MCHPFSUSB\fw\Boot\MCHPUSB.mcs | 08-27-2007 | 13:25:54 | | 8996 | f6a78c27
+File Copy: C:\MCHPFSUSB\fw\Boot\MCHPUSB.mcw | 08-27-2007 | 13:25:52 | | 24064 | 9442ecae
+File Copy: C:\MCHPFSUSB\fw\Boot\MCHPUSB.mptags | 08-27-2007 | 13:25:32 | | 50201 | 3d4b2ed4
+File Copy: C:\MCHPFSUSB\fw\Boot\MCHPUSB.tagsrc | 08-27-2007 | 13:25:32 | | 871 | 3577dde1
+Made Dir: C:\MCHPFSUSB\fw\Boot\system
+Made Dir: C:\MCHPFSUSB\fw\Boot\system\interrupt
+File Copy: C:\MCHPFSUSB\fw\Boot\system\interrupt\interrupt.c | 04-14-2004 | 16:50:32 | | 1631 | 5a54d758
+File Copy: C:\MCHPFSUSB\fw\Boot\system\interrupt\interrupt.h | 04-14-2004 | 16:57:52 | | 811 | a48932e2
+File Copy: C:\MCHPFSUSB\fw\Boot\system\typedefs.h | 11-19-2004 | 17:49:08 | | 4187 | f1440479
+Made Dir: C:\MCHPFSUSB\fw\Boot\system\usb
+Made Dir: C:\MCHPFSUSB\fw\Boot\system\usb\class
+Made Dir: C:\MCHPFSUSB\fw\Boot\system\usb\class\boot
+File Copy: C:\MCHPFSUSB\fw\Boot\system\usb\class\boot\boot.c | 11-19-2004 | 17:48:04 | | 12865 | 80748b80
+File Copy: C:\MCHPFSUSB\fw\Boot\system\usb\class\boot\boot.err | 08-27-2007 | 13:25:06 | | 95 | 4f838f03
+File Copy: C:\MCHPFSUSB\fw\Boot\system\usb\class\boot\boot.h | 05-16-2007 | 15:54:40 | | 7195 | 753d8a0d
+File Copy: C:\MCHPFSUSB\fw\Boot\system\usb\class\boot\boot.i | 08-27-2007 | 13:25:06 | | 40327 | b9bc0b75
+File Copy: C:\MCHPFSUSB\fw\Boot\system\usb\usb.h | 11-19-2004 | 17:49:08 | | 2330 | d1e9a92a
+Made Dir: C:\MCHPFSUSB\fw\Boot\system\usb\usb9
+File Copy: C:\MCHPFSUSB\fw\Boot\system\usb\usb9\usb9.c | 11-19-2004 | 17:49:08 | | 12618 | 39c54235
+File Copy: C:\MCHPFSUSB\fw\Boot\system\usb\usb9\usb9.err | 08-27-2007 | 13:25:04 | | 95 | 4f838f03
+File Copy: C:\MCHPFSUSB\fw\Boot\system\usb\usb9\usb9.h | 11-19-2004 | 17:49:08 | | 3867 | cde240aa
+File Copy: C:\MCHPFSUSB\fw\Boot\system\usb\usb9\usb9.i | 08-27-2007 | 13:25:04 | | 40327 | 9511e5f
+Made Dir: C:\MCHPFSUSB\fw\Boot\system\usb\usbctrltrf
+File Copy: C:\MCHPFSUSB\fw\Boot\system\usb\usbctrltrf\usbctrltrf.c | 05-15-2007 | 16:30:16 | | 21639 | de8a8637
+File Copy: C:\MCHPFSUSB\fw\Boot\system\usb\usbctrltrf\usbctrltrf.err | 08-27-2007 | 13:25:06 | | 95 | 4f838f03
+File Copy: C:\MCHPFSUSB\fw\Boot\system\usb\usbctrltrf\usbctrltrf.h | 11-19-2004 | 17:49:10 | | 3063 | bee4ac83
+File Copy: C:\MCHPFSUSB\fw\Boot\system\usb\usbctrltrf\usbctrltrf.i | 08-27-2007 | 13:25:06 | | 40364 | c29b892d
+Made Dir: C:\MCHPFSUSB\fw\Boot\system\usb\usbdefs
+File Copy: C:\MCHPFSUSB\fw\Boot\system\usb\usbdefs\usbdefs_ep0_buff.h | 11-19-2004 | 17:49:10 | | 6913 | 7a3f360e
+File Copy: C:\MCHPFSUSB\fw\Boot\system\usb\usbdefs\usbdefs_std_dsc.h | 11-19-2004 | 17:49:10 | | 6409 | 802033ea
+Made Dir: C:\MCHPFSUSB\fw\Boot\system\usb\usbdrv
+File Copy: C:\MCHPFSUSB\fw\Boot\system\usb\usbdrv\usbdrv.c | 05-16-2007 | 15:53:22 | | 12298 | 9a9c4e13
+File Copy: C:\MCHPFSUSB\fw\Boot\system\usb\usbdrv\usbdrv.err | 08-27-2007 | 13:25:04 | | 95 | 4f838f03
+File Copy: C:\MCHPFSUSB\fw\Boot\system\usb\usbdrv\usbdrv.h | 05-15-2007 | 14:21:26 | | 8714 | 6efeb728
+File Copy: C:\MCHPFSUSB\fw\Boot\system\usb\usbdrv\usbdrv.i | 08-27-2007 | 13:25:04 | | 40341 | 64074768
+File Copy: C:\MCHPFSUSB\fw\Boot\system\usb\usbmmap.c | 11-24-2004 | 12:46:32 | | 12129 | d27dbf09
+File Copy: C:\MCHPFSUSB\fw\Boot\system\usb\usbmmap.err | 08-27-2007 | 13:25:04 | | 95 | 4f838f03
+File Copy: C:\MCHPFSUSB\fw\Boot\system\usb\usbmmap.h | 11-19-2004 | 17:49:10 | | 7076 | 9e74e23a
+File Copy: C:\MCHPFSUSB\fw\Boot\system\usb\usbmmap.i | 08-27-2007 | 13:25:04 | | 12177 | cf8da75d
+File Copy: C:\MCHPFSUSB\fw\Boot\system\usb\usb_compile_time_validation.h | 06-18-2004 | 15:56:26 | | 2245 | 849b75b7
+Made Dir: C:\MCHPFSUSB\fw\Boot\_output
+File Copy: C:\MCHPFSUSB\fw\Boot\_output\boot.o | 08-21-2007 | 14:39:54 | | 19521 | 3cb15e21
+File Copy: C:\MCHPFSUSB\fw\Boot\_output\cdc.o | 10-07-2004 | 11:43:40 | | 13705 | ca00d116
+Made Dir: C:\MCHPFSUSB\fw\Boot\_output\Hex Saves
+File Copy: C:\MCHPFSUSB\fw\Boot\_output\Hex Saves\MCHPUSB_Bootloader_PICDEM FS USB Demo Board.27Aug2007.hex | 08-27-2007 | 13:25:50 | | 92248 | d535057c
+File Copy: C:\MCHPFSUSB\fw\Boot\_output\main.o | 08-27-2007 | 13:25:32 | | 5394 | 2821b459
+File Copy: C:\MCHPFSUSB\fw\Boot\_output\MCHPUSB.cof | 08-27-2007 | 13:25:32 | | 66944 | baf23e14
+File Copy: C:\MCHPFSUSB\fw\Boot\_output\MCHPUSB.hex | 08-27-2007 | 13:25:32 | | 6005 | 4ec0b85e
+File Copy: C:\MCHPFSUSB\fw\Boot\_output\MCHPUSB.map | 08-27-2007 | 13:25:32 | | 84900 | c84a6dfa
+File Copy: C:\MCHPFSUSB\fw\Boot\_output\temperature.o | 08-19-2004 | 10:53:08 | | 8364 | 1737e2dd
+File Copy: C:\MCHPFSUSB\fw\Boot\_output\usb9.o | 08-21-2007 | 14:39:54 | | 5719 | 3eeed296
+File Copy: C:\MCHPFSUSB\fw\Boot\_output\usbctrltrf.o | 08-21-2007 | 14:39:54 | | 13577 | bdcc488e
+File Copy: C:\MCHPFSUSB\fw\Boot\_output\usbdrv.o | 08-21-2007 | 14:39:54 | | 7168 | 8ea41afb
+File Copy: C:\MCHPFSUSB\fw\Boot\_output\usbdsc.o | 08-21-2007 | 14:39:54 | | 3658 | 7d1eafc9
+File Copy: C:\MCHPFSUSB\fw\Boot\_output\usbmmap.o | 08-21-2007 | 14:39:54 | | 12191 | 724e2f46
+Made Dir: C:\MCHPFSUSB\fw\Cdc
+File Copy: C:\MCHPFSUSB\fw\Cdc\18f87j50.lkr | 04-14-2007 | 16:39:38 | | 1672 | 89bba97e
+Made Dir: C:\MCHPFSUSB\fw\Cdc\autofiles
+File Copy: C:\MCHPFSUSB\fw\Cdc\autofiles\usbcfg.h | 08-27-2007 | 10:35:28 | | 4068 | d20d4b9e
+File Copy: C:\MCHPFSUSB\fw\Cdc\autofiles\usbdsc.c | 08-23-2007 | 17:29:06 | | 12867 | daf6db17
+File Copy: C:\MCHPFSUSB\fw\Cdc\autofiles\usbdsc.h | 11-18-2004 | 02:21:48 | | 3042 | a19d2b25
+File Copy: C:\MCHPFSUSB\fw\Cdc\CleanUp.bat | 06-30-2004 | 17:08:06 | | 1048 | 5d23e4dc
+Made Dir: C:\MCHPFSUSB\fw\Cdc\inf
+Made Dir: C:\MCHPFSUSB\fw\Cdc\inf\win2k_winxp_winvista32
+File Copy: C:\MCHPFSUSB\fw\Cdc\inf\win2k_winxp_winvista32\mchpcdc.inf | 08-21-2007 | 14:42:16 | | 1956 | 539d177e
+File Copy: C:\MCHPFSUSB\fw\Cdc\io_cfg.h | 08-23-2007 | 17:34:20 | | 6823 | 82df8f9d
+File Copy: C:\MCHPFSUSB\fw\Cdc\main.c | 08-23-2007 | 11:39:12 | | 14895 | bdd73cd5
+File Copy: C:\MCHPFSUSB\fw\Cdc\MCHPUSB.mcp | 08-27-2007 | 10:35:30 | | 1867 | 71016160
+File Copy: C:\MCHPFSUSB\fw\Cdc\MCHPUSB.mcs | 08-27-2007 | 10:36:10 | | 11163 | 550be4b3
+File Copy: C:\MCHPFSUSB\fw\Cdc\MCHPUSB.mcw | 08-27-2007 | 10:36:10 | | 908288 | 6f6bbbf0
+File Copy: C:\MCHPFSUSB\fw\Cdc\MCHPUSB.mptags | 08-27-2007 | 10:35:34 | | 62300 | 507972ed
+File Copy: C:\MCHPFSUSB\fw\Cdc\MCHPUSB.tagsrc | 08-27-2007 | 10:35:34 | | 921 | d90c44a4
+File Copy: C:\MCHPFSUSB\fw\Cdc\rm18f4550.lkr | 05-15-2007 | 11:24:10 | | 1508 | 6a6497f2
+Made Dir: C:\MCHPFSUSB\fw\Cdc\system
+Made Dir: C:\MCHPFSUSB\fw\Cdc\system\interrupt
+File Copy: C:\MCHPFSUSB\fw\Cdc\system\interrupt\interrupt.c | 04-14-2004 | 16:50:32 | | 1631 | 5a54d758
+File Copy: C:\MCHPFSUSB\fw\Cdc\system\interrupt\interrupt.h | 04-14-2004 | 16:57:52 | | 811 | a48932e2
+File Copy: C:\MCHPFSUSB\fw\Cdc\system\typedefs.h | 07-12-2004 | 13:23:08 | | 4187 | 2329cf7b
+Made Dir: C:\MCHPFSUSB\fw\Cdc\system\usb
+Made Dir: C:\MCHPFSUSB\fw\Cdc\system\usb\class
+Made Dir: C:\MCHPFSUSB\fw\Cdc\system\usb\class\cdc
+File Copy: C:\MCHPFSUSB\fw\Cdc\system\usb\class\cdc\cdc.c | 11-19-2004 | 13:32:14 | | 20187 | 478dc73b
+File Copy: C:\MCHPFSUSB\fw\Cdc\system\usb\class\cdc\cdc.h | 06-19-2007 | 16:49:38 | | 12616 | fb2a232d
+File Copy: C:\MCHPFSUSB\fw\Cdc\system\usb\usb.h | 11-19-2004 | 10:54:32 | | 2362 | 500816a
+Made Dir: C:\MCHPFSUSB\fw\Cdc\system\usb\usb9
+File Copy: C:\MCHPFSUSB\fw\Cdc\system\usb\usb9\usb9.c | 08-23-2007 | 17:24:24 | | 11037 | cf2e420a
+File Copy: C:\MCHPFSUSB\fw\Cdc\system\usb\usb9\usb9.h | 11-19-2004 | 10:54:32 | | 3867 | cde240aa
+Made Dir: C:\MCHPFSUSB\fw\Cdc\system\usb\usbctrltrf
+File Copy: C:\MCHPFSUSB\fw\Cdc\system\usb\usbctrltrf\usbctrltrf.c | 05-16-2007 | 14:28:30 | | 27397 | 9e8d9bc0
+File Copy: C:\MCHPFSUSB\fw\Cdc\system\usb\usbctrltrf\usbctrltrf.h | 08-22-2007 | 14:55:36 | | 4158 | b9ddefcc
+Made Dir: C:\MCHPFSUSB\fw\Cdc\system\usb\usbdefs
+File Copy: C:\MCHPFSUSB\fw\Cdc\system\usb\usbdefs\usbdefs_ep0_buff.h | 11-19-2004 | 10:54:32 | | 6913 | 7a3f360e
+File Copy: C:\MCHPFSUSB\fw\Cdc\system\usb\usbdefs\usbdefs_std_dsc.h | 11-19-2004 | 10:54:32 | | 6409 | 802033ea
+Made Dir: C:\MCHPFSUSB\fw\Cdc\system\usb\usbdrv
+File Copy: C:\MCHPFSUSB\fw\Cdc\system\usb\usbdrv\usbdrv.c | 08-21-2007 | 21:01:54 | | 29102 | f9e494af
+File Copy: C:\MCHPFSUSB\fw\Cdc\system\usb\usbdrv\usbdrv.h | 05-15-2007 | 14:18:18 | | 9066 | 8ce8e8eb
+File Copy: C:\MCHPFSUSB\fw\Cdc\system\usb\usbmmap.c | 08-22-2007 | 14:21:52 | | 12304 | a6b0eed1
+File Copy: C:\MCHPFSUSB\fw\Cdc\system\usb\usbmmap.h | 11-19-2004 | 10:54:32 | | 7234 | 90fc23a7
+File Copy: C:\MCHPFSUSB\fw\Cdc\system\usb\usb_compile_time_validation.h | 08-27-2004 | 19:04:16 | | 2604 | 6996f51e
+Made Dir: C:\MCHPFSUSB\fw\Cdc\user
+File Copy: C:\MCHPFSUSB\fw\Cdc\user\HyperTerminal.lnk | 03-05-2003 | 02:50:56 | | 786 | d07ac5d6
+Made Dir: C:\MCHPFSUSB\fw\Cdc\user\solutions
+File Copy: C:\MCHPFSUSB\fw\Cdc\user\solutions\Exercise_01.txt | 07-16-2004 | 15:40:58 | | 257 | 2ec8c68e
+File Copy: C:\MCHPFSUSB\fw\Cdc\user\solutions\Exercise_02.txt | 07-16-2004 | 15:41:06 | | 245 | 1de48db9
+File Copy: C:\MCHPFSUSB\fw\Cdc\user\solutions\Exercise_03.txt | 07-15-2004 | 16:06:30 | | 222 | 7f50febe
+File Copy: C:\MCHPFSUSB\fw\Cdc\user\solutions\Exercise_04.txt | 05-15-2007 | 08:39:12 | | 399 | 85a90579
+File Copy: C:\MCHPFSUSB\fw\Cdc\user\solutions\Exercise_05.txt | 06-07-2007 | 20:11:26 | | 673 | 1e9fb892
+File Copy: C:\MCHPFSUSB\fw\Cdc\user\temperature.c | 08-21-2007 | 15:23:52 | | 6134 | 78a42686
+File Copy: C:\MCHPFSUSB\fw\Cdc\user\temperature.h | 07-13-2004 | 09:06:34 | | 2095 | 7744152c
+File Copy: C:\MCHPFSUSB\fw\Cdc\user\user.c | 08-21-2007 | 19:16:18 | | 14165 | 4f3ab9cf
+File Copy: C:\MCHPFSUSB\fw\Cdc\user\user.h | 11-19-2004 | 10:54:34 | | 1884 | 16fbad36
+Made Dir: C:\MCHPFSUSB\fw\Cdc\_output
+File Copy: C:\MCHPFSUSB\fw\Cdc\_output\cdc.o | 08-27-2007 | 10:35:32 | | 21544 | 1d7c5aa3
+Made Dir: C:\MCHPFSUSB\fw\Cdc\_output\Hex Saves
+File Copy: C:\MCHPFSUSB\fw\Cdc\_output\Hex Saves\MCHPUSB_CDC_RS232_PIC18F87J50 FS USB Plug In Module.27Aug2007.hex | 08-27-2007 | 10:34:52 | | 368700 | ff933852
+File Copy: C:\MCHPFSUSB\fw\Cdc\_output\Hex Saves\MCHPUSB_CDC_RS232_PICDEM FS USB Demo Board.27Aug2007.hex | 08-27-2007 | 10:36:02 | | 92248 | 2dce0a89
+File Copy: C:\MCHPFSUSB\fw\Cdc\_output\main.o | 08-27-2007 | 10:35:30 | | 5900 | c315de01
+File Copy: C:\MCHPFSUSB\fw\Cdc\_output\MCHPUSB.cod | 08-20-2007 | 16:55:42 | | 82944 | 7818fef
+File Copy: C:\MCHPFSUSB\fw\Cdc\_output\MCHPUSB.cof | 08-27-2007 | 10:35:32 | | 114791 | 5e7180a
+File Copy: C:\MCHPFSUSB\fw\Cdc\_output\MCHPUSB.hex | 08-27-2007 | 10:35:32 | | 13892 | c392defa
+File Copy: C:\MCHPFSUSB\fw\Cdc\_output\MCHPUSB.lst | 08-20-2007 | 16:55:42 | | 894545 | ebcb2a50
+File Copy: C:\MCHPFSUSB\fw\Cdc\_output\MCHPUSB.map | 08-27-2007 | 10:35:32 | | 92618 | 6efb5922
+File Copy: C:\MCHPFSUSB\fw\Cdc\_output\temperature.o | 08-27-2007 | 10:35:32 | | 10374 | 7695f901
+File Copy: C:\MCHPFSUSB\fw\Cdc\_output\usb9.o | 08-27-2007 | 10:35:32 | | 14868 | c1ac7977
+File Copy: C:\MCHPFSUSB\fw\Cdc\_output\usbctrltrf.o | 08-27-2007 | 10:35:32 | | 21450 | 441da301
+File Copy: C:\MCHPFSUSB\fw\Cdc\_output\usbdrv.o | 08-27-2007 | 10:35:32 | | 13579 | 4a30a153
+File Copy: C:\MCHPFSUSB\fw\Cdc\_output\usbdsc.o | 08-27-2007 | 10:35:32 | | 6097 | 6dc6dc44
+File Copy: C:\MCHPFSUSB\fw\Cdc\_output\usbmmap.o | 08-27-2007 | 10:35:30 | | 11718 | b769a628
+File Copy: C:\MCHPFSUSB\fw\Cdc\_output\user.o | 08-27-2007 | 10:35:32 | | 15789 | 3f7fa66e
+Made Dir: C:\MCHPFSUSB\fw\Demo
+File Copy: C:\MCHPFSUSB\fw\Demo\18f87j50.lkr | 04-14-2007 | 16:39:38 | | 1672 | 89bba97e
+Made Dir: C:\MCHPFSUSB\fw\Demo\autofiles
+File Copy: C:\MCHPFSUSB\fw\Demo\autofiles\usbcfg.h | 08-27-2007 | 10:33:56 | | 3814 | d2b374fe
+File Copy: C:\MCHPFSUSB\fw\Demo\autofiles\usbdsc.c | 08-23-2007 | 19:01:40 | | 11790 | a965d310
+File Copy: C:\MCHPFSUSB\fw\Demo\autofiles\usbdsc.h | 11-19-2004 | 17:26:04 | | 2597 | cae91df1
+File Copy: C:\MCHPFSUSB\fw\Demo\CleanUp.bat | 06-30-2004 | 17:08:06 | | 1048 | 5d23e4dc
+File Copy: C:\MCHPFSUSB\fw\Demo\io_cfg.h | 08-23-2007 | 10:54:40 | | 7525 | d3ab45f8
+File Copy: C:\MCHPFSUSB\fw\Demo\main.c | 08-23-2007 | 10:51:04 | | 15935 | a313f27
+File Copy: C:\MCHPFSUSB\fw\Demo\MCHPUSB.mcp | 08-27-2007 | 10:33:56 | | 1920 | 994de6
+File Copy: C:\MCHPFSUSB\fw\Demo\MCHPUSB.mcs | 08-27-2007 | 10:34:06 | | 11334 | 666a1001
+File Copy: C:\MCHPFSUSB\fw\Demo\MCHPUSB.mcw | 08-27-2007 | 10:34:04 | | 910336 | 368e6876
+File Copy: C:\MCHPFSUSB\fw\Demo\MCHPUSB.mptags | 08-27-2007 | 10:33:58 | | 54281 | 69278ed2
+File Copy: C:\MCHPFSUSB\fw\Demo\MCHPUSB.tagsrc | 08-27-2007 | 10:33:58 | | 990 | a4fa62db
+File Copy: C:\MCHPFSUSB\fw\Demo\rm18f4550.lkr | 05-15-2007 | 11:24:10 | | 1508 | 6a6497f2
+Made Dir: C:\MCHPFSUSB\fw\Demo\system
+Made Dir: C:\MCHPFSUSB\fw\Demo\system\interrupt
+File Copy: C:\MCHPFSUSB\fw\Demo\system\interrupt\interrupt.c | 04-14-2004 | 16:50:32 | | 1631 | 5a54d758
+File Copy: C:\MCHPFSUSB\fw\Demo\system\interrupt\interrupt.h | 04-14-2004 | 16:57:52 | | 811 | a48932e2
+File Copy: C:\MCHPFSUSB\fw\Demo\system\typedefs.h | 11-19-2004 | 17:30:42 | | 4187 | f1440479
+Made Dir: C:\MCHPFSUSB\fw\Demo\system\usb
+Made Dir: C:\MCHPFSUSB\fw\Demo\system\usb\class
+Made Dir: C:\MCHPFSUSB\fw\Demo\system\usb\class\generic
+File Copy: C:\MCHPFSUSB\fw\Demo\system\usb\class\generic\usbgen.c | 11-19-2004 | 17:28:28 | | 8469 | 1c53c65
+File Copy: C:\MCHPFSUSB\fw\Demo\system\usb\class\generic\usbgen.h | 11-19-2004 | 17:30:44 | | 4204 | 739c8dae
+File Copy: C:\MCHPFSUSB\fw\Demo\system\usb\usb.h | 11-19-2004 | 17:30:42 | | 2419 | 38a244a
+Made Dir: C:\MCHPFSUSB\fw\Demo\system\usb\usb9
+File Copy: C:\MCHPFSUSB\fw\Demo\system\usb\usb9\usb9.c | 11-19-2004 | 17:28:28 | | 11062 | 2101645c
+File Copy: C:\MCHPFSUSB\fw\Demo\system\usb\usb9\usb9.h | 11-19-2004 | 17:30:42 | | 3867 | cde240aa
+Made Dir: C:\MCHPFSUSB\fw\Demo\system\usb\usbctrltrf
+File Copy: C:\MCHPFSUSB\fw\Demo\system\usb\usbctrltrf\usbctrltrf.c | 05-16-2007 | 14:04:24 | | 27308 | 9fb860a7
+File Copy: C:\MCHPFSUSB\fw\Demo\system\usb\usbctrltrf\usbctrltrf.h | 08-22-2007 | 14:55:06 | | 4158 | b9ddefcc
+Made Dir: C:\MCHPFSUSB\fw\Demo\system\usb\usbdefs
+File Copy: C:\MCHPFSUSB\fw\Demo\system\usb\usbdefs\usbdefs_ep0_buff.h | 11-19-2004 | 17:30:42 | | 6913 | 7a3f360e
+File Copy: C:\MCHPFSUSB\fw\Demo\system\usb\usbdefs\usbdefs_std_dsc.h | 11-19-2004 | 17:30:42 | | 6409 | 802033ea
+Made Dir: C:\MCHPFSUSB\fw\Demo\system\usb\usbdrv
+File Copy: C:\MCHPFSUSB\fw\Demo\system\usb\usbdrv\usbdrv.c | 08-21-2007 | 15:41:24 | | 28525 | 620142f5
+File Copy: C:\MCHPFSUSB\fw\Demo\system\usb\usbdrv\usbdrv.h | 05-15-2007 | 14:18:56 | | 9066 | 8ce8e8eb
+File Copy: C:\MCHPFSUSB\fw\Demo\system\usb\usbmmap.c | 11-24-2004 | 12:48:14 | | 12180 | f62bcace
+File Copy: C:\MCHPFSUSB\fw\Demo\system\usb\usbmmap.h | 11-19-2004 | 17:30:44 | | 7104 | 5b2d3e71
+File Copy: C:\MCHPFSUSB\fw\Demo\system\usb\usb_compile_time_validation.h | 08-27-2004 | 19:04:16 | | 2604 | 6996f51e
+Made Dir: C:\MCHPFSUSB\fw\Demo\user
+File Copy: C:\MCHPFSUSB\fw\Demo\user\temperature.c | 08-23-2007 | 11:05:20 | | 12171 | 5be2c92e
+File Copy: C:\MCHPFSUSB\fw\Demo\user\temperature.h | 08-23-2007 | 10:42:06 | | 2202 | acf396f1
+File Copy: C:\MCHPFSUSB\fw\Demo\user\user.c | 08-23-2007 | 10:54:42 | | 14513 | 7a976450
+File Copy: C:\MCHPFSUSB\fw\Demo\user\user.h | 05-16-2007 | 15:48:08 | | 3572 | 490b828
+Made Dir: C:\MCHPFSUSB\fw\Demo\_output
+Made Dir: C:\MCHPFSUSB\fw\Demo\_output\Hex Saves
+File Copy: C:\MCHPFSUSB\fw\Demo\_output\Hex Saves\MCHPUSB_CustomDemo_PIC18F87J50 FS USB Plug In Module.27Aug2007.hex | 08-27-2007 | 10:33:36 | | 368700 | ef5c1b28
+File Copy: C:\MCHPFSUSB\fw\Demo\_output\Hex Saves\MCHPUSB_CustomDemo_PICDEM FS USB Demo Board.27Aug2007.hex | 08-27-2007 | 10:32:42 | | 92248 | a11a66d3
+File Copy: C:\MCHPFSUSB\fw\Demo\_output\main.o | 08-27-2007 | 10:33:56 | | 6408 | 33fb2456
+File Copy: C:\MCHPFSUSB\fw\Demo\_output\MCHPUSB.cof | 08-27-2007 | 10:33:58 | | 110884 | 15f3bad1
+File Copy: C:\MCHPFSUSB\fw\Demo\_output\MCHPUSB.hex | 08-27-2007 | 10:33:58 | | 13788 | cfba3a1a
+File Copy: C:\MCHPFSUSB\fw\Demo\_output\MCHPUSB.map | 08-27-2007 | 10:33:58 | | 95675 | 49d87ac2
+File Copy: C:\MCHPFSUSB\fw\Demo\_output\temperature.o | 08-27-2007 | 10:33:58 | | 10740 | 367c1a34
+File Copy: C:\MCHPFSUSB\fw\Demo\_output\usb9.o | 08-27-2007 | 10:33:56 | | 14892 | 429ad8dd
+File Copy: C:\MCHPFSUSB\fw\Demo\_output\usbctrltrf.o | 08-27-2007 | 10:33:56 | | 20346 | b8ad581a
+File Copy: C:\MCHPFSUSB\fw\Demo\_output\usbdrv.o | 08-27-2007 | 10:33:56 | | 13315 | 6c9805f3
+File Copy: C:\MCHPFSUSB\fw\Demo\_output\usbdsc.o | 08-27-2007 | 10:33:56 | | 4680 | 6423596f
+File Copy: C:\MCHPFSUSB\fw\Demo\_output\usbgen.o | 08-27-2007 | 10:33:58 | | 7438 | 3a806338
+File Copy: C:\MCHPFSUSB\fw\Demo\_output\usbmmap.o | 08-27-2007 | 10:33:56 | | 11604 | 9ac6ebf7
+File Copy: C:\MCHPFSUSB\fw\Demo\_output\user.o | 08-27-2007 | 10:33:58 | | 28763 | 14a3ab14
+Made Dir: C:\MCHPFSUSB\fw\Demo02
+File Copy: C:\MCHPFSUSB\fw\Demo02\CleanUp.bat | 06-30-2004 | 17:08:06 | | 1048 | 5d23e4dc
+File Copy: C:\MCHPFSUSB\fw\Demo02\Demo02.c | 11-17-2004 | 16:49:26 | | 4536 | bc144688
+File Copy: C:\MCHPFSUSB\fw\Demo02\Demo02.cod | 08-21-2007 | 21:32:40 | | 13824 | f6bd527f
+File Copy: C:\MCHPFSUSB\fw\Demo02\Demo02.cof | 08-21-2007 | 21:32:38 | | 13280 | e192ad03
+File Copy: C:\MCHPFSUSB\fw\Demo02\Demo02.hex | 08-21-2007 | 21:32:40 | | 838 | 2a8db31a
+File Copy: C:\MCHPFSUSB\fw\Demo02\Demo02.lst | 08-21-2007 | 21:32:40 | | 61658 | a2e8137b
+File Copy: C:\MCHPFSUSB\fw\Demo02\Demo02.mcp | 12-01-2004 | 10:26:26 | | 886 | 7f475996
+File Copy: C:\MCHPFSUSB\fw\Demo02\Demo02.mcs | 08-27-2007 | 11:15:56 | | 3069 | 8e4fac46
+File Copy: C:\MCHPFSUSB\fw\Demo02\Demo02.mcw | 08-27-2007 | 10:31:58 | | 23552 | 88820cee
+File Copy: C:\MCHPFSUSB\fw\Demo02\Demo02.mptags | 08-20-2007 | 16:41:12 | | 2570 | ce117017
+File Copy: C:\MCHPFSUSB\fw\Demo02\Demo02.o | 08-21-2007 | 21:32:38 | | 2548 | bfaee129
+File Copy: C:\MCHPFSUSB\fw\Demo02\Demo02.tagsrc | 08-20-2007 | 16:41:12 | | 33 | 2370c4c4
+File Copy: C:\MCHPFSUSB\fw\Demo02\rm18f4550.lkr | 05-15-2007 | 11:24:10 | | 1508 | 6a6497f2
+Made Dir: C:\MCHPFSUSB\fw\Hid
+Made Dir: C:\MCHPFSUSB\fw\Hid\Mouse
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\18f87j50.lkr | 04-14-2007 | 16:39:38 | | 1672 | 89bba97e
+Made Dir: C:\MCHPFSUSB\fw\Hid\Mouse\autofiles
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\autofiles\usbcfg.h | 08-27-2007 | 10:28:46 | | 4536 | 371dcc67
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\autofiles\usbdsc.c | 08-23-2007 | 17:46:42 | | 13899 | cff7d9b7
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\autofiles\usbdsc.h | 11-17-2004 | 23:43:24 | | 2690 | e8a30a6e
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\CleanUp.bat | 06-30-2004 | 17:08:06 | | 1048 | 5d23e4dc
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\io_cfg.err | 05-16-2007 | 16:39:04 | | 65 | c9633004
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\io_cfg.h | 08-22-2007 | 14:52:00 | | 6734 | 7469a4b6
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\main.c | 08-22-2007 | 14:03:36 | | 14585 | d3728b29
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\MCHPUSB.mcp | 08-27-2007 | 10:28:46 | | 1896 | 5eca7afb
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\MCHPUSB.mcs | 08-27-2007 | 10:29:26 | | 10615 | bc737e3e
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\MCHPUSB.mcw | 08-27-2007 | 10:29:24 | | 960512 | 6bdb8ba7
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\MCHPUSB.mptags | 08-27-2007 | 10:28:48 | | 58765 | 550489a
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\MCHPUSB.tagsrc | 08-27-2007 | 10:28:48 | | 1052 | a2f56d98
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\rm18f4550.lkr | 05-15-2007 | 11:24:10 | | 1508 | 6a6497f2
+Made Dir: C:\MCHPFSUSB\fw\Hid\Mouse\system
+Made Dir: C:\MCHPFSUSB\fw\Hid\Mouse\system\interrupt
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\system\interrupt\interrupt.c | 04-14-2004 | 16:50:32 | | 1631 | 5a54d758
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\system\interrupt\interrupt.h | 04-14-2004 | 16:57:52 | | 811 | a48932e2
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\system\typedefs.h | 11-19-2004 | 17:45:00 | | 4187 | f1440479
+Made Dir: C:\MCHPFSUSB\fw\Hid\Mouse\system\usb
+Made Dir: C:\MCHPFSUSB\fw\Hid\Mouse\system\usb\class
+Made Dir: C:\MCHPFSUSB\fw\Hid\Mouse\system\usb\class\hid
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\system\usb\class\hid\hid.c | 11-19-2004 | 17:43:36 | | 11759 | 23b92d93
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\system\usb\class\hid\hid.h | 11-19-2004 | 17:45:00 | | 5353 | 767b029b
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\system\usb\usb.h | 11-19-2004 | 17:45:00 | | 2403 | 5ae5a66d
+Made Dir: C:\MCHPFSUSB\fw\Hid\Mouse\system\usb\usb9
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\system\usb\usb9\usb9.c | 05-14-2007 | 11:01:46 | | 11059 | e727c452
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\system\usb\usb9\usb9.h | 11-19-2004 | 17:45:00 | | 3867 | cde240aa
+Made Dir: C:\MCHPFSUSB\fw\Hid\Mouse\system\usb\usbctrltrf
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\system\usb\usbctrltrf\usbctrltrf.c | 05-16-2007 | 13:18:56 | | 27463 | 74ad6bc3
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\system\usb\usbctrltrf\usbctrltrf.h | 08-22-2007 | 14:55:28 | | 4158 | b9ddefcc
+Made Dir: C:\MCHPFSUSB\fw\Hid\Mouse\system\usb\usbdefs
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\system\usb\usbdefs\usbdefs_ep0_buff.h | 11-19-2004 | 17:45:00 | | 6913 | 7a3f360e
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\system\usb\usbdefs\usbdefs_std_dsc.h | 11-19-2004 | 17:45:00 | | 6409 | 802033ea
+Made Dir: C:\MCHPFSUSB\fw\Hid\Mouse\system\usb\usbdrv
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\system\usb\usbdrv\usbdrv.c | 08-21-2007 | 15:44:24 | | 28976 | 94c98cdf
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\system\usb\usbdrv\usbdrv.h | 05-15-2007 | 14:20:12 | | 9066 | 8ce8e8eb
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\system\usb\usbmmap.c | 11-24-2004 | 12:51:54 | | 12253 | 5794d5ee
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\system\usb\usbmmap.h | 11-19-2004 | 17:45:00 | | 7173 | 104c5e75
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\system\usb\usb_compile_time_validation.h | 08-27-2004 | 19:04:16 | | 2604 | 6996f51e
+Made Dir: C:\MCHPFSUSB\fw\Hid\Mouse\user
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\user\user_mouse.c | 07-14-2007 | 16:41:28 | | 7324 | 9f1c0d72
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\user\user_mouse.h | 11-19-2004 | 17:45:00 | | 1891 | 36b73136
+Made Dir: C:\MCHPFSUSB\fw\Hid\Mouse\_output
+Made Dir: C:\MCHPFSUSB\fw\Hid\Mouse\_output\Hex Saves
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\_output\Hex Saves\MCHPUSB_MouseCircle_PIC18F87J50 FS USB Plug In Module.27Aug2007.hex | 08-27-2007 | 10:28:20 | | 368700 | 84caa8ae
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\_output\Hex Saves\MCHPUSB_MouseCircle_PICDEM FS USB Demo Board.27Aug2007.hex | 08-27-2007 | 10:27:00 | | 92248 | e25bc5a6
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\_output\hid.o | 08-27-2007 | 10:28:46 | | 12202 | 678a7ce1
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\_output\main.o | 08-27-2007 | 10:28:46 | | 5907 | b7593f3b
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\_output\MCHPUSB.cod | 08-20-2007 | 16:29:10 | | 71680 | d4ad0796
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\_output\MCHPUSB.cof | 08-27-2007 | 10:28:48 | | 89377 | 26c77155
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\_output\MCHPUSB.hex | 08-27-2007 | 10:28:48 | | 10651 | f13360b8
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\_output\MCHPUSB.lst | 08-20-2007 | 16:29:10 | | 729961 | dcafb921
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\_output\MCHPUSB.map | 08-27-2007 | 10:28:48 | | 82755 | 2177056b
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\_output\usb9.o | 08-27-2007 | 10:28:46 | | 14952 | 9c10ea93
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\_output\usbctrltrf.o | 08-27-2007 | 10:28:46 | | 21528 | c9f5eec0
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\_output\usbdrv.o | 08-27-2007 | 10:28:46 | | 13979 | 9af14bdc
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\_output\usbdsc.o | 08-27-2007 | 10:28:46 | | 5496 | b895dbde
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\_output\usbmmap.o | 08-27-2007 | 10:28:46 | | 11590 | 8d43b64d
+File Copy: C:\MCHPFSUSB\fw\Hid\Mouse\_output\user_mouse.o | 08-27-2007 | 10:28:46 | | 11285 | 855854b2
+File Copy: C:\MCHPFSUSB\fw\important.readme.txt | 08-27-2007 | 13:29:14 | | 2430 | bfc20ade
+Made Dir: C:\MCHPFSUSB\fw\_factory_hex
+File Copy: C:\MCHPFSUSB\fw\_factory_hex\PIC18F87J50_FS_USB_PIM_MouseDemo_2007_08.hex | 06-29-2007 | 14:12:06 | | 368700 | 56e4d8c0
+File Copy: C:\MCHPFSUSB\fw\_factory_hex\picdemfsusb.hex | 11-30-2004 | 12:12:50 | | 23128 | dfe42b1f
+Made Dir: C:\MCHPFSUSB\Pc
+Made Dir: C:\MCHPFSUSB\Pc\MCHPUSB Driver
+Made Dir: C:\MCHPFSUSB\Pc\MCHPUSB Driver\Debug
+File Copy: C:\MCHPFSUSB\Pc\MCHPUSB Driver\Debug\Ioctls.h | 09-30-2004 | 06:28:02 | | 7835 | 2919db97
+File Copy: C:\MCHPFSUSB\Pc\MCHPUSB Driver\Debug\mchpusb.cat | 05-04-2004 | 05:10:56 | | 54 | d3160b88
+File Copy: C:\MCHPFSUSB\Pc\MCHPUSB Driver\Debug\mchpusb.inf | 08-17-2007 | 18:31:36 | | 3141 | 31fb9d6d
+File Copy: C:\MCHPFSUSB\Pc\MCHPUSB Driver\Debug\mchpusb.NMS | 11-22-2004 | 06:04:02 | | 2388052 | 17ea9757
+File Copy: C:\MCHPFSUSB\Pc\MCHPUSB Driver\Debug\mchpusb.pdb | 11-22-2004 | 06:04:00 | | 764928 | 702d8410
+File Copy: C:\MCHPFSUSB\Pc\MCHPUSB Driver\Debug\mchpusb.sys | 11-22-2004 | 06:04:00 | 1.0.0.5 | 234240 | 6cded15d
+File Copy: C:\MCHPFSUSB\Pc\MCHPUSB Driver\Debug\TraceFlags.dll | 06-14-2004 | 05:33:26 | | 217162 | 19b82754
+File Copy: C:\MCHPFSUSB\Pc\MCHPUSB Driver\Debug\Trcflg16.dll | 08-18-2002 | 07:51:38 | | 27880 | 821d692f
+File Copy: C:\MCHPFSUSB\Pc\MCHPUSB Driver\Debug\WDMSTUB.sys | 03-15-2003 | 07:16:50 | 5.0.0.6 | 20480 | 683cc35a
+File Copy: C:\MCHPFSUSB\Pc\MCHPUSB Driver\MCHPUSB Driver Release Notes.htm | 08-17-2007 | 16:56:08 | | 7574 | 581ba91d
+Made Dir: C:\MCHPFSUSB\Pc\MCHPUSB Driver\Release
+File Copy: C:\MCHPFSUSB\Pc\MCHPUSB Driver\Release\Ioctls.h | 09-30-2004 | 05:28:02 | | 7835 | 2919db97
+File Copy: C:\MCHPFSUSB\Pc\MCHPUSB Driver\Release\mchpusb.cat | 05-04-2004 | 04:10:56 | | 54 | d3160b88
+File Copy: C:\MCHPFSUSB\Pc\MCHPUSB Driver\Release\mchpusb.inf | 08-30-2007 | 16:34:58 | | 2348 | de95cf82
+File Copy: C:\MCHPFSUSB\Pc\MCHPUSB Driver\Release\mchpusb.NMS | 11-22-2004 | 06:03:56 | | 51316 | 9ec06281
+File Copy: C:\MCHPFSUSB\Pc\MCHPUSB Driver\Release\mchpusb.pdb | 11-22-2004 | 06:03:56 | | 166912 | 7d7ef3db
+File Copy: C:\MCHPFSUSB\Pc\MCHPUSB Driver\Release\mchpusb.sys | 11-22-2004 | 06:03:56 | 1.0.0.5 | 61440 | 248d153c
+File Copy: C:\MCHPFSUSB\Pc\MCHPUSB Driver\Release\wdmstub.sys | 03-15-2003 | 06:16:48 | 5.0.0.6 | 11520 | 29ff2959
+Made Dir: C:\MCHPFSUSB\Pc\Mpusbapi
+Made Dir: C:\MCHPFSUSB\Pc\Mpusbapi\Dll
+Made Dir: C:\MCHPFSUSB\Pc\Mpusbapi\Dll\Borland_C
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Dll\Borland_C\mpusbapi.dll | 11-24-2004 | 11:10:42 | 1.0.0.0 | 59392 | d67906cc
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Dll\Borland_C\mpusbapi.h | 11-24-2004 | 10:55:20 | | 3431 | 2bfba410
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Dll\Borland_C\mpusbapi.lib | 11-24-2004 | 11:10:42 | | 1748 | 33a560cf
+Made Dir: C:\MCHPFSUSB\Pc\Mpusbapi\Dll\Borland_C\Source
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Dll\Borland_C\Source\!readme.IMPORTANT!.txt | 11-11-2004 | 19:01:50 | | 297 | 983ce7a6
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Dll\Borland_C\Source\Ioctls.h | 09-30-2004 | 06:28:02 | | 7835 | 2919db97
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Dll\Borland_C\Source\Ioctls.~h | 09-30-2004 | 06:28:02 | | 7835 | 2919db97
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Dll\Borland_C\Source\mpusbapi.bpf | 09-27-2004 | 16:44:06 | | 107 | a27d938d
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Dll\Borland_C\Source\mpusbapi.bpr | 11-11-2004 | 23:16:08 | | 2965 | 8c334433
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Dll\Borland_C\Source\mpusbapi.dll | 11-24-2004 | 11:10:42 | 1.0.0.0 | 59392 | d67906cc
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Dll\Borland_C\Source\mpusbapi.h | 11-24-2004 | 10:55:20 | | 3431 | 2bfba410
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Dll\Borland_C\Source\mpusbapi.lib | 11-24-2004 | 11:10:42 | | 1748 | 33a560cf
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Dll\Borland_C\Source\mpusbapi.obj | 09-27-2004 | 16:56:58 | | 29653 | 3123b714
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Dll\Borland_C\Source\mpusbapi.res | 11-11-2004 | 23:16:02 | | 1716 | 9dc8dc8
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Dll\Borland_C\Source\mpusbapi.tds | 11-24-2004 | 11:15:12 | | 458752 | 4b1b7e45
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Dll\Borland_C\Source\mpusbapi.~bpr | 11-11-2004 | 23:15:06 | | 2965 | 8c334433
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Dll\Borland_C\Source\mpusbapi.~cpp | 09-27-2004 | 16:48:10 | | 10238 | 7e86157d
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Dll\Borland_C\Source\mpusbapi.~h | 11-11-2004 | 20:21:44 | | 3483 | 98edc571
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Dll\Borland_C\Source\_mpusbapi.cpp | 11-24-2004 | 10:25:10 | | 31660 | e497a6b3
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Dll\Borland_C\Source\_mpusbapi.h | 11-24-2004 | 10:22:28 | | 3637 | 5963ee6a
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Dll\Borland_C\Source\_mpusbapi.obj | 11-24-2004 | 11:10:42 | | 34396 | 194a7085
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Dll\Borland_C\Source\_mpusbapi.~cpp | 11-24-2004 | 10:25:10 | | 31660 | e497a6b3
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Dll\Borland_C\Source\_mpusbapi.~h | 11-11-2004 | 21:39:34 | | 3627 | a7ae4dd8
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Dll\Borland_C\_mpusbapi.h | 11-24-2004 | 10:22:28 | | 3637 | 5963ee6a
+Made Dir: C:\MCHPFSUSB\Pc\Mpusbapi\Example Applications
+Made Dir: C:\MCHPFSUSB\Pc\Mpusbapi\Example Applications\Borland_C
+Made Dir: C:\MCHPFSUSB\Pc\Mpusbapi\Example Applications\Borland_C\Example 01 - Load-time Linking
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Example Applications\Borland_C\Example 01 - Load-time Linking\console.cpp | 11-11-2004 | 21:59:20 | | 5036 | 260da75
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Example Applications\Borland_C\Example 01 - Load-time Linking\console.obj | 11-24-2004 | 11:12:42 | | 20550 | 5f5e477d
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Example Applications\Borland_C\Example 01 - Load-time Linking\console.~cpp | 11-11-2004 | 21:59:14 | | 5030 | b33d6d8e
+Made Dir: C:\MCHPFSUSB\Pc\Mpusbapi\Example Applications\Borland_C\Example 01 - Load-time Linking\exe
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Example Applications\Borland_C\Example 01 - Load-time Linking\exe\mpusbapi.dll | 11-24-2004 | 11:10:42 | 1.0.0.0 | 59392 | d67906cc
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Example Applications\Borland_C\Example 01 - Load-time Linking\exe\_console.exe | 11-24-2004 | 11:12:44 | | 71168 | c84ffbd
+Made Dir: C:\MCHPFSUSB\Pc\Mpusbapi\Example Applications\Borland_C\Example 01 - Load-time Linking\hex
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Example Applications\Borland_C\Example 01 - Load-time Linking\hex\MCHPUSB.hex | 11-19-2004 | 17:31:22 | | 11517 | 1c1cd55f
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Example Applications\Borland_C\Example 01 - Load-time Linking\mpusbapi.dll | 11-24-2004 | 11:10:42 | 1.0.0.0 | 59392 | d67906cc
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Example Applications\Borland_C\Example 01 - Load-time Linking\mpusbapi.lib | 11-24-2004 | 11:10:42 | | 1748 | 33a560cf
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Example Applications\Borland_C\Example 01 - Load-time Linking\_console.bpf | 09-28-2004 | 10:03:52 | | 98 | dc2d5873
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Example Applications\Borland_C\Example 01 - Load-time Linking\_console.bpr | 11-11-2004 | 23:19:22 | | 2849 | a2918c5c
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Example Applications\Borland_C\Example 01 - Load-time Linking\_console.exe | 11-24-2004 | 11:12:44 | | 71168 | c84ffbd
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Example Applications\Borland_C\Example 01 - Load-time Linking\_console.res | 09-28-2004 | 10:03:50 | | 876 | 929ffe26
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Example Applications\Borland_C\Example 01 - Load-time Linking\_console.tds | 11-24-2004 | 11:16:10 | | 458752 | 9ec9f2cb
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Example Applications\Borland_C\Example 01 - Load-time Linking\_console.~bpr | 11-11-2004 | 21:21:16 | | 2882 | 5e92af0e
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Example Applications\Borland_C\Example 01 - Load-time Linking\_mpusbapi.h | 11-24-2004 | 10:22:28 | | 3637 | 5963ee6a
+Made Dir: C:\MCHPFSUSB\Pc\Mpusbapi\Example Applications\Borland_C\Example 02 - Run-time Linking
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Example Applications\Borland_C\Example 02 - Run-time Linking\console.cpp | 11-11-2004 | 23:10:52 | | 11323 | c608d6f3
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Example Applications\Borland_C\Example 02 - Run-time Linking\console.obj | 11-24-2004 | 11:14:04 | | 27159 | 1c394e3
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Example Applications\Borland_C\Example 02 - Run-time Linking\console.~cpp | 11-11-2004 | 23:05:52 | | 11320 | d04fa47c
+Made Dir: C:\MCHPFSUSB\Pc\Mpusbapi\Example Applications\Borland_C\Example 02 - Run-time Linking\exe
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Example Applications\Borland_C\Example 02 - Run-time Linking\exe\mpusbapi.dll | 11-24-2004 | 11:10:42 | 1.0.0.0 | 59392 | d67906cc
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Example Applications\Borland_C\Example 02 - Run-time Linking\exe\_console.exe | 11-24-2004 | 11:14:04 | | 71680 | 5a297bb1
+Made Dir: C:\MCHPFSUSB\Pc\Mpusbapi\Example Applications\Borland_C\Example 02 - Run-time Linking\hex
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Example Applications\Borland_C\Example 02 - Run-time Linking\hex\MCHPUSB.hex | 11-19-2004 | 17:31:22 | | 11517 | 1c1cd55f
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Example Applications\Borland_C\Example 02 - Run-time Linking\mpusbapi.dll | 11-24-2004 | 11:10:42 | 1.0.0.0 | 59392 | d67906cc
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Example Applications\Borland_C\Example 02 - Run-time Linking\mpusbapi.h | 11-24-2004 | 10:55:20 | | 3431 | 2bfba410
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Example Applications\Borland_C\Example 02 - Run-time Linking\_console.bpf | 09-28-2004 | 10:03:52 | | 98 | dc2d5873
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Example Applications\Borland_C\Example 02 - Run-time Linking\_console.bpr | 11-24-2004 | 11:15:10 | | 2709 | cfb6eb42
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Example Applications\Borland_C\Example 02 - Run-time Linking\_console.exe | 11-24-2004 | 11:14:04 | | 71680 | 5a297bb1
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Example Applications\Borland_C\Example 02 - Run-time Linking\_console.res | 09-28-2004 | 10:03:50 | | 876 | 929ffe26
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Example Applications\Borland_C\Example 02 - Run-time Linking\_console.tds | 11-24-2004 | 11:18:34 | | 458752 | cbfcce9
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\Example Applications\Borland_C\Example 02 - Run-time Linking\_console.~bpr | 11-11-2004 | 23:14:06 | | 2849 | a2918c5c
+File Copy: C:\MCHPFSUSB\Pc\Mpusbapi\readme.txt | 11-22-2004 | 15:59:38 | | 2066 | 36aaa169
+Made Dir: C:\MCHPFSUSB\Pc\Pdfsusb
+File Copy: C:\MCHPFSUSB\Pc\Pdfsusb\cc3260.dll | 02-01-2002 | 07:00:00 | 6.0.0.0 | 1410560 | cab88efc
+File Copy: C:\MCHPFSUSB\Pc\Pdfsusb\mpusbapi.dll | 11-24-2004 | 11:10:42 | 1.0.0.0 | 59392 | d67906cc
+File Copy: C:\MCHPFSUSB\Pc\Pdfsusb\PDFSUSB.exe | 11-30-2004 | 16:22:02 | 1.0.0.0 | 1144320 | 7935a018
+File Copy: C:\MCHPFSUSB\Pc\Pdfsusb\PICBOOT.dll | 11-10-2003 | 12:07:08 | | 135168 | 1870e63b
+File Copy: C:\MCHPFSUSB\Release Notes for MCHPFSUSB v1.2.htm | 08-30-2007 | 19:30:44 | | 40496 | c2885108
+File Copy: C:\MCHPFSUSB\USB Framework Software License Agreement Rev 02-032907.pdf | 04-17-2007 | 16:05:56 | | 60360 | 8f56225d
+Made Dir: C:\Documents and Settings\All Users\Start Menu\Programs\Microchip\MCHPFSUSB v1.2
+Shell Link: C:\Documents and Settings\All Users\Start Menu\Programs\Microchip\MCHPFSUSB v1.2\PICDEM FS USB Demo Tool.lnk
+Link Info: C:\MCHPFSUSB\Pc\Pdfsusb\PDFSUSB.exe |  |  | 0 | 1 | 0 | 
+Shell Link: C:\Documents and Settings\All Users\Start Menu\Programs\Microchip\MCHPFSUSB v1.2\Release Notes for MCHPFSUSB v1.2.lnk
+Link Info: C:\MCHPFSUSB\Release Notes for MCHPFSUSB v1.2.htm |  |  | 0 | 1 | 0 | 
+Shell Link: C:\Documents and Settings\All Users\Start Menu\Programs\Microchip\MCHPFSUSB v1.2\MCHPFSUSB Firmware User's Guide.lnk
+Link Info: C:\MCHPFSUSB\Documents\MCHPFSUSB Firmware Users Guide 51679a.pdf |  |  | 0 | 1 | 0 | 
+User Rights: Admin

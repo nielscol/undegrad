@@ -1,0 +1,19 @@
+header
+"PSFversion" "1.00" 
+"simulator" "HSPICE"
+"version" "I-2013.12-SP2-1 32-BIT" 
+"rundate" "16:56:49 12/08/2016 " 
+"runtitle" "**han-carlson adder - 16 bit                                      " 
+"runtype" "Summary Information"
+"op point time" "      0.27"  
+"op point iterations" "       
+"transient time" "      3.78"      
+"transient time" "      3.78"      
+"total cpu time" "        4.65"    
+"node value" "complete"
+"operating point" "invalid"
+"ac analysis" "invalid"
+"dc sweep" "invalid"
+"transient analysis" "complete"
+trailer
+end

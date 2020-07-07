@@ -1,0 +1,320 @@
+% Cole Nielsen niels538@umn.edu
+% EE 2002 Spring 2015
+% Formal Lab Report 2
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[12pt]{article}
+
+\usepackage{circuitikz}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage[top=1in, bottom= 1in, left=1in, right= 1in]{geometry}
+\setlength\parindent{0pt}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{adforn}
+\usepackage{texdraw}
+\usepackage{amsmath}
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title{Experiment 8: Transients \\in RLC Circuits \\\vspace{0.3 in} EE 2002}
+
+\author{Cole \textsc{Nielsen}} 
+\date{Spring 2015}
+
+\newcommand{\mymeter}[2]{   	% #1 = name , #2 = rotation angle
+ \begin{scope}[transform shape,rotate=#2]
+   \draw[thick] (#1)node(){$\mathbf V$} circle (11pt);
+   \draw[rotate=45,-latex] (#1)  +(-17pt,0) --+(17pt,0);
+ \end{scope}
+}
+
+\def\approxprop{%
+  \def\p{%
+    \setbox0=\vbox{\hbox{$\propto$}}%
+    \ht0=0.6ex \box0 }%
+  \def\s{%
+    \vbox{\hbox{$\sim$}}%
+  }%
+  \mathrel{\raisebox{0.7ex}{%
+      \mbox{$\underset{\s}{\p}$}%
+    }}%
+}
+
+\begin{document}
+\maketitle 
+\begin{center}
+ \begin{tabular}{l r}
+   Date Performed: & April 27, 2015 \\ 
+   Instructor: & Rebecca Culp\\ 
+\end{tabular}
+\end{center}
+\pagebreak
+
+%----------------------------------------------------------------------------------------
+%   ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+\noindent Resistor, capacitor and inductor containing circuits were constructed and their response sinusoids, triangle waves and square waves was analyzed. In particular, a differentiator and integrator response of several RC and LC circuits to the input waveforms was observed. This behaviour was found to be dependent on the design parameters, such as time constant $\tau$ and physical configuration of the circuit. The time constant $\tau$ was found to be particularly important because it quantified the time-response of the circuit. The results of this experiment provides valuable insight into the design of circuits for integration, differentiation and timing.
+\end{abstract}
+\hrulefill
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION
+%----------------------------------------------------------------------------------------
+\section{Introduction}
+Circuits containing inductors, capacitors and resistors are highly useful in modern Electrical Engineering, as they represent the basis of analog timers, integrators, differentiators and filters. The useful properties of these types of circuits is derived from the fundamental behavior of each of these circuit elements. A brief overview of each component will be given, starting with the resistor. A resistor (represented by $R$) has the simplest behavior of the three devices, given by Ohm's Law, which states the voltage $V_R$ across the terminals of a resistor is equal to the current $I$ through it times its resistance $R$:
+\begin{equation}
+V_R = IR
+\end{equation}
+Resistance is a constant quantity that describes the ability of a resistor to impede, or \textit{resist} the flow of a current through the resistor. The other two quantities are variables. An important thing to notice about this equation is that it is linear, and accordingly so is the behaviour of the resistor.\par\vspace{12pt}
+%
+A capacitor is a slightly more complex device which develops a voltage across its terminals that is proportional to the charge built up on it. The constant of this proportionality between voltage and charge is referred to as \textit{capacitance} (denoted by $C$). This relationship can be written mathematically as $Q=CV$. Differentiating this equation gives a new equation that relates current and voltage of the capacitor:
+\begin{equation}
+\frac{dQ}{dt} = I = C \frac{dV_C}{dt}
+\end{equation}
+So it can be seen that the current through the capacitor is equal to the capacitance times the rate of change of voltage across its terminals. This more complex behavior opens up some interesting possibilities that will be discussed later.\par\vspace{12pt}
+
+Finally, inductors are devices that develop a voltage across their terminals proportional to the time rate of change in magnetic flux in the device, per Faraday's Law. Since the the magnetic field is simply proportional to the current, the time rate of change in flux can be seen as proportional the time rate of change in current. It can then be deduced that the inductor's voltage is proportional to the derivative of current, where the constant of proportionality is called \textit{inductance} (denoted by L):
+\begin{equation}
+V_L = L\frac{dI}{dt}
+\end{equation}
+Like the capacitor, we see that the relationship between voltage and capacitance involves a derivative, however this time it is the opposite of the capacitor where voltage $V_L$ across the inductor is proportional to the derivative of current.\par
+%
+\begin{figure}[htb!]
+ \begin{subfigure}[c]{0.45\textwidth}
+   \caption*{\hspace{30pt}\textbf{Figure 1.1} RC Circuit}
+    \hspace{40pt}
+ \begin{circuitikz}[ scale=1.0, american voltages]\draw
+   (0,0) to[voltage source, l= V$_{in}$] (0,3)
+         to[resistor, l_=R] (3,3)
+         to[capacitor, l=C] (3,0)
+         to (0,0);
+ \end{circuitikz}
+ \end{subfigure}
+ \begin{subfigure}[c]{0.45\textwidth}
+ \caption*{\hspace{50pt}\textbf{Figure 1.2} RC Circuit III}
+ \hspace{50pt}
+ \begin{circuitikz}[ scale=1.0, american voltages]\draw
+   (0,0) to[voltage source, l= V$_{in}$] (0,3)
+         to[resistor, l_=R] (3,3)
+         to[inductor, l=L] (3,0)
+         to (0,0);
+ \end{circuitikz}
+ \end{subfigure}
+ \end{figure}
+%
+Now understanding resistors, capacitors and inductors, the behavior of the circuits can be analyzed. Only RC and LC circuits will be discussed. Starting with RC circuits, we consider a resistor, capacitor and voltage source connected in series with each other, like in \textit{Figure 1.1}. The voltage source is assumed to be connected at time zero. The current through this circuit can be simply be found using Kirchhoff's loop rule. Doing so and differentiating the result gives:
+\begin{equation}
+-V + IR + \frac{Q}{C} = 0 \hspace{12pt}\longrightarrow\hspace{12pt} \frac{dI}{dt}R + IC = 0
+\end{equation}
+The resulting equation is a differential equation. The solution of this equation is as follows, assuming the voltage across the capacitor is initially zero:
+\begin{equation}
+I(t) = \frac{V}{R}e^{\frac{-t}{RC}}
+\end{equation}
+This equation is an exponential function, meaning the response of the circuit to a stepped input is also exponential. Using the equations relating voltage and current for resistors and capacitors, the voltage across each element can be found by plugging in this current equation. An important quantity of \textit{Equation 5} is the RC time constant, $\tau_{RC}$, which is the reciprocal of the number in the exponent. In this case, $\tau_{RC}=RC$. The time constant quantifies the amount time ($\tau$ seconds) that a circuit takes to either rise or fall to approximately 63\% of the final value for either current or voltage. The time constant ends up being a simple way to calculate how fast a circuit will charge or discharge. The exponential behavior of this circuit and the RC time constant is illustrated in \textit{Figure 1.3}\par
+%
+\begin{center}
+    	\resizebox{0.6\textwidth}{!}{\input{./plots/exp.tex}}
+\end{center}
+Continuing with the discussion of the series RC circuit, it is known that the current through the capacitor is proportional to the derivative of the voltage across it. Since the resistor and capacitor are in series, it follows that the two share the same current, and therefore the current through the resistor should be proportional to derivative of the capacitors voltage. Ohm's law then implies that the voltage across the resistor should be proportional to the derivative of the capacitors voltage. This means that this circuit acts like a differentiator if the output voltage is measured across the resistor! If the circuit is designed with appropriate R and C values to keep $\frac{dV_R}{dt}$ much less than $\frac{dV_{in}}{dt}$, the voltage read across the resistor can be interpreted as (approximately) the derivative of the input voltage. A similar analysis can be done for the capacitor, using the same relationship. This time, since $\frac{dV_c}{dt}$ is proportional to the current and accordingly $V_R$, $V_C$ can be found through integration of the resistor voltage term. This means that the circuit behaves as an integrator if  measured across the capacitor. By keeping $V_C$ much smaller than $V_{in}$ by controlling the R and C values, the output voltage can be interpreted as the approximate integral of the input voltage.\par\vspace{12pt}
+%
+Moving on to the RL circuit, a series RL circuit like \textit{Figure 1.2} will be considered. Using Kirchhoff's voltage rule around the loop yields:
+\begin{equation}
+-V + IR + L\frac{dI}{dt}= 0
+\end{equation}
+This is another differential equation. The solution of this equation assuming the voltage source is attached at time zero is and the inductor stores no energy initially:
+\begin{equation}
+I(t) = \frac{V}{R} \Big( 1-e^\frac{-tR}{L}\Big)
+\end{equation}
+It can be seen that this equation takes a similar form as an exponential to the RC circuit. The primary difference of this equation from the RC one is the value in the exponent. Recall before that the reciprocal of this number is the time constant. This means that the time constant of a  RL circuit is different than RC circuit, taking the form of $\tau_{RL}=\frac{L}{R}$. Therefore it will take $\frac{L}{R}$ seconds for the LR circuit to change to 63\% of the final value for a stepped input.\par\vspace{12pt}
+%
+Like the RC circuit, the devices in the series RL circuit share the same current. Looking at \textit{Equation 3}, it can be inferred the current through an inductor is proportional to the integral of the voltage across its terminals. Since the voltage of the resistor is proportional to the current, this means that $V_R$ will be proportional to the integral of the voltage of across inductor. Therefore, this configuration acts like an integrator!  By keeping $V_R$ much smaller than $V_{in}$ by controlling the RL values, the output voltage can be interpreted as the approximate integral of the input voltage. Finally, if the output voltage is measured across the inductor, the voltage can be interpreted as proportional to $\frac{dI}{dt}$, where $I$ is proportional to $V_R$. Therefore the voltage across the inductor is proportional to the derivative of the resistor's voltage, and by keeping $\frac{dV_L}{dt}$ much smaller than 
+$\frac{dV_{in}}{dt}$, this voltage is proportional to the derivative of the input voltage.\par\vspace{12pt}
+%
+This experiment will be focused on analyzing the behavior of the discussed series RC and RL circuits. The time constant of a series RC circuit will be first analysed, and then the integrator and differentiator response of it. The same will then be performed with a series RL circuit. From the results, the discussed theory can then be either be confirmed or disproven.
+\pagebreak
+%----------------------------------------------------------------------------------------
+%   EXPERIMENT
+%----------------------------------------------------------------------------------------
+\section{Experiment}
+
+%----------------------------------------------------------------------------------------
+%   PART 1
+%----------------------------------------------------------------------------------------
+\subsection*{Part 1}
+The RC circuit shown in \textit{Figure 2.1} was considered in this part. The objective was to determine appropriate values for R and C such that the time constant of the circuit would be 100 $\mu$s. Using the equation for RC time constant $\tau = RC$ derived in the \textit{Introduction} section, it was determined arbitrarily that R=1k$\Omega$ and C=100nF would be appropriate values they corresponds to the desired time constant of 100 $\mu$s. This circuit was then constructed in preparation for \textit{Part 2}.
+\begin{center}
+ \title{\textbf{Figure 2.1} RC Integrator Circuit}\\\vspace{6pt}
+ \begin{circuitikz}[american voltages]
+   \draw
+   (0,3) to[resistor, l_=1k$\Omega$, o-] (3,3)
+   (3,3) to[capacitor, l_=0.1$\mu$F ] (3,0)
+         to[short, -o] (0,0)
+   (3,3) to[short, -o] (4,3)      
+   (3,0) to[short, -o] (4,0)
+   (0,0) to[open, v^>=$v_{in}$] (0,3)
+   (4,0) to[open, v_>=$v_{out}$] (4,3);
+ \end{circuitikz}
+\end{center}
+
+%----------------------------------------------------------------------------------------
+%   PART 2
+%----------------------------------------------------------------------------------------
+\subsection*{Part 2}
+This objective was to experimentally determine the time constant and response of the circuit built in \textit{Part 1} to a square wave input. In this case a 1 kHz, 4 $V_{pp}$ signal was attached to the circuit input $v_{in}$. The input was chosen to be this frequency because its period (1 ms) is much longer than the circuit's time constant, which allows for the step response of it to be seen in detail. The output was then observed using an oscilloscope. The time constant was determined by using the oscilloscope's built in rising and falling edge time measurement. The rising and falling time is simply the amount of time it takes for the waveform to transition from 10\% to 90\% to a final value from an initial value. \textit{Figure 2.2} illustrates this for a rising edge.\par\vspace{-12pt}
+\begin{center}
+    	\resizebox{0.6\textwidth}{!}{\input{./plots/rise.tex}}
+\end{center}
+From the rising and falling time, the time constant can be deduced by using \textit{Equation 5} from the \textit{Introduction} section. This is done by solving the time it takes for the waveform to change from the initial value to 10\% of the final value ($t_{10\%}$) and the same for 90\% ($t_{90\%}$). The difference between the two is then the rising or falling time. Mathematically:
+\begin{equation}
+0.1 = e^{\frac{-t_{10\%}}{RC}}\hspace{0.25in}\longrightarrow\hspace{0.25in} t_{10\%} = -RC\ln(0.1)
+\end{equation}
+\begin{equation}
+0.9 = e^{\frac{-t_{90\%}}{RC}}\hspace{0.25in}\longrightarrow\hspace{0.25in} t_{90\%} = -RC\ln(0.9)
+\end{equation}
+\begin{equation}
+t_{rising}=t_{falling}= t_{10\%}-t_{90\%} = RC[\ln(0.9)-\ln(0.1)] \approx 2.2RC
+\end{equation}
+Therefore, it is seen that the rising time and falling time is approximately 2.2 times the $RC$ time constant. Below in \textit{Figure 2.3}, the automated measurements for rising time and falling time are reported for this circuit. Note that the output waveform (in red) takes an exponential form as predicted. The blue waveform is the input.\par\vspace{6pt}
+\title{\textbf{Figure 2.3} Capacitive Charge and Discharge Waveform.}
+\begin{center}
+ \includegraphics[scale=0.45]{./oscilloscope/2c.png}
+\end{center}
+The measurements for rising and falling time were reported by the oscilloscope to be approximately 224.9 $\mu$s and 218.1 $\mu$s respectively. Below in \textit{Table 1} are the experimental values for $\tau$ found using the relation between rising/falling time and $\tau$:
+\begin{center}
+\title{\textbf{Table 1} Rise/Fall Times and Time Constants}\\\vspace{6pt}
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{|l|c|c|}
+\hline
+&$t_{rise/fall}$&$\tau$\\
+\hline
+Riding Edge:& 224.9 $\mu$s&102.4 $\mu$s\\
+\hline
+Falling Edge:& 218.1 $\mu$s &99.3 $\mu$s\\
+\hline
+\end{tabular}
+\end{center} 
+The values for the time constant for both the rising and falling edges ending up being almost exactly the predicted 100 $\mu$s, given a couple microseconds of error. This error is understandable due to the part tolerances of $\pm$ 5\% for the resistor and $\pm$ 10\% for the capacitor. This general agreement between the prediction and experimental data confirms the derived model for the RC time constant.
+%----------------------------------------------------------------------------------------
+%   PART 3
+%----------------------------------------------------------------------------------------
+\subsection*{Part 3}
+The objective of this part was to determine whether the circuit built in \textit{Part 1} is an integrator or differentiator by decreasing the period of the input signal to be much less than the circuit's time constant. In this case a 20 kHz 4 $V_{pp}$ signal was used, having a period of 50 $\mu$s. A shorter period is expected to decrease the capacitive charge/discharge behavior of the circuit, instead allowing the integrator and differentiator response to an input signal to be observed. As discussed in the introduction, a RC circuit with the output measured across the capacitor is expected to act like an integrator. So, if a square wave is applied to this circuit's input, the expected output is a triangle wave because it is the integral of a square wave. This hypothesis was tested, and the resulting waveforms are shown in \textit{Figure 2.4}, where the blue waveform is the input and the red the output:\par\vspace{6pt}
+\title{\textbf{Figure 2.4} RC Integrator Response.}
+\begin{center}
+ \includegraphics[scale=0.45]{./oscilloscope/3c.png}
+\end{center}
+In this screen shot, it is apparent that the output waveform is indeed as triangle wave as predicted, confirming the predictions for the circuit's behavior.
+%----------------------------------------------------------------------------------------
+%   PART 4
+%----------------------------------------------------------------------------------------
+\subsection*{Part 4}
+The objective of this part was to build a differentiator for a 1 kHz input square wave by rearranging the series RC circuit from \textit{Part 1}. As discussed in the introduction, it is expected that the voltage across the resistor to be the derivative of the input as the current through the resistor is proportional to the derivative of the capacitor's voltage. With properly chosen values for R and C to make $\frac{dV_R}{dt}$ insignificant compared to $\frac{dV_{in}}{dt}$ (i.e. make most of the voltage drop across the capacitor), the current then should be nearly proportional to the derivative of the input signal. Accordingly the resistor's voltage should be then proportional to the derivative of the input. Applying this, a differentiator can be built by flipping the components used previously and measuring the output across the resistor:  \pagebreak
+\begin{center}
+ \title{\textbf{Figure 2.5} RC Differentiator Circuit}\\\vspace{6pt}
+ \begin{circuitikz}[american voltages]
+   \draw
+   (0,3) to[capacitor, l_=10nF, o-] (3,3)
+   (3,3) to[resistor, l_=1k$\Omega$ ] (3,0)
+         to[short, -o] (0,0)
+   (3,3) to[short, -o] (4,3)      
+   (3,0) to[short, -o] (4,0)
+   (0,0) to[open, v^>=$v_{in}$] (0,3)
+   (4,0) to[open, v_>=$v_{out}$] (4,3);
+ \end{circuitikz}
+\end{center}
+The component values for this circuit were chosen to minimize the width of the output spike resulting from a square wave input, yet still make the pulse width visible. In this case, a time constant of 10 $\mu$s was chosen, being considerably smaller than the input's 1 ms period. Below in \textit{Figure 2.6} is is the input waveform (in blue) and the output waveform (in red) for this circuit:\par\vspace{6pt}
+\title{\textbf{Figure 2.6} RC Differentiator.}\vspace{-6pt}
+\begin{center}
+ \includegraphics[scale=0.45]{./oscilloscope/4c.png}
+\end{center}
+The output waveform for this circuit spiked at the rising and falling edges of the square wave, which is expected if a square wave (with some rise and fall time) is differentiated. This means this circuit worked as expected as a differentiator.
+\pagebreak
+%----------------------------------------------------------------------------------------
+%   PART 5
+%----------------------------------------------------------------------------------------
+\subsection*{Part 5}
+The objective of this part was to test the circuit built in the previous part using a low frequency (50 Hz) triangle wave input and validate the differentiator response. In the case of the triangle wave, the expected derivative is a square wave. This was tested, and the results are shown in \textit{Figure 2.7}, where the red waveform is the output:\par\vspace{6pt}
+\title{\textbf{Figure 2.7} Oscilloscope Screen Capture.}
+\begin{center}
+ \includegraphics[scale=0.45]{./oscilloscope/5c.png}
+\end{center}
+In the above figure, it is clear that the output waveform is a square wave as predicted. The frequency of the input was then increased to determine the maximum frequency the circuit can operate at before it distorts the input signal too much. Too much distortion was considered to be the point when approximately half the width of the signal had become a capacitive charge/discharge waveform. This point was reached at around 500 Hz input:\par\vspace{6pt}
+\title{\textbf{Figure 2.8} Oscilloscope Screen Capture.}
+\begin{center}
+ \includegraphics[scale=0.45]{./oscilloscope/5cb.png}
+\end{center}
+Beyond 500 Hz the singal became mostly a capacitive charge/discharge waveform, slowly transforming into a triangle wave as the frequency increased, making it unrecognisable as a square wave.
+%----------------------------------------------------------------------------------------
+%   PART 6
+%----------------------------------------------------------------------------------------
+\subsection*{Part 6}
+The objective of this part was to construct the RL series circuit shown below in \textit{Figure 2.9} and determine its time constant. The below circuit is predicted to have a time constant of 100 $\mu$s using $\tau=\frac{L}{R}$, R=1k$\Omega$ and L=100mH.
+\begin{center}
+ \title{\textbf{Figure 2.9} RL Differentiator Circuit}\\\vspace{6pt}
+ \begin{circuitikz}[american voltages]
+   \draw
+   (0,3) to[resistor, l_=1 k$\Omega$, o-] (3,3)
+   (3,3) to[inductor, l_=0.1 H] (3,0)
+         to[short, -o] (0,0)
+   (3,3) to[short, -o] (4,3)      
+   (3,0) to[short, -o] (4,0)
+   (0,0) to[open, v^>=$v_{in}$] (0,3)
+   (4,0) to[open, v_>=$v_{out}$] (4,3);
+ \end{circuitikz}
+\end{center}
+It was found that automated rise and fall time measurements did not work on this waveform with the used oscilloscope, so cursors were used to measure the time taken for the waveform to change by 63\% (one time constant) from initial to final value. The difference between initial value and final value of the output was measured at 3.48 V, therefore 63\% change would be a $\Delta V$ of approximately 2.2 V. Below in \textit{Figure 2.10} is a capture showing the measurement of the time constant using cursors:\par\vspace{6pt}
+\title{\textbf{Figure 2.10} Falling Edge Time Constant.}
+\begin{center}
+ \includegraphics[scale=0.45]{./oscilloscope/6c.png}
+\end{center}
+It was found using this method that the falling edge time constant was 80 $\mu$s and the rising 82$\mu$s. This is considerably short of the predicted 100$\mu$s. A closer inspection of the inductor used with a multimeter showed that it had an internal resistance of 215.5$\Omega$, which means that the value for $R$ in the circuit is really 1215.5$\Omega$. Recalculating $\tau$ with this value gives $\tau$ = 82.3 $\mu$s. This value agrees with the experimental data and backs the derived models for time constant.
+%----------------------------------------------------------------------------------------
+%   PART 7
+%----------------------------------------------------------------------------------------
+\subsection*{Part 7}
+The objective of this part was to determine if the circuit of the previous part is an integrator or differentiator by inputting a triangle wave and observing the output. As discussed in the introduction, the voltage across the inductor like in this series RL circuit is expected to be proportional to the derivative of the input, therefore the output signal should be a square wave and the circuit should be a differentiator. This theory was tested, and below is a oscilloscope capture showing the output waveform in red with a 500 Hz input:\par\vspace{6pt}
+\title{\textbf{Figure 2.11} Series RL circuit triangle wave response.}
+\begin{center}
+ \includegraphics[scale=0.45]{./oscilloscope/7c.png}
+\end{center}
+The above waveform shows a very crude, distorted square wave output caused by the triangle wave input. This response implies that the circuit behaves as a differentiator as expected, albeit a very poor one. The distortion of the output was unacceptable across all input frequencies tested (between 0 Hz and 2 MHz), with the shown 500 Hz signal giving the most ideal response. The differentiator behavior of this circuit can be confirmed by the waveforms in \textit{Figure 10} by observing that the circuit causes spikes at the transitions of the input square wave, which is indicative of an differentiator.
+\pagebreak
+%----------------------------------------------------------------------------------------
+%   PART 8
+%----------------------------------------------------------------------------------------
+\subsection*{Part 8}
+The objective of this part was to rearrange the RL circuit from the \textit{Part 6} in order to get an integrator like the circuit in \textit{Part 1}. As discussed in the introduction, it is expected that the voltage across the resistor will be proportional to the integral of the input signal if the values for R and L are chosen to minimize the voltage across the resistor, making most of the voltage drop across the inductor. As a result, the $\frac{dI}{dt}$ of the inductor will be essentially proportional to the input voltage signal, and since the voltage of the resistor is proportional to current, it will also be approximately equal to the integral of the input voltage ($\frac{dI}{dt} \approxprop V_{in} \longrightarrow V_R \propto I \approxprop \int V_{in}dt$). This can be applied by flipping the resistor and inductor from the last circuit so voltage can be measure across the resistor:
+\begin{center}
+ \title{\textbf{Figure 2.12} RL Differentiator Circuit}\\\vspace{6pt}
+ \begin{circuitikz}[american voltages]
+   \draw
+   (0,3) to[inductor, l_=0.1 H](3,3)
+   (3,3) to[resistor, l_=1 k$\Omega$, o-] (3,0)
+         to[short, -o] (0,0)
+   (3,3) to[short, -o] (4,3)      
+   (3,0) to[short, -o] (4,0)
+   (0,0) to[open, v^>=$v_{in}$] (0,3)
+   (4,0) to[open, v_>=$v_{out}$] (4,3);
+ \end{circuitikz}
+\end{center}
+This circuit was built and tested with a 1 kHz 4 $V_{pp}$ square wave input. Below the input signal is shown in blue and the output in red for this circuit:\par\vspace{6pt}
+\title{\textbf{Figure 13} Oscilloscope Screen Capture.}
+\begin{center}
+ \includegraphics[scale=0.45]{./oscilloscope/8c.png}
+\end{center}
+The output waveform of this circuit behaved as expected, looking extremely similar the one from \textit{Part 1}, showing the exponential rise and decay trend. This behavior confirms this circuit to be an integrator.
+\pagebreak
+%----------------------------------------------------------------------------------------
+%   CONCLUSION
+%----------------------------------------------------------------------------------------
+\section{Conclusion}
+The time constant, being the time taken for the output of a RC or RL to change 63\% to its final value with a stepped input, was determined for a RC series circuit to be $\tau=RC$. It was then found that the the voltage across the resistor of a series RC circuit is proportional to the derivative  of the input signal, and the voltage across the capacitor the integral of the input under appropriate circumstances. The time constant for series RL circuits was then found to be $\tau= \frac{L}{R}$. Finally, it was determined that a RL circuit acts as an integrator when the output voltage is measured across the resistor and as a differentiator when the output is measured across the inductor.
+\end{document}

@@ -1,0 +1,10 @@
+NET CLOCK_IN LOC = B8;
+NET la LOC = L14;
+NET lb LOC = H12;
+NET lc LOC = N14;
+NET ld LOC = N11;
+NET le LOC = P12;
+NET lf LOC = L13;
+NET lg LOC = M12;
+NET rst LOC = G12;
+#Assign the rest of the 7-segment pins appropriately.

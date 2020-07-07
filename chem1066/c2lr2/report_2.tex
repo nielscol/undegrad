@@ -1,0 +1,306 @@
+\documentclass[12pt, letterpaper]{article}
+
+\usepackage{setspace}
+\usepackage[version=3]{mhchem} % Package for chemical equation typesetting
+\usepackage{siunitx} % Provides the \SI{}{} and \si{} command for typesetting SI units
+\usepackage{graphicx} % Required for the inclusion of images
+\usepackage{amsmath} % Required for some math elements 
+\usepackage{subcaption}
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+\usepackage[top=0.8in, bottom= 0.8in, left= 0.8in, right= 0.8in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{array}
+\usepackage{adforn}
+\usepackage{textcomp}
+\usepackage{placeins}
+\newcolumntype{L}{>{\centering\arraybackslash}m{3cm}}
+
+\pagestyle{fancy}
+\renewcommand{\labelenumi}{\alph{enumi}.} % Make numbering in the enumerate environment by letter rather than number (e.g. section 6)
+
+%----------------------------------------------------------------------------------------
+%	Cover Page
+%----------------------------------------------------------------------------------------
+
+\title{Determining Rate Law and Activation Energy of Magnesium Powder and Hydrochloric Acid Reaction Using Pressure Probe Based Rate Measurements \\ \adforn{21} \\  Chemistry 1066} % Title
+
+\author{Author: Cole \textsc{Nielsen}} % Author name
+\date{Fall 2015} % Date for the report
+
+
+\begin{document}
+
+\maketitle % Insert the title, author and date
+
+\begin{center}
+ \begin{tabular}{l r}
+  Dates Performed: & Oct. 22 \& 29, 2015 \\ % Date the experiment was performed
+  Partners: & Maile Anthony \\  
+  &Joshua Widman \\ % Partner names
+  Instructor: & Subhasree Kal % Instructor/supervisor
+ \end{tabular}
+\end{center}
+
+\pagebreak
+%-----------------------------------------------------------------------------------------
+%   Abstract
+%-----------------------------------------------------------------------------------------
+\begin{abstract}\doublespacing
+\noindent The rate law and activation energy of the reaction between hydrochloric acid and magnesium powder was determined experimentally using pH and pressure probe based methods. This was done using these methods by finding the initial rate and then using the rate law equation and Arrhenius equation to find the desired values. The pH test was performed initially by monitoring the pH of the reaction solution (that is the HCl concentration) to find the initial rate. This method was found to be unsuitable in this experiment, as the reaction was too turbulent and resulted in data with too much uncertainty to produce a meaningful initial rate. Therefore, a pressure based method where the reaction was performed in a sealed beaker with a pressure probe measuring the increase in pressure (\ce{H2} generation) was used to find the initial reaction rates. From the pressure based data, the rate law was successfully found to be 
+\begin{equation}
+\textnormal{rate}  = 1.378 (\textnormal{grams Mg})^{1.029} [\textnormal{HCl}]^{1.853}
+\end{equation}
+The experimental orders of reaction were found to be close to the expected 1 and 2 respective for Mg and HCl. Finally, the activation energy (E$_a$) was found to be 18.9 kJ/mol, also similar to the expected value of 28.5 kJ/mol \cite{mg_hcl}. 
+\end{abstract}
+\hrulefill
+
+%-----------------------------------------------------------------------------------------
+%  Introduction
+%-----------------------------------------------------------------------------------------
+\section{Introduction}\doublespacing
+The objective of this experiment was to determine the rate law equation and activation energy for the reaction between magnesium powder and hydrochloric acid. The interest of this experiment is largely with the methods it uses, as they lay ground work for techniques to determine rate laws and activation energy experimentally. Rate law equations and activation energy are of specific interest and value because they allow for reactions to quantitatively be understood in terms of how fast a reaction will occur and the energy cost to begin a reaction. These factors are crucial in understanding how many reactions work, such as the iodine clock reaction \cite{clock}, which is highly dependent on reaction rates of the chemicals used. These concepts are also of great interest in chemical engineering, as they allow processes to be designed to take a minimal amount of time (using rates) and with minimal energy (activation energy) to reduce cost of production.\\\par
+
+Similar work has been done before to this experiment using a related pressure based method and strips of magnesium metal \cite{mg_hcl} to find the reaction rate and activation energy. Those results will be compared with this experiments results as a form of validation. It is predicted for this experiment that the rate law will take the following form:
+\begin{equation}
+rate = k'(\textnormal{grams Mg})^1 [\textnormal{HCl}]^2
+\label{eq:rl}
+\end{equation}
+This is because the balanced chemical equation for the reaction is \ce{Mg(s) + 2HCl(aq) -> MgCl2(aq) + H2(g)}, which correlates to the rate law of the left side being k$ [\textnormal{Mg}]^1 [\textnormal{HCl}]^2$, which is reaffirmed by \cite{mg_hcl}. Since the magnesium is a solid and therefore its concentration is unknown, we replace concentration with surface area, which is proportional to mass of the powder. Since Mg concentration is not used, the reaction rate coefficient will be changed, and thus we used k' instead, denoting the rate coefficient for a given mass of Mg instead of concentration. This leads to equation \ref{eq:rl}. The values for k' and E$_a$ are not so easily predictable and can only be found experimentally.\\\par
+
+This prediction will be tested experimentally given by the procedures in the \textit{Experimental} section to produce values given in the \textit{Results} section. These results will later be discussed in detail, spanning theory, derivation and implications in the \textit{Discussion } section. Final remarks on the overall outcomes and results of the experiment will be made last in the \textit{Conclusions} section.
+
+
+%-----------------------------------------------------------------------------------------
+%  Experimental
+%-----------------------------------------------------------------------------------------
+\section{Experimental}
+The experiment was performed and will be discussed in two major parts: a pH based test and a pressure based test.
+\subsection{pH Test}
+The rate equation was found using a pH test by the following procedure. Initially samples of Mg powder and HCl were prepared for three reactions, with the following pairs used (Mg then HCl): 0.04g and 10 mL 1M, 0.02g and 10mL 1M, 0.04g and 10mL 0.5M. These values were chosen so that between the sets of trials there were two where Mg was held constant and HCl and varied, and vice versa to determine the reaction order. The volume of HCl was chosen to be arbitrarily in excess for the reaction. A Vernier pH probe, being a USB pH meter that connects to a PC for pH monitoring, was set up with LoggerPro to record the experimental data. The probe was calibrated before the experiment using two buffer solutions of pH 7 and pH 4. The first trial was performed by placing 10 mL of 1M HCl into a beaker and placing the clean pH probe into the solution until the measured pH stabilized. Data was then set to record, and the Mg was added into the acid and stirred with a glass stir-rod until the pH stabilized again. The data sampling was then stopped, saved, and the probe cleaned. This process was then repeated for the other two sets of samples.
+\subsection{Pressure Test}
+The rate equation was found using a pressure probe by the following procedure. Samples of Mg and HCl were again prepared for four reactions, with the following pairs used: two sets of 0.04g Mg and 10 mL 1M HCl, 0.02g Mg and 10mL 1M HCl, 0.04g Mg and 10mL 0.5M HCl. These were again chosen so that one value was held constant while the other varied so both rate orders of the reactants could be found. Additionally, the temperature of the solutions were recorded this time, and one of the 10 mL 1M HCl solutions of the duplicated pair was chilled in a ice bath to allow for calculation of E$_a$. A Vernier Gas Pressure sensor, being a USB pressure meter that connects to a PC was set up with LoggerPro to monitor pressure in atmospheres. The pressure probe was used on a cork-sealed 250 mL Erlenmeyer Flask, which acted as a pressure vessel. The amounts of reactants were chosen such that the pressure would never exceed 1.3 atm, leaving little possibility for a vessel rupture. The first trial was performed by loading 10 mL of 1M HCl into a syringe, and 0.04g of Mg powder into the flask. Data recording was started, the HCl was injected quickly into the unsealed flask, after which the flask was quickly sealed. The flask was unsealed during injection to avoid fluctuations in pressure due to the added liquid volume. After the pressure stabilized, data sampling was stopped, the pressure vessel was cleaned and then the process was repeated for the other samples.
+
+%-----------------------------------------------------------------------------------------
+%  Results
+%-----------------------------------------------------------------------------------------
+\section{Results}%\singlespacing
+\FloatBarrier
+\subsection{pH Test}
+Below in figure \ref{fig:pH_plot} is an example of the plotted (unusable) data from the pH trials. The data was found to be too turbulent at the start of every trial (seen as the initial rise and fall) to determine an accurate initial rate.
+\begin{figure}[h!]
+  \begin{center}
+    	\resizebox{0.6\textwidth}{!}{\input{./dp/pH_plot.tex}}
+  \end	{center}
+  \caption{Example plot of pH test data}
+\label{fig:pH_plot}
+\end {figure}
+\FloatBarrier
+
+The following table contains the (erroneous) initial rates extrapolated from all the performed pH trials. Below the table is the calculated rate equation from this data.
+\FloatBarrier
+\begin{figure}[h!]
+	\begin{center}
+	\renewcommand\arraystretch{1.5}
+	\renewcommand\tabcolsep{12pt}
+		\begin{tabular}{|c|c|c|c|}
+			\hline 
+			Trial & Mg Mass & HCl M & Initial Rate $\frac{-\Delta pH}{2 \Delta t}$\\
+			\hline 
+			1 & 0.04g & 1M & -0.0025\\
+	 		\hline
+			2 & 0.02g & 1M & -0.00167\\
+	 		\hline
+			3 & 0.04g & 0.5M & -0.00167\\
+	 		\hline			 			 		
+		\end{tabular}
+	\end{center}
+	\label{fig:pHtab}
+	\caption{Results of trials including initial rates}
+\end{figure}
+\FloatBarrier
+
+\begin{equation}
+\textnormal{rate}  = 0.0025 (\textnormal{grams Mg})^0 [\textnormal{HCl}]^{0.58}
+\label{eq:pHrate}
+\end{equation}
+It should be noted that this rate law is far from expected for the rate constants, where Mg was seen to be negligible with an order of 0. 
+
+
+\subsection{Pressure Test}
+Below are the plots for pressure versus time for the four pressure probe trials, each varying in Mg masses, HCl concentrations and temperatures. This data is notably less turbulent than the pH trials, making the initial rate easier to extrapolate.
+\FloatBarrier
+\begin{figure}[h!]
+\centering
+\begin{minipage}{0.5\textwidth}
+		\raggedright
+	   	\resizebox{0.9\textwidth}{!}{\input{./dp/1m4.tex}}
+  \caption{Trial 1, temperature = 22.4 \textdegree C}%
+\label{fig:1m4}%
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.5\textwidth}%
+		\raggedleft
+    	\resizebox{0.9\textwidth}{!}{\input{./dp/1m2.tex}}
+  \caption{Trial 2, temperature = 22.4 \textdegree C }
+\label{fig:1m2}
+\end {minipage}
+\end {figure}
+\FloatBarrier
+
+\begin{figure}[h!]
+\centering
+\begin{minipage}{0.5\textwidth}%
+		\raggedright
+    	\resizebox{0.9\textwidth}{!}{\input{./dp/05m4.tex}}
+  \caption{Trial 3, temperature = 22.4 \textdegree C}
+\label{fig:05m4}
+\end {minipage}%
+\hfill%
+\begin{minipage}{0.5\textwidth}%
+  \raggedleft
+    	\resizebox{0.9\textwidth}{!}{\input{./dp/1m4c.tex}}
+  \caption{Pressure trial 4, temperature = 8.5 \textdegree C }
+\label{fig:1m4c}
+\end {minipage}
+\end {figure}
+\FloatBarrier
+
+Below is a table containing the initial rates ($\frac{\Delta P}{\Delta t}$) taken as the average slope of the first $\frac{1}{2}$ second of the pressure rise. Underneath the table is the calculated rate equation and activation energy (E$_a$) for the pressure trials.
+
+\FloatBarrier
+\begin{figure}[h!]
+	\begin{center}
+	\renewcommand\arraystretch{1.5}
+	\renewcommand\tabcolsep{12pt}
+		\begin{tabular}{|c|c|c|c|c|}
+			\hline 
+			Trial & Mg Mass & HCl M & Initial Rate $\frac{\Delta P}{\Delta t}$ & Temperature (\textdegree C)\\
+			\hline 
+			1 & 0.04g & 1M & 0.0502 & 22.4 \\
+	 		\hline
+			2 & 0.02g & 1M & 0.0139 & 22.4\\
+	 		\hline
+			3 & 0.04g & 0.5M & 0.0246 & 22.4\\
+	 		\hline	
+			4 & 0.04g & 1M & 0.0489 & 8.5\\
+	 		\hline		 				 			 		
+		\end{tabular}
+	\end{center}
+	\label{fig:prestab}
+	\caption{Results of trials including initial rates}
+\end{figure}
+\FloatBarrier
+\begin{equation}
+\textnormal{rate}  = 1.378 (\textnormal{grams Mg})^{1.029} [\textnormal{HCl}]^{1.853}
+\label{eq:presrate}
+\end{equation}
+\begin{equation}
+\textnormal{E}_a = 18.9\textnormal{\space kJ/mol}
+\label{Ea}
+\end{equation}
+It should be noted that the rate law using pressure data is far more reasonable, with the rate orders being on par with expectations.
+%\begin{figure}[h!]
+%  \begin{center}
+%    	\resizebox{0.6\textwidth}{!}{\input{./plotdata/depr.tex}}
+%  \end	{center}
+%  \caption{NaCl freezing point depression versus molality}
+%\end {figure}
+%\FloatBarrier
+
+%\FloatBarrier
+%\begin{figure}[h!]
+%	\begin{center}
+%	\renewcommand\arraystretch{1.5}
+%	\renewcommand\tabcolsep{12pt}
+%		\begin{tabular}{|c|c|c|c|}
+%			\hline 
+%			Trial & 1 & 2& Average \\
+%			\hline 
+%			$C_{cal}$ & 18.22 $\frac{J}{\textnormal{\textdegree} C}$  & 20.80 $\frac{J}{\textnormal{\textdegree} C}$& 19.51 $\frac{J}{\textnormal{\textdegree} C}$ \\
+%			\hline 
+%		\end{tabular}
+%	\end{center}
+%	\caption{Measured Cup Calorimetry Constants (in [J]/[\textdegree\space C])}
+%\end{figure}
+%\FloatBarrier
+
+
+\FloatBarrier
+%-----------------------------------------------------------------------------------------
+%  Discussion
+%-----------------------------------------------------------------------------------------
+\section{Discussion}\doublespacing
+The rate law equation was solved using the initial rates found experimentally, given above in the \textit{Results} section. The rate law was first solved for by finding the reaction orders $m$ and $n$ in the rate equation for this reaction:
+\begin{equation}
+rate = k'(\textnormal{grams Mg})^m [\textnormal{HCl}]^n
+\label{eq:ratel}
+\end{equation}
+Recall the values for Mg and HCl were chosen so that between the sets of trials there were two where Mg was held constant and HCl and varied, and vice versa. The parameter held constant can be solved for as follows, for example if [HCl] is constant:
+\begin{equation}
+[\textnormal{HCl}]^n = \frac{\textnormal{rate}}{k'(\textnormal{grams Mg)}^m}
+\end{equation}
+The initial amount of Mg is known for both trials, and the initial rate was found experimentally, so they can be plugged in as rate$_0$ and (grams Mg)$_0$. Also, since both trials have the same [HCl], the above equation can be set equal to each other for the two trials with initial values substituted in:
+\begin{equation}
+\frac{\textnormal{rate}_{a,0}}{k' (\textnormal{grams Mg})_{a,0}^m} = \frac{\textnormal{rate}_{b,0}}{k' (\textnormal{grams Mg})_{b,0}^m} 
+\end{equation}
+Rearanged and simplified:
+\begin{equation}
+\frac{\textnormal{rate}_{a,0}}{\textnormal{rate}_{b,0}} = \Big(\frac{\textnormal{grams Mg}_{a,0}}{\textnormal{grams Mg}_{b,0}}\Big)^m
+\end{equation}
+Solve for m:
+\begin{equation}
+X = \Big(\frac{\textnormal{grams Mg}_{a,0}}{\textnormal{grams Mg}_{b,0}}\Big), \hspace{48pt} m = \textnormal{log}_X\Big(\frac{\textnormal{rate}_{a,0}}{\textnormal{rate}_{b,0}}\Big)
+\end{equation}
+The equation for n can be found using the same method, or the above equation can be used by substituting in [HCl] for (grams Mg). Applying this formula, it was found that the data for the pH based trials was very poor. m was found to be 0 and and n was 0.58, far from the expected 1 and 2 respectively. These results are poor due to the unstable nature of the measurements made. Looking at Figure \ref{fig:pH_plot}, it can be seen that the pH violently varies initially (instead of monotonically increasing like expected), at the start of the reaction. This occurred in all trials performed. This made it near impossible to determine the real initial rate, and accordingly the rate was just taken at the start of the monotonically increasing region after the ripples, as an approximation. This results in high uncertainty, however, because the rate is taken after the start of the reaction, so the precise amount of reactants are unknown, meaning the values for k', m, n cannot be calculated accurately. It was decided that this method was infeasible for determining the sought after quantities for these reasons, and this method is therefore extremely limited because so. It is probable that this method worked so poorly because the reaction between powdered Mg and HCl is too fast and turbulent, that the solution doesn't mix evenly enough for the pH probe to measure, and the generated gas likely prevents the probe from properly being exposed to solution.\\\par
+Applying the equations for m and n to the pressure based data yields much more favourable results of m = 1.029 and n = 1.853, close to the predictions. This is likely due to the data being far more stable from the pressure measurements as they were not done in solution as with the pH ones. Some error is still inherent in these results, however. A primary source would be due to the pressure vessel not being closed until a short time after the HCl was injected. This means that the measurements are not exactly when the reaction initiates, but they are quite close. Unsealed injection of HCl was preferred to sealed because adding the HCl to a sealed vessel will increase the pressure at the same time the reaction runs, making it hard to know how much each the addition of liquid and the reaction contribute to the pressure. It was deemed that open injection would have the least effect on the final results. This experimental method could be extended and improved by making sure the addition of the acid does not affect vessel pressure, making the initial rate measurements more accurate.\\\par 
+
+The rate constant k' was next found by simply plugging in the initial values from each trial into equation \ref{eq:ratel} and solving for k'. Over each of the 22.4 \textdegree C trials, k' was found to be 1.378, which completes the final experimental rate law (equation \ref{eq:presrate}). \\\par
+
+Last, the activation energy E$_a$ was found by using the rate data recorded for the two trials of the same reactant amounts (0.04g Mg and 10mL 1.0M HCl) at different temperatures. The value for k at each temperature was calculated using the previously described methods, but with m = 1 and n = 2. This resulted in k' at 22.4 \textdegree C equalling 1.255, and k' at 8.5 \textdegree C being 1.2225. E$_a$ is easily solved for by using Arrhenius' Equation, solved for E$_a$:
+\begin{equation}
+\textnormal{E}_a = \frac{\textnormal{ln}\big(\frac{k_1}{k_2}\big)}{\big(\frac{1}{T_2}-\frac{1}{T_1}\big)R}
+= \frac{\textnormal{ln}\big(\frac{1.255}{1.2225}\big)}{\big(\frac{1}{8.5+273.15}-\frac{1}{22.4+273.15}\big)\times 8.314} = 18.9 \textnormal{ kJ/mol}
+\end{equation}
+Therefore, it is seen that E$_a$ is 18.9 kJ/mol, which is near the 28.5 kJ \cite{mg_hcl} found by the similar experiment discussed in the introduction. Since only one point of data was found in this experiment for activation energy, there is high, unquantifiable uncertainty associated with it. This could easily be remedied by performing more trials at different temperatures and different concentrations, and then calculate the average for a more statistically sound value for E$_a$.
+
+%\begin{figure}[h!]
+%  \begin{center}
+%    	\resizebox{0.6\textwidth}{!}{\input{./plotdata/428.tex}}
+%  \end	{center}
+%  \caption{0.428 m NaCl solution freezing point depression}
+%\end {figure}
+%\FloatBarrier
+
+
+%-----------------------------------------------------------------------------------------
+%  Conculusion
+%-----------------------------------------------------------------------------------------
+\section{Conclusion}
+The rate law of the reaction between HCl and Mg powder was found by measuring the rate of change of pressure (generated by \ce{H2} product) and knowing the initial amounts of reactants. This rate law is:
+\begin{equation}
+\textnormal{rate}  = 1.38 (\textnormal{grams Mg})^{1.03} [\textnormal{HCl}]^{1.85}
+\end{equation}
+The reaction orders were single point measurements, so there is no calculable uncertainty. Given three significant figures, the uncertainty in k' is statistically insignificant  at 1.86$\times 10^{-4}$, which is much smaller than the least significant digit of k'. The reaction orders are also very close to the theoretical values of 1 and 2 for Mg and HCl respectively, which implies that the model used for the rate law is valid according to experimental data.\\\par
+
+The activation energy for powdered Mg and HCl reacting was determined to be 18.9 kJ/mol, and there is an unknown level of uncertainty due to being a single point measurement. This value agrees with an externally found value of 28.5 kJ/mol, being off only by -33.4\%. Activation energy is of importance because it quantifies how much energy it takes for a reaction to start. Thus it is important to know it when designing reactions to make sure they will occur (have enough energy to start). These results are significant in that they affirm the model used for the rate law to be true, which provides certainty in its accuracy. Also, this experiment lays out a basic and effective methodology to finding the rate law and activation energy for basic reactions, which may help others in performing similar work.
+
+%  References
+%-----------------------------------------------------------------------------------------
+\vspace{-12pt}
+\begin{thebibliography}{11}
+\raggedright
+
+ \bibitem{mg_hcl}
+Birk, James P. ; 
+Walters, David L.
+Pressure measurements to determine the rate law of the magnesium-hydrochloric acid reaction.
+Journal of Chemical Education, July, 1993, Vol.70(7), p.587(3)
+\bibitem{clock}
+Oliveira, André P ; Faria, Roberto B.
+The chlorate-iodine clock reaction.
+Journal of the American Chemical Society, 28 2005, Vol.127(51), pp.18022-3
+	
+	
+	
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "F:/4301/lab7/tb_isim_beh.exe" -prj "F:/4301/lab7/tb_beh.prj" "work.tb" "work.glbl" 

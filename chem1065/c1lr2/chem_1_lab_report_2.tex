@@ -1,0 +1,284 @@
+\documentclass[12pt]{article}
+
+\usepackage{setspace}
+\usepackage[version=3]{mhchem} % Package for chemical equation typesetting
+\usepackage{siunitx} % Provides the \SI{}{} and \si{} command for typesetting SI units
+\usepackage{graphicx} % Required for the inclusion of images
+\usepackage{amsmath} % Required for some math elements 
+%\usepackage[style=chem-acs]{biblatex}
+%\usepackage[backend=bibtex,style=chem-acs,biblabel=dot]{biblatex}
+\usepackage[backend=bibtex]{biblatex}
+\addbibresource{biblatex-chem.bib}
+\usepackage{subcaption}
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+\usepackage[top=0.8in, bottom= 0.8in, left= 0.8in, right= 0.8in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{array}
+\newcolumntype{L}{>{\centering\arraybackslash}m{3cm}}
+
+\pagestyle{fancy}
+\renewcommand{\labelenumi}{\alph{enumi}.} % Make numbering in the enumerate environment by letter rather than number (e.g. section 6)
+
+%----------------------------------------------------------------------------------------
+%	Cover Page
+%----------------------------------------------------------------------------------------
+
+\title{Dye Identification and Replication\\of an Artificially Colored Drink\\ Using Absorption Spectroscopy\\ \vspace{0.3 in} Chemisty 1065} % Title
+
+\author{Author: Cole \textsc{Nielsen}} % Author name
+\date{Spring 2015} % Date for the report
+
+
+\begin{document}
+
+\maketitle % Insert the title, author and date
+
+\begin{center}
+ \begin{tabular}{l r}
+  Dates Performed: & March 10 \& 24, 2015 \\ % Date the experiment was performed
+  Partners: & Nickolas Johnson \\ % Partner names
+  & Erin Potter-Rank \\
+  Instructor: & Che Wu % Instructor/supervisor
+ \end{tabular}
+\end{center}
+
+\pagebreak
+%-----------------------------------------------------------------------------------------
+%   Abstract
+%-----------------------------------------------------------------------------------------
+\begin{abstract}\doublespacing
+The food dye content of a purple artificially colored drink was determined to replicate the product's appearance. This was done first using a UV-Visible absorption spectrometer to determine the  absorption spectrum of the drink. Then, seven common FD\&C food dyes were tested in the same spectrometer, producing absorption spectra for each dye. The spectra of each dye was compared the drink's spectrum. It was found that the maximum absorption wavelength of Red 40 and Blue 1 matched the drink, indicating their presence in it. The absorption spectra for Red 40 and Blue 1 were measured at 20\%, 40\%, 60\%, and 80\% concentration of respective stock dyes solutions. A calibration curve for each dye was produced by plotting the absorption against concentration. From the calibration curve, the concentration of Red 40 in the original drink was determined to be $4.65 \times 10^{-5}$ M and Blue 1 was found to have a concentration of $8.69 \times 10^{-6}$ M. A 50 mL replica solution of the original drink was prepared by diluting and mixing together the given Red 40 and Blue 1 stock solution to those concentrations. Visual inspection yielded that the drink and replicated solution appeared identical. To confirm this, the replicated solution was tested in the spectrometer, producing a spectrum that closely matched the original drink, indicating replication to be an accurate copy of the drink within 8.7 \% of the original drink's absorption. 
+\end{abstract}
+
+%-----------------------------------------------------------------------------------------
+%  Introduction
+%-----------------------------------------------------------------------------------------
+\section{Introduction}\doublespacing
+The objective of this experiment was to replicate the the color of an artificially colored drink. In this experiment, the drink used was a bottle of purple grape flavored Kool-Aid. The dyes present in the drink were determined using a absorption spectrometry-based lab techniques described in the \textit{Experimental} section and analyzed in the \textit{Discussion} section. The process of replicating the drink is also discussed procedurally in the \textit{Experimental} section and analytically in the \textit{Discussion} section. In particular, it was predicted that dye concentration and light absorption of the dyes in this experiment are linearly correlated, following Beer's law$^4$. This hypothesis was used as the basis for determining the dye concentration and replicating the drink in this experiment. The outcomes and final conclusions are lastly discussed in the \textit{Conclusions} section. The significance of this work lies in one regard with the generic foods industry. In particular, the methodology used is invaluable in that it outlines the process to accurately replicate the color appearance of name brand products, so that convincing generics can be made and sold for profit. The technique of absorption spectrometry used also holds significance in that it can be used to analyze more than just dye content, for example elemental composition of a medium such as an atmosphere can be determined by analyzing the wavelengths absorbed by it$^{1}$. From those wavelengths, quantum mechanical principles (energy associated with the absorbed wavelengths and electron transitions) can be used to infer the constituent elements of the medium. Similar work to this experiment has been done by the Israeli Ministry of Health using paper chromatography$^{2}$ to determine dye content of foods. This was done by staining paper with different dye containing samples, and then allowing different solvents to run across the paper, causing different streaks to occur. Based on the streaks and the solvents, the dye content was determined understanding the solubility of common dyes.
+%-----------------------------------------------------------------------------------------
+%  Experimental
+%-----------------------------------------------------------------------------------------
+\section{Experimental}
+This experiment was performed in two parts, being identification of the dyes in the drink and replication of the drink. These are discussed in this respective order.
+\subsection*{Dye Identification}
+To identify the dyes in the grape drink, the absorption spectra of the drink and several FD\&C dyes were determined. This was done using an Ocean Optics USB2000 UV/Vis absorption spectrometer interfaced by USB to a computer running Logger Pro. The spectrometer used was a small black and silver box approximately 4 inches wide, 8 inches long and an inch tall with a small slot to place a sample containing clear acrylic cuvette.  When a sample was loaded into the spectrometer in the cuvette, the absorption spectrum was obtained for that sample using the Logger Pro software. The grape drink was tested first, followed by the seven FD\&C dyes provided (Red 3, Red 40, Blue 1, Blue 2, Yellow 5, Yellow 6 and Green 3).\par
+\pagebreak
+\textbf{Grape Drink}\\
+The spectrometer cuvette was rinsed out with deionized water and then filled with deionized water. The filled cuvette was placed in the spectrometer, and a software calibration was performed in Logger Pro to zero out the meter. Three 200 mL bottles of grape Kool-Aid were poured into a large beaker. The cuvette was then emptied out in the sink, rinsed with grape drink from the beaker, and filled to the top with the grape drink. The cuvette was again placed in the spectrometer. Logger Pro was used to obtain the absorption spectrum (light absorption vs. wavelength graph) for the drink, which was repeated three times for the sample. The wavelength and absorption value of the absorption peaks were recorded and averaged.
+
+\vspace{6pt}\textbf{Food Dyes}\\
+The procedure to determine the absorption spectrum of each dye tested was identical, so it will only be described once, but it should be understood that it is done separately for each dye (Red 3, Red 40, Blue 1, Blue 2, Yellow 5, Yellow 6 and Green 3). Initially, the cuvette was rinsed out with deionized water, then with the stock solution of the dye being tested, and was finally filled to the top with that dye. The cuvette was then placed in the Ocean Optics spectrometer. Using Logger Pro, the absorption spectrum of the dye was obtained. The absorption spectrum was obtained two additional times using the same process for that dye. The values of the wavelength and absorption for the peak of the absorption was noted for each trial, and were averaged.
+
+\subsection*{Drink Replication}
+To replicate the coloration of the drink, the concentration of the dyes in it were determined. The dyes have already been determined to be Red 40 and Blue 1 as future discussed in the \textit{Discussion} section. Both Red 40 and Blue 1 were tested with the absorption spectrometer at several different concentrations. The resulting data was used to produce the replicated solution. The procedure for concentration determination will be first discussed followed by the drink replication procedure.
+
+\vspace{6pt}\textbf{Red 40 and Blue 1 Concentration}
+Initially four 20 mL samples of both Red 40 and Blue 1 were prepared from stock solutions. These samples were made at 20\%, 40\%, 60\%, and 80\% of the concentration of the respective $9.0 \times 10^{-5}$ M Red 40 and $2.0 \times 10^{-5}$ M Blue 1 stock solutions. These samples were prepared by measuring out calculated volumes for each dilution of deionized water and dye using a 10 mL graduated cylinder into a 50 mL beaker. Each sample was thoroughly mixed by swirling the beaker around for approximately 10 seconds. The absorption spectrum of each dye concentration using the absorption spectrometer was then obtained. The procedure for obtaining the spectra of each dye was the same, so it will be described once. First, a cuvette was rinsed out with deionized water, then with the sample solution and was filled with the sample solution. The cuvette was placed in the UV/Vis absorption spectrometer, and the spectrum was recorded in Logger Pro. The spectrum was then recorded two additional times. The values for peak absorption and wavelength were noted, and averaged to produce a result. The process was repeated for the next sample.
+
+\vspace{6pt}\textbf{Drink Replication}\\
+25.8 mL of $9.0 \times 10^{-5}$ M Red 40 stock solution, 21.8 mL of $2.0 \times 10^{-5}$ M Blue 1 stock solution and 2.4 mL of deionized water were measured out using a 10 mL graduated cylinder and were combined together into a 150 mL beaker in that order, producing a 50 mL solution. This was calculated in the \textit{Discussion} section to have the same dye concentration as the original grape drink. The solution was thoroughly mixed by swirling the beaker around for approximately 10 seconds. Then, the spectrometer cuvette was rinsed out again with deionized water, then with the replicated solution and was filled with the replicated solution. The solution containing cuvette was placed into the spectrometer, and the absorption spectrum of it was collected. The spectrum was collected two more times, and the values for wavelength and absorption of the peak absorption were recorded and averaged.
+\pagebreak
+%-----------------------------------------------------------------------------------------
+%  Results
+%-----------------------------------------------------------------------------------------
+\section{Results}\singlespacing
+\subsection*{Original Drink}
+\begin {figure}[htb!]
+  \title{\textbf{Figure 1.} Two peak absorption spectrum of grape drink.}
+  \begin{center}
+    	\resizebox{0.6\textwidth}{!}{\input{original_drink.tex}}
+  \end	{center}
+\end {figure}
+%
+%\renewcommand*{\arraystretch}{1.5}
+%\title{\textbf{Table 1.} Values for the peaks of the grape Kool-Aid absorption spectrum.}\vspace{-6pt}
+%\begin{center}
+%\begin{tabular}{|L|L|L|L|L|}
+%\hline 
+%• &Peak 1 Wavelength ($\lambda$) & Peak 1 Absorbance &Peak 2 Wavelength ($\lambda$) &Peak 2 Absorbance \\ 
+%\hline 
+%Mean ($\mu$) & 504.9 nm & 0.905 & 632.8 nm & 0.928 \\ 
+%\hline 
+%Standard Deviation ($\sigma$) & 1.01 nm & 0.00624 & 0.945 nm & 0.00458 \\ 
+%\hline 
+%\end{tabular} 
+%\end{center}
+The purple Kool-Aid was found to have two peaks of maximal absorption, as seen in \textit{Figure 1}. The first was determined to be at 504.9 nm $\pm$ 1.01 nm with an absorption of 0.905 $\pm$ 0.00624, and the second was at 632.8 $\pm$ 0.945 nm with a 0.928 $\pm$ 0.00458 absorption.\par
+\subsection*{FD\&C Dyes}
+This table contains the aggregated results for peak wavelength and absorption of the maxima of absorption each of the seven provided dyes. Each dye had a unique peak wavelength associated with it.\par\vspace{6pt}
+\title{\textbf{Table 1.} Peak wavelength of 7 FD\&C dyes.}
+\begin{center}
+\begin{tabular}{|L|L|L|L|}
+\hline 
+Dye & Peak Wavelength & Absorbance & Concentration  \\ 
+\hline 
+Red 3 & 528.3 $\pm$ 0.46 nm & 0.740 & $1.6 \times 10^{-5}$ M \\
+\hline 
+Red 40 & 504.2 $\pm$ 0.2 nm & 1.719 & $9.0 \times 10^{-5}$ M \\ 
+\hline 
+Blue 1 & 632.4 $\pm$ 0.12 nm & 1.837 & $2.0 \times 10^{-5}$ M \\ 
+\hline 
+Blue 2 & 614.3 $\pm$ 1.0 nm & 1.195 & $9.0 \times 10^{-5}$ M \\ 
+\hline 
+Yellow 5 & 431.6 $\pm$ 1.6 nm & 0.646 & $3.0 \times 10^{-5}$ M  \\ 
+\hline 
+Yellow 6 & 485.9 $\pm$ 0.87 nm & 0.998 & $4.7 \times 10^{-5}$ M  \\ 
+\hline 
+Green 3 & 627.3 $\pm$ 0.76 nm & 0.262 & $2.8 \times 10^{-6}$ M  \\ 
+\hline 
+\end{tabular} 
+\end{center}
+%
+\subsection*{Dyes Identified in Drink}
+The maximum absorption peak values for wavelength and absorption for  Red 40 and Blue 1 at concentrations of 20\%, 40\%, 60\% and 80\% of the respective stock solution are shown in \textit{Table 2} and \textit{Table 3}. Absorption approximately follows a linear trend with respect to concentration.\par\vspace{6pt}
+\title{\textbf{Table 2.} Concentration vs. Absorbance for Red 40.}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline 
+Dye Concentration & Absorbance & Wavelength \\ 
+\hline 
+$1.8 \time 10^-5$ M & 0.327 $\pm$ 0.0082 & 507.5 $\pm$ 1.1 nm \\ 
+\hline 
+$3.6 \time 10^-5$ M & 0.767 $\pm$ 0.0015 & 504.9 $\pm$ 0.12 nm \\ 
+\hline 
+$5.4 \time 10^-5$ M & 1.055 $\pm$ 0.026 & 503.7 $\pm$ 0.78 nm\\ 
+\hline 
+$7.2 \time 10^-5$ M & 1.374 $\pm$ 0.030 & 499.9 $\pm$ 0.90 nm\\ 
+\hline 
+\end{tabular} 
+\end{center}
+\title{\textbf{Table 3.} Concentration vs. Absorbance for Blue 1.}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline 
+Dye Concentration & Absorbance & Wavelength \\ 
+\hline 
+$4.0 \time 10^-6$ M & 0.358 $\pm$ 0.012 & 633.1 $\pm$ 0.68 nm \\ 
+\hline 
+$8.0 \time 10^-6$ M & 0.887 $\pm$ 0.024 & 632.2 $\pm$ 1.5 nm \\ 
+\hline 
+$1.2 \time 10^-5$ M & 1.273 $\pm$ 0.0091 & 632.2 $\pm$ 0.70 nm\\ 
+\hline 
+$1.6 \time 10^-5$ M & 1.753 $\pm$ 0.0066 & 632.0 $\pm$ 2.1 nm\\ 
+\hline 
+\end{tabular} 
+\end{center}
+\subsection*{Replicated Drink}
+The replicated drink yielded two peaks, seen in \textit{Figure 2}, similar to the original drink.  The first peak was found to occur at a wavelength of 502.4 $\pm$ 0.231 nm with and absorption of 0.984 $\pm$ 0.00568 and the second occurring at a wavelength of 629.4 $\pm$ 1.10 nm with an absorption of 0.948 $\pm$ 0.00100.\par\vspace{6pt}
+\title{\textbf{Figure 2.} Absorption spectrum of replicated drink.}
+\begin {figure}[htb!]
+  \begin{center}
+    	\resizebox{0.6\textwidth}{!}{\input{replicated_drink.tex}}
+  \end	{center}
+\end {figure}
+%
+%\renewcommand*{\arraystretch}{1.5}
+%\title{\textbf{Table 5.} Values for the peaks of the replicated drink's absorption spectrum.}\vspace{-6pt}
+%\begin{center}
+%\begin{tabular}{|L|L|L|L|L|}
+%\hline 
+%• &Peak 1 Wavelength ($\lambda$) & Peak 1 Absorbance &Peak 2 Wavelength ($\lambda$) &Peak 2 Absorbance \\ 
+%\hline 
+%Mean ($\mu$) & 502.4 nm & 0.984 & 629.4  nm & 0.948 \\ 
+%\hline 
+%Standard Deviation ($\sigma$) & 0.231 nm & 0.00568 & 1.10 nm & 0.00100 \\ 
+%\hline 
+%\end{tabular} 
+%\end{center}
+%-----------------------------------------------------------------------------------------
+%  Discussion
+%-----------------------------------------------------------------------------------------
+\section{Discussion}\doublespacing
+To replicate the color of the grape drink (known to be colored by FD\&C dyes), it was determined that the dyes present in the drink and their concentration must be found. Once known, replicating the drink is simply a matter of producing a solution containing the same concentration of the dyes. The first step in this process is identifying the dyes. This was done by testing the drink and seven common FD\&C dyes in a absorption spectrometer, which yielded a absorption spectrum for each sample. An absorption spectrum is a graph that relates the wavelength of light passing through some medium to the amount of light absorbed by it. In the case of this experiment, the drink and dyes were tested in the visible light spectrum (approximately 400 nm to 800 nm). It is expected that a given dye will have a unique spectrum associated with it, with the absorption peaking at a specific wavelength that is independent of concentration. It is also expected if a solution contains multiple dyes, like the grape drink, it will have multiple peaks of absorption of which peak wavelengths corresponds to each dye in it. Therefore, by looking at the peaks in the drink and those of several known dyes, it is possible to determine what dyes are in the drink. This is exactly what was done in this lab. In the \textit{Original Drink} subsection of the \textit{Results} section, the spectra of the grape drink tested is given in \textit{Figure 1}, which shows two peaks, one occurring at 504.9 $\pm$ 1.01 nm with an absorption of 0.905 $\pm$ 0.00624 and the second at 632.8 $\pm$ 0.945 nm with an absorption of 0.928 $\pm$ 0.00458. These values were determined as the average of three trials plus or minus the standard deviation. The peak wavelength and absorption for the seven FD\&C dyes (Red 3, Red 4, Blue, Blue 2, Yellow, Yellow 6, Green 3) found in the same manner for each dye are listed in \textit{Table 1}. It is apparent that the absorption of each dye is unique in the sense that each dye has a distinct peak absorption wavelength, which enable different dyes to effectively be identified.\par\vspace{6pt}
+%
+From inspection, it is apparent that the peak absorption wavelength of Red 40 (504.2 $\pm$ 0.2 nm) agrees with the value for the first peak of the drink (504.9 $\pm$ 1.0 nm), given the overlap due to the uncertainty (calculated as the standard deviation). This indicates the presence of Red 40 in the drink. The second peak of the drink (occurring at 632.8 $\pm$ 0.945 nm) agrees with Blue 1 (peak wavelength of 632.4 $\pm$ 0.12 nm), given the overlap in values indicates that the second dye is Blue 1. There are no other matching peaks, leading to the conclusion that the drink only contains Red 40 and Blue 1. A source of uncertainty in this determination is due to a small peak at approximately 410 nm, which could indicate another dye, however none of the stock solutions tested have a peak absorption that agrees with this wavelength. It is possible this is a result of other chemicals in the drink, or an extraneous peak caused by one  of the dyes. Another limitation of the data is that the peak absorption of Green 3 (627.3 nm) is very close to that of Blue 1 (632.4 nm), which may lead to error in the interpretation of the results. This does not seem to have affected the results of this experiment because the wavelength measured for the drink agrees with the wavelength with Blue 1 given the uncertainty, but it does not agree with Green 3's wavelength. A third source of uncertainty is due to contamination of test samples from using the same cuvette for all trials, however this was mitigated by rinsing out the cuvette with deionized water, and then with the test solution to minimize error from dilution and cross contamination between trials.
+\vspace{12pt}\\
+With the dye content of the drink known, it is possible to determine the concentration of each dye in it using a calibration curve. A calibration curve is simply a graph that correlates dye concentration to light absorption at a wavelength. A calibration curve for both Red 40 and Blue 1 one were determined experimentally by finding the peak absorption for both dyes at different concentration (20\%, 40\%, 60\% an 80\% of the stock solution concentration), shown in \textit{Table 2} for Red 40 and \textit{Table 3} for Blue 1. These values were plotted in a single graph for each dye, and a line of best fit (giving absorption as a function of concentration) was determined using a linear regression calculation. Linear regression was performed because a linear relationship in this case is expected due to Beer's law. Below are the calibration curves and the respective line of best fit for each dye.
+\begin{tabular}{l r}
+\end{tabular}
+\begin{figure}[htb!]
+  \begin{subfigure}[b]{0.5\textwidth}
+  	\caption*{\textbf{Figure 3.} Red 40 Calibration Curve}
+    	\resizebox{1\textwidth}{!}{\input{red_40_cal.tex}}
+    \caption*{Absorbance = 19311C + 0.0094 \\ $R^2$ = 0.9954}
+  \end{subfigure}
+  %
+  \hspace{0.25in}
+  \begin{subfigure}[b]{0.5\textwidth}
+  		\caption*{\textbf{Figure 4.} Blue 1 Calibration Curve.}
+    	\resizebox{1\textwidth}{!}{\input{blue_1_cal.tex}}
+    	\caption*{Absorbance = 110525C - 0.03\\$R^2$ = 0.9971}
+  \end{subfigure}
+\end{figure}\\
+Using the calibration curve best fit lines, the absorption associated with each dye in the grape drink can be substituted into the respective equation and solved for concentration (C). Since the coefficient of determination ($R^2$) for both fitted lines is very close to 1, this indicates that the line fits the data well and there is little uncertainty associated with it.  For Red 40 of the drink, the associated absorption was 0.905 $\pm$ 0.00624, mathematically solving for C:
+\begin{equation}
+0.905 = 19311C + 0.0094 \hspace{12pt}\implies\hspace{12pt} C = \frac{0.905-0.0094}{19311} = 4.64 \times 10^{-5} M 
+\end{equation}
+This gives the Red 40 concentration to be $4.64 \times 10^{-5}$ M. The concentration for Blue 1 is solved for in a similar manner:
+\begin{equation}
+0.928 = 110525C - 0.03 \hspace{12pt}\implies\hspace{12pt} C = \frac{0.928+0.03}{110525} = 8.67 \times 10^{-6} M 
+\end{equation} 
+This gives the Blue 1 concentration to be $8.67 \times 10^{-6}$ M. With both concentrations known, a replica solution can be produced. It was arbitrarily chosen to make a 50 mL replica solution. Given the $9.0 \time 10^{-5}$ M Red 40 stock solution, the amount of full concentration Red 40 dye needed for a 50 mL is calculated as follows:
+\begin{equation}
+M_{red}V_{red} = M_{red,f}V_{solution} \hspace{12pt}\implies\hspace{12pt} V_{red} = \frac{M_{red,f}V_{solution}}{M_{red}}
+\end{equation}
+\begin{equation}
+V_{red} = \frac{4.64 \times 10^{-5} \times 50.0 }{9.0 \times 10^{-5}} = \text{25.8 mL}
+\end{equation}
+Therefore 25.8 mL of Red 40 stock solution is needed. This is done the same way for the Blue 1 solution:
+\begin{equation}
+V_{blue} = \frac{M_{blue,f}V_{solution}}{M_{blue}} = \frac{8.67 \times 10^{-6} \times 50.0 }{2.0 \times 10^{-5}} = \text{21.8 mL}
+\end{equation}
+Therefore 21.8 mL of Blue 1 stock solution is needed. Finally, the excess volume required to bring the total volume of the solution to 50 mL will be calculated. This volume will be composed of deionized water as it has a negligible effect on light absorption in the visible spectrum. The water volume is found as follows:
+\begin{equation}
+V_{total} = V_{red} + V_{blue} + V_{water} \hspace{12pt}\implies\hspace{12pt} V_{water} = 50 - 21.8 - 25.8 = \text{2.4 mL}
+\end{equation} 
+The 50 mL replica solution was prepared by combining these volumes of stock dye solution and deionized water. The replica solution was then tested in the spectrometer to obtain its absorption spectrum. Below in \textit{Table 4} are the peak absorption values from the original drink, the replicated drink and the calculated error.\\
+\renewcommand*{\arraystretch}{1.5}
+\title{\textbf{Table 4.} Original and Replicated Drink Comparison}\vspace{-6pt}
+\begin{center}
+\begin{tabular}{|L|L|L|L|L|}
+\hline 
+• &Peak 1 Wavelength ($\lambda$) & Peak 1 Absorbance &Peak 2 Wavelength ($\lambda$) &Peak 2 Absorbance \\ 
+\hline 
+Grape Drink & 504.9 nm & 0.905 & 632.8  nm & 0.928 \\ 
+\hline 
+Replication & 502.4 nm & 0.984 & 629.4  nm& 0.948 \\ 
+\hline 
+\% Error & -0.50 \% & +8.7 \% & -0.54 \% & +2.2 \%\\ 
+\hline 
+\end{tabular} 
+\end{center}
+The wavelength of the peaks agree with each other given their uncertainties and the resolution of the spectrometer, asserting the dyes in both to be identical. However, there is a level of error between the peak absorption of the original and replicated drink. This is such that the replication's absorption is higher than the grape drink's for both dye peaks. This trend is visibly shown below in \textit{Figure 5}, where the absorption spectrum of both samples are plotted together. The upper curve is the replication and the lower is the original drink:\\
+\title{\textbf{Figure 5.} Absorption spectrum of replicated drink.}
+\begin {figure}[htb!]
+  \begin{center}
+    	\resizebox{0.6\textwidth}{!}{\input{comparison.tex}}
+  \end	{center}
+\end {figure}\\
+Visual inspection of \textit{Figure 5} shows that the two curves respond nearly identically to wavelength (again showing the dyes to be correct), just with different amplitude of absorption. In this case, the replicated drink has greater absorption throughout all wavelengths, perhaps indicating it to be over-concentrated. This results in a positive error for the replicated drink's absorption. This error may be attributed to several sources, one being the presence of chemicals other than the dye in the grape drink. These extra chemicals could potentially alter the absorption of the original drink in an unknown manner, leading to uncertainty in its measurements that may skew the results of the experiment. Another potential error is due to drift in the spectrometers calibration. In the experiment, the spectrometer was calibrated only once at the start of each experimental session. This leads to the possibility that the spectrometer drifted out of calibration over the session, causing the measured spectra to be off and yielding uncertainty. There is also a small level of uncertainty associated with the glassware (discussed in the glassware accuracy project), however these are so small (on the order of hundredths of a percent) that it is improbable they caused the observed error. A final uncertainty is that different spectrometers were used in the two sessions, and they could likely had different accuracy and precision, which would have produced a difference between the values measured in each session, possibly explaining the discrepancy. 
+\vspace{12pt}\\
+A complementary technique to the spectrometry-based approach used in this lab would be column chromatography$^{3}$. Column chromatography is a technique that separates and purifies chemicals from a solution. Column chromatography can be used to separate the individual dyes from the solution based off their properties, such as how polar they are. Once they are separated, they can be quantitatively judged in their pure form using a spectrometer, giving the absorption and wavelength without uncertainties due to other chemicals. This allows for a more accurate quantitative measurements to be performed on the drink. The previously discussed paper chromatography method discussed in the \textit{Introduction} section could also be used, however this approach seems limited in that it offers mostly qualitative as opposed to quantitative results.
+%-----------------------------------------------------------------------------------------
+%  Conculusion
+%-----------------------------------------------------------------------------------------
+\section{Conclusion}
+It was found that the purple grape-flavored Kool-Aid contained Red 40 and Blue 1 dyes, with $4.64 \times 10^{-5}$ M and $8.67 \times 10^{-6}$ M concentrations respectively. A 50 mL replicated solution was produced, and it was found that the solution matched the original given a maximum level of uncertainty of about +8.7\% for absorption and -0.54\% for wavelength at the peak of absorption of the absorption spectrum. This agreement confirmed the found dye concentrations of the original grape drink, showing them to be a formula for replicating the drink. These results also confirm the accuracy of Beer's law as it was used to successfully determine the concentrations of the grape drink and to replicate it.\par
+\vspace{6pt}
+The methodology and results of this experiment hold significance in that they bring forth an approach to identifying the contents and concentration of a solution or material via comparison of the spectral absorption of the material to other known materials. This holds value for example to government bodies as it allows them to establish means to test and verify compliance of food and pharmaceutical to standards such as acceptable food dye concentration.
+%-----------------------------------------------------------------------------------------
+%  References
+%-----------------------------------------------------------------------------------------
+\section*{References}
+[1]\hspace{4ex} Visible and Ultraviolet Spectroscopy. http://www2.chemistry.msu.edu
+
+\hspace{12ex}(accessed March 30, 2015).
+\vspace{6pt}\newline
+[2]\hspace{4ex}Yanuka, Y.; Shalon, Y.; Weissenberg, E.; Nir-Grosfeld, I. A Paper-chromatographic Method 
+
+\hspace{12ex}for the Identification of Food Dyes. \textit{Analyst.} \textbf{1962}, 87, 791-796\newline
+[3]\hspace{4ex} Separation of Food Dyes Via Column Chromatography. http://www.chem.umn.edu
+
+\hspace{12ex}(accessed March 29, 2015).\newline
+[4]\hspace{4ex} Colorimetric Analysis. http://www.chem.ucla.edu (accessed April 6, 2015).
+\end{document}

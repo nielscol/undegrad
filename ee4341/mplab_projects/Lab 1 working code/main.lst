@@ -1,0 +1,211 @@
+MPASM  5.42                            MAIN.C   1-26-2016  14:26:08         PAGE  1
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00001 
+Error[105]  : Cannot open file (Include File "p18f4520.h" not found)
+                      00002 #include <p18f4520.h>
+Error[108]  : Illegal character (/)
+                      00003 //LATD7 PWR
+Error[108]  : Illegal character (/)
+                      00004 //LATD6 EN
+Error[108]  : Illegal character (/)
+                      00005 //LATD5 RW
+Error[108]  : Illegal character (/)
+                      00006 //LATD4 RS
+                      00007 
+                      00008 
+                      00009 
+Error[122]  : Illegal opcode (WriteNibble)
+                      00010 void WriteNibble(char Dat)
+Error[108]  : Illegal character ({)
+                      00011 {
+Warning[207]: Found label after column 1. (char)
+Error[122]  : Illegal opcode (buf)
+                      00012   char buf;
+                      00013 
+Error[108]  : Illegal character (/)
+                      00014                                  // Otherwise we are writing data
+Warning[207]: Found label after column 1. (LATDbits.LATD4)
+  00000001            00015   LATDbits.LATD4 = 1;                             // Set register select according to specified
+Warning[207]: Found label after column 1. (LATDbits.LATD5)
+  00000001            00016   LATDbits.LATD5 = 1;                                   // Set write mode
+Warning[207]: Found label after column 1. (LATDbits.LATD6)
+  00000000            00017   LATDbits.LATD6 = 0;                           // Disable LCD
+                      00018 
+Warning[207]: Found label after column 1. (LATDbits.LATD0)
+Error[113]  : Symbol not previously defined (LATDbits.LATD1)
+Error[108]  : Illegal character (=)
+  00000000            00019   LATDbits.LATD0 = LATDbits.LATD1 = LATDbits.LATD2 = LATDbits.LATD3= 0;    // Clear the data lines
+Warning[211]: Extraneous arguments on the line.
+Error[152]  : Executable code and data must be defined in an appropriate section
+000000                00020   Nop();                                                        ;                                       
+                                             // Small delay
+Warning[211]: Extraneous arguments on the line.
+Error[152]  : Executable code and data must be defined in an appropriate section
+000000                00021   Nop();;
+                      00022 
+Warning[207]: Found label after column 1. (buf)
+Error[113]  : Symbol not previously defined (LATD)
+  00000000            00023   buf =LATD;                                            // Getting the high nibble
+Warning[207]: Found label after column 1. (buf)
+  00000000            00024   buf &= 0xF0;                                      // Clear the low nibble
+Warning[207]: Found label after column 1. (LATD)
+Error[113]  : Symbol not previously defined (Dat)
+  00000000            00025   LATD = buf | (Dat & 0x0F);                                    ;                                    // 
+                            Combine & write back to the data lines
+Warning[211]: Extraneous arguments on the line.
+MPASM  5.42                            MAIN.C   1-26-2016  14:26:08         PAGE  2
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Error[152]  : Executable code and data must be defined in an appropriate section
+000000                00026   Nop();                                                                ;                               
+                                                             // Give the data a small delay to settle
+Warning[211]: Extraneous arguments on the line.
+Error[152]  : Executable code and data must be defined in an appropriate section
+000000                00027   Nop();;
+                      00028 
+Warning[207]: Found label after column 1. (LATDbits.LATD6)
+  00000001            00029   LATDbits.LATD6 = 1;                                                   // Enable LCD => The data is tak
+                            en now
+Error[108]  : Illegal character (})
+  00000001            00030 }
+                      00031 
+                      00032 
+Error[122]  : Illegal opcode (WriteByte)
+                      00033 void WriteByte(char Dat)
+Error[108]  : Illegal character ({)
+                      00034 {
+Warning[207]: Found label after column 1. (WriteNibble)
+Error[108]  : Illegal character (()
+                      00035   WriteNibble(Dat >> 4);            ;            // Output the high nibble to the LCD
+Warning[207]: Found label after column 1. (WriteNibble)
+Error[108]  : Illegal character (()
+                      00036   WriteNibble(Dat);                 ;                 // Now send the low nibble
+Error[108]  : Illegal character (})
+                      00037 }
+                      00038 
+Error[122]  : Illegal opcode (intUART)
+                      00039 void intUART (void){
+                      00040 
+Warning[207]: Found label after column 1. (TRISD)
+  00000256            00041         TRISD = 256;
+Warning[207]: Found label after column 1. (LATD)
+  00000000            00042         LATD = 0;
+                      00043 
+                      00044 
+Error[108]  : Illegal character (/)
+                      00045         // Reset USART registers to POR state
+Warning[207]: Found label after column 1. (TXSTA)
+  00000000            00046         TXSTA = 0;          
+Warning[207]: Found label after column 1. (RCSTA)
+  00000000            00047         RCSTA = 0;
+                      00048 
+Error[108]  : Illegal character (/)
+                      00049         // Sync or async operation
+Warning[207]: Found label after column 1. (TXSTAbits.SYNC)
+  00000000            00050         TXSTAbits.SYNC = 0;
+                      00051 
+Error[108]  : Illegal character (/)
+                      00052         //(0) 8- or (1) 9-bit mode
+Warning[207]: Found label after column 1. (TXSTAbits.TX9)
+  00000000            00053         TXSTAbits.TX9 = 0;      
+Warning[207]: Found label after column 1. (RCSTAbits.RX9)
+MPASM  5.42                            MAIN.C   1-26-2016  14:26:08         PAGE  3
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+  00000000            00054         RCSTAbits.RX9 = 0;
+                      00055   
+Error[108]  : Illegal character (/)
+                      00056         // Continuous or single reception
+Warning[207]: Found label after column 1. (RCSTAbits.CREN)
+  00000001            00057         RCSTAbits.CREN = 1; //enables rx
+                      00058 
+Warning[207]: Found label after column 1. (TXSTAbits.BRGH)
+  00000000            00059         TXSTAbits.BRGH = 0; //baud rate generator speed
+                      00060         
+Warning[207]: Found label after column 1. (PIE1bits.RCIE)
+  00000001            00061         PIE1bits.RCIE = 1; //interrupt on receive enable (0 - disabled)
+                      00062         
+Warning[207]: Found label after column 1. (PIE1bits.TXIE)
+  00000000            00063         PIE1bits.TXIE = 0;// Interrupt on transmission (0 - disabled)
+                      00064         
+Warning[207]: Found label after column 1. (SPBRG)
+  00000012            00065         SPBRG = 12;       // Write baudrate to SPBRG
+Error[108]  : Illegal character (/)
+  00000012            00066                                                 //fosc/[64(n+1)] 12 = 19200 baud
+                      00067         
+Warning[207]: Found label after column 1. (TXSTAbits.TXEN)
+  00000001            00068         TXSTAbits.TXEN = 1;  // Enable transmitter
+Warning[207]: Found label after column 1. (RCSTAbits.SPEN)
+  00000001            00069         RCSTAbits.SPEN = 1;  // Enable receiver
+Warning[207]: Found label after column 1. (TRISCbits.TRISC6)
+  00000000            00070         TRISCbits.TRISC6 = 0;
+Warning[207]: Found label after column 1. (TRISCbits.TRISC7)
+  00000001            00071         TRISCbits.TRISC7 = 1; 
+Error[108]  : Illegal character (/)
+  00000001            00072 //      if(TXSTA1bits.SYNC && !TXSTA1bits.CSRC) //synchronous  slave mode
+Error[108]  : Illegal character (/)
+  00000001            00073 //              TRISCbits.TRISC6 = 1;
+Error[108]  : Illegal character (})
+  00000001            00074 }
+                      00075 
+Error[122]  : Illegal opcode (main)
+                      00076 void main( void) {
+                      00077         
+Warning[207]: Found label after column 1. (char)
+Error[128]  : Missing argument(s)
+                      00078         char data;
+                      00079 
+Warning[207]: Found label after column 1. (TRISB)
+  00000000            00080         TRISB = 0x00;
+Warning[207]: Found label after column 1. (PORTB)
+  000000FF            00081         PORTB = 0xFF;
+Error[129]  : Expected (ENDW)
+                      00082         while(1);;
+Error[129]  : Expected (END)
+MPASM  5.42                            MAIN.C   1-26-2016  14:26:08         PAGE  4
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+LATD                              00000000
+LATDbits.LATD0                    00000000
+LATDbits.LATD4                    00000001
+LATDbits.LATD5                    00000001
+LATDbits.LATD6                    00000001
+PIE1bits.RCIE                     00000001
+PIE1bits.TXIE                     00000000
+PORTB                             000000FF
+RCSTA                             00000000
+RCSTAbits.CREN                    00000001
+RCSTAbits.RX9                     00000000
+RCSTAbits.SPEN                    00000001
+SPBRG                             00000012
+TRISB                             00000000
+TRISCbits.TRISC6                  00000000
+TRISCbits.TRISC7                  00000001
+TRISD                             00000256
+TXSTA                             00000000
+TXSTAbits.BRGH                    00000000
+TXSTAbits.SYNC                    00000000
+TXSTAbits.TX9                     00000000
+TXSTAbits.TXEN                    00000001
+__18F4520                         00000001
+__DEBUG                           1
+buf                               00000000
+
+Errors   :    36
+Warnings :    34 reported,     0 suppressed
+Messages :     0 reported,     0 suppressed
+
+

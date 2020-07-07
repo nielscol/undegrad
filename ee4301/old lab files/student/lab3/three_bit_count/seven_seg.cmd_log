@@ -1,0 +1,35 @@
+xst -intstyle ise -ifn "Z:/lab3/three_bit_count/seven_seg.xst" -ofn "Z:/lab3/three_bit_count/seven_seg.syr" 
+xst -intstyle ise -ifn "Z:/lab3/three_bit_count/seven_seg.xst" -ofn "Z:/lab3/three_bit_count/seven_seg.syr" 
+xst -intstyle ise -ifn "Z:/lab3/three_bit_count/seven_seg.xst" -ofn "Z:/lab3/three_bit_count/seven_seg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter_3bit.ucf -p xc3s100e-cp132-4 seven_seg.ngc seven_seg.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o seven_seg_map.ncd seven_seg.ngd seven_seg.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter_3bit.ucf -p xc3s100e-cp132-4 seven_seg.ngc seven_seg.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o seven_seg_map.ncd seven_seg.ngd seven_seg.pcf 
+par -w -intstyle ise -ol high -t 1 seven_seg_map.ncd seven_seg.ncd seven_seg.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml seven_seg.twx seven_seg.ncd -o seven_seg.twr seven_seg.pcf -ucf counter_3bit.ucf 
+bitgen -intstyle ise -f seven_seg.ut seven_seg.ncd 
+xst -intstyle ise -ifn "Z:/lab3/three_bit_count/seven_seg.xst" -ofn "Z:/lab3/three_bit_count/seven_seg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter_3bit.ucf -p xc3s100e-cp132-4 seven_seg.ngc seven_seg.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o seven_seg_map.ncd seven_seg.ngd seven_seg.pcf 
+par -w -intstyle ise -ol high -t 1 seven_seg_map.ncd seven_seg.ncd seven_seg.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml seven_seg.twx seven_seg.ncd -o seven_seg.twr seven_seg.pcf -ucf counter_3bit.ucf 
+bitgen -intstyle ise -f seven_seg.ut seven_seg.ncd 
+xst -intstyle ise -ifn "Z:/lab3/three_bit_count/seven_seg.xst" -ofn "Z:/lab3/three_bit_count/seven_seg.syr" 
+xst -intstyle ise -ifn "Z:/lab3/three_bit_count/seven_seg.xst" -ofn "Z:/lab3/three_bit_count/seven_seg.syr" 
+xst -intstyle ise -ifn "Z:/lab3/three_bit_count/seven_seg.xst" -ofn "Z:/lab3/three_bit_count/seven_seg.syr" 
+xst -intstyle ise -ifn "Z:/lab3/three_bit_count/seven_seg.xst" -ofn "Z:/lab3/three_bit_count/seven_seg.syr" 
+xst -intstyle ise -ifn "Z:/lab3/three_bit_count/seven_seg.xst" -ofn "Z:/lab3/three_bit_count/seven_seg.syr" 
+xst -intstyle ise -ifn "Z:/lab3/three_bit_count/seven_seg.xst" -ofn "Z:/lab3/three_bit_count/seven_seg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter_3bit.ucf -p xc3s100e-cp132-4 seven_seg.ngc seven_seg.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o seven_seg_map.ncd seven_seg.ngd seven_seg.pcf 
+par -w -intstyle ise -ol high -t 1 seven_seg_map.ncd seven_seg.ncd seven_seg.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml seven_seg.twx seven_seg.ncd -o seven_seg.twr seven_seg.pcf -ucf counter_3bit.ucf 
+bitgen -intstyle ise -f seven_seg.ut seven_seg.ncd 
+xst -intstyle ise -ifn "Z:/lab3/three_bit_count/seven_seg.xst" -ofn "Z:/lab3/three_bit_count/seven_seg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter_3bit.ucf -p xc3s100e-cp132-4 seven_seg.ngc seven_seg.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o seven_seg_map.ncd seven_seg.ngd seven_seg.pcf 
+par -w -intstyle ise -ol high -t 1 seven_seg_map.ncd seven_seg.ncd seven_seg.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml seven_seg.twx seven_seg.ncd -o seven_seg.twr seven_seg.pcf -ucf counter_3bit.ucf 
+par -w -intstyle ise -ol high -t 1 seven_seg_map.ncd seven_seg.ncd seven_seg.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml seven_seg.twx seven_seg.ncd -o seven_seg.twr seven_seg.pcf -ucf counter_3bit.ucf 
+bitgen -intstyle ise -f seven_seg.ut seven_seg.ncd 

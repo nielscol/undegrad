@@ -1,0 +1,159 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage{lipsum}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{ {} }
+\usepackage{authblk}
+\usepackage[top=0.8in, bottom= 0.8in, left= 0.8in, right= 0.8in]{geometry}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\begin{document}
+
+%title and author details
+\title{Laboratory III, Problem II: Forces in Equilibrium}
+\author[]{Cole Nielsen}
+\date{}
+\affil[]{Physic 1301W TA: Yao Meng}
+\pdfpagewidth 8.5in
+\pdfpageheight 11in
+%
+%
+\maketitle
+%
+\abstract{Two equal masses were attached to the ends of a string resting on two pulleys, yielding a tension in the string. Another mass was then attached to the middle of the string between the two pulleys and the system was allowed to enter a state of equilibrium. The vertical displacement of the string from its initial state was measured and then used to confirm a predicted equation for the displacement based on the system's parameters. }
+
+\section{Introduction}
+The scenario shown below in \textit{Figure 1} was considered. In this scenario, a research group in South America is studying the ecology of a rain forest. In order to avoid walking on the delicate rain forest floor, they use a rope walkway system like in \textit{Figure 1} strung between trees to navigate through the forest. The walkway is set up such that the ends of the ropes go over a branch of each tree they are strung on. It is assumed that friction between the rope and tree is negligible. At the ends of each rope, masses of equal mass \(m\) are attached to provide tension. When a person (of mass \(M\)) walks across the rope, a sag (vertical displacement) of \(d\) occurs due to the gravitation forces acting on the person and consequently the supporting rope. Because of this sag, the group's supervisor is concerned over the amount of equipment each person can carry safely before there is risk of danger to the team members and damage to the forest floor.
+\newline
+\begin{center}
+\hspace{.4in}
+\includegraphics[scale=0.15]{lr3.png}
+\newline\newline
+\textit{Figure 1.} The experimental setup.
+\end{center}%
+\pagebreak
+Therefore, in order to ensure the safety of the group members and to preserve to forest, an equation has been derived (see the below \(Predicition\) section) to predict the sag so it can be controlled safely. This equation, however, is untested, so in order to confirm its validity it must be tested and proven experimentally. This experiment thus seeks to affirm the validity of our predicted equation for the sag in of a string of a two pulley-three mass system such as in \textit{Figure 1}.
+\section{Prediction}
+It is predicted that the vertical sag \(d\) in meters of the rope will be as follows:
+\begin{equation}
+d = \frac{L M}{2\sqrt{4m^2 - M^2}}
+\end{equation}
+Where \(M\) is the mass of the person in kg, \(m\) is the mass in kg of the masses attached to the ends of the rope and \(L\) is the horizontal distance in meters between the points where the rope is tangent to the pulleys. It is assumed that d is the vertical displacement for when mass \(M\) is centered between the pulleys as it is the natural equilibrium position of the experimental setup. The equation was derived as seen below usings Newton's laws of motion. \(F_{T,l}\) represents the tension of the segment of the rope on the left side of mass \(M\), \(F_{T,r}\) and represents the same but for the right segement of the rope.
+
+\begin{equation}
+\Sigma F_M = F_{g,M} + F_{T,l} + F_{T,r} = 0
+\end{equation}
+\begin{equation}
+F_{T,l} =  -mg\cos\theta \vec{i} +mg\sin\theta \vec{j}, \hspace{.2in} F_{T,r} =  mg\cos\theta \vec{i} +mg\sin\theta \vec{j}, \hspace{.2in} F_{g,M}=-Mg\vec{j}
+\end{equation}
+\begin{equation}
+\therefore \Sigma F = F_{g,M}= -mg\cos\theta \vec{i} +mg\sin\theta \vec{j} + mg\cos\theta \vec{i} +mg\sin\theta \vec{j} - Mg\vec{j}
+\end{equation}
+\begin{equation}
+=2mg\sin\theta \vec{j} - Mg\vec{j} = 0 \hspace{.2in} \Rightarrow \hspace{.2in} \theta = \arcsin\left(\frac{M}{2m}\right)
+\end{equation}
+\begin{equation}
+d = \frac{L}{2}\tan\theta \hspace{.2in} \Rightarrow \hspace{.2in} d =  \frac{L}{2}\tan\\arcsin\left(\frac{M}{2m}\right) = \frac{L M}{2\sqrt{4m^2 - M^2}}
+\end{equation}
+\begin{equation}
+Thus,\hspace{0.1in} d = \frac{L M}{2\sqrt{4m^2 - M^2}}
+\end{equation}
+\newline
+Below: \textit{Figure 2}. Plot showing the relationship between the sag of the rope and mass \(M\) if \(m\) is held constant at 1 kg and \(L\) is held constant at 1 meter. Note that the sag approaches infinity as \(M\) approaches 2\(m\) (2 kg).
+
+\begin {figure}[htb!]
+  \begin{center}
+    	\resizebox{0.49\textwidth}{!}{\input{2d.tex}}
+  \end	{center}
+\end {figure}
+
+\pagebreak  
+\section{Procedure}
+Three trials of this experiment were performed. A value for mass \(m\) was chosen initially and kept constant for all of the trials. For each trial a value for mass \(M\) was chosen such that it was different for each trial and that the system would reach a stable point of equilibrium (that is \(M<2m\)). The experiment was then set up like in \textit{Figure 1}, with the equal masses attached to the ends of a string resting on two pulleys with a mass \(M\) hanging from the string between the two pulleys. Finally, the distance \(L\), being the horizontal distance between the points where the string is tangent to each pulley and the distance \(d\), being the "sag" or vertical distance from those tangent points to the lowest point of the string (vertically) were recorded. This process was repeated for each trial.
+\section{Data}
+
+For each trial, the recorded data for each mass \(m\) and \(M\), as well as each distance \(L\) and \(d\) will be listed.
+\newline\newline
+\textbf{Trial 1}
+\newline
+\textit{Below: Table 1.} Trial 1 Data.
+{\renewcommand{\arraystretch}{1.2}
+\begin{table}[h]
+\hspace{1.1in}
+\begin{tabular}{llll}
+\hspace{0.4in}\(m\) & \hspace{0.4in}\(M_1\) & \hspace{0.4in} \(L_1\) & \hspace{0.4in} \(d_1\)\\
+\hspace{0.2in}0.100 kg \hspace{0.2in}& \hspace{0.2in}0.130 kg\hspace{0.2in}& 0.188 \(\pm\) .005 m & 0.080  \(\pm\) .005 m \\                
+\end{tabular}
+\end{table}
+
+\hspace{-16pt}\textbf{Trial 2} 
+\newline
+\textit{Below: Table 2.} Trial 2 Data.
+{\renewcommand{\arraystretch}{1.2}
+\begin{table}[h]
+\hspace{1.1in}
+\begin{tabular}{llll}
+\hspace{0.4in}\(m\) & \hspace{0.4in}\(M_2\) & \hspace{0.4in} \(L_2\) & \hspace{0.4in} \(d_2\)\\
+\hspace{0.2in}0.100 kg \hspace{0.2in}& \hspace{0.2in}0.170 kg\hspace{0.2in}& 0.183 \(\pm\) .005 m & 0.140  \(\pm\) .005 m \\                
+\end{tabular}
+\end{table}
+
+\hspace{-16pt}\textbf{Trial 3}
+\newline
+\textit{Below: Table 3.} Trial 3 Data.
+{\renewcommand{\arraystretch}{1.2}
+\begin{table}[h]
+\hspace{1.1in}
+\begin{tabular}{llll}
+\hspace{0.4in}\(m\) & \hspace{0.4in}\(M_3\) & \hspace{0.4in} \(L_3\) & \hspace{0.4in} \(d_3\)\\
+\hspace{0.2in}0.100 kg \hspace{0.2in}& \hspace{0.2in}0.190 kg\hspace{0.2in}& 0.161 \(\pm\) .005 m & 0.241  \(\pm\) .005 m \\                
+\end{tabular}
+\end{table}
+\newpage
+\section{Analysis}
+In order to show that the predicted equation for the vertical displacement \(d\) is valid, it must simply be shown that the equation is consistent with the experimental data. The best way to do this is to take the experimental values for \(M\), \(m\) and \(L\) and plug them into the predicted equation for \(d\) for each trial to get predicted values for \(d\). Those values then can be directly compared to the experimental values for \(d\) to either prove or disprove the equation. Below is a table that contains the experimental valuse for \(d\) and the expected values aquired using the predicted equation:  
+\newline\newline
+\textit{Below: Table 4.} Experimental and Predicted Values.
+{\renewcommand{\arraystretch}{1.2}
+\begin{table}[h]
+\hspace{1.55in}
+\begin{tabular}{l|l|l}
+Trial \hspace{.15in}& \hspace{.15in} Experimental \(d\) \hspace{.15in}&\hspace{.15in} Predicted \(d\) \\
+\hspace{.15in}1 \hspace{.15in}& \hspace{.15in} 0.080 \(\pm\) .005 m \hspace{.15in}& \hspace{.15in} 0.0804 \(\pm\) .002 m \\
+\hspace{.15in}2 \hspace{.15in}& \hspace{.15in}0.140\(\pm\).005 m\hspace{.15in} &\hspace{.15in} 0.148 \(\pm\) .004 m \\
+\hspace{.15in}3 \hspace{.15in}& \hspace{.15in} 0.241 \(\pm\) .005 m\hspace{.15in}& \hspace{.15in} 0.245 \(\pm\) .008 m \\                 
+\end{tabular}
+\end{table}
+\newline
+}
+From the data above in Table 4, it is apparent that the values for the predicted and experimental displacement \(d\) are extremely close and consistent. In fact, for each trial the experimental and predicted value ranges (tolerances) overlap, which strongly indicates an agreement between the predicted equation and the experimental data. This agreement and the great closeness of the data sets suggests with a high certainty that our predicted equation is indeed valid and accurate for this scenario. 
+\newline\newline
+Since the horizontal distance \(L\) between the tangent points of the string on the pulleys and the of mass \(M\) changed for each trial, it is impossible to graph our data for this experiment in one plane. Instead we rely on a 3-dimensional plot of \(d\) as a function of \(L\) and \(M\) or \(d(L,M)\) (\(m\) is held constant at 0.100 kg) and the data from the lab to show our results visually:
+\newline\newline\textit{Below: Figure 3.} Plot containing \(d(L,M)\) and and the data point representing each trial marked with a "\(\times\)".
+\vspace{-.4in}
+\begin {figure}[htb!]
+  \begin{center}
+    	\resizebox{0.6\textwidth}{!}{\input{data.tex}}
+  \end	{center}
+\end {figure}
+\newpage
+\hspace{-16.5pt}From \textit{Figure 3} it is visible that the experimental data points fit the graph of \(d\) as a function of \(L\) and \(M\) quite well. Looking at the data set, one trend does seem to stand out, and that is the experimental displacement for each trial is lower than expected. This will be remarked upon later in the \textit{Error} subsection.
+\newline\newline
+\textbf{Error}
+\newline
+There are several issues and potential sources of error in this experiment. The first issue is the fact that with this setup, if you increase mass \(M\) but keep the masses of mass \(m\) constant, the horizontal distance \(L\) will slowly decrease. This is because the distance \(L\) must be taken between the points where the string is tangent to the pulleys, and the points of tangency change such that they are closer when the mass increases. Therefore, \(L\) decreases as \(M\) increases. This makes it infeasible to plot all the experimental data in one 2D plot like requested in the lab manual as the function for \(d\) becomes a multivariable function. So to circumvent this issue, the data and function is plotted in a 3D graph (\textit{Figure 3}) to accurately show it. A potential source of error in this experiment is due to the neglection of friction in the pulleys. This source of error seems to have had some effect on the results as all the experimental values are slightly low (but within tolerances). This is makes sense because the friction acts againt the center mass from moving downwards and prevents it from going the full expected displacement. A final source of potential error in the experiment is due to the difficuly of accurately measuring the distances \(L\) and \(d\) by hand. This is attributed to the tangent points being visually obscured by the pulley's bevels and the string. To account for this error, we used a relatively high uncertaintly of \(\pm\) 0.005 m. 
+
+\section{Conclusion}
+A system of three masses and two pulleys was tested. The vertical displacement of a center mass strung between the two pulleys was found. A predicted equation for the center mass' displacement based on the system's parameters was then confirmed from data aquired in the experiment.
+\newline\newline
+The data aquired from this experiment confirms the predicted equation in the \textit{Prediction} section for a the displacement of a center mass in a system shown in \textit{Figure 1}. The results from this experiment imply several things, and most importantly it confirms that the vertical displacement \(d\) of an object suspended on a string between two pulleys indeed depends on the mass of that object (that is more mass, more displacement). The dependency is shown mathematically in \textit{Equation 1}. Another implication of the results is the walkway system can only support a mass \(M\) that is less than 2\(m\), and ideally much less than 2\(m\). This is due to the fact that the sag approaches infinity as mass \(M\) approaches 2\(m\) (see the \textit{Predictions} section), and if it exceeds 2\(m\) the mass will never reach an equilibrium point, rather it will accelerate downwards and risk bodily harm or damage to the forest floor. So in otherwords the supervisor was right to be concerned about the sag of a rope and how much equipment the researchers carry.
+\newline\newline
+In order to apply this calulation to the research group, the equation must simply be rewritten so that it yields the maximum mass that the walkway can support given the maximum acceptable sag \(d_{max}\), mass \(m\) and the length of the rope between the branches \(L\). This equation achieved by taking the original predicted equation and redistributing it such that \(M\) is the isolated variable. The resulting equation is as follows:
+\begin{equation}
+M_{max} = \frac{4d_{max}m}{\sqrt{4d_{max}^2 + L^2}}
+\end{equation}
+This equation gives us \(M_{max}\), or the max permissable mass a person and the equipment they are carrying can be without exceeding the max alloted sag. Assuming that a person's  mass is approximately 80 kg, the average length of a walkway in the rain forest will be 10 m, the max permissable sag is 1m and the mass of \(m\) is 100kg, it is estimated that the most equipment that a given researcher should carry is approximately 40kg. 
+
+\end{document}

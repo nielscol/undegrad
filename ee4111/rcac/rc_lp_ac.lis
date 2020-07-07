@@ -1,0 +1,242 @@
+Using: /usr/local/apps/synopsys/hspice/linux/hspice rc_lp_ac.sp
+ ****** HSPICE -- I-2013.12-SP2-1 32-BIT (Jun 10 2014) RHEL32 ******            
+  Copyright (C) 2014 Synopsys, Inc. All Rights Reserved.                        
+  Unpublished-rights reserved under US copyright laws.
+  This program is protected by law and is subject to the
+  terms and conditions of the license agreement from Synopsys.
+  Use of this program is your acceptance to be bound by the
+  license agreement. HSPICE is the trademark of Synopsys, Inc.
+  Input File: rc_lp_ac.sp                                                       
+  Command line options: rc_lp_ac.sp
+ lic:  
+ lic: FLEXlm: v10.9.8 
+ lic: USER:   niels538             HOSTNAME: ece-spiez 
+ lic: HOSTID: 1803734585b4         PID:      45298 
+ lic: Using FLEXlm license file: 
+ lic: 27020@synopsys.cse.umn.edu 
+ lic: Checkout 1 hspice 
+ lic: License/Maintenance for hspice will expire on 19-dec-2016/2015.06 
+ lic: 27(in_use)/50(total) FLOATING license(s) on SERVER 27020@synopsys.cse.umn.edu 
+ lic:   
+ Init: read install configuration file: /usr/local/apps/synopsys/hspice/meta.cfg
+ scientific notation:
+ a=10**-18  f=10**-15  p=10**-12  n=10**-9  u=10**-6
+ m=10**-3   k=10**3    x=10**6    g=10**9 
+
+
+ circuit parameter definitions
+  parameter          =  value 
+
+
+
+
+
+ constants  - tnom         kt           vt           gapsi        ni
+            298.15000    4.1163e-21    25.69184m     1.11562    1.2565e+16 
+  **warning** (rc_lp_ac.sp:5) Could not find branch element r2 ;branch output ignored
+1****** HSPICE -- I-2013.12-SP2-1 32-BIT (Jun 10 2014) RHEL32 ******            
+ ******  
+ a simple ac run
+
+ ****** circuit element summary tnom=  25.000 temp=  25.000 ******
+
+
+ **** resistors
+
+  
+  
+                             
+ element name        0:r1    
+ node1               0:1     
+ node2               0:2     
+ model                       
+ res eff             1.0000k 
+ tc1                 0.      
+ tc2                 0.      
+ scale               1.0000  
+ m                   1.0000  
+ ac                  1.0000k 
+ temp               25.0000  
+ l                   0.      
+ w                   0.      
+ cap                 0.      
+ noise            1.000e+00  
+
+
+ **** capacitors
+  
+  
+                             
+ element name        0:c1    
+ node1               0:2     
+ node2               0:0     
+ model                       
+ cap eff             1.0000u 
+ tc1                 0.      
+ tc2                 0.      
+ scale               1.0000  
+ ic                  0.      
+ m                   1.0000  
+ w                   0.      
+ l                   0.      
+ temp               25.0000  
+
+
+ **** independent sources
+
+     name         node1        node2      dc volt    ac mag    ac phase    type
+  v1  1                 0                    0.         1.0000     0.      dc   
+  
+1****** HSPICE -- I-2013.12-SP2-1 32-BIT (Jun 10 2014) RHEL32 ******            
+ ******  
+ a simple ac run
+
+ ****** element node table
+                          
+ 0                c1 v1   
+ 1                r1 v1   
+ 2                r1 c1   
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2         
+ **info** dc convergence successful at Newton-Raphson method 
+1****** HSPICE -- I-2013.12-SP2-1 32-BIT (Jun 10 2014) RHEL32 ******            
+ ******  
+ a simple ac run
+
+ ****** operating point information tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is     0.     
+    node    =voltage      node    =voltage
+
+ +0:1       =   0.      0:2       =   0.     
+
+
+ **** voltage sources
+
+ subckt             
+ element  0:v1      
+  volts      0.     
+  current    0.     
+  power      0.     
+
+     total voltage source power dissipation=    0.            watts
+
+
+
+ **** resistors
+
+ subckt             
+ element  0:r1      
+  r value    1.0000k
+  v drop     0.     
+  current    0.     
+  power      0.     
+
+ ******  
+ a simple ac run
+
+ ****** ac analysis tnom=  25.000 temp=  25.000 ******
+x
+
+        freq    voltage      voltage    
+                     1            2     
+   10.00000       1.0000     998.0319m  
+   12.58925       1.0000     996.8861m  
+   15.84893       1.0000     995.0783m  
+   19.95262       1.0000     992.2331m  
+   25.11886       1.0000     987.7734m  
+   31.62278       1.0000     980.8267m  
+   39.81072       1.0000     970.1109m  
+   50.11872       1.0000     953.8246m  
+   63.09573       1.0000     929.6128m  
+   79.43282       1.0000     894.7522m  
+  100.00000       1.0000     846.7330m  
+  125.89254       1.0000     784.2979m  
+  158.48932       1.0000     708.5870m  
+  199.52623       1.0000     623.5810m  
+  251.18864       1.0000     535.2172m  
+  316.22777       1.0000     449.5646m  
+  398.10717       1.0000     371.2139m  
+  501.18723       1.0000     302.6619m  
+  630.95734       1.0000     244.5826m  
+  794.32823       1.0000     196.4595m  
+    1.00000k      1.0000     157.1767m  
+    1.25893k      1.0000     125.4230m  
+    1.58489k      1.0000      99.9175m  
+    1.99526k      1.0000      79.5139m  
+    2.51189k      1.0000      63.2339m  
+    3.16228k      1.0000      50.2656m  
+    3.98107k      1.0000      39.9460m  
+    5.01187k      1.0000      31.7396m  
+    6.30957k      1.0000      25.2163m  
+    7.94328k      1.0000      20.0324m  
+   10.00000k      1.0000      15.9135m  
+   12.58925k      1.0000      12.6411m  
+   15.84893k      1.0000      10.0415m  
+   19.95262k      1.0000       7.9764m  
+   25.11886k      1.0000       6.3359m  
+   31.62278k      1.0000       5.0329m  
+   39.81072k      1.0000       3.9978m  
+   50.11872k      1.0000       3.1755m  
+   63.09573k      1.0000       2.5224m  
+   79.43282k      1.0000       2.0036m  
+  100.00000k      1.0000       1.5915m  
+y
+
+          ***** job concluded
+1****** HSPICE -- I-2013.12-SP2-1 32-BIT (Jun 10 2014) RHEL32 ******            
+ ******  
+ a simple ac run
+
+ ****** job statistics summary tnom=  25.000 temp=  25.000 ******
+  
+  
+ ******  Machine Information  ******
+ CPU:
+ model name	: Intel(R) Xeon(R) CPU           E5603  @ 1.60GHz
+ cpu MHz	: 1596.043
+  
+ OS:
+ Linux version 2.6.32-573.12.1.el6.x86_64 (mockbuild@x86-031.build.eng.bos.redhat.com) (gcc version 4.4.7 20120313 (Red Hat 4.4.7-16) (GCC) ) #1 SMP Mon Nov 23 12:55:32 EST 2015
+
+
+  ******  HSPICE Threads Information  ******
+
+  Command Line Threads Count :     1
+  Available CPU Count        :     8
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =       3 # elements   =       3
+  # resistors   =       1 # capacitors =       1 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       1
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =       0 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.00           1           3
+  ac analysis        0.00          41          41
+  readin             0.01
+  errchk             0.00
+  setup              0.00
+  output             0.00
+
+
+           peak memory used        120.04 megabytes
+           total cpu time            0.01 seconds
+           total elapsed time        1.53 seconds
+           job started at     14:24:47 01/25/2016
+           job ended   at     14:24:48 01/25/2016
+
+
+ lic: Release hspice token(s) 
+ lic: total license checkout elapse time:        1.49(s)

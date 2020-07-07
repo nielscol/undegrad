@@ -1,0 +1,5 @@
+verilog work "slow_clock_divider.v"
+verilog work "fast_clock_divider.v"
+verilog work "dice.v"
+verilog work "clock_divider.v"
+verilog work "craps.v"

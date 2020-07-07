@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\colen\Desktop\4301\lab7\rng.ncd
+OUTFILE=C:\Users\colen\Desktop\4301\lab7\rng.bit
+FAMILY=Spartan3E
+PART=xc3s100e-4cp132
+WORKINGDIR=C:\Users\colen\Desktop\4301\lab7
+LICENSE=WebPack
+USER_INFO=211099444_0_0_619

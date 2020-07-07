@@ -1,0 +1,153 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 13.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : fourbit_addsub.vf
+// /___/   /\     Timestamp : 09/25/2015 14:45:43
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog Z:/lab3/adder_verilog/fourbit_addsub.vf -w Z:/lab3/adder_verilog/fourbit_addsub.sch
+//Design Name: fourbit_addsub
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module full_adder_MUSER_fourbit_addsub(ain, 
+                                       bin, 
+                                       cin, 
+                                       cout, 
+                                       sum);
+
+    input ain;
+    input bin;
+    input cin;
+   output cout;
+   output sum;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   
+   AND2  XLXI_1 (.I0(bin), 
+                .I1(ain), 
+                .O(XLXN_1));
+   AND2  XLXI_2 (.I0(cin), 
+                .I1(bin), 
+                .O(XLXN_2));
+   AND2  XLXI_3 (.I0(cin), 
+                .I1(ain), 
+                .O(XLXN_3));
+   OR3  XLXI_6 (.I0(XLXN_3), 
+               .I1(XLXN_2), 
+               .I2(XLXN_1), 
+               .O(cout));
+   XOR3  XLXI_7 (.I0(cin), 
+                .I1(bin), 
+                .I2(ain), 
+                .O(sum));
+endmodule
+`timescale 1ns / 1ps
+
+module fourbit_addsub(a, 
+                      b, 
+                      sub, 
+                      cout, 
+                      s);
+
+    input [3:0] a;
+    input [3:0] b;
+    input sub;
+   output cout;
+   output [3:0] s;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_5;
+   wire XLXN_10;
+   wire XLXN_11;
+   wire XLXN_12;
+   wire XLXN_13;
+   wire XLXN_14;
+   wire XLXN_15;
+   wire XLXN_16;
+   wire XLXN_17;
+   wire XLXN_18;
+   wire XLXN_19;
+   wire XLXN_20;
+   wire XLXN_21;
+   wire XLXN_22;
+   wire XLXN_23;
+   wire XLXN_24;
+   wire XLXN_25;
+   
+   full_adder_MUSER_fourbit_addsub  XLXI_1 (.ain(XLXN_1), 
+                                           .bin(XLXN_14), 
+                                           .cin(XLXN_5), 
+                                           .cout(XLXN_18), 
+                                           .sum(XLXN_21));
+   full_adder_MUSER_fourbit_addsub  XLXI_2 (.ain(XLXN_2), 
+                                           .bin(XLXN_15), 
+                                           .cin(XLXN_18), 
+                                           .cout(XLXN_19), 
+                                           .sum(XLXN_22));
+   full_adder_MUSER_fourbit_addsub  XLXI_3 (.ain(XLXN_3), 
+                                           .bin(XLXN_16), 
+                                           .cin(XLXN_19), 
+                                           .cout(XLXN_20), 
+                                           .sum(XLXN_23));
+   full_adder_MUSER_fourbit_addsub  XLXI_4 (.ain(XLXN_4), 
+                                           .bin(XLXN_17), 
+                                           .cin(XLXN_20), 
+                                           .cout(XLXN_25), 
+                                           .sum(XLXN_24));
+   XOR2  XLXI_9 (.I0(XLXN_5), 
+                .I1(XLXN_10), 
+                .O(XLXN_1));
+   XOR2  XLXI_10 (.I0(XLXN_5), 
+                 .I1(XLXN_11), 
+                 .O(XLXN_2));
+   XOR2  XLXI_11 (.I0(XLXN_5), 
+                 .I1(XLXN_12), 
+                 .O(XLXN_3));
+   XOR2  XLXI_12 (.I0(XLXN_5), 
+                 .I1(XLXN_13), 
+                 .O(XLXN_4));
+   BUF  XLXI_13 (.I(a[0]), 
+                .O(XLXN_10));
+   BUF  XLXI_14 (.I(a[1]), 
+                .O(XLXN_11));
+   BUF  XLXI_15 (.I(a[2]), 
+                .O(XLXN_12));
+   BUF  XLXI_16 (.I(a[3]), 
+                .O(XLXN_13));
+   BUF  XLXI_17 (.I(b[0]), 
+                .O(XLXN_14));
+   BUF  XLXI_18 (.I(b[1]), 
+                .O(XLXN_15));
+   BUF  XLXI_19 (.I(b[2]), 
+                .O(XLXN_16));
+   BUF  XLXI_20 (.I(b[3]), 
+                .O(XLXN_17));
+   BUF  XLXI_21 (.I(sub), 
+                .O(XLXN_5));
+   BUF  XLXI_22 (.I(XLXN_21), 
+                .O(s[0]));
+   BUF  XLXI_23 (.I(XLXN_22), 
+                .O(s[1]));
+   BUF  XLXI_24 (.I(XLXN_23), 
+                .O(s[2]));
+   BUF  XLXI_25 (.I(XLXN_24), 
+                .O(s[3]));
+   BUF  XLXI_26 (.I(XLXN_25), 
+                .O(cout));
+endmodule

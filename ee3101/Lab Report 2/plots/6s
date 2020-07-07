@@ -1,0 +1,11 @@
+set logscale x 10
+set title "CD-CG Amplifier Gain vs Frequency"
+set xlabel "Frequency (Hz)"
+set ylabel "Gain (V/V)"
+set yrange [2.5:17.5]
+set xrange [100:3000000]
+unset key
+plot "6" with lines lt -1, "6" lt -1, "6sl" with lines lt 2
+
+
+

@@ -1,0 +1,495 @@
+% Cole Nielsen niels538@umn.edu
+% EE 2002 Spring 2015
+% Formal Lab Report 1
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[12pt]{article}
+
+\usepackage{circuitikz}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage[top=1in, bottom= 1in, left=1in, right= 1in]{geometry}
+\setlength\parindent{0pt}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{textcomp}
+\usepackage{tikz}
+\usepackage{siunitx}
+\usepackage{placeins}
+\usepackage{titlesec}
+\usepackage{cancel} 
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title{Experiment N\textsuperscript{\underline{o}} 1:   \\ Frequency Response \\and Filters\\ \vspace{0.3 in} EE 3101}
+
+\author{Cole \textsc{Nielsen}} 
+\date{Fall 2015}
+
+\newcommand{\mymeter}[2]{   	% #1 = name , #2 = rotation angle
+ \begin{scope}[transform shape,rotate=#2]
+   \draw[thick] (#1)node(){$\mathbf V$} circle (11pt);
+   \draw[rotate=45,-latex] (#1)  +(-17pt,0) --+(17pt,0);
+ \end{scope}
+}
+
+\begin{document}
+\maketitle 
+
+\begin{center}
+ \begin{tabular}{l r}
+   Dates Performed: & Sept. 16 \& 23, 2015 \\ 
+   Instructor: & Kyle Fox \\ 
+\end{tabular}
+\end{center}
+\pagebreak
+%----------------------------------------------------------------------------------------
+%	Abstract
+%----------------------------------------------------------------------------------------
+\begin{abstract}
+\noindent The frequency response and filter behavior of several resistor, capacitor and inductor containing circuits was tested in this lab experiment. The tendency of resistor and capacitor (RC) circuits to form low pass and high pass filters was observed. The tendency of resistor, capacitor and inductor (RLC) containing circuits to have a resonant frequency  dependent on L and C (and R if the damping is large enough) was also observed. Near the resonance frequency the RLC circuits were seen to filter input signals by either blocking a band (band reject filter) or by passing a band (band pass filter). Another observation made was a band pass filter with a low Q value can be used to produce to low pass filter with superior characteristics than a RC filter, including faster roll of and a sharper corner at the frequency cutoff. The low pass RLC circuit was even found to behave as an integrator for input signals. All circuits tested were found to confirm circuit theory, as the theoretical calculations performed matched the experimental results given some uncertainty in the results and experimental methods.
+\end{abstract}
+\hrulefill
+%----------------------------------------------------------------------------------------
+%	Introduction
+%----------------------------------------------------------------------------------------
+\section{Introduction}
+%
+In the study and application of Electrical Engineering, frequency response and filter behavior of resistor, capacitor and inductor containing circuits is of great interest. Frequency response refers to the output behavior of a system or circuit to different input frequencies. In electronics, the signal gain and phase shift of a signal due to its frequency are typically of most interest. The frequency response of these parameters are typically exhibited using what is called a Bode Plot. A Bode plot is a graph which the output parameter (e.g. phase or gain) is plotted against the input frequency of the system on a logarithmic scale. The Bode plot allows for several things, one important one being the response of filters typically graph out as linear, and another is that the response can be analyzed over large frequency ranges more effectively. \\\par
+
+Frequency response analysis of circuits is often of most interest in the design of filters. Filters are circuits that "filter", or in other words block and pass certain ranges of input frequencies. A common topology for passive filter design makes use of a voltage divider comprised of resistors, capacitors and inductors. In short, this type of filter can be generalized by the following circuit, where $Z_1$ and $Z_2$ are some complex impedance formed by RLC components (the following will be a walk through of solving for frequency response of these types of circuits):
+
+\begin{figure}
+\begin{center}
+ \begin{circuitikz}[american voltages]
+
+   \draw
+   (0,3) to[european resistor, l_=$Z_1$, o-] (3,3)
+   (3,3) to[european resistor, l_=$Z_2$ ] (3,0)
+         to[short, -o] (0,0)
+   (3,3) to[short, -o] (4,3)      
+   (3,0) to[short, -o] (4,0)
+   (0,0) to[open, v^>=$v_{in}$] (0,3)
+   (4,0) to[open, v_>=$v_{out}$] (4,3);
+ \end{circuitikz}
+ \caption[Circuit Caption]{Voltage Divider Filter}
+ \end{center}
+\end{figure}
+\FloatBarrier
+It is well known that the output voltage of such a voltage divider is as follows:
+\begin{equation}
+	v_{out} = v_{in} \frac{Z_2}{Z_1 + Z_2}
+\end{equation}
+It is helpful to think of this circuit in terms of a transfer function $H$, such that $v_{in} = H v_{out}$, which rearranges to $H = \frac{v_{out}}{v_{in}}$. Applying this to the voltage divider, it can be seen that its transfer function is as follows:
+\begin{equation}
+	H = \frac{Z_2}{Z_1 + Z_2}
+\end{equation}
+Now, consider if either $Z_1$ or $Z_2$ is complex, that is containing some inductive or capacitive component. This can complicate solving for the transfer function, so a way to simplify this is by analyzing the circuit in the Laplace domain. The impedance of resistors, capacitors and inductors in the s-domain is given as follows:
+\begin{equation}
+Z_R = R \hspace{24pt} Z_C = \frac{1}{sC} \hspace{24pt} Z_L = sL
+\end{equation}
+Solving the voltage divider transfer function with these as the impedances results in a new transfer function  in the s-domain $H(s)$. The frequency response can be directly solved from this function by plugging in $j\omega$ (the s-domain is in terms of complex frequency). The phase response can be calculated simply as the angle of the phasor formed by the real and complex parts of $H(j\omega)$. More significant in filter analysis is the gain response, which is found by taking the magnitude of $H(j\omega)$:
+\begin{equation}
+|H(\omega)| =\sqrt{H(j \omega) \ast H(-j \omega)}
+\end{equation}
+Solving for this gives a function for frequency response, which can be plotted as a Bode plot by using logarithmic scales. By trying different combinations of R and C components, it will be observed that high pass and low pass filters will be formed, where the gain will either decrease with frequency or increase with it. RLC combinations will result in band pass or band reject filters, where input frequencies will either be passed or rejected near a resonance frequency determined by the L and C values, and will be seen in the transfer function as a spike or dip at some frequency.
+
+Understanding this, it is easy to understand the value importance of frequency response and filters in electronics, particularly in areas of telecommunication, audio, and signal processing. Filters enable the modern world of wireless communications by allowing devices such as cell phones to filter out specific frequency bands, allowing for the frequency spectrum to be shared by all. Filters even allow for audio signals to be broken down into their components, such as bass, so that it can be played through a subwoofer, or to adjust different frequency contents of the sound to be more pleasing.
+
+Following those motivations for understanding circuit frequency response and filters, this experiment will be focused on analyzing the behavior of R, L and C filter circuits in order to gain a practical understanding of them and their application. This will be done by theoretically designing filters, constructing the circuits, testing them and validating the theory and observing any shortfalls. First, low pass and high pass filters will be considered, followed by band pass and band reject filters.
+\FloatBarrier
+%----------------------------------------------------------------------------------------
+%	Experiment
+%----------------------------------------------------------------------------------------
+
+\section{Experiment}
+\subsection*{Part 1- RC Low Pass Filter}
+The RC low-pass filter below in \textit{Figure 2} was considered in this part. The objective was to design and construct the low pass filter with a corner frequency of 2 kHz, and a impedance of 10k$\Omega$ at a high frequency. From there the magnitude (gain) and phase response of the circuit was measured from 200 Hz to 20 kHz, and the experimental cut-off frequency and 45\textdegree\space phase shift frequency were determined.
+\begin{figure}[h!]
+\begin{center}
+ \begin{circuitikz}[american voltages]
+   \draw
+   (0,3) to[resistor, l_=$R$, o-] (3,3)
+   (3,3) to[capacitor, l_=$C$ ] (3,0)
+         to[short, -o] (0,0)
+   (3,3) to[short, -o] (4,3)      
+   (3,0) to[short, -o] (4,0)
+   (0,0) to[open, v^>=$v_{in}$] (0,3)
+   (4,0) to[open, v_>=$v_{out}$] (4,3);
+ \end{circuitikz}
+\end{center}
+\caption{RC Low Pass Filter}
+\end{figure}
+\FloatBarrier
+\textbf{Prediction/Calculations:}
+The transfer function $H(s)$ for this circuit is:
+\begin{equation}
+	H(s) = \frac{\frac{1}{sC}}{\frac{1}{sC} + R}
+\end{equation}
+Solving for $|H(j\omega)|$ 	gives
+\begin{equation}
+|H(j\omega)| = \frac{\frac{1}{RC}}{\sqrt{\omega^2 + \frac{1}{R^2C^2}}}
+\end{equation}
+The cutoff frequency $\omega_c$ occurs when the output power is halved (assuming resistive load), so $|H(j\omega_c)|$ = $\frac{\sqrt{2}}{2}|H|_{max}$, again solving this out $\omega_c$ is found to be:
+\begin{equation}
+\omega_c = \frac{1}{RC}
+\end{equation}
+The value for R is known, as the impedance of the circuit is 10k$\Omega$ at a high frequency, i.e. $Z_C$ is zero and R is equal to 10k$\Omega$. Now C can be found:
+\begin{equation}
+C = \frac{1}{2\pi f R} = \frac{1}{2\pi\times 2000 \times 10^4} = 7.96 nF
+\end{equation}
+7.96 nF is not a standard value, so two 10nF capacitors are put in series to get 5nF, and then three 1nF capacitors are added in parallel to net 8nF $\approx$ 7.96nF.\\\par
+
+\textbf{Experiment-} The circuit was constructed on a bread board and the function generator with 2 volt peak-peak amplitude was hooked up across the $v_{in}$ terminals. The oscilloscope was connected to the circuit input on channel one and the output on channel two using grabber terminated BNC cables. The data for magnitude and phase  was measured at 15 frequencies, separated to give a relatively even spread on a log scale on the frequency range measured. The function generator amplitude was adjusted between every measurement to ensure 2 volt p-p input amplitude.\\\par
+
+\textbf{Data-} The results for magnitude were normalized to 1, and then converted to decibels. The phase and magnitude data was then plotted as Bode Plots.
+\FloatBarrier
+\begin{figure}[h!]
+\begin{center}
+    	\resizebox{0.6\textwidth}{!}{\input{./data_plots/pt1_gain.tex}}
+\end{center}
+\caption{RC Low Pass Filter Gain Bode Plot\\ Cut-off Frequency (-3dB point) : 2.11 kHz}
+\end{figure}
+\begin{figure}[h!]
+
+\begin{center}
+    	\resizebox{0.6\textwidth}{!}{\input{./data_plots/pt1_phase.tex}}
+\end{center}
+\caption{RC Low Pass Filter Phase Bode Plot \\ 45\textdegree\space Phase Shift Frequency: 2.11 kHz}
+\end{figure}
+\FloatBarrier
+\textbf{Conclusion-} The filter behaved as expected as a low pass filter, having its cut-off point at 2.11 kHz, which is 5.5\% away from the theoretical 2 kHz. Given the resistor tolerance of 5\%, and the capacitor's 10\%, this error is understandable and likely attributable to the tolerances as it is less than the greatest tolerance. The frequency at which a phase shift of 45\textdegree\space occured at was also 2.11 kHz. The reason for this is logical if one looks at the phasor for the system, shown below, at the cut-off frequency. The cut-off point corresponds to half power (into a real load), which is equal to $\frac{\sqrt{2}}{2}V_{in}$. Using that relationship and simple geometry, one can calculate that the angle, or phase, between the input and output (real portion of the signal) is -45 \textdegree. Intuitively this circuit acts as a low pass filter because a capacitor conducts  more at greater frequencies, so when this circuit is thought of as a voltage divider, it makes sense that the output voltage will drop with frequency across the capacitor.
+\begin{figure}[h!]
+\begin{center}
+\begin{tikzpicture}[>=latex]
+\draw[style=help lines] (0,0) (3,2);
+
+\coordinate (vec1) at (315:2.828); 
+\coordinate (vec2) at (30:3);
+\coordinate (vec3) at (0:3);
+\coordinate (vec4) at (90:1);
+\coordinate (vec5) at (270:2.5);
+\coordinate (vec6) at (180:1);
+
+\draw[->,thick,black] (0,0) -- (vec1) node[midway, below] {$V_{in}$};
+\draw[->,thick,black] (0,0) -- (vec3) node [below] {$Re$};
+\draw[->,thick,black] (0,0) -- (vec4) node [left] {$Im$};
+\draw[->,thick,black] (0,0) -- (vec5);
+\draw[->,thick,black] (0,0) -- (vec6);
+\draw[->,thick,black] (2,0) -- (2,-2);
+\draw[->,thick,black] (0,0) -- (2,0) node [midway, above] {$V_{out}$};
+
+\draw [->, blue, thick] (1.5,0) arc [start angle=0, end angle=-45, radius=1.5cm]
+    node [right, near start] {}; 
+\node [blue, thick] at (.93,-0.37) {$\ang{-45}$};   
+\end{tikzpicture}
+\end{center}
+\caption{Circuit's Phasor Diagram at Cut-off Frequency}
+\end{figure}
+
+\subsection*{Part 2- RC High Pass Filter}
+The RC high pass filter of \textit{Figure 6}, being an interchanged version of the previous circuit was considered. The same values were used for all components, and the same measurements were performed.
+\begin{figure}[h!]
+\begin{center}
+ \begin{circuitikz}[american voltages]
+   \draw
+   (0,3) to[capacitor, l_=8nF, o-] (3,3)
+   (3,3) to[resistor, l_=10k$\Omega$ ] (3,0)
+         to[short, -o] (0,0)
+   (3,3) to[short, -o] (4,3)      
+   (3,0) to[short, -o] (4,0)
+   (0,0) to[open, v^>=$v_{in}$] (0,3)
+   (4,0) to[open, v_>=$v_{out}$] (4,3);
+ \end{circuitikz}
+\end{center}
+\caption{RC High Pass Filter}
+\end{figure}
+\FloatBarrier
+\textbf{Prediction/Calculations-} Similar to part 1, the transfer function $H(s)$ can be found, and then $|H(j\omega)|$ following:
+\begin{equation}
+H(s) = \frac{R}{\frac{1}{sC} + R} \hspace{24pt} \rightarrow \hspace{24pt} |H(j\omega)| = \frac{\omega}{\sqrt{\omega^2 +\frac{1}{R^2C^2}}}
+\end{equation}
+The cut-off can then be found using the same methods as before, yielding:
+\begin{equation}
+\omega_c = \frac{1}{RC}
+\end{equation} 
+Since this equation is the same at part 1, we expect the same 2 kHz cutoff.\\\par 
+\textbf{Experiment-} The same procedure was performed as part 1.\\\par 
+\pagebreak
+\textbf{Data-}
+
+\begin{figure}[h!]
+\begin{center}
+    	\resizebox{0.6\textwidth}{!}{\input{./data_plots/pt2_gain.tex}}
+\end{center}
+\caption{RC High Pass Filter Gain Bode Plot \\ Cut-off Frequency: 2.12 kHz}
+\end{figure}
+\begin{figure}[h!]
+\begin{center}
+    	\resizebox{0.6\textwidth}{!}{\input{./data_plots/pt2_phase.tex}}
+\end{center}
+\caption{RC High Pass Filter Phase Bode Plot \\ 45\textdegree\space Phase Shift Frequency: 2.12 kHz}
+\end{figure}
+\FloatBarrier
+\textbf{Conclusion-} The circuit of this section behaved as expected, behaving as an high pass filter with a cut-off of 2.12 kHz, approximately the theoretical 2 kHz. The discrepancy in frequency again was found to be 2.12 kHz (same as cut-off) which is also for the same reason as part 1. An interesting note is that the RC high pass filter and low pass filter have the same cut-off frequency, and that the phase difference between the two filters is 90 degrees. This circuit can be explained in an intuitive manner again by understanding that the capacitor is high impedance at low frequencies, and low impedance at high frequencies. This effectively means that low frequencies will be block by the capacitor, but higher frequencies will pass.
+\subsection*{Part 3- RLC Low Pass Filter Prototype}
+The prototype low pass filter of \textit{Figure 9} was constructed of a 100uH inductor, with a winding resistance $R_w$ of 216.7$\Omega$ and a capacitor C. The value for C was chosen such that the resonant frequency of the circuit would be 2 kHz. The circuit was then measured to determine the frequency response and the Q (quality) factor.
+\begin{figure}[h!]
+\begin{center}
+ \begin{circuitikz}[american voltages]
+   \draw
+   (0,3) to[resistor, l_=$R_w$, o-] (2.5,3)
+   		 to[inductor, l_=$L$] (5,3) 
+   (5,3) to[capacitor, l_=$C$ ] (5,0)
+         to[short, -o] (0,0)
+   (5,3) to[short, -o] (6,3)      
+   (5,0) to[short, -o] (6,0)
+   (0,0) to[open, v^>=$v_{in}$] (0,3)
+   (6,0) to[open, v_>=$v_{out}$] (6,3);
+ \end{circuitikz}
+\end{center}
+\caption{Prototype (R$_w$)LC Low Pass Filter }
+\end{figure}
+\FloatBarrier
+\textbf{Prediction/Calculations-} The resonant frequency of the circuit occurs when the impedance looking into the input is all real, and therefore is equal to some resistance $\alpha$ plus zero reactance ($j0$):
+\begin{equation} 
+Zin = R + j\omega L -j\frac{1}{\omega C} = \alpha + j0 \hspace{24pt}\rightarrow\hspace{24pt} \bcancel{j}0 = \bcancel{j}(\omega L - \frac{1}{\omega C})
+\end{equation}
+Since L and $\omega_0$ is already know, some rearrangement is done to get C:
+\begin{equation}
+C = \frac{1}{{\omega_0}^2 L} = \frac{1}{(2\pi\ast 2000)^2 0.1} = 63.3 nF
+\end{equation}
+This value for C is non standard, so it is approximated by putting two 100nF capacitors in parallel and then putting an addition 100nF in series with the parallel capacitors to achieve 66.7nF.\\\par
+
+\textbf{Experiment-} The circuit was assembled as in the schematic using the calculated values. A function generator outputting a 2 volt peak to peak sine wave was then connected to the input side of the circuit. The oscilloscope was connected to the circuit input with channel one and the circuit output with channel two. The input frequency was varied from 200 Hz to 20 kHz, taking samples for amplitude at 15 points that give a fairly even spacing in a logarithmic scale for frequency. The amplitude of the input signal was adjusted between measurements to ensure a constant 2$V_{p-p}$ input.\\\par 
+\pagebreak
+\textbf{Data-} The data from the experiment has been as a Bode plot, having logarithmic scaling for frequency, and dB gain normalized to the peak of the response.
+\begin{figure}[h!]
+\begin{center}
+    	\resizebox{0.6\textwidth}{!}{\input{./data_plots/pt3.tex}}
+\end{center}
+\caption{Prototype Low Pass Filter Bode Plot }
+\caption*{$f_{c1}$ = 1.6 kHz $f_{c2}$ = 1.94 kHz \\ $f_{0}$ = 1.78 kHz}
+\end{figure}
+\FloatBarrier
+\textbf{Conclusion-} The prototype low pass filter did not behave very ideally as a low pass filter as it had a relatively sharp peak (due to resonance) near 1.78 kHz. The resonance being off from the the theoretical value of 2 kHz is likely due to aforementioned component tolerances, especially due to the inductor as it has an unknown tolerance (yielding a unknown level of uncertainty). The circuit still did behave as a low pass filter as it predominantly allowed frequencies lower than the resonance to pass, while attenuating frequencies greater than the resonance with a fair level of roll off. The Q factor of the system, which is the ratio of the resonant frequency to the bandwidth, and is used to quantify how resonant a system is was found to be:
+\begin{equation}
+Q = \frac{f_0}{\beta}=\frac{f_0}{f_{c2}-f{c1}} = \frac{1780}{1940-1600} = 5.23
+\end{equation}
+This result implies a fair level of resonance in the design, which is not desirable for a low pass filter, showing again this to not be an ideal design. To achieve a better filter, Q should be low to ensure even passing before the cut-off frequency. This circuit works as a low pass filter because the input leg of the divider contains an inductor, which blocks high frequencies, and the the output leg contains a capacitor, which conducts high frequencies, and if you consider the effect of both combined this circuit basically acts doubly what the RC filter did to block high frequency signals and pass low frequency. It is essentially a combined RL low pass- RC low pass filter.
+\subsection*{Part 4- RLC Low Pass Filter}
+The improved low pass filter shown in \textit{Figure 11}, developed by adding an additional resistor $R_1$ in series with the inductor was considered. The addition of resistance to the circuit increases the damping, which ideally will reduce the resonance and create more of an ideal low pass filter with a flat response before the cut-off. In this part, the circuit was designed to achieve a Q of one and a resonance of 2 kHz. The magnitude-frequency response of the circuit was measured, and then plotted against that of the low pass filter from part one to compare the designs.
+\FloatBarrier
+\begin{figure}[h!]
+\begin{center}
+ \begin{circuitikz}[american voltages]
+   \draw
+   (0,3) to[resistor, l_=$R_1$, o-] (2,3)
+   		 to[resistor, l_=$R_w$] (4,3)
+   		 to[inductor, l_=$L$] (6,3) 
+   (6,3) to[capacitor, l_=$C$ ] (6,0)
+         to[short, -o] (0,0)
+   (6,3) to[short, -o] (7,3)      
+   (6,0) to[short, -o] (7,0)
+   (0,0) to[open, v^>=$v_{in}$] (0,3)
+   (7,0) to[open, v_>=$v_{out}$] (7,3);
+ \end{circuitikz}
+\end{center}
+\caption{Improved RLC Low Pass Filter}
+\end{figure}
+\FloatBarrier
+\textbf{Prediction/Calculations-} The resonant frequency of this circuit is expected to remain the same as the previous circuit as only the resistance changes, and therefore L is held at 100mH and C at 66.7nF. The value for $R_{1+w}$ can be calculated by knowing that the bandwidth $\beta$ of a series RLC is given by $\frac{R}{L}$ and the resonant frequency:
+\begin{equation}
+Q= \frac{\omega_0}{\frac{R_{1+w}}{L}}=\frac{2\pi f_0 L}{R_{1+w}} \hspace{24pt}\rightarrow\hspace{24pt} R_{1+w} = \frac{2\pi\ast 2000 \ast 0.1}{1} = 1257 \hspace{6pt}\Omega
+\end{equation}
+Knowing $R_w$ = 217 $\Omega$, $R_1$ = $R_{1+w}$ - $R_w$ = 1257 - 217 = 1040 $\Omega$, which is approximately 1k$\Omega$. Therefore 1k$\Omega$ will be used for $R_1$\\\par 
+
+\textbf{Experiment-} The circuit was assembled with the calculated values and attached to the function generator set to output a 2 volt peak to peak sine wave. As before, channel one of the oscilloscope was connected to the input of the circuit, and channel two to the output. The input signal was varied from 200 Hz to 20 kHz, with the voltage across the input maintained at 2$V_{p-p}$. 15 samples of the magnitude were take across the frequency range, with an attempt to keep a fairly even spacing for a logarithmic plot.\\\par  
+
+\textbf{Data-} The data was plotted in log scale, with the amplitude converted to dB normalized to the peak of the frequency response.The response with the asterisk data points in that of the RLC circuit.
+\FloatBarrier
+\begin{figure}[h!]
+\begin{center}
+    	\resizebox{0.6\textwidth}{!}{\input{./data_plots/pt4.tex}}
+\end{center}
+\caption{Improved RLC Low Pass Filter Bode Plot \\ $f_c$ = 2.2 kHz}
+\end{figure}
+\FloatBarrier
+\textbf{Conclusion-} The improved RLC low pass filter appears to be a much better low pass filter than the original RC version, providing much greater roll off of 40dB/decade versus the 20dB/decade afforded by the RC filter. The roll of is much greater with the RLC circuit as it is a two pole design as opposed to one pole with the RC, and roll off is equal to the number of poles time 20dB/decade. The "corner" formed by the pass region and roll of region of the RLC circuit is also much sharper than the RC circuit, which is more ideal. An interesting note is that resonance of this design is much lower than expected, at about 1.4 kHz. This is due to the extra damping of the system added resistance. The exact damped frequency can be calculated by finding the maxima of the transfer function through differentiation and then solving for the zero (which will correspond to maxima in this case). Solving this for this system gives us:
+\begin{equation}
+f_{damped} = \frac{1}{2\pi}\sqrt{\frac{1}{LC}-\frac{R^2}{2L^2}} = \frac{1}{2\pi}\sqrt{\frac{1}{0.1\ast 66.7E-9}-\frac{1217^2}{2\ast 0.1^2}} = 1387 Hz
+\end{equation}
+We see that this value is the experimentally measured resonance, and suggests a fair level of error in the calculations for R1 in the part as they did not account for the damping. It is possible to account for the damping coefficient in filter design, however the derivations involved in factoring dampening in is far more complex, beyond the scope of this experiment. Overall the LRC band pass / low pass filter behaves as a good low pass filter, offering advantages over a single pole RC filter.
+\subsection*{Part 5- Square Wave Investigation}
+The circuit design in part 4 was considered, except with a square wave input instead of a sinusoid. The output was observed and recorded over various frequencies, and the observed behavior was analyzed.\\\par 
+\textbf{Experiment-} The same experimental setup as part 4 was used, except the output was switched to a square  wave. The output of the circuit was observed and recorded over various frequencies from 200 Hz to 2 kHz.\\\par 
+
+\textbf{Data-} Below are oscilloscope captures of the filter at 200, 800, 1400 and 2000 Hz. The stable square wave is the input, and the other waveform in the output of the circuit
+\FloatBarrier
+\begin{figure}[h!]
+\begin{center}
+ \includegraphics[scale=0.45]{./data_plots/200.png}
+\end{center}
+\caption{Filter with 200 Hz Square Wave Input}
+\end{figure}
+\begin{figure}[h!]
+\begin{center}
+ \includegraphics[scale=0.45]{./data_plots/800.png}
+\end{center}
+\caption{Filter with 800 Hz Square Wave Input}
+\end{figure}
+\begin{figure}[h!]
+\begin{center}
+ \includegraphics[scale=0.45]{./data_plots/1400.png}
+\end{center}
+\caption{Filter with 1400 Hz Square Wave Input}
+\end{figure}
+\begin{figure}[h!]
+\begin{center}
+ \includegraphics[scale=0.45]{./data_plots/2000.png}
+\end{center}
+\caption{Filter with 2000 Hz Square Wave Input}
+\end{figure}
+\FloatBarrier
+\textbf{Conclusion-} As the frequency of the input increases, a noticeable change occurs in the output of the filter occurs, acting as more and more of an integrator with increases in frequency. It should be noted that this circuit is a RLC analogue of the RC low pass filter, which is also known as an integrator, and would make sense why the output of the filter is approximately the integral of the input. One should note that at lower frequencies, that is frequencies contained more within the pass band, the output it more like the input because it is logically "passed" more. However, as the frequency increases up to the cut-off, an integrator like response is seen because the output amplitude drops, meaning more and more voltage is dropped in the circuit's resistance, and the current through the circuit becomes more proportional to the input voltage due to Ohm's law. Since the capacitors voltage is proportional to the integral of the current, it is logical that as the frequency increases and the currents proportionality to the input increases. If the proportionality of the current to input increases, so should the integral of that current, the output voltage, to the input, making the output look like the integral of the input. Another reason to explain the output behavior is that a square wave is really a Fourier series, that is an infinite sum of sinusoids, each spaced evenly in the time domain and decreasing in power with frequency. If a square wave is run through a low pass filter, the Fourier transform of the output should show the input Fourier series multiplied by the low pass filter's transfer function. That means if the input frequency is lower, less of the square wave's harmonics should be cut off, leading to less distortion at the output. However if the frequency is increased, especially to the point where the first harmonic is near the cut-off, it should be observed that a majority of the output will be that first harmonic, making the output sinusoid like. This may explain why the output appeared sinusoidal, especially in the 1.4 kHz and 2 kHz figures, as the input is near the filters cut-off frequency.
+
+\subsection*{Part 6- RLC Band Pass Filter}
+The Band Pass filter circuit of \textit{Figure 17} was designed to have a resonant frequency of 5 kHz, and a Q of 5, using a 10mH inductor. The magnitude and phase response of the circuit was then measured across 500 Hz to 5 kHz, and then experimental Q was derived from that data.
+\FloatBarrier
+\begin{figure}[h!]
+\begin{center}
+ \begin{circuitikz}[american voltages]
+   \draw
+   (0,3) to[capacitor, l_=$C$, o-] (2,3)
+   		 to[resistor, l_=$R_W$] (4,3)
+   		 to[inductor, l_=$L$] (6,3) 
+   (6,3) to[resistor, l_=$R_1$] (6,0)
+         to[short, -o] (0,0)
+   (6,3) to[short, -o] (7,3)      
+   (6,0) to[short, -o] (7,0)
+   (0,0) to[open, v^>=$v_{in}$] (0,3)
+   (7,0) to[open, v_>=$v_{out}$] (7,3);
+ \end{circuitikz}
+\end{center}
+\caption{RLC Band Pass Filter}
+\end{figure}
+\FloatBarrier
+\textbf{Predictions/Calculations-} This circuit is a series RLC, and therefore should have the same resonance of $f_0$ = $\frac{1}{2\pi \sqrt{LC}}$ as found in the previous parts. C solves out as follows:
+\begin{equation}
+C = \frac{1}{(\omega_0)^2L}=\frac{1}{(2\pi\ast 2000)^2 \ast 0.1} = 101.3 nF \approx 100nF
+\end{equation}
+
+The bandwidth of the circuit can be derived by solving the transfer function for the half power points. This is done first by deriving $H(s)$, and finding the frequency response $|H(\omega)|$:
+\begin{equation}
+H(s) =\frac{R_1}{R_1+R_w+sL+\frac{1}{sC}} \hspace{24pt}\rightarrow\hspace{24pt}|H(\omega)|= \frac{\frac{R_1\omega}{L}}{\sqrt{(\frac{1}{LC}-\omega^2)^2 + \frac{(R_1+R_w)^2\omega^2}{L^2}}}
+\end{equation}
+Using $|H(\omega)|$, the cut-off points can be solved and their difference found to get the bandwidth:
+\begin{equation}
+\beta = \frac{R_1 + R_w}{L}
+\end{equation}
+The circuit resistance can now be solved for using the Q factor equation and $\beta$:
+\begin{equation}
+Q = \frac{\omega_0}{\beta}=\frac{1}{\sqrt{LC}}\frac{L}{R_1+R_w}= \sqrt{\frac{L}{C}}\frac{1}{R_1+R_w}
+\end{equation}
+\begin{equation}
+R_1 = \sqrt{\frac{L}{C}}\frac{1}{Q}-R_w = \sqrt{\frac{0.01}{100E-9}}\frac{1}{5}-22.2= 41\hspace{6pt}\Omega 
+\end{equation}
+Therefore $R_1$ = 41 $\Omega$, which is approximately equal to four 10 $\Omega$ resistors in series.\\\par 
+\textbf{Experiment-} The filter was constructed using the calculated values. The function generator and oscilloscope was connected the same to the input and output of the circuit as the previous parts. The circuit was driven with a 2 volt peak to peak sine wave varying from 500 Hz to 50 kHz, with samples for phase and amplitude taken at various frequencies po produce response plots.\\\par 
+\textbf{Data-} The data was plotted as Bode plots, where the frequency is displayed in log scale and the magnitude is converted to a decibel scale normalized to the peak value of the response.
+\FloatBarrier
+\begin{figure}[h!]
+\begin{center}
+    	\resizebox{0.6\textwidth}{!}{\input{./data_plots/pt6.tex}}
+\end{center}
+\caption{RLC Band Pass Filter Gain Bode Plot}
+\caption*{$f_{c1}$ = 4.18 kHz $f_{c2}$ = 5.34 kHz \\ $f_0$ = 4.7 kHz}
+\end{figure}
+\begin{figure}[h!]
+\begin{center}
+    	\resizebox{0.6\textwidth}{!}{\input{./data_plots/pt6_phase.tex}}
+\end{center}
+\caption{RLC Band Pass Filter Phase Bode Plot}
+\end{figure}
+\FloatBarrier
+\textbf{Conclusion}
+Observing \textit{Figure 18} shows that the circuit behaved as a band pass filter, as the transfer function peaked at the resonant frequency and decreased for lower and greater frequency. This circuit behaves as a band pass filter because on the input leg of the voltage divider formed by the circuit there is an inductor and capacitor. Inductors have the tendency to go to infinite impedance at high frequencies, and capacitors do the same but for low frequencies. This means that signals will be blocked if the input is sufficiently high or low voltage. However, if the input signal is near or at the resonant frequency, the combined impedance of the inductor and capacitor will become essentially zero, allowing signals to pass freely. The passing of frequencies in one band and rejecting them for frequencies that are above and below the resonance is what qualifies this circuit as a band pass filter. An interesting thing to note on the phase Bode plot (\textit{Figure 19}) is that the phase is zero at the resonance frequency of 4.7 kHz, which implies that the impedance at resonance is all real and will pass at maximum amplitude. The experimental Q factor for this circuit was found to be as follows:
+\begin{equation}
+Q = \frac{f_0}{f_{c2}-f_{c1}} = \frac{4700}{5340-4180} = 4.31
+\end{equation}
+This is slightly lower than the expected 5, however there are several reasons that may explain this. First, the component tolerances are likely to have skewed the values from what was calculated, and second damping of the system may have had some impact on decreasing the resonance.
+\subsection*{Part 7- RLC Band Reject Filter}
+The Band Pass filter circuit of \textit{Figure 20} was designed to have a resonant frequency of 5 kHz, and a Q of 5, using a 10mH inductor. The magnitude and phase response of the circuit was then measured across 500 Hz to 5 kHz.
+\begin{figure}[h!]
+\begin{center}
+ \begin{circuitikz}[american voltages]
+   \draw
+   (0,3) to[short, o-] (1,3)
+		 to[short] (1,4)
+   (1,3) to[short] (1,2)
+   		 to[inductor, l_=$L$] (4,2)
+   		 to[short] (4,3)
+   (1,4) to[capacitor, l_=$C$] (4,4)
+   		 to[short] (4,3)
+   (4,4) to[short] (4,3)
+   		 to[short] (5,3) 
+         to[resistor, l_=$R_1$] (5,0)
+         to[short, -o] (0,0)
+   (5,3) to[short, -o] (6,3)      
+   (5,0) to[short, -o] (6,0)
+   (0,0) to[open, v^>=$v_{in}$] (0,3)
+   (6,0) to[open, v_>=$v_{out}$] (6,3);
+ \end{circuitikz}
+\end{center}
+\caption{RLC Band Reject Filter}
+\end{figure}
+
+
+\textbf{Predictions/Calculations-} The resonant frequency of this circuit is modelled by the same equation as the previous part, and is intended to have the same resonance frequency (50 kHz), so 10mH will be used for L and 100nF for C to match part 6. 
+
+The bandwidth of the circuit can be derived by frequency of the transfer function for the half power points. This is done by again be deriving $H(s)$, and finding the frequency response $|H(\omega)|$:
+\begin{equation}
+H(s) =\frac{R}{R + \frac{\frac{L}{C}}{sL + \frac{1}{sC}}} \hspace{24pt}\rightarrow\hspace{24pt}|H(\omega)|= \frac{\frac{1}{LC}-\omega^2}{\sqrt{(\frac{1}{LC}-\omega^2)^2 + \frac{\omega^2}{R^2C^2}}}
+\end{equation}
+$|H(\omega)|$ is then used to get the cut-off points, which are used to get the bandwidth:
+\begin{equation}
+\beta = f_{c2}-f_{c1} = \frac{1}{RC}
+\end{equation}
+R can now be solved for using the Q factor equation and the bandwidth:
+\begin{equation}
+Q = \frac{\omega_0}{\beta}=\frac{1}{\sqrt{LC}}RC= \sqrt{\frac{C}{L}}R
+\end{equation}
+\begin{equation}
+R = \sqrt{\frac{L}{C}}Q= \sqrt{\frac{0.01}{100E-9}}\ast 5= 1581\hspace{6pt}\Omega 
+\end{equation}
+Therefore $R_1$ = 1581 $\Omega$ $\approx$ 1589 $\Omega$ which can be built from the series combination of a 47 ohm resistor and a 5.1k resistor in parallel with a 2.2k.\\\par 
+\textbf{Experiment-} The filter was constructed using the calculated values. The function generator and oscilloscope was connected the same to the input and output of the circuit as the previous parts. The circuit was driven with a 2 volt peak to peak sine wave varying from 500 Hz to 50 kHz, with samples for phase and amplitude taken at various frequencies po produce response plots.\\\par 
+\textbf{Data-} The data was plotted as Bode plots, where the frequency is displayed in log scale and the magnitude is converted to a decibel scale normalized to the peak value of the response.
+
+
+\FloatBarrier
+\begin{figure}[h!]
+\begin{center}
+    	\resizebox{0.6\textwidth}{!}{\input{./data_plots/pt7.tex}}
+\end{center}
+\caption{RLC Band Reject Filter Gain Bode Plot \\ $f_0$ = 4.76 kHz}
+\end{figure}
+\FloatBarrier
+\textbf{Conclusion}
+As Illustrated in \textit{Figure 21}, the RLC filter tested in this part behaves as a band pass filter, rejecting frequencies near the circuit's resonant frequency. This circuit behaves as a band reject filter because the input leg of the divider formed the filter consists of a parallel inductor capacitor. It is known that capacitors conduct high frequencies well, and inductors low frequencies well, so it is intuitive that signals of reasonable high and low frequency should pass through to the output. However, near the and at the resonance of he circuit the output dips. This can be explained by looking at the impedence of the parallel LC sub-circuit:
+\begin{equation}
+Z_{L||C} = \frac{\frac{L}{C}}{j\omega L - j\frac{1}{\omega C}}
+\end{equation}
+At resonance, the bottom term of the fraction will become zero, which means that the parallel impedance of the LC will be essentially infinity, which blocks signals from passing. Practically speaking, the inductor still has some resistance in the windings, which will limit how high impedance the upper leg becomes, limiting the efficacy of this band reject filter.
+%-----------------------------------------------------------------------------
+%	Conclusion
+%----------------------------------------------------------------------------------------
+\section{Conclusion}
+In this experiment, the design, analysis and verification of high pass, low pass, band reject and band reject filters built from resistors, capacitors and inductors was performed. First, it was found that RC circuits will behave as high pass and low pass filters, depending on the configuration, with a cut-off frequency of $(RC)^{-1}$. It was then found that superior low pass filters can be constructed as RLC circuits, per part 3, providing greater twice the roll off of RC filters (40db vs 20db per decade) after the cut-off frequency. Finally, RLC band pass and band reject filters were designed. Some design limitations were observed with the RLC type filters, experimental values were consistently off from the expected values, perhaps due to limitations of the models used. The overall outcomes of this lab are greater understanding of the advantages, features, and limitations of different filter configuration, as well as a gained understanding of the filter design process.
+
+\end{document}

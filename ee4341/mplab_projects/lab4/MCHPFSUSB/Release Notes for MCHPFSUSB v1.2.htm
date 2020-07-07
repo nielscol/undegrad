@@ -1,0 +1,919 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>Release Notes for MCHPFSUSB v1.2</title>
+
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-family:Arial;}
+h1
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.3in;
+	text-indent:-.3in;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+h2
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.4in;
+	text-indent:-.4in;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:Arial;
+	font-weight:bold;
+	font-style:italic;}
+h3
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-family:Arial;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:10.0pt;
+	font-size:10.0pt;
+	font-family:Arial;}
+p.MsoListBullet, li.MsoListBullet, div.MsoListBullet
+	{margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-size:10.0pt;
+	font-family:Arial;}
+p.MsoListBullet2, li.MsoListBullet2, div.MsoListBullet2
+	{margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:.5in;
+	text-indent:-.25in;
+	font-size:10.0pt;
+	font-family:Arial;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.heading0, li.heading0, div.heading0
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:14.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+p.listbullet2nospace, li.listbullet2nospace, div.listbullet2nospace
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.75in;
+	margin-bottom:.0001pt;
+	text-indent:-.25in;
+	font-size:10.0pt;
+	font-family:Arial;}
+span.computerchar
+	{font-family:"Courier New";}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink=purple>
+
+<div class=Section1>
+
+<p class=MsoNormal><a name="_Toc175736789"><b><span style='font-size:14.0pt'>Release
+Notes for MCHPFSUSB v1.2 – Microchip Full-Speed USB Solutions</span></b></a></p>
+
+<p class=MsoNormal>August 27, 2007</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><a name="_Toc175736790"><b><span style='font-size:14.0pt'>Table
+of Contents</span></b></a></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="#_Toc175988955">1.<span
+style='font-size:12.0pt;font-family:"Times New Roman";color:windowtext;
+text-decoration:none'>     </span>What's New/Updated in Release v1.2</a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="#_Toc175988956">2.<span
+style='font-size:12.0pt;font-family:"Times New Roman";color:windowtext;
+text-decoration:none'>     </span>Important Notes</a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="#_Toc175988957">3.<span
+style='font-size:12.0pt;font-family:"Times New Roman";color:windowtext;
+text-decoration:none'>     </span>What's in Release v1.2</a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="#_Toc175988958">4.<span
+style='font-size:12.0pt;font-family:"Times New Roman";color:windowtext;
+text-decoration:none'>     </span>Known Limitations</a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="#_Toc175988959">5.<span
+style='font-size:12.0pt;font-family:"Times New Roman";color:windowtext;
+text-decoration:none'>     </span>USB Compliance Test ID (TID) Information</a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="#_Toc175988960">6.<span
+style='font-size:12.0pt;font-family:"Times New Roman";color:windowtext;
+text-decoration:none'>     </span>Alternative Software Solutions</a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="#_Toc175988961">7.<span
+style='font-size:12.0pt;font-family:"Times New Roman";color:windowtext;
+text-decoration:none'>     </span>Online Reference Documents</a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="#_Toc175988962">8.<span
+style='font-size:12.0pt;font-family:"Times New Roman";color:windowtext;
+text-decoration:none'>     </span>Customer Support</a></span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h1 style='margin-left:.25in;text-indent:-.25in'><a name="_Toc175988955"></a><a
+name="_Toc175736791"></a><a name="Whats_New_Updated">1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span>What's New/Updated </a>in Release v1.2</h1>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Several bug fixes in USB library firmware.</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Updates to support a wider selection of PIC18 USB devices. </p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Out of the box support for PICDEM™ FS USB Demonstration Board and
+PIC18F87J50 FS USB Plug-In Module.</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>General Purpose INF file, mchpusb.inf, updated to show USB icon
+in the Windows® Device Manager (used to appear under “Other devices”).</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>CDC RS-232 emulation INF file, mchpcdc.inf, updated for
+supporting Windows Vista™ 32-bit.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>In order to provide out of box support for both the PICDEM
+FS USB Demo Board and the PIC18F87J50 FS USB Plug-In Module, the example
+firmware projects have added a few additional “#if defined” type of statements
+as needed to accommodate the minor differences between the hardware platforms. 
+By default, all of the projects are preconfigured to work with the PICDEM FS
+USB Demo Board.  To switch them over for use with the PIC18F87J50 FS USB
+Plug-In Module, follow the listed steps below.  For additional details, see the
+comments at the top of the top of the main.c file used by the projects.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>1. In MPLAB® IDE, click &quot;Configure --&gt; Select
+Device&quot; and then select the PIC18F87J50</p>
+
+<p class=MsoNormal>2. From the project window, change the linker script to the
+18f87j50.lkr file</p>
+
+<p class=MsoNormal>3. Open usbcfg.h and uncomment the line that reads,
+&quot;//#define PIC18F87J50_FS_USB_PIM&quot; and then comment the other choices</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>The project should now build, and when programmed onto the
+device, the programs should function essentially as they do with the PICDEM FS
+USB Demo Board.  This procedure will work with the communications device class
+(CDC), human interface device (HID) class, and the custom device class “Demo”
+projects.  The USB bootloader “Boot” is not currently supported with the
+PIC18F87J50 family devices.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h1 style='margin-left:.25in;text-indent:-.25in'><a name="_Toc175988956"></a><a
+name="_Toc175736792">2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span>Important Notes</a></h1>
+
+<h2><a name="_Toc175736793">Notes about .INF files</a></h2>
+
+<p class=MsoNormal>Upon initially plugging in a USB device, in some cases Windows
+will prompt the user for a driver.  Rather than having users manually copy .sys
+files (driver binary files) into important system directories (such as within
+the “\Windows\system32\” directory structure) and manually add registry
+entries, Windows automates the driver installation process through the use of
+.INF files.  INF files are plain text (can be edited with notepad) installation
+instruction script files.</p>
+
+<p class=MsoNormal>Some types of USB devices will not require .INF files or
+user provided drivers (for example, a HID class mouse).  For these types of
+devices, the operating system makes use of drivers already built
+into/distributed with the operating system, so no user provided driver or .INF
+file is necessary.</p>
+
+<p class=MsoNormal>For other types of devices, Windows will prompt the user for
+a driver.  In these cases, point Windows to the .INF file relevant for the USB
+device.  All of the example projects included in the MCHPFSUSB framework which
+need an INF file are provided with an example INF file.  The INF file will need
+slight modification (most importantly to change the VID and PID) before
+commercial distribution.</p>
+
+<h2><a name="_Toc175736794">Notes about Vendor ID (VID) and Product ID (PID)</a></h2>
+
+<p class=MsoNormal>Every USB product line must have a unique combination of VID
+and PID.  All firmware examples in the 'fw' directory use Microchip's VID
+(0x04d8) and a unique PID. Prior to manufacturing and marketing a new USB
+product, the VID and PID need to be changed.  New VID and PID numbers can be
+obtained by purchasing a VID from the USB Implementers Forum:</p>
+
+<p class=MsoNormal><a href="http://www.usb.org/developers/vendor">http://www.usb.org/developers/vendor</a></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Alternatively, Microchip has a free VID sublicensing program. 
+An application form for obtaining a PID (for use with Microchip’s VID: 0x04d8)
+from Microchip can be obtained from:</p>
+
+<p class=MsoNormal><a href="http://www.microchip.com/usb">http://www.microchip.com/usb</a>
+(and click on the “Full Speed USB Solutions” link, then download the form in
+the “Additional Documentation” section, or click <u><a
+href="http://www.microchip.com/stellent/groups/sitecomm_sg/documents/market_communication/en025058.pdf">here</a></u>
+for the direct link.)</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Once a new VID/PID combination is obtained, both the
+firmware and the .INF file (when applicable) will need to be updated.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>To modify the VID/PID in one of the example USB firmware
+projects, open the usbdsc.c file (found in the ‘autofiles’ folder of the
+project).  Search for the terms “Vendor ID” and “Product ID”.  They should
+appear in the table used for the USB Device Descriptor.  Change both values as
+needed.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>To modify the VID/PID in the .INF file, open the relevant
+INF file and search for the “[DeviceList]” section.  In this section, some text
+will appear with the form “USB\VID_xxxx&amp;PID_yyyy”.  Update the “xxxx” and
+“yyyy” sections with the new hexadecimal format VID/PID values.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h2><a name="_Toc175736795">Notes about MPLAB® C18 C Compiler</a></h2>
+
+<p class=MsoNormal>The example firmware projects included in the distribution
+are based around the MPLAB C18 compiler.  Either the commercial version, or the
+free student version can be used to build the example projects.  The compiler
+may be obtained from <a href="http://www.microchip.com/c18">http://www.microchip.com/c18</a></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h1 style='margin-left:.25in;text-indent:-.25in'><a name="_Toc175988957"></a><a
+name="_Toc175736796">3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span>What's in Release v1.2</a></h1>
+
+<h2 style='margin-left:.55in;text-indent:-.55in'><a name="_Toc175736797"><span
+style='font-size:10.0pt'>3.1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Overview</a></h2>
+
+<p class=MsoNormal>After the installation of MCHPFSUSB setup file, the content
+can be found in the “C:\MCHPFSUSB” directory. There are three main sub-folders
+available, “Documents”, “fw” (firmware), and “Pc” (Personal Computer). The
+“Documents” folder contains the MCHPFSUSB Firmware User’s Guide and online
+links to other useful USB related documents. The firmware (fw) folder contains various
+example firmware projects for PIC18 USB microcontrollers.  The Pc directory
+contains software products useful for developing and demonstrating USB
+applications on the personal computer.  The most important directories are
+shown below.  Details of their contents and purpose are described below.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>.\MCHPFSUSB\</p>
+
+<p class=MsoNormal>            - Documents\</p>
+
+<p class=MsoNormal>            - <a href="#_MPLAB_IDE_Firmware_Projects and HEX">fw</a>\</p>
+
+<p class=MsoNormal>                        - <a
+href="#_Factory_Original_HEX_Files">_factory_hex</a>\</p>
+
+<p class=MsoNormal>                        - <a href="#_Custom_Class:_Boot,">Boot</a>\</p>
+
+<p class=MsoNormal>                        - <a
+href="#_Communications_Device_Class">Cdc</a>\</p>
+
+<p class=MsoNormal>                        - <a href="#_Custom_Class:_Demo">Demo</a>\</p>
+
+<p class=MsoNormal>                        - <a href="#_Demo02">Demo02</a>\</p>
+
+<p class=MsoNormal>                        - <a
+href="#_Human_Interface_Device_Class (HID):">Hid</a>\</p>
+
+<p class=MsoNormal>            - <a href="#_USB_Tools/Code_for_the PC">Pc</a>\</p>
+
+<p class=MsoNormal>                        - <a
+href="#_Microchip_General_Purpose_(Custom C">MCHPUSB Driver</a>\</p>
+
+<p class=MsoNormal>                        - <a
+href="#_MPUSBAPI_Library_and_DLL Source">Mpusbapi</a>\</p>
+
+<p class=MsoNormal>                        - <a
+href="#_PICDEM_FS_USB_Demo Tool “Pdfsusb”">Pdfsusb</a>\</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h2 style='margin-left:27.0pt;text-indent:-27.0pt'><a name="_Toc175736798"></a><a
+name="_MPLAB_IDE_Firmware_Projects and HEX"></a><span style='font-size:10.0pt'>3.2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span>MPLAB
+IDE Firmware Projects and HEX Files</h2>
+
+<p class=MsoNormal>Several USB example firmware projects and hex files are
+included in the MCHPFSUSB distribution:</p>
+
+<h3><a name="_Toc175736799"></a><a name="_Factory_Original_HEX_Files"></a><span
+style='font-size:11.0pt'>Factory Original HEX Files</span></h3>
+
+<p class=MsoNormal><b>See:</b> “C:\MCHPFSUSB\fw\_factory_hex”</p>
+
+<p class=MsoNormal>Currently (as this is written), Microchip provides two
+full-speed USB demo board hardware platforms:</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>The PICDEM FS USB Demo Board (<a
+href="http://www.microchipdirect.com/">www.microchipDIRECT.com</a> part number
+DM163025) ships from the factory pre-programmed with the picdemfsusb.hex file. 
+The firmware programmed on the PIC18F4550 can be restored to its original
+contents by reprogramming the picdemfsusb.hex file onto the device.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>The PIC18F87J50 FS USB Plug-In Module demo board (<a
+href="http://www.microchipdirect.com/">www.microchipDIRECT.com</a> part number
+MA180021) ships from the factory pre-programmed with the PIC18F87J50_FS_USB_PIM_MouseDemo_2007_08.hex
+file.  To restore the demo board to its original state, simply reprogram the
+microcontroller with this hex file.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>To use these hex files with standard Microchip development
+tools such as MPLAB IDE and the MPLAB ICD2 programmer, open MPLAB IDE, click
+“Configure <span style='font-family:Wingdings'>à</span> Select Device”, then choose
+PIC18F4550 for the PICDEM FS USB Demo Board, or PIC18F87J50 for the PIC18F87J50
+FS USB Demo PIM.  Make sure an appropriate programmer is connected and has been
+selected.  Then click “File <span style='font-family:Wingdings'>à</span>
+Import” and import the .hex file to be used.  Then use the “Programmer <span
+style='font-family:Wingdings'>à</span> Program” menu choice to restore the
+device.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h3><a name="_Toc175736800"></a><a name="_Custom_Class:_Boot,_USB Bootloader "></a><a
+name="_Custom_Class:_Boot,"></a>Custom Class: Boot, USB Bootloader Firmware </h3>
+
+<p class=MsoNormal><b>See:</b> “C:\MCHPFSUSB\fw\Boot”</p>
+
+<p class=MsoNormal>This project contains USB firmware which handles the USB
+chapter 9 requests needed for enumeration, and it also provides an
+implementation example of a custom device class USB bootloader.  The chapter 9
+enumeration firmware has been stripped down compared to the other USB projects,
+in an effort to make the bootloader as small as possible (~2kB of program
+memory).  Not all “required” chapter 9 requests are handled, only functions
+necessary for enumeration and basic operation are implemented.  </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>The bootloader is written to work with the PICDEM FS USB
+Demo Board.  The PIC18F87J50 family of devices are not currently supported. </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>This project provides the necessary bootloader firmware
+needed to use the “PICDEM FS USB Demo Tool” (launched with PDFSUSB.exe) while in
+the bootload mode.  </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>After a device has been programmed with this firmware,
+bootload mode is entered by holding RB4 low at device power up or reset.  On
+the PICDEM FS USB Demo Board, this can be done by holding down switch S1 (MCLR)
+and S2 (RB4) simultaneously, and then releasing S1 while still holding S2.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>When using this firmware, Windows should prompt the user for
+a driver when the device first enumerates in the bootload mode.  Upon receiving
+this prompt, point Windows to the .INF file located in the “C:\MCHPFSUSB\Pc\MCHPUSB
+Driver\Release” directory.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h3><a name="_Toc175736801"></a><a name="_Communications_Device_Class_(CDC): "></a><a
+name="_Communications_Device_Class"></a>Communications Device Class (CDC):
+RS-232 Emulation Firmware</h3>
+
+<p class=MsoNormal><b>See:</b> “C:\MCHPFSUSB\fw\Cdc”</p>
+
+<p class=MsoNormal>This project contains USB firmware which handles the USB
+chapter 9 requests needed for device enumeration, and it also provides an
+implementation example of a CDC class device.  The firmware is intended to be
+used to provide RS-232 emulation over the USB port.  For example, if a USB
+microcontroller is programmed with this firmware, upon plugging into the host
+PC, it will enumerate and appear in the device manager as a new communications
+port, with a new COM number.  Windows based applications can then interface with
+the embedded device by using standard function calls as would be used to
+interface with a standard RS-232 like communications port.  This can be very
+advantageous when migrating legacy RS-232 serial port embedded devices over to
+USB, as it means very little code changes are required to the PC side
+application to communicate with the USB device.  See application note AN956
+“Migrating Applications to USB from RS-232 with Minimal Impact on PC Software,”
+for more details.<a
+href="http://www.microchip.com/stellent/idcplg?IdcService=SS_GET_PAGE&amp;nodeId=1824&amp;appnote=en024394"
+target="_top"><br>
+</a></p>
+
+<p class=MsoNormal>Upon initially plugging in the USB cable to a device
+programmed with this CDC firmware, Windows will prompt the user for a driver. 
+Upon receiving this prompt, point Windows to the .INF file located under the “C:\MCHPFSUSB\fw\Cdc\inf\win2k_winxp_winvista32”
+directory.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>The CDC based RS-232 emulation firmware makes use of
+standard drivers which distribute with Windows.  The .INF file is the only PC
+side file that is needed with this firmware.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><u>Note:</u> HyperTerminal is no longer shipped with Windows
+in Vista. An alternative is to use TeraTerm which can be downloaded from:  <a
+href="http://ttssh2.sourceforge.jp/">http://ttssh2.sourceforge.jp/</a></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h3><a name="_Toc175736802"></a><a name="_Custom_Class:_“Demo”,_for use with "></a><a
+name="_Custom_Class:_“Demo”,"></a><a name="_Custom_Class:_Demo"></a>Custom
+Class: Demo (for use with PDFSUSB.exe)</h3>
+
+<p class=MsoNormal><b>See:</b> “C:\MCHPFSUSB\fw\Demo”</p>
+
+<p class=MsoNormal>This project contains USB firmware which handles the USB
+chapter 9 requests needed for enumeration, and it also provides an
+implementation example of a custom or ‘vendor’ class device using Microchip’s
+USB general purpose driver.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>This project serves as the basis for the firmware intended
+to be used with the “PICDEM FS USB Demo Tool” (launched with PDFSUSB.exe).  The
+code provided in the “Demo” project provides the firmware needed for the
+various features (such as temperature, potentiometer position) used by
+PDFSUSB.exe.  </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>When using this firmware, Windows should prompt the user for
+a driver when the USB cable is first connected.  Upon receiving this prompt,
+point Windows to the .INF file located in the “C:\MCHPFSUSB\Pc\MCHPUSB
+Driver\Release” directory.</p>
+
+<p class=MsoNormal><b><span style='font-size:13.0pt'>&nbsp;</span></b></p>
+
+<h3><a name="_Demo02"></a>Demo02</h3>
+
+<p class=MsoNormal><b>See:</b> “C:\MCHPFSUSB\fw\Demo02”</p>
+
+<p class=MsoNormal>Demo02 is not a USB project, but a simple skeleton project
+meant to show how to create an application that can be programmed by the USB
+bootloader.  The USB bootloader contained in the “Boot” project occupies flash
+memory locations 0x000 thru 0x7FF.  The bootloader “remaps” the reset, high
+priority interrupt, and low priority interrupt vectors to addresses 0x800,
+0x808, and 0x818 respectively.  An application meant to be programmed with the
+bootloader must be written such that it does not use 0x000 thru 0x7FF, and it
+should assume the reset, high priority interrupt, and low priority interrupt
+vectors are located at 0x800, 0x808, and 0x818 respectively.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h3><a name="_Toc175736803"></a><a name="_Human_Interface_Device_Class (HID):"></a>Human
+Interface Device Class (HID): Mouse in a Circle Demo Firmware</h3>
+
+<p class=MsoNormal><b>See:</b> “C:\MCHPFSUSB\fw\Hid\Mouse”</p>
+
+<p class=MsoNormal>This project contains USB firmware which handles the USB
+chapter 9 requests needed for device enumeration, and it also provides an
+implementation example of a HID class device.  The firmware is intended to
+emulate a basic USB mouse device, although it is intended to be readily
+modified for developing other types of non-mouse HID class USB devices.  </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>When using this firmware, Windows should not prompt the user
+for any kind of driver or .INF files.  The HID driver is provided with the
+operating system, so no additional files are needed.  Several different types
+of operating systems, including modern Macintosh and Linux® operating systems
+have built in HID drivers.  Neither the USB hardware on the PIC®
+microcontroller, nor the firmware used is platform specific.  The mouse in a
+circle demo may be used on these other platforms in addition to Windows.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>This project serves as the basis for the PIC18F87J50_FS_USB_PIM_MouseDemo_2007_08.hex
+firmware which comes pre-programmed on the PIC18F87J50 FS USB Plug-In Module
+demo board.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Note: When using this firmware, the mouse cursor movement
+can be stopped by pressing the “S4” pushbutton on the PIC18F87J50 FS USB
+Plug-In Module.  When the firmware is used with the PICDEM FS USB Demo Board,
+the mouse can be stopped by pressing pushbutton “S2”.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h2 style='margin-left:27.0pt;text-indent:-27.0pt'><a name="_Toc175736804"></a><a
+name="_USB_Tools/Code_for_the PC"></a><span style='font-size:10.0pt'>3.3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span>USB
+Tools/Code for the PC</h2>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h3><a name="_Toc175736805"></a><a name="_Microchip_General_Purpose_(Custom C"></a>Microchip
+General Purpose (Custom Class) USB Driver</h3>
+
+<p class=MsoNormal><b>See:</b> “C:\MCHPFSUSB\Pc\MCHPUSB Driver”</p>
+
+<p class=MsoNormal>Microchip provides a general purpose Windows driver which
+can be used by Windows applications to interface with a custom class USB
+device.  This driver will not be necessary in many USB applications, such as
+USB HID class devices, which would normally use built in HID class drivers
+which distribute with the OS.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>For USB applications that do not readily fit within the
+constraints of these other device class options, Microchip’s general purpose
+driver may be used.  Windows applications can access USB devices either by
+directly interfacing with the driver (mchpusb.sys), or they may indirectly use
+the driver through a pre-compiled library.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>The custom class firmware examples (“Demo” and “Boot”) are
+intended to be used with the general purpose USB driver.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>After installation, the release notes for the general
+purpose USB driver are located at: “C:\MCHPFSUSB\Pc\MCHPUSB Driver\MCHPUSB
+Driver Release Notes.htm”</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h3><a name="_Toc175736806"></a><a name="_MPUSBAPI_Library_and_DLL Source"></a>MPUSBAPI
+Library and DLL Source</h3>
+
+<p class=MsoNormal><b>See:</b> “C:\MCHPFSUSB\Pc\Mpusbapi”</p>
+
+<p class=MsoNormal>A custom class Windows application using the Microchip
+General Purpose USB driver may interface directly with the driver (mchpusb.sys
+file).  Doing so directly requires more effort and more time to learn than
+using a pre-compiled library that exposes a simple to use API including basic
+functions like open(), read(), write(), and close().</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>The MPUSBAPI.DLL file is a library which provides a number
+of functions including the basic ones needed for reading and writing to a USB
+device.  A list of the functions available, and the calling conventions for
+those functions is currently documented in the form of inline comments in the
+source code for the DLL file.  The DLL is compiled using Borland® C++ Builder™
+6 development environment, and the source code is provided in the “C:\MCHPFSUSB\Pc\Mpusbapi\Dll\Borland_C\Source”
+directory.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>A load time linking and a run time linking example showing
+how to use the DLL are included in the “C:\MCHPFSUSB\Pc\Mpusbapi\Example
+Applications” directory.</p>
+
+<h2>&nbsp;</h2>
+
+<h3><a name="_Toc175736807"></a><a name="_PICDEM_FS_USB_Demo Tool “Pdfsusb”"></a>PICDEM
+FS USB Demo Tool “Pdfsusb”</h3>
+
+<p class=MsoNormal><b>See:</b> “C:\MCHPFSUSB\Pc\Pdfsusb”</p>
+
+<p class=MsoNormal>The firmware which comes pre-programmed on the PICDEM FS USB
+Demo Board (picdemfsusb.hex) demonstrates basic USB communication with a
+Windows GUI based application.  The firmware is intended to be used in
+conjunction with the “PICDEM FS USB Demo Tool” which can be launched by
+executing the PDFSUSB.exe file.  The features and use of this application are
+described in the PICDEM FS USB Demonstration Board User’s Guide (DS51526).  </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>This application was originally intended to be used with the
+PICDEM FS USB Demo Board, but it can be used with the PIC18F87J50 FS USB
+Plug-In Module as well.  The demo tool makes use of hardware features, such as
+a temperature sensor and potentiometer which are not found on the Plug-In
+Module.  In order to use the demo tool with this device, the Plug-In Module
+should be used while it is plugged into the HPC Explorer board.  The HPC
+Explorer board has the needed potentiometer, temperature sensor, and additional
+LEDs.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>In order to use the PICDEM FS USB Demo Tool with the
+PIC18F87J50 FS USB Plug-In Module, the board will need to be programmed with
+the code generated by the “C:\MCHPFSUSB\fw\Demo” project when it is configured
+for the PIC18F87J50.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h1 style='margin-left:.25in;text-indent:-.25in'><a name="_Toc175988958"></a><a
+name="_Toc175736814"></a><a name="_Toc163987711">4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span>Known </a>Limitations</h1>
+
+<h2><a name="_Toc175736815">Operating System Issues</a></h2>
+
+<p class=MsoNormal>The General Purpose USB driver, mchpusb.sys, does not
+currently support 64-bit operating systems or Windows Vista.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>On some computers, you may need administrative access in
+order to install USB drivers on your PC.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>The CDC RS-232 emulation example does not currently work
+with Windows Vista 64-bit.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h1 style='margin-left:.25in;text-indent:-.25in'><a name="_Toc175988959"></a><a
+name="_Toc175736813">5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span>USB Compliance Test ID (TID) Information</a></h1>
+
+<p class=MsoNormal>When getting a USB peripheral officially compliance tested,
+a peripheral checklist must be filled out and submitted to the USB-IF.  These
+checklists are provided by the USB-IF.  On the peripheral checklist, one of the
+requested items is the TID number associated with the USB silicon used in the
+device.  Test ID numbers can be found at the USB Design Center:</p>
+
+<p class=MsoNormal><a href="http://www.microchip.com/usb">http://www.microchip.com/usb</a></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h1 style='margin-left:.25in;text-indent:-.25in'><a name="_Toc175988960">6.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Alternative
+Software Solutions</a></h1>
+
+<p class=MsoNormal>There are many third party software solutions available in
+designing your USB application.  A few examples are listed below:</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>SnoopyPro (software based USB traffic logger)</p>
+
+<p class=MsoNormal>            - <a
+href="http://sourceforge.net/projects/usbsnoop/">http://sourceforge.net/projects/usbsnoop/</a></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>HIDmaker <i><span style='color:red'>FS</span></i> (example
+USB firmware/software generator)</p>
+
+<p class=MsoNormal style='text-indent:.5in'>- <a
+href="http://www.tracesystemsinc.com/usb_tools.ivnu">http://www.tracesystemsinc.com/usb_tools.ivnu</a></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>USB Software Solutions from Jungo® (assorted USB tools and
+driver generator)</p>
+
+<p class=MsoNormal>            - <a href="http://www.jungo.com/products_st.html">http://www.jungo.com/products_st.html</a></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h1 style='margin-left:.25in;text-indent:-.25in'><a name="_Toc175988961"></a><a
+name="_Toc175736808"></a><a name="_Ref118886796"></a><a name="_Toc163987703"></a><a
+name="PC_Operating_System_Support_List"></a><a name="_Toc163987704"></a><a
+name="Reference_Documents"></a>7.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span>Online Reference Documents&nbsp;</h1>
+
+<p class=MsoNormal><b>Note:</b> Links provided below point to the latest
+version of the documents to date. Please check <a
+href="http://www.microchip.com/">www.microchip.com</a> for the latest version.</p>
+
+<h2><a name="_Toc175736809">Demo Board User’s Guides</a></h2>
+
+<p class=MsoNormal><a
+href="http://ww1.microchip.com/downloads/en/DeviceDoc/51526a.pdf">PICDEM™ FS
+USB Demonstration Board User’s Guide – 51526a</a></p>
+
+<p class=MsoNormal><a
+href="http://ww1.microchip.com/downloads/en/DeviceDoc/51678a.pdf">PIC18F87J50
+FS USB Plug-In Module User’s Guide – 51678a</a></p>
+
+<h2><a name="_Toc175736810">Device Family Data Sheets</a></h2>
+
+<p class=MsoNormal><a
+href="http://ww1.microchip.com/downloads/en/DeviceDoc/39775b.pdf">PIC18F87J50
+Family Data Sheet – 39775b</a> (or link to product page <a
+href="http://www.microchip.com/stellent/idcplg?IdcService=SS_GET_PAGE&amp;nodeId=1335&amp;dDocName=en027172">here</a>)</p>
+
+<p class=MsoNormal><a
+href="http://ww1.microchip.com/downloads/en/DeviceDoc/39760c.pdf">PIC18F4450
+Family Data Sheet – 39760c</a> (or link to product page <a
+href="http://www.microchip.com/stellent/idcplg?IdcService=SS_GET_PAGE&amp;nodeId=1335&amp;dDocName=en023498">here</a>)</p>
+
+<p class=MsoNormal><a
+href="http://ww1.microchip.com/downloads/en/DeviceDoc/39632d.pdf">PIC18F4550
+Family Data Sheet – 39632d</a> (or link to product page <a
+href="http://www.microchip.com/stellent/idcplg?IdcService=SS_GET_PAGE&amp;nodeId=1335&amp;dDocName=en010300">here</a>)</p>
+
+<p class=MsoNormal><a
+href="http://ww1.microchip.com/downloads/en/DeviceDoc/39887b.pdf">PIC18F4553
+Family Data Sheet – 39887b</a> (or link to product page <a
+href="http://www.microchip.com/stellent/idcplg?IdcService=SS_GET_PAGE&amp;nodeId=1335&amp;dDocName=en530214">here</a>)</p>
+
+<h2><a name="_Toc175736811">Application Notes</a></h2>
+
+<p class=MsoNormal><a
+href="http://ww1.microchip.com/downloads/en/AppNotes/00950b.pdf">AN950 – Power
+Management for PIC18 USB Microcontrollers with nanoWatt Technology</a></p>
+
+<p class=MsoNormal><a
+href="http://ww1.microchip.com/downloads/en/AppNotes/00956b.pdf">AN956 –
+Migrating Applications to USB from RS-232 UART with Minimal Impact on PC
+Software</a></p>
+
+<p class=MsoNormal><a href="http://www.microchip.com/msd">AN1003 – USB Mass
+Storage Device Using a PIC® MCU</a></p>
+
+<h2><a name="_Toc175736812"></a>USB Design Center</h2>
+
+<p class=MsoNormal><a href="http://www.microchip.com/usb">http://www.microchip.com/usb</a></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><a name="_Toc163987709"></a><a name="_Ref118886844"></a><a
+name="Known_Problems"></a><a name="_Ref118886852"></a><a name="_Toc163987710"></a>&nbsp;</p>
+
+<h1 style='margin-left:.25in;text-indent:-.25in'><a name="_Toc175988962"></a><a
+name="_Toc175736816"></a><a name="_Toc163987714">8.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span>Customer Support</a></h1>
+
+<h2><a name="_Toc175736817">The Microchip Web Site</a></h2>
+
+<p class=MsoNormal>Microchip provides online support via our web site at <a
+href="http://www.microchip.com/">http://www.microchip.com</a>. This web site is
+used as a means to make files and information easily available to customers.
+Accessible by using your favorite Internet browser, the web site contains the
+following information:</p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal>Product Support - Data sheets and errata, application
+     notes and sample programs, design resources, user's guides and hardware
+     support documents, latest software releases and archived software</li>
+ <li class=MsoNormal>General Technical Support - Frequently Asked Questions
+     (FAQs), technical support requests, online discussion groups/forums (<a
+     href="http://forum.microchip.com/">http://forum.microchip.com</a>),
+     Microchip consultant program member listing</li>
+ <li class=MsoNormal>Business of Microchip - Product selector and ordering
+     guides, latest Microchip press releases, listing of seminars and events,
+     listings of Microchip sales offices, distributors and factory
+     representatives</li>
+</ul>
+
+<h2><a name="_Toc175736818">Development Systems Customer Change Notification
+Service</a></h2>
+
+<p class=MsoNormal>Microchip's customer notification service helps keep
+customers current on Microchip products. Subscribers will receive e-mail
+notification whenever there are changes, updates, revisions or errata related
+to a specified product family or development tool of interest.</p>
+
+<p class=MsoNormal>To register, access the Microchip web site at
+www.microchip.com, click on Customer Change Notification and follow the
+registration instructions.</p>
+
+<h2><a name="_Toc175736819">Additional Support</a></h2>
+
+<p class=MsoNormal>Users of Microchip products can receive assistance through
+several channels:</p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal>Distributor or Representative</li>
+ <li class=MsoNormal>Local Sales Office</li>
+ <li class=MsoNormal>Field Application Engineer (FAE)</li>
+ <li class=MsoNormal>Technical Support</li>
+</ul>
+
+<p class=MsoNormal>Customers should contact their distributor, representative
+or field application engineer (FAE) for support. Local sales offices are also
+available to help customers. A listing of sales offices and locations is
+available on our website.</p>
+
+<p class=MsoNormal>Technical support is available through the web site at: <a
+href="http://support.microchip.com/">http://support.microchip.com</a><a
+name="_Toc163987715"></a><a name="License_Agreements"></a></p>
+
+<h2><a name="_Toc175736820">Training</a></h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal>Regional Training Centers: <a
+     href="http://www.microchip.com/rtc">http://www.microchip.com/rtc</a></li>
+ <li class=MsoNormal>MASTERs Conference: <a
+     href="http://www.microchip.com/masters">http://www.microchip.com/masters</a></li>
+ <li class=MsoNormal>Webseminars: <a
+     href="http://techtrain.microchip.com/webseminars/QuickList.aspx">http://techtrain.microchip.com/webseminars/QuickList.aspx</a></li>
+</ul>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h2><span style='font-size:10.0pt;font-style:normal'>Trademarks:</span></h2>
+
+<p class=MsoNormal><i><span style='font-size:8.0pt;color:black'>The Microchip
+name and logo, the Microchip logo, MPLAB, and PIC are registered trademarks of
+Microchip Technology Incorporated in the U.S.A. and other countries.</span></i></p>
+
+<p class=MsoNormal><i><span style='font-size:8.0pt;color:black'>PICDEM is a
+trademark of Microchip Technology Incorporated in the U.S.A. and other countries.</span></i></p>
+
+<p class=MsoNormal><i><span style='font-size:8.0pt;color:black'>Microsoft,
+Windows, and Windows Vista are either registered trademarks or trademarks of
+Microsoft Corporation in the United States and/or other countries.</span></i></p>
+
+<p class=MsoNormal><i><span style='font-size:8.0pt;color:black'>Borland, and
+C++ Builder are trademarks or registered trademarks of Borland Software
+Corporation in the United States and other countries.</span></i></p>
+
+<p class=MsoNormal><i><span style='font-size:8.0pt;color:black'>Linux is the
+registered trademark of Linus Torvalds in the U.S. and other countries.</span></i></p>
+
+</div>
+
+</body>
+
+</html>

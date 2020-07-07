@@ -1,0 +1,56 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  5323_project
+* Top Cell Name: PG_buffer
+* View Name:     schematic
+* Netlisted on:  Dec  9 00:06:20 2016
+************************************************************************
+
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+*.GLOBAL VDD!
++        GND!
+
+*.PIN VDD!
+*+    GND!
+
+************************************************************************
+* Library Name: 5323_project
+* Cell Name:    inv
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT inv A Y
+*.PININFO A:I Y:O
+MM0 Y A GND! GND! NMOS_VTL W=100n L=50n
+MM1 Y A VDD! VDD! PMOS_VTL W=200n L=50n
+.ENDS
+
+************************************************************************
+* Library Name: 5323_project
+* Cell Name:    buffer
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT buffer A Y
+*.PININFO A:I Y:O
+XI1 net5 Y / inv
+XI0 A net5 / inv
+.ENDS
+
+************************************************************************
+* Library Name: 5323_project
+* Cell Name:    PG_buffer
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT PG_buffer Gi Go Pi Po
+*.PININFO Gi:I Pi:I Go:O Po:O
+XI3 Pi Po / buffer
+XI2 Gi Go / buffer
+.ENDS
+

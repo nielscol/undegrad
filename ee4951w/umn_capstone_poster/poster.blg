@@ -1,0 +1,9 @@
+[0] Config.pm:304> INFO - This is Biber 2.14 (beta)
+[0] Config.pm:307> INFO - Logfile is 'poster.blg'
+[63] biber:322> INFO - === Tue Jul  7, 2020, 14:36:06
+[75] Biber.pm:415> INFO - Reading 'poster.bcf'
+[129] Biber.pm:943> INFO - Found 0 citekeys in bib section 0
+[134] Utils.pm:293> WARN - The file 'poster.bcf' does not contain any citations!
+[140] bbl.pm:652> INFO - Writing 'poster.bbl' with encoding 'UTF-8'
+[141] bbl.pm:755> INFO - Output to poster.bbl
+[141] Biber.pm:128> INFO - WARNINGS: 1

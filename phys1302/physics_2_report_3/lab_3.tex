@@ -1,0 +1,177 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{authblk}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=0.8in,right=0.8in,top=0.8in,bottom=0.8in]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{adforn}
+\usepackage{circuitikz}
+\usepackage{subcaption}
+
+\newcommand{\mymeter}[2]{   	% #1 = name , #2 = rotation angle
+ \begin{scope}[transform shape,rotate=#2]
+   \draw[thick] (#1)node(){$\mathbf V$} circle (11pt);
+   \draw[rotate=45,-latex] (#1)  +(-17pt,0) --+(17pt,0);
+ \end{scope}
+}
+
+\begin{document}
+\title{Lab IV, Problem V: Circuits \\With Two Capacitors}
+\author{\adforn{21}\\\vspace{12pt}Cole \textsc{Nielsen}}
+\date{}
+\affil[]{Physic 1302W \vspace{6pt} TA: Santosh Adhikari}
+
+\maketitle
+\vspace{-12pt}\hrule
+\begin{abstract}
+\hspace{-16.5pt}Multiple arrangements of a RC (resistor-capacitor) circuit was tested in order to determine the time taken for the capacitors in each to charge to a certain level. In each circuit the current flow was limited by a resistor. A equation for the capacitive charging of a RC in terms of current dependent exponentially on time was found as a prediction. This equation is shown below, with V being the supply voltage, R being the equivalent of resistance and C the capacitance of the tested circuit: \\
+\begin{equation}
+i(t)= \frac{V}{R}e^{\frac{-t}{RC}}
+\end{equation}
+This exponential nature of the test RC charging circuit was confirmed by data agreement, particularly using line fitting, which yielded an exponential function fit with a minimum coefficient of determination of 0.9958. The high value of $R^2$ suggests the prediction to be correct.
+\end{abstract}
+
+\hrulefill
+\section*{Introduction}
+A scenario involving the circuit shown in \textit{Figure 1} was tested. In this scenario, a resistor connected in series with an initially discharged capacitor was connected to a power supply set to provided a constant voltage. A current $i$ then would flow though the circuit, causing the capacitor to charge. The circuit given in \textit{Figure 1} takes too long to charge to a satisfactory level, so it has been resolved 
+\begin{center}
+ \title{\textbf{Figure 1.} RC Circuit I.}\\\vspace{6pt}
+ \begin{circuitikz}[american voltages]
+   \draw
+   (0,0) to[battery, l= 11 V] (0,4)
+         to[closing switch, i^>=$i$] (3,4)
+         to[resistor, l=22 $\Omega$, v_<=$V_R$] (3,2)
+         to [capacitor, l= 210 mF, v_<=$V_C$] (3,0)
+         to (0,0);
+ \end{circuitikz}
+\end{center}
+to shorten the time for the circuit to charge by adding an additional capacitor of the same size. The two alternate circuits considered containing an extra capacitor are shown below in \textit{Figure 2} and 
+\textit{Figure 3}. The effect of changing the capacitance on the time taken to charge the capacitor is unknown, therefore this experiment seeks to determine the time dependence of an RC charging circuit on the circuit's configuration. From this, it can be determined how to shorten the charge time.
+
+\begin{figure}[htb!]
+ \begin{subfigure}[t]{0.45\textwidth}
+   \caption*{\hspace{-40pt}\textbf{Figure 2.} RC Circuit II}
+ \begin{circuitikz}[ scale=1.0, american voltages]\draw
+   (0,0) to[battery, l= 11 V] (0,4)
+         to[closing switch] (3,4)
+         to[capacitor, l=210 mF] (3,2.75)
+         to[resistor, l=22 $\Omega$] (3,1.25)
+         to [capacitor, l= 210 mF] (3,0)
+         to (0,0);
+ \end{circuitikz}
+ \end{subfigure}
+ \begin{subfigure}[t]{0.45\textwidth}
+ \caption*{\hspace{40pt}\textbf{Figure 3.} RC Circuit III}
+ \begin{circuitikz}[ scale=1.0, american voltages]\draw
+   (3,4) to [short] (6,4) 
+   (0,0) to[battery, l= 11 V] (0,4)
+         to[closing switch] (3,4)
+         to [capacitor, *-*, l= 210 mF] (3,0)
+   (6,4) to [capacitor, l= 210 mF] (6,0)      
+         to (3,0)
+         to [resistor, l = 22 $\Omega$] (0,0);
+ \end{circuitikz}
+ \end{subfigure}
+ \end{figure}
+ \vspace{-12pt}
+\section*{Prediction}
+To calculate the current of the circuit given in in \textit{Figure 1} as a function of time, Kirchoff's voltage rule around the circuit's loop must be found. This is given as follows, where $V_S$ is the voltage across the power supply, $V_R$ is the voltage across the resistor and $V_C$ is the voltage across the capacitor:
+\begin{equation}
+-V_S + V_R + V_C = 0
+\end{equation} 
+It is known using Ohms law that the voltage across a resistor is $V_R = IR$, the voltage across a capacitor is $V_C = \frac{q}{C}$ and the voltage across the power supply is a constant. This can be substituted into \textit{Equation 2}:
+\begin{equation}
+-V_S + IR + \frac{q}{C} = 0
+\end{equation}
+To solve for current as a function of time, current must be the only variable. Since the time derivative of charge is current, differentiating the above equation would yield a new equation containing I as the only variable.
+\begin{equation}
+\frac{d}{dt}(-V_S + IR + \frac{q}{C}) = \frac{d}{dt}(0)\hspace{12pt} \longrightarrow\hspace{12pt} R\frac{dI}{dt} + \frac{1}{C}I = 0
+\end{equation}
+This new equation is a differential equation that can be rearranged and solved using separation of variables:
+\begin{equation}
+\frac{1}{I}dI = \frac{-1}{RC}dt\hspace{12pt}\longrightarrow\hspace{12pt} \int\frac{1}{I}dI = \int\frac{-1}{RC}dt + k \hspace{12pt}\longrightarrow\hspace{12pt} \ln(I)= \frac{-t}{RC} + k
+\end{equation}
+Exponential both sides to the power of $e$:
+\begin{equation}
+e^{\ln(I)} = e^{\frac{-t}{RC} + k}\hspace{12pt} \longrightarrow\hspace{12pt} I(t) = e^ke^{\frac{-t}{RC}} = Ae^{\frac{-t}{RC}}
+\end{equation}
+\pagebreak
+The constant A represents the initial current when the battery is first attached. Since the capacitor is initially discharged and accordingly has no voltage drop across its terminals, all the voltage is dropped by the resistor. Using ohms law, it is found that $A=I_0 = \frac{V_S}{R}$. Substituting this into the equation gives the general solution for current of a capacitor charging:
+\begin{equation}
+I(t) = \frac{V_S}{R}e^{\frac{-t}{RC}}
+\end{equation}
+It should be observed that this function is an exponential decay function that at time zero starts at some $I_0$ decreases to zero current as time approaches $+\infty$. The behavior of this function is shown below in \textit{Figure 4} using the initial conditions C = 210 mF, R = 22 $\Omega$ and $V_S$ = 11V, which are the parameters used experimentally for Circuit I.
+\begin{center}
+		\title{\textbf{Figure 4}. RC Circuit Charging.}\\
+    	\resizebox{0.6\textwidth}{!}{\input{./data/rcI.tex}}
+\end{center}
+To determine how to decrease the charge time by adding another capacitor of the same size of the original capacitor, the equivalent capacitance of each circuit being tested (\textit{Figure 2} and \textit{Figure 3}) must be determined. Then each capacitance can be plugged into \textit{Equation 7}) to show the current as a function of time. From there the equation for each scenario can be compared. To begin, circuit II given in \textit{Figure 2} is the same as the original circuit with the capacitor being represented by to capacitors in series. The equivalent capacitance of the two capacitors can be determined simply by using the series capacitor equation. Since the capacitors are equal, the equivalent capacitance of the two is found to be $\frac{C}{2}$. Substituting this into \textit{Equation 7} gives:
+\begin{equation}
+I_{II}(t) = \frac{V_S}{R}e^{\frac{-2t}{RC}}
+\end{equation}
+The same can be done for circuit III given in \textit{Figure 3}. This circuit is also the same as the original, but this time the capacitor is made of two parallel capacitors. The equivalent capacitance can simply be found as the sum of the two capacitances, which is 2C. Substituting this into \textit{Equation 7} gives:
+\begin{equation}
+I_{III}(t) = \frac{V_S}{R}e^{\frac{-t}{2RC}}
+\end{equation}
+Mathematically the fastest circuit to charge can be inferred by looking at the exponential of each equation. A higher magnitude of the number multiplied by $t$ in the exponential is expected to cause the function to decay faster, meaning it charges faster. Inspecting the equations for the three circuits shows that the decay equation for the series circuit has the largest exponent, which indicates it will charge fastest. The single capacitor is the next largest, making it second fastest to charge, and the parallel configuration is the smallest, indicating it to be the slowest charging. This prediction is confirmed in the plot below in \textit{Figure 5}, which shows the current through each circuit as a function of time. The thin line is the single capacitor circuit, the dotted line is the series capacitor circuit and the thick line is the parallel capacitor circuit. The values used in the circuits were 210 mF for C, 22 $\Omega$ for R and 11 volts for V, which matches the conditions used experimentally. 
+\begin{center}
+		\title{\textbf{Figure 5}. RC Circuit Charging.}\\
+    	\resizebox{0.6\textwidth}{!}{\input{./data/rcall.tex}}
+\end{center}
+It is apparent from the above plot that the dotted line, representing the series capacitor circuit, decays fastedt and consequently charges quickest. The next fastest is the thin line, representing the single capacitor, followed by the thick line curve representing the parallel capacitor configuration. This matches the previous prediction.
+\section*{Procedure}
+The circuit shown in \textit{Figure 1} was assembled using a 210 mF capacitor, 22 $\Omega$ resistor and with a power supply set to 11 volts. The capacitor was then shorted with a set of leads. The circuit was then closed by connecting the open terminal of the resistor to the terminal of the power supply. At this moment a timer was started. The current readout of the power supply was then monitored, and the time that the current crossed 0.4 A, 0.3 A, 0.2 A and 0.1 A was recorded by using the lap function of the timer. This process was repeated two more times for this configuration. Next, the series capacitor circuit shown in \textit{Figure 2} was assembled, and the capacitors shorted. The same timing procedure was performed on this circuit three times as the single capacitor circuit. Finally, the parallel capacitor configured circuit of \textit{Figure 3} was constructed. The capacitors were shorted and the same three trial timing process was again repeated.
+\pagebreak
+\section*{Data}
+Below is the data for each circuit configuration containing a plot with the data points and a line of best fit. The equation for the line of best fit is given below each plot.\vspace{-12pt}
+\subsubsection*{Circuit I: Single Capacitor}
+\begin{center}
+		\title{\textbf{Figure 6}. RC Circuit Charging.}\\
+    	\resizebox{0.5\textwidth}{!}{\input{./data/210.tex}}\\
+    	\small$I(t)= 0.4884e^{-0.1293t}$ \hspace{24pt}$R^2 = 0.9968$
+\end{center}
+\vspace{-12pt}
+\subsubsection*{Circuit II: Series Capacitors}
+\begin{center}
+		\title{\textbf{Figure 7}. RC Circuit Charging.}\\
+    	\resizebox{0.5\textwidth}{!}{\input{./data/105.tex}}\\
+    	\small$I(t)= 0.5128e^{-0.2944t}$ \hspace{24pt}$R^2 = 0.9990$
+\end{center}
+\vspace{-12pt}
+\subsubsection*{Circuit III: Parallel Capacitors}
+\begin{center}
+		\title{\textbf{Figure 8}. RC Circuit Charging.}\\
+    	\resizebox{0.5\textwidth}{!}{\input{./data/420.tex}}\\
+    	\small$I(t)= 0.4748e^{-0.06478t}$ \hspace{24pt}$R^2 = 0.9958$
+\end{center}
+\section*{Analysis}
+Looking at the plots and associated lines of best fit in the data section, it is apparent that the data is modelled by exponential decay as predicted. The is affirmed by the coefficient of determination ($R^2$) for each line being very close to 1, with the lowest one being 0.9958. This gives provides very high certainty that an exponential is a proper fit for the data. The predicted equation is also confirmed by looking at the leading coefficient of the exponentials. For all the predicted equations, the coefficient was expected to be $\frac{V}{R}=\frac{11}{22}=0.5$. The coefficients for each of the functions were all extremely close to this predicted value, being 0.4884, 0.5128 and 0.4748. This also suggests accuracy of the predicted equation. To further validate the prediction, the predicted data must be numerically compared to the experimental data to see if there is agreement. The easiest way to do this is by comparing the magnitude of the number that is multiplied by t (so $\frac{1}{RC}$) in the exponent of each function. This quantity is the inverse of what is called the RC time constant. The time constant essentially quantifies how fast or slow an exponential function decays or grows, which makes it useful in comparing exponentials. Below is a table containing the predicted inverse RC time constant given each circuit's initial conditions, and the time constant obtained from the experimental lines of best fit.\\\par\noindent
+\title{\textbf{Table 1.} Predicted and Experimental Inverse RC Time Constants}
+\begin{center}
+\renewcommand*{\arraystretch}{1.5}
+\begin{tabular}{|c|c|c|c|}
+\hline 
+ & Circuit I & Circuit II & Circuit III \\ 
+\hline 
+Predicted $t_{RC}^{-1}$& 0.2165 & 0.4329 & 0.1082 \\ 
+\hline 
+Measured $t_{RC}^{-1}$ & 0.1293 & 0.2944 & 0.06478 \\ 
+\hline 
+Error & -40.3\% & -32.0\% & -40.1\% \\ 
+\hline 
+\end{tabular} 
+\end{center}
+As seen in the above table, the experimental values for the inverse RC time constant are consistently low. This discrepancy will be discussed in the following \textit{Error and Uncertainty} section. An important trend to notice is that the prediction for which circuit will charge fastest and slowest was correct. As predicted, Circuit II, the series capacitor circuit, took the shortest time to charge, taking about 5.5 seconds for the current draw to drop to 0.1 A. This is also confirmed by circuit II having the largest magnitude exponential, which supports that it would charge fastest. Looking at the same aspects of the data for Circuit I and III show that Circuit I was the next fastest to charge, and Circuit III was the slowest as predicted. Another trend that confirms the validity of the prediction is the magnitude of the exponents of each circuit's function relative to each other. It was predicted that circuit I would have an exponent of $\frac{-t}{RC}$, circuit II would have $\frac{-2t}{RC}$ and circuit III $\frac{-t}{2RC}$. This implies that the exponent of circuit II is expected to be double that of circuit I, and circuit III is half that of circuit I. From the data in \textit{Table 1}, it can be calculated that the exponent of circuit II is 2.277 times that of circuit I, and circuit III is 0.501 times that of circuit I. These values agree with the prediction, given a level of uncertainty that will be later discussed, which again suggests the the predicted model is correct. The general agreement of the predicted function with the experimental data suggests that the predicted equation is correct, meaning that capacitive charging of a RC circuit is modelled by the predicted exponential function.
+\subsection*{Error and Uncertainty}
+There were several potential sources of uncertainty and error that may explain the results of this experiment. A major source of uncertainty is attributed to the tolerances of the parts used. The resistor had a tolerance of $\pm$ 10\%, which could potentially skew the results by that factor. The tolerance of the capacitor is unknown, however it was determined that the capacitances of the two different capacitors used were different. This was done by testing each capacitor using the configuration of Circuit I and timing how long it took for the current through the circuit took to reach 100 mA. For one capacitor it took 11.66 seconds, and the second 12.81 (the resistor and all other parts didn't change). This timing difference equates to approximately a 10\% difference in capacitance between the capacitors. This may also have skewed the results. Another factor, which would have explained the measured times being consistently slower than the predictions is that there was additional resistance in the system that was not accounted for as only the resistor was assumed to have resistance. In reality, all of the parts used had some internal resistance, including the power supply, cables and capacitor. This increase of resistance would decrease the current flow, making the charge time slower than expected. This seems to explain the discrepancy of the results as all the trials were consistently slow, at being about 40\% slower than expected. A final source of error is due to the process of timing that relied on human timing to obtain the data points. Human response isn't incredibly precise, so there is some expected uncertainty in the results, however to mitigate this several trials were performed, and an uncertainty for each was calculated an used for the experiment. This error source could largely be eliminated by using an oscilloscope or other data acquisition device to record the trials, which would result in extremely precise results that are unachievable by manual methods.
+\section*{Conclusion}
+The charging of a series RC circuit was determined to follow a exponential trend, given by the following function derived in the \textit{Prediction} section:
+\begin{equation}
+I(t) = \frac{V_S}{R}e^{\frac{-t}{RC}}
+\end{equation}
+The time taken to charge was found to be entirely dependent circuit's values for resistance and capacitance. If the resistance is held constant, it was found that an increase in capacitance increased the time taken to charge, and a decrease in capacitance decreased the time taken to charge. Therefore, to decrease the charging time of Circuit I by adding an additional capacitor of the same capacitance, the series configured Circuit II should be used because it has a smaller equivalent capacitance. Experimentally, this was shown to be true, as the series circuit (circuit II) charged fastest, followed by the original one capacitor circuit (circuit I), and the parallel circuit (circuit III) was the slowest.  The exact time taken for the the experimental circuits to charge was found to be approximately 40\% slower than predicted for each circuit, however then exponential trend was still followed perfectly. This discrepancy and its systematic behavior is most likely explained by the uncertainty of the component values, and unaccounted for resistances in the wires, capacitor and power supply that would slow down the charge time as expected. Therefore, with the exponential trend preserved and the timing difference explained by uncertainties, the prediction holds as being valid.
+\end{document}

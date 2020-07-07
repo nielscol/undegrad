@@ -1,0 +1,7 @@
+the powerpoint in this folder is the project report
+
+"PEX_netlist" contains the parasitic netlist of the layout "adder16b.sp", along with the simulation files
+
+the text files in this folder are the LVS and DRC output files
+
+"5323_project" is the library used for the project, "adder" is the top level design.

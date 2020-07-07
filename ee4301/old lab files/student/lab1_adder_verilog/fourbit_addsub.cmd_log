@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "Z:/lab1_adder_verilog/fourbit_addsub.xst" -ofn "Z:/lab1_adder_verilog/fourbit_addsub.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fourbit_addsub.ucf -p xc3s100e-cp132-4 fourbit_addsub.ngc fourbit_addsub.ngd  
+xst -intstyle ise -ifn "Z:/lab1_adder_verilog/fourbit_addsub.xst" -ofn "Z:/lab1_adder_verilog/fourbit_addsub.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim fourbit_addsub.ngc fourbit_addsub_synthesis.v 

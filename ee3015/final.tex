@@ -1,0 +1,232 @@
+% 2015 COLE NIELSEN
+\documentclass[12pt,letterpaper]{article}
+\usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry} %MARGINS
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\setlength{\parindent}{0pt} %NO INDENT
+\usepackage{titlesec}
+\usepackage{placeins}
+\titleformat{\section}{\normalsize\bfseries}{\thesection}{1em}{}
+\titlespacing*{\section}{0pt}{0pt}{0pt}
+\usepackage[font=normalsize,labelfont=bf]{caption}
+\setlength{\parindent}{0pt} %NO INDENT\
+\usepackage{titlesec}
+\usepackage{cancel} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                         FANCYHDR SETTINGS                               %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{fancy}
+%HEADER SETTINGS
+\lhead{\Large Cole \textsc{Nielsen}\\ %DOCUMENT NAME
+\normalsize EE 3015 FINAL} %DOCUMENT DESCRIPTION
+\renewcommand{\headrulewidth}{0.4pt}
+\rhead{}%\includegraphics[width=0.375in,height=0.375in]{logo.png}
+%FOOTER SETTINGS
+\fancyfoot{} % clear all footer fields
+\renewcommand{\footrulewidth}{0.4pt}
+\fancyfoot[LE,CO]{\thepage}
+\fancyfoot[LE,LO]{\leftmark} %DOCUMENT NUMBER
+\fancyfoot[LE,RO]{\today} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                               DOCUMENT                                  %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\section{Problem 1}
+A time pulse of width $\pm$T has a FT being the sinc function $\frac{2 \sin \omega T}{\omega}$:
+\FloatBarrier
+\begin{figure}[h!]
+\begin{center}
+    	\resizebox{0.6\textwidth}{!}{\input{./plots/ft.tex}}
+\end{center}
+\end{figure}
+Using this the FT of  $\delta(t)$ and constants can be understood. Observe that the FT of the 2T-width time pulse results in a large bump centered at 0 (DC) with a width $\pm \frac{\pi}{T}$, and is surrounded by decreasing bumps as $\omega \rightarrow \pm \infty$. $\delta(t)$ is understood as a pulse 0 width, so the FT should have a bump of width  $\pm \frac{\pi}{T} = \pm \frac{\pi}{0} = \pm \infty$, in other word we expect to see a constant value FT for $\delta(t)$. Constants functions are pulses of infinite width, so the FT should be a zero width pulse at $\pm \frac{\pi}{\infty}$ = 0 (DC). Essentially, the FT of DC and $\delta (t)$ are the limits of the FT of a pulse.\\\par
+\section{Problem 2}
+Given $h(t)$, the function for $H(j\omega)$ is found by using the Laplace transform and solving for $\lvert H(\omega) \rvert$:
+\begin{equation}
+h(t) = (e^{-40t}\cos 30t + e^{-40t} \sin 30t)u(t)
+\end{equation}
+\begin{equation}
+\mathcal{L}\{h(t)\} = H(s) = \frac{s+40}{(s+40)^2 + 30^2} + \frac{30}{(s+40)^2 + 30^2} = \frac{s+70}{(s+40)^2 + 30^2}
+\end{equation}
+\begin{equation}
+H(j\omega) = \frac{70+j\omega}{(j\omega +40)^2 + 30^2} = \frac{70+j\omega}{30^2 + 40^2 -\omega^2 + j80\omega} = \frac{70+j\omega}{(50^2 - \omega ^2) + j80\omega}
+\label{eq:hjw}
+\end{equation}
+\begin{equation}
+\lvert H(j\omega)\rvert = \sqrt{\frac{70+j\omega}{(50^2 - \omega ^2) + j80\omega}*\frac{70-j\omega}{(50^2 - \omega ^2) - j80\omega}} 
+\end{equation}
+\begin{equation}
+\Rightarrow \lvert H(\omega)\rvert  = \sqrt{\frac{70^2+\omega^2}{(50^2 - \omega ^2)^2+80^2\omega^2}}
+\end{equation}
+This function was then be plotted using GNUPlot in log scaling to produce a bode plot.
+\FloatBarrier
+\begin{figure}[h!]
+\begin{center}
+    	\resizebox{0.6\textwidth}{!}{\input{./plots/2bb.tex}}
+\end{center}
+\end{figure}
+\FloatBarrier
+Phase response is found by taking $H(j\omega)$ given by equation \ref{eq:hjw} and finding the inverse tangent of the imaginary part divided by real part, solved out it is:
+
+\begin{equation}
+\sphericalangle H(j\omega)=\tan^-1\bigg[\frac{-\omega^3 - 3100 \omega}{70\times50^2+10\omega^2}\bigg]
+\end{equation}
+Below is the phase Bode diagram produced from $H(j\omega)$:
+\FloatBarrier
+\begin{figure}[h!]
+\begin{center}
+    	\resizebox{0.6\textwidth}{!}{\input{./plots/2p.tex}}
+\end{center}
+\end{figure}
+\pagebreak
+\section{Problem 3}
+To record the data through sampling, we can find the maximum amplitude from the maximal rate of change in the data, as well from the approximate amplitude of the signal. A sinusoidal component of the signal will take the following form:
+\begin{equation}
+q_1(x) = Asin(\omega_1 x)
+\end{equation}
+The rate of change of this sinusoid (slope) will be:
+\begin{equation}
+\frac{dq_1(x)}{dx} = A\omega cos(\omega_1 x)
+\end{equation}
+The maximal rate of change $R_{max}$ of this signal should be $A\omega$.  We can find the max slope and estimate the amplitude of the signal to solve for $\omega_1$, which we can approximated as the highest frequency component if we look for the maximal values for slope. Below is the given figure with peaks marked, as well as data for finding the slope
+\begin{figure}[h!]
+\begin{center}
+ \includegraphics[scale=0.35]{./plots/3.png}
+\end{center}
+\end{figure}
+\FloatBarrier
+We find that the max amplitude of this signal is approximately 0.5(0.85 - 0.2) = 0.325 = $A_{max}$, and the max slope is $\frac{1}{7.4-6.15} =0.80 = R_{max}$. Using $R_{max} = A\omega$, we find the highest frequency to be:
+\begin{equation}
+\omega = \frac{R_{max}}{A} = \frac{0.8}{0.325} = 2.46
+\end{equation}
+We must sample at twice the frequency of the highest frequency component in order to record the signal accurately, so $\omega_{samp}$ = 2$\times$2.46 = 4.92. Therefore, maximal sampling period $X_{max}$ is:
+\begin{equation}
+X_{max} = \frac{2\pi}{\omega_{samp}}=\frac{2\pi}{4.92} = 1.28 \textnormal{ meters}
+\end{equation}
+The max sampling period is 1.3 meters.
+\pagebreak
+\section{Problem 4}
+If any of the delta functions overlap in the Fourier transform, this means that the signal is being undersampled ($\omega_s < 2\omega_{M} $), and thus the original signal can not be recovered by from FT. This is because the signal $x(t)$ has a greater bandwidth than the spacing ($\omega_s$) between the frequencies (0, $\pm\omega_s$, $\pm2\omega_s$...) that the frequency domain "image" of the original signal is duplicated and centered at, so overlapping (superimposing) of those images (impulses) will occur. This means the frequency representation of the original signal will be corrupted, and the original signal is not deducible from it.\\\par
+\section{Problem 5}
+\begin{equation}
+c(t) = 5e(t) + 4\int_0^te(\tau)d\tau
+\label{eq:ct}
+\end{equation}
+\section*{a)}
+If c(t) is the control signal, e(t) is the error signal, G(s) is expected to relate as follows:
+\begin{equation}
+C(s) = G(s)E(s) \hspace{6pt}\Rightarrow \hspace{6pt}G(s) = \frac{C(s)}{E(s)}
+\end{equation}
+If we take equation \ref{eq:ct} and compute the Laplace transform:
+\begin{equation}
+\mathcal{L}\{c(t)\} = C(s) = 5E(s) + \frac{4}{s}E(s)
+\end{equation}
+Now we find $\frac{C(s)}{E(s)}$
+\begin{equation}
+C(s) = E(s)\bigg[5 + \frac{4}{s}\bigg] \hspace{6pt}\Rightarrow \hspace{6pt} \frac{C(s)}{E(s)} = G(s) = 5 + \frac{4}{s}
+\end{equation}
+Therefore $G(s) =  5 + \frac{4}{s}$\\
+\section*{b)}
+If $ e(t) = 2e^{-4t}$, assuming for t $\geq$ 0 we find $E(s) = \frac{2}{s+4}$. We can solve for $C(s)$ in the Laplace domain easily:
+\begin{equation}
+C(s) = G(s)E(s) = \frac{2}{s+4}\bigg[5 + \frac{4}{s}\bigg] = \frac{10}{s+4} + \frac{8}{(s+4)s}
+\end{equation}
+Breaking up one of the partial fractions:
+\begin{equation}
+C(s) = \frac{10}{s+4} + \frac{-2}{s+4} + \frac{2}{s} = \frac{8}{s+4} + \frac{2}{s}
+\end{equation}
+Find $c(t)$ using inverse Laplace transform:
+\begin{equation}
+\mathcal{L}^{-1}\{C(s)\} = (8e^{-4t} + 2)u(t)  = c(t)
+\end{equation}
+Therefore $c(t) = (8e^{-4t} + 2)u(t)$ \pagebreak
+\section{Problem 6}
+\section*{a)}
+\underline{Region 1:} poles	on the	unit	circle	correspond	to:\\
+$\Rightarrow$Constant sinusoidal function \\
+\underline{Region 2:} poles on the positive real axis inside the unit circle correspond to:\\ $\Rightarrow$Exponentially decaying functions\\
+\underline{Region 3:} poles on the positive real axis outside the unit circle correspond to:\\ $\Rightarrow$Exponentially growing functions\\
+\underline{Region 4:} pairs of complex poles inside the unit circle correspond to:\\
+$\Rightarrow$Exponentially decaying sinusoidal functions\\
+\underline{Region 5:} pairs of complex poles outside of the unit circle correspond to:\\
+$\Rightarrow$Exponentially growing sinusoidal functions\\
+\underline{Region 6:} poles on the negative real axis inside the unit circle correspond to:\\$\Rightarrow$ Exponentially decaying sinusoidal functions\\
+\underline{Region 7:} poles on the negative real axis outside the unit circle correspond to:\\
+$\Rightarrow$Exponentially growing sinusoidal functions\\
+\section*{b)}
+
+Region A $\Longleftrightarrow$ Region 2\\
+Region B $\Longleftrightarrow$ Region 3\\
+Region C $\Longleftrightarrow$ Region 1\\
+Region D $\Longleftrightarrow$ Region 4 and Region 6\\
+Region E $\Longleftrightarrow$ Region 5 and Region 7\\\par
+\section{Problem 7}
+\section*{a)}
+Simplified $Human(s)$ or $H(s)$:
+\begin{equation}
+H(s) = k e^{-0.250s}\
+\end{equation}
+We can find closed loop gain $Q(s)$ knowing $H(s)$ and $S(s) = \frac{1}{s}$
+\begin{equation}
+Q(s) = \frac{H(s)S(s)}{1 + H(s)S(s)} = \frac{\frac{1}{s}ke^{-0.250s}}{1 +\frac{1}{s}ke^{-0.250s}}
+\end{equation}
+The system is unstable if $\frac{k}{s}> 1$, so we want $\frac{k}{s}= 1$ to be on the edge of stability. That means $k = s$. Therefore
+\begin{equation}
+Q(s) = \frac{e^{-0.250s}}{1 + e^{-0.250s}} = \frac{1}{1+e^{0.250s}}
+\end{equation}
+This is equivalent to a linear feedback system with H(s) being a delay system with a 250 ms delay, and the feedback G(s) = 1. So the time constant would be 250 ms from input to output.
+\section*{b)}
+\begin{equation}
+Q(s) = \frac{e^{-2s}}{1 + e^{-2s}} = \frac{1}{1+e^{2s}}
+\end{equation}
+Calculations are same as before. Time constant is 2 seconds.
+\section{Problem 8}
+The total response $H(s)$ of $G_C(s)$, the 2x and 5x gain and $G_p(s)$ can be calculated as the product of the four. We can easily infer the s-domain functions for each looking at the given plots.
+\begin{figure}[h!]
+\begin{center}
+ \includegraphics[scale=0.4]{./plots/g.png}
+\end{center}
+\end{figure}
+\FloatBarrier
+\begin{figure}[h!]
+\begin{center}
+ \includegraphics[scale=0.4]{./plots/f.png}
+\end{center}
+\end{figure}
+\FloatBarrier
+$G_C(s)$ looks like a single zero filter (because it rises at +20dB per decade after the corner) with a DC gain of -30 dB, or A = $10^{-1.5}$, and the corner frequency occurring at 100 r/s. This gives a $G_C(s)$ of:
+\begin{equation}
+G_C(s)=10^{-1.5}(1+\frac{s}{100})
+\end{equation}
+$G_P(s)$ looks like a second order damped system (decreasing after the corner at -40 dB per decade), with a DC gain of 0 dB, or A = 1, and a corner frequency of 500 r/s found using a straight line approximation. $\zeta \approx 0.4$, based upon figures given in the textbook. This means $G_P(s)$ is:
+\begin{equation}
+G_P(s) =\frac{1}{\big(\frac{s}{\omega_n}\big)^2+2\zeta\big(\frac{s}{\omega_n}\big)+1} =\frac{1}{\big(\frac{s}{500}\big)^2+0.8\big(\frac{s}{500}\big)+1}
+\end{equation}
+Therefore $H(s)$ is the product of these responses:
+\begin{equation}
+H(s) = \frac{10* 10^{-1.5}(1+\frac{s}{100})}{\big(\frac{s}{500}\big)^2+0.8\big(\frac{s}{500}\big)+1}= \frac{10^{-0.5}(1+\frac{s}{100})}{\big(\frac{s}{500}\big)^2+0.8\big(\frac{s}{500}\big)+1}
+\end{equation}
+The closed loop transfer function of the system is:
+\begin{equation}
+Q(s) = \frac{H(s)}{1+H(s)} = \frac{\frac{10^{-0.5}(1+\frac{s}{100})}{\big(\frac{s}{500}\big)^2+0.8\big(\frac{s}{500}\big)+1}}{1 + \frac{10^{-0.5}(1+\frac{s}{100})}{\big(\frac{s}{500}\big)^2+0.8\big(\frac{s}{500}\big)+1}} = \frac{10^{-0.5}(1+\frac{s}{100})}{10^{-0.5}(1+\frac{s}{100}) + \big(\frac{s}{500}\big)^2+0.8\big(\frac{s}{500}\big)+1}
+\end{equation}
+%From $Q(s)$ we can find $\lvert Q(\omega) \rvert$ to figure out the bandwidth:
+%\begin{equation}
+%\lvert Q(\omega) \rvert = \sqrt{\frac{10^{-5}\omega^2 + 10^{-10}}{\big(1 + 10^{-5} - %\frac{\omega^2}{500^2}\big)^2+\omega^2\big(\frac{0.8}{500}+10^{-2.5}\big)^2}}
+%\end{equation}
+Here is the Bode diagram of this closed loop response from Wolfram:
+\begin{figure}[h!]
+\begin{center}
+ \includegraphics[scale=0.4]{./plots/s.png}
+\end{center}
+\end{figure}
+\FloatBarrier
+The Maxima of the transfer function is at 500 r/s, with a gain of -3.56 dB, and the DC gain is -12.39 dB. The bandwidth of this system can be classified in two ways, one viewing it as a low pass filter and considering the cutoff/bandwidth to be -3 dB from the DC value, and the second seeing it as a sort of band pass filter and the bandwidth being the difference between the two -3dB points relative to the peak. The low pass filter bandwidth was found to be 4.58 kHz (AKA $\omega_{cutoff}$ using the Bode plot) at -3 dB from the DC gain. The Band pass bandwidth was found to be 1.12 - 0.200 = 0.92 kHz.\\\par
+
+Therefore, the "Lowpass" bandwidth is 4.58 kHz and the "Bandpass" bandwidth is 0.92 kHz.
+\end{document}

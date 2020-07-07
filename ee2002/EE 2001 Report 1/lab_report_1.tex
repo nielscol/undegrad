@@ -1,0 +1,330 @@
+% Cole Nielsen niels538@umn.edu
+% EE 2002 Spring 2015
+% Formal Lab Report 1
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[12pt]{article}
+
+\usepackage{circuitikz}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage[top=1in, bottom= 1in, left=1in, right= 1in]{geometry}
+\setlength\parindent{0pt}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title{Experiment 4: I-V Curves  \\ and Load Lines \\ \vspace{0.3 in} EE 2002}
+
+\author{Cole \textsc{Nielsen}} 
+\date{Spring 2015}
+
+\newcommand{\mymeter}[2]{   	% #1 = name , #2 = rotation angle
+ \begin{scope}[transform shape,rotate=#2]
+   \draw[thick] (#1)node(){$\mathbf V$} circle (11pt);
+   \draw[rotate=45,-latex] (#1)  +(-17pt,0) --+(17pt,0);
+ \end{scope}
+}
+
+\begin{document}
+\maketitle 
+
+\begin{center}
+ \begin{tabular}{l r}
+   Date Performed: & March 2, 2015 \\ 
+   Instructor: & Rebecca Culp \\ 
+\end{tabular}
+\end{center}
+\pagebreak
+
+%----------------------------------------------------------------------------------------
+%	Abstract
+%----------------------------------------------------------------------------------------
+\begin{abstract}
+Load line and diode models were used to analyze and design several non-linear circuits. In particular, the I-V curve of an incandescent light bulb was found experimentally, showing a non-linear nature. Then using load lines, the current through the bulb was successfully predicted when connected to a resistor. The behavior of a diode connected a resistor and signal generator was also observed. In particular, it was determined that a diode conducts when a potential of 0.7 volts or more is present across the diode from anode to cathode (otherwise it behaves as an open circuit). It was also determined that the voltage dropped across a diode is generally 0.7 volts. Finally, several voltage clipper circuits were successfully designed to cut off a signal at different levels understanding the behavior of diodes. These results provide valuable insight into the design of non-linear and voltage clipping circuits.
+\end{abstract}
+
+%----------------------------------------------------------------------------------------
+%	Introduction
+%----------------------------------------------------------------------------------------
+\section{Introduction}
+%
+I-V curves, load lines and diode models are powerful tools that are used to design circuits containing non-linear elements such as diodes and incandescent light bulbs. These models allow for effective control of parameters such as operating point and circuit response in non-linear circuits. I-V curves (current-voltage curves) are graphical representations used to show the relationship between the current running through a circuit element and the voltage across it. A typical I-V curve is that of a diode shown below. Diodes in the simplest sense are devices that only conduct current in one direction. They are constructed out of semiconductors- typically silicon- that are doped (have impurities added) in order to change the characteristics of the material. Diodes are built from two layers of semiconductors doped such that one layer has an excess of electrons relative to the other. This causes it so that currents will only flow through the diode in the direction that moves electrons from the layer with an excess of electrons to the other. \par 
+
+\begin {figure}[htb!]
+ \begin{center}
+   \resizebox{0.6\textwidth}{!}{\input{./data_plots/diode_iv.tex}}
+ \end{center}
+\end {figure}
+
+As seen above in the diode I-V curve, a diode conducts essentially zero current (is an open circuit) until it reaches a threshold voltage where the diode begins to conduct as if it is a short. For most diodes like the one in \textit{Figure 1}, this voltage is approximately 0.7 V. The voltage drop with respect to current grows very slowly after 0.7 volts, remaining almost constant. Because of this, the voltage dropped across a conducting diode is usually generalized as 0.7 V. Using a fixed voltage drop model for diodes in circuit analysis greatly simplifies the process by removing the need to use complex exponential functions like the Shockley diode equation. \\\par
+%
+In this experiment an incandescent light bulb's I-V curve was determined. An incandescent light bulb is simply a resistor that is designed to heat up and emit light as current flows through it. Its I-V curve is of particular interest due to its non-linear nature which is unexpected from a resistor. Usually resistor I-V curves are linear, being determined by ohms law (\(V = IR\)). The IV curve of a light bulb changes much more gradually than than that of a diode, making it a good example for load line analysis to determine the operating point of a non-linear circuit. A load line is a graphical method using I-V curves to determine the operating state of a circuit with non-linear elements. The I-V curves of two elements being considered are graphed on the same plot and the intersection of the the curves represents what is called the operating point. The operating point is what voltage and current the circuit will operate at.  Below is an example load line for a Th\'{e}venin equivalent voltage source connected to a diode. The diode's I-V curve is modelled by the Shockley Diode equation, also shown below.\par
+%
+\begin {figure}[htb!]
+ \begin{center}
+   \resizebox{0.6\textwidth}{!}{\input{./data_plots/load_line.tex}}
+ \end{center}
+\end {figure}
+%
+The Shockley Diode equation:
+\begin{equation}
+  I = I_s (e^{\frac{V_d}{nV_T}}-1)
+\end{equation}
+%
+The first part of this experiment is focused on the the use of I-V curves and load lines on an incandescent light bulb. The I-V curve of a light bulb will be determined. The IV curve of the bulb and load lines will then be used to predict the current through the bulb when connected in series to a resistor. This will be verified experimentally. A circuit containing a diode and resistor in series with a function generator will then be built and observed with an oscilloscope. With the original circuit's behavior in mind, it will be modified to only pass negative voltages. Again, the circuit will be modified to then only pass up to 2 V. Finally the circuit will be modified a third time to a pass between -2 and 2 V, and it will be tested with several different waveforms.
+
+%----------------------------------------------------------------------------------------
+%	Experiment
+%----------------------------------------------------------------------------------------
+
+\section{Experiment}
+\subsection*{Part 1}
+The objective of this part of the experiment was to determine the I-V curve of an incandescent light bulb. It was expected that the curve would be linear, modelled by $i = \frac{V}{R}$ (Ohm's Law). This experiment was performed with the below circuit:\par
+
+\begin{center}
+ \title{\textbf{Figure 3.} Light Bulb I-V Curve Circuit}\\\vspace{6pt}
+ \begin{circuitikz}
+   \draw
+   (0,0) to[american voltage source, l= PSU] (0,3)
+         to[ammeter, -*] (3,3)
+         to (5,3)
+         to[lamp, l=Lamp, i>^=$i$] (5,0)
+         to [short, -*] (3,0)
+         to (0,0);
+   \draw (3,0) to[voltmeter, color=white,name=M](3,3);
+   \mymeter{M}{0}  % try 90, 0, -90
+ \end{circuitikz}
+\end{center}
+%
+This circuit was built using a power supply connected to a light bulb, with one multimeter connected in series with the light bulb and supply to measure current (set to mA range), and another in parallel with the bulb to measure the voltage drop. The power supply was then set to zero volts and then the voltage was increased until the current multimeter read 20 mA. The current and voltage for this state was then recorded. This process was then repeated for 20 mA increments up to 100 mA. This resulted in the table below, containing 6 I-V data points. This data is also plotted as a I-V curve below in \textit{Figure 4}.\par
+
+\begin{center}
+ \title{\textbf{Table 1.} Light Bulb I-V Data.}\vspace{6pt}
+ \begin{tabular}{|c|c|c|c|c|c|c|}
+   \hline 
+   Current ($i$) & 0.00 mA & 20.73 mA & 39.7 mA & 59.9 mA & 79.7 mA & 100.0 mA \\ 
+   \hline 
+   Voltage Drop & 0.000V & 0.2564 V & 0.7191 V & 1.580 V & 2.266 V & 3.373 V \\ 
+   \hline 
+ \end{tabular} 
+\end{center}
+
+
+\begin{figure}[htb!]
+ \title{\textbf{Figure 4.} Light Bulb I-V Curve.}
+   \begin{center}
+    	\resizebox{0.6\textwidth}{!}{\input{./data_plots/bulb_iv.tex}}
+   \end	{center}
+\end {figure}
+%
+It is evident looking at \textit{Figure 4} that the current increases with voltage. However the curve is non-linear, which is unexpected from a resistive element. This is because as the filament heats up with current, the resistance increases, causing the slope of the I-V curve to fall off as the current increases.
+%
+\subsection*{Part 2}
+ The objective of this part was to determine the current that will flow through the light bulb in \textit{Part 1} if a 100 $\Omega$ resistor connected in series with the bulb when the PSU is set to 3 and 6 volts. This new circuit is shown below in \textit{Figure 5}.\par
+ 
+\begin{center}
+ \textbf{Figure 5.} Light Bulb Circuit with 100 $\Omega$ Resistor Added in Series.\\
+ \begin{circuitikz}
+   \draw
+   (0,0)	to[american voltage source, l=PSU] (0,3)
+    		to[ammeter] (2.5,3)
+    		to[R, l=100 $\Omega$] (5,3)
+    		to[lamp, l=Lamp, i>^=$i$] (5,0)
+    		to (0,0);
+ \end{circuitikz}
+\end{center}
+%
+The current through the bulb was determined using the load line method. The light bulb I-V curve determined from \textit{Part 1} was plotted on the same graph as the I-V curve for the PSU and resistor combined. PSU and resistor I-V curve is given by this equation, where $I_s$ is the circuits short circuit current:\par
+
+\begin{equation}
+I = I_s - \frac{V}{R}
+\end{equation}
+
+Below are the two load lines for this circuit powered a 3 and 6 volts. The intersection between the two curves represents the DC operating point of the circuit, and therefore the current part of the intersect is the current through the bulb in each scenario:\par
+%
+\begin{figure}[htb!]
+  \begin{subfigure}[b]{0.5\textwidth}
+  		\caption*{\textbf{Figure 6.} 3 V Load Line.}
+    	\resizebox{1\textwidth}{!}{\input{./data_plots/3v_load_line.tex}}
+  \end{subfigure}
+  %
+  \hspace{0.25in}
+  \begin{subfigure}[b]{0.5\textwidth}
+  		\caption*{\textbf{Right: Figure 7.} 6 V Load Line}
+    	\resizebox{1\textwidth}{!}{\input{./data_plots/6v_load_line.tex}}
+  \end{subfigure}
+\end{figure}
+%
+\pagebreak
+%
+Here are the expected currents at the given voltages (taken as the current part of the intersects):
+\begin{center}
+\begin{tabular}{l r}
+Expected Current with 3 volt input: & 26.121 mA \\ % Date the experiment was performed
+Expected Current with 6 volt input: & 48.889 mA % Instructor/supervisor
+\end{tabular}
+\end{center}
+
+\subsection*{Part 3}
+The objective of this part was to test the circuit in part \textit{2} to verify the predicted values for current. This was performed by assembling the circuit shown in \textit{Figure 5}. The ammeter was a digital multimeter set to the mA range connected in series with the circuit. The voltage provided by the power supply was then set to 3.0 V and then current displayed on the multimeter was recorded. This was repeated for 6 volts. Below is the table of results, including the expected values and calculated error.\par
+
+\begin{center}
+ \title{\textbf{Table 2.} Measured Current with Resistor Added.}\vspace{6pt}
+ \begin{tabular}{|c|c|c|c|}
+   \hline 
+   Input Voltage & Current ($i$) & Calculated $i$ & Percent Error \\ 
+   \hline 
+   3.0V & 25.63 mA & 26.121 mA & - 1.88 \% \\ 
+   \hline 
+   6.0V & 49.20 mA & 48.889 mA & +0.64  \% \\ 
+   \hline 
+ \end{tabular} 
+\end{center}
+%
+It is apparent the expected values and measured values for current are extremely close. The discrepancy in values can be attributed to the 5\% tolerance of the resistor used and given the uncertainty of $\pm$ 50 mV in the voltage provided by the PSU. The errors in this experiment are well within the potential range of error that could be produced by those uncertainties, which suggests the values agree with each other. Therefore these results suggest the calculations made using load line method are correct, and accordingly the load line method is a valid means of circuit analysis.
+
+\subsection*{Part 4}
+The objective of this part of the experiment was to determine the behavior of the circuit in \textit{Figure 8}. This circuit consists of a 1N4148 diode connected in series with a 500 $\Omega$ resistor (constructed from two 1 K$\Omega$ resistors in parallel) connected to a function generator. The function generator outputs a 5 volt amplitude 1 kHz sine wave. This circuit is expected to pass all input voltages below 0.7 volts as diodes act as open circuits below 0.7 volts. Voltages over 0.7 should be clipped of as the diode will begin to conduct (the voltage is dropped across the resistor), holding a nearly constant 0.7 volt drop across its terminals.\par  
+\begin{center}
+ \textbf{Figure 8.} Circuit\\
+ \begin{circuitikz}[american voltages]
+   \draw
+   (0,0)	to[sV, l=1 1 kHz 5V] (0,3)
+    		to[R, l=500 $\Omega$] (3,3)
+    		to[Do, *-*] (3,0)
+    		to (0,0)
+   (3,3)	to[short, -o] (4,3)
+   (3,0)	to[short, -o] (4,0)
+   (4,3) to [open, v^=$v_{out}$] (4,0);
+ \end{circuitikz}
+\end{center}
+%
+This circuit was constructed like previously described on a bread board. Channel one of an oscilloscope was hooked up to the input of the circuit (the function generator), and channel two was connected the the output $v_{out}$. The function generator was turned on and the oscilloscope was used to view and measure the waveform. \textit{Figure 9} shows a screen capture taken from the oscilloscope of the input and output waveforms with measurements included:\par
+%
+\vspace{12pt}\title{\textbf{Figure 9.} Oscilloscope Screen Capture.}
+\begin{center}
+ \includegraphics[scale=0.8]{./oscilloscope_captures/part4.png}
+\end{center}
+%
+The waveforms captured using the oscilloscope show that the input waveform is clipped partially on the positive swing of the sine wave as expected. The oscilloscope measured the voltage ($V_{max}$) where the waveform is clipped to be approximately 880 mV. This clipped of region was zoomed in on the oscilloscope by increasing the volts per division, and the cursor mode was used to measure the cut off voltage more precisely (the oscilloscope has a 8 bit DAC, so the resolution is the displayed voltage range divided by 256). The cut off voltage was determined to be 700 mV. This value agrees with the prediction that the waveform will be clipped off at 0.7 volts because any voltages greater than 0.7 will cause the diode to conduct (holding a 0.7 volt drop across its terminals) and thus clip off the input signal at 0.7 volts. It also validates the voltage drop of a diode to be 700 mV.\par
+
+\pagebreak
+
+\subsection*{Part 5}
+The objective of this part is to modify the circuit from \textit{Part 4} such that it will only pass negative input voltages. To do this, the voltage which the diode begins to conduct must be changed from 0.7 volts to zero volts relative to the output. An easy way to do this is to add a 0.7 volt source in series with the diode, such that the polarity of the source is opposite of the 0.7 volt drop across the diode. Conduction beginning at zero volts in this circuit causes positive voltages to be clipped off above 0 volts as the voltage drop remains essentially constant for any practical currents. All of the positive voltage in this case is dropped across resistor in accordance to Ohm's Law. This circuit is shown below:\par
+
+\begin{center}
+ \textbf{Figure 10.} Zero Volt Signal Clipper\\
+ \begin{circuitikz}[american voltages]
+   \draw
+   (0,0)	to[sV, l=1 kHz 5V] (0,4)
+    		to[R, l=500 $\Omega$, -*] (3,4)
+    		to[Do] (3,2)
+    		to[american voltage source, l_=0.7 V, -*] (3,0)
+    		to (0,0)
+   (3,4)	to[short, -o] (5,4)
+   (3,0)	to[short, -o] (5,0)
+   (5,4) to [open, v^=$v_{out}$]              (5,0);
+ \end{circuitikz}
+\end{center}
+%
+This circuit was constructed like shown in the diagram on a bread board, with the oscilloscope measuring the input on channel one and the output $V_{out}$ on channel two. Below in \textit{Figure 11} is a screen capture of the input and output waveforms of this circuit.\par
+%
+\vspace{12pt}\title{\textbf{Figure 11.} Oscilloscope Screen Capture.}
+\begin{center}
+ \includegraphics[scale=0.8]{./oscilloscope_captures/part5.png}
+\end{center}
+
+As expected the waveform is clipped off as the voltage the diode begins to conduct at is biased to 0V in this circuit, making the voltage measured by the oscilloscope zero for any positive input voltages. This validates the approach of biasing the voltage of the diode in the circuit to change the voltage which it conducts and clips.
+
+\pagebreak
+
+\subsection*{Part 6}
+The objective of this part is similar to the last, except the circuit must be modified such that it will only pass voltages less than 2 volts. This can again be achieved by changing the voltage that the diode conducts from 0.7 volts to 2.0 volts relative to the output. This can be implemented by adding a 1.3 V voltage source in series with the diode (with the polarity in the same direction of the voltage drop on the resistor), causing the voltage drop across the two elements to be 2.0 volts when the diode conducts. For all voltages under two volts, the diode and supply will behave like an open circuit, allowing signals to freely pass. For input voltages above 2 volts the output will be held at the 2V drop. This circuit is shown in \textit{Figure 12}.\par
+%
+\begin{center}
+ \textbf{Figure 12.} 2 Volt Signal Clipper\\
+ \begin{circuitikz}[american voltages]
+   \draw
+   (0,0)	to[sV, l=1 kHz 5V] (0,4)
+    		to[R, l=500 $\Omega$, -*] (3,4)
+    		to[Do] (3,2)
+   (3,0)	to[american voltage source, l=1.3 V, *-] (3,2)
+   (3,0)	to (0,0)
+   (3,4)	to[short, -o] (5,4)
+   (3,0)	to[short, -o] (5,0)
+   (5,4) to [open, v^=$v_{out}$]              (5,0);
+ \end{circuitikz}
+\end{center}
+%
+The circuit was assembled on a bread board and connected to the oscilloscope where channel 1 was connected to the input and channel to the output. The input and output waveforms and measurements were captured in \textit{Figure 13}.\par
+%
+\vspace{12pt}\title{\textbf{Figure 13.} Oscilloscope Screen Capture.}
+\begin{center}
+ \includegraphics[scale=0.8]{./oscilloscope_captures/part6.png}
+\end{center}
+%
+The waveform was clipped off above 2 volts like expected, confirming the predicted circuit and theory again.
+
+\pagebreak
+
+\subsection*{Part 7}
+The circuit was again modified, this time such that an input signal would be cut off above 2 volts and below -2 volts. This circuit is implemented by adding another of the series diode and 1.3 volt supplies to the last circuit, this time with flipped polarity. This new circuit is shown below in \textit{Figure 14}. This circuit works because current will now flow through one of the sets of diodes and voltage supplies if the magnitude of the waveform exceeds 2 volts, causing the waveform to be clipped above above 2 volts and below -2 volts across the output. The excess voltage is again dropped across the resistor. \par
+%
+\begin{center}
+ \textbf{Figure 14.} $\pm$ 2 Volt Clipper\\
+ \begin{circuitikz}[american voltages]
+   \draw
+   (0,0)	to[sV, l=1 kHz 5V] (0,4)
+    		to[R, l=500 $\Omega$, -*] (3,4)
+    		to[Do] (3,2)
+   (3,0)	to[american voltage source, l=1.3 V, *-] (3,2)
+   (3,0)	to (0,0)
+   (5,0)	to[Do, *-] (5,2)
+   (5,4)	to[american voltage source, l=1.3V, *-] (5,2)
+   (3,4)	to[short, -o] (7,4)
+   (3,0)	to[short, -o] (7,0)
+   (7,4) to [open, v^=$v_{out}$]              (7,0);
+ \end{circuitikz}
+\end{center}
+%
+The circuit was built by adding to the circuit from \textit{Part 6} a second diode and power supply connected in opposite polarity of the first. \textit{Figure 15} shows the oscilloscope capture of the input and output waveforms of this circuit.\par
+%
+\vspace{12pt}\title{\textbf{Figure 15.} Oscilloscope Screen Capture.}
+\begin{center}
+ \includegraphics[scale=0.8]{./oscilloscope_captures/part7.png}
+\end{center}
+The output clips off at plus and minus 2 volts as expected.
+
+\pagebreak
+
+\subsection*{Part 8}
+This final part is intended to show the response of the clipper circuit from \textit{Part 7} on square and triangle waves. It is expected that the circuit will have the same operation as before, clipping off each input waveform above 2 volts and below negative 2 volts. \textit{Figure 16} shows the circuit behavior for a square wave input and \textit{Figure 17} for a triangle wave.\par
+%
+\vspace{12pt}\title{\textbf{Figure 16.} Oscilloscope Screen Capture.}
+\begin{center}
+  \includegraphics[scale=0.8]{./oscilloscope_captures/square.png}
+\end{center}
+%
+\title{\textbf{Figure 17.} Oscilloscope Screen Capture.}
+\begin{center}
+  \includegraphics[scale=0.8]{./oscilloscope_captures/triangle.png}
+\end{center}
+%
+For the square wave, the circuit doesn't behave as expected, cutting off at plus 3.04 volts and minus -2.80 volts instead of the expected plus and minus 2 volts. This appears to be a problem with the power supply being used, as the output voltages would not regulate down to the desired 1.3 volts, rather the lowest they would go to was about 2.1 volts. This problem is probably attributed to the fact that this circuit causes the PSU to sink current, which it likely is not intended to do nor can it properly regulate. The triangle wave did clip off as expected, cutting of at approximately plus and minus 2 volts. It is possible that the power supply only misbehaved on the square wave because the signal changes very rapidly on the rising and falling edges (compared to the other two waveforms), which may cause an error with the voltage control mechanism of the power supply.
+
+%-----------------------------------------------------------------------------
+%	Conclusion
+%----------------------------------------------------------------------------------------
+\section{Conclusion}
+
+The I-V curve of an incandescent light bulb was found experimentally, showing that it is non-linear in nature. The I-V curve for the bulb was then used through load-line analysis to predict the current through the bulb with a resistor attached, which were verified to be correct experimentally. The behavior of a diode was then observed experimentally with an oscilloscope and was determined to behave as an open circuit until a voltage of approximately 0.7 volts is across its terminals from anode to cathode. After this voltage it was observed that the diode conducts and holds a nearly constant voltage drop of 0.7 volts. Understanding the constant voltage drop nature of the diode, several signal clipping circuits were designed to clip an input signal off at various voltage levels on the output of the circuit. This was done successfully by changing the voltage that the diode conducts (and accordingly the voltage drop) relative to the output, causing the waveform to be clipped at that voltage when it was exceeded and to pass signals below that voltage.
+
+\end{document}

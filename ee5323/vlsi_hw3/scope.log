@@ -1,0 +1,2046 @@
+ScopeSigMgr:loadpffile /home/class/niels538/cds_ncsu45/hw3/runsim.sw0 1 openonly
+# PF:1
+pf:read PF:1 i1(m0) par(-1*i1(m1)
+# WF:1:2 WF:1:3
+Graph addsignal {WF:1:2 WF:1:3} -region {new new} -yview {real(y) real(y)} -xview {real(x) real(x)} -tracehi {2 2}
+# Signal0 Signal1
+Graph:Select Graph0
+Graph:DSel
+Graph itemselect Signal1 add
+# Signal1
+Graph:DSel
+AimCalc
+AimBarItem:Hide .aimCalc
+wm withdraw .aimCalcConstForm
+AimBarItem:Show .aimCalc
+wm geometry .aimCalc 310x303+582+327
+Graph:DSel
+Graph itemselect Signal0 add
+# Signal0
+Graph:DSel
+AimCalc:GraphWaveform
+# Signal2
+AimCalc:GraphWaveform
+# Signal3
+Mdi:Resize 631 570
+Mdi:Move 5 5
+Graph:Select Graph0
+Graph:DSel
+Graph itemselect AxisY(2,0) add
+# AxisY(2,0)
+Graph:DSel
+Graph itemselect AxisY(3,0) add
+# AxisY(3,0)
+Graph axisconfig AxisY(3,0) -scale log -range all
+Graph:DSel
+Graph itemselect AxisY(2,0) add
+# AxisY(2,0)
+Graph axisconfig AxisY(2,0) -scale log -range all
+Graph:DSel
+Graph:DSel
+wm geometry .sigmgr 376x204+518+136
+wm geometry .sigmgr 376x204+520+137
+wm geometry .sigmgr 376x204+526+138
+wm geometry .sigmgr 376x204+534+140
+wm geometry .sigmgr 376x204+553+143
+wm geometry .sigmgr 376x204+582+151
+wm geometry .sigmgr 376x204+623+159
+wm geometry .sigmgr 376x204+671+170
+wm geometry .sigmgr 376x204+705+172
+wm geometry .sigmgr 376x204+793+186
+wm geometry .sigmgr 376x204+805+188
+wm geometry .sigmgr 376x204+822+193
+wm geometry .sigmgr 376x204+831+197
+wm geometry .sigmgr 376x204+832+198
+Graph:DSel
+Graph:DSel
+Graph:DSel
+Graph itemselect AxisX(0) add
+# AxisX(0)
+Graph:DSel
+wm geometry .aimCalc 310x303+582+326
+wm geometry .aimCalc 310x303+591+325
+wm geometry .aimCalc 310x303+599+325
+wm geometry .aimCalc 310x303+617+324
+wm geometry .aimCalc 310x303+666+321
+wm geometry .aimCalc 310x303+679+320
+wm geometry .aimCalc 310x303+710+320
+wm geometry .aimCalc 310x303+740+322
+wm geometry .aimCalc 310x303+778+320
+wm geometry .aimCalc 310x303+790+319
+wm geometry .aimCalc 310x303+800+317
+wm geometry .aimCalc 310x303+826+315
+wm geometry .aimCalc 310x303+832+313
+Graph:DSel
+Graph:Select Graph0
+Graph:DSel
+Graph itemselect AxisY(1,0) add
+# AxisY(1,0)
+Graph axisconfig AxisY(1,0) -scale log -range all
+Graph:DSel
+Graph itemselect AxisY(0,0) add
+# AxisY(0,0)
+Graph axisconfig AxisY(0,0) -scale log -range all
+Graph:DSel
+Graph itemselect AxisY(3,0) add
+# AxisY(3,0)
+Graph axisconfig AxisY(3,0) -scale log -range all
+Graph axisconfig AxisY(3,0) -scale linear -rang all
+Graph:DSel
+Graph itemselect AxisY(2,0) add
+# AxisY(2,0)
+Graph axisconfig AxisY(2,0) -scale linear -rang all
+Graph:DSel
+Graph addsignal WF:5:1 -region 0 -yview real(y) -xview real(x) -rainbow 0 -rbcolors {} -fill green -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label i1(m0) -xaxis 0 -yaxis 0 -tracehi 2 -bus {} -segdisp yy -monotonicdisp 0
+# Signal4
+Graph addsignal WF:5:2 -region 1 -yview real(y) -xview real(x) -rainbow 0 -rbcolors {} -fill magenta -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label par(-1*i1(m1) -xaxis 0 -yaxis 0 -tracehi 2 -bus {} -segdisp yy -monotonicdisp 0
+# Signal5
+Graph addsignal WF:7:1 -region 2 -yview real(y) -xview real(x) -rainbow 0 -rbcolors {} -fill cyan -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label deriv(log10(i1(m0))) -xaxis 0 -yaxis 0 -tracehi 2 -bus {} -segdisp yy -monotonicdisp 0
+# Signal6
+Graph addsignal WF:10:1 -region 3 -yview real(y) -xview real(x) -rainbow 0 -rbcolors {} -fill yellow -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label (1/deriv(log10(i1(m0)))) -xaxis 0 -yaxis 0 -tracehi 2 -bus {} -segdisp yy -monotonicdisp 0
+# Signal7
+Graph itemselect all rem
+Graph itemselect Signal0 add
+# Signal0
+Graph itemselect Signal1 add
+# Signal1
+Graph itemselect Signal2 add
+# Signal2
+Graph itemselect Signal3 add
+# Signal3
+Graph delsignal selected
+AimCalc:RollStack up
+AimCalc:ClearX
+AimCalc:ClearX
+AimCalc:ClearX
+AimCalc:ClearX
+AimCalc:ClearX
+AimCalc:ClearX
+AimCalc:ClearX
+AimCalc:ClearX
+AimCalc:ClearX
+AimCalc:ClearX
+AimCalc:ClearX
+AimCalc:Enter 1/deriv*
+wm geometry .sigmgr._PF:1 231x341+800+451
+wm geometry .sigmgr._PF:1 231x341+797+453
+wm geometry .sigmgr._PF:1 231x341+792+456
+wm geometry .sigmgr._PF:1 231x341+787+462
+wm geometry .sigmgr._PF:1 231x341+782+467
+wm geometry .sigmgr._PF:1 231x341+755+495
+wm geometry .sigmgr._PF:1 231x341+734+504
+wm geometry .sigmgr._PF:1 231x341+718+541
+wm geometry .sigmgr._PF:1 231x341+708+552
+wm geometry .sigmgr._PF:1 231x341+703+557
+wm geometry .sigmgr._PF:1 231x341+695+565
+wm geometry .sigmgr._PF:1 231x341+692+568
+wm geometry .sigmgr._PF:1 231x341+694+565
+wm geometry .sigmgr._PF:1 231x341+694+566
+wm geometry .sigmgr._PF:1 231x341+694+567
+wm geometry .sigmgr._PF:1 231x341+694+569
+wm geometry .sigmgr._PF:1 231x341+694+572
+wm geometry .sigmgr._PF:1 231x341+693+576
+wm geometry .sigmgr._PF:1 231x341+691+584
+wm geometry .sigmgr._PF:1 231x341+690+592
+wm geometry .sigmgr._PF:1 231x341+689+598
+wm geometry .sigmgr._PF:1 231x341+689+601
+Graph:Select Graph0
+Graph:DSel
+Graph itemselect Signal5 add
+# Signal5
+Graph:DSel
+AimCalc:Enter {1/deriv(log10(WF:5:2 ))}
+AimCalc:GraphWaveform
+# Signal8
+Graph:Select Graph0
+Graph:DSel
+Graph itemselect Signal4 add
+# Signal4
+Graph delsignal selected
+Graph:DSel
+Graph itemselect Signal5 add
+# Signal5
+Graph delsignal selected
+Graph:DSel
+Graph itemselect Signal6 add
+# Signal6
+Graph delsignal selected
+Graph:DSel
+Graph addsignal WF:17:1 -region 0 -yview real(y) -xview real(x) -rainbow 0 -rbcolors {} -fill yellow -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label (1/deriv(log10(i1(m0)))) -xaxis 0 -yaxis 0 -tracehi 2 -bus {} -segdisp yy -monotonicdisp 0
+# Signal9
+Graph addsignal WF:20:1 -region 1 -yview real(y) -xview real(x) -rainbow 0 -rbcolors {} -fill #ffd016 -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label (1/deriv(log10(par(-1*i1(m1)))) -xaxis 0 -yaxis 0 -tracehi 2 -bus {} -segdisp yy -monotonicdisp 0
+# Signal10
+Graph itemselect all rem
+Graph itemselect Signal7 add
+# Signal7
+Graph itemselect Signal8 add
+# Signal8
+Graph delsignal selected
+Graph sigconfig Signal10 -segdisp ll
+Graph sigconfig Signal9 -segdisp ll
+Graph sigconfig Signal10 -segdisp ll
+Graph sigconfig Signal9 -segdisp ll
+Graph sigconfig Signal10 -rainbow 1
+Graph sigconfig Signal9 -rainbow 1
+Graph:Select Graph0
+Graph itemselect Signal10 add
+# Signal10
+Graph itemselect Signal9 add
+# Signal9
+GrMeas:AtX Graph0 Signal10 {} xyrangeVisible
+# M:0
+GrMeas:AtX Graph0 Signal9 {} xyrangeVisible
+# M:1
+Graph:DSel
+GrMeas:Select Graph0 M:0 1 1
+GrMeas:HideResult Graph0 M:0 1
+GrMeas:ShowResult Graph0 M:0 1
+GrMeas:Select Graph0 M:0 1 1
+Graph:DSel
+Graph:DSel
+GrMeas:Select Graph0 M:1 0
+GrMeas:MoveXLevel Graph0 M:1 0 0.071986235549735
+# M:2
+Graph:DSel
+GrMeas:Select Graph0 M:2 0
+GrMeas:MoveXLevel Graph0 M:2 0 -0.030870455046067
+# M:3
+Graph:DSel
+Graph itemselect AxisY(0,0) add
+# AxisY(0,0)
+Graph:DSel
+GrMeas:Select Graph0 M:0 0
+GrMeas:MoveXLevel Graph0 M:0 0 -0.076885290312611
+# M:4
+Graph:DSel
+GrMeas:Select Graph0 M:4 1 2
+GrMeas:MoveText Graph0 M:4 1 46 15
+Graph:DSel
+GrMeas:Select Graph0 M:3 1 1
+GrMeas:MoveText Graph0 M:3 1 54 27
+Graph:DSel
+set Graph(Graph0,Signal10,lblpcent) 0.80442070152329
+GrSeg:ShowLbls Graph0 Signal10
+Graph:DSel
+Graph:DSel
+Graph:DSel
+Graph:DSel
+Graph itemselect Signal10 add
+# Signal10
+GrMeas:AtX Graph0 Signal10 {} xyrangeVisible
+# M:5
+Graph:DSel
+GrMeas:Select Graph0 M:5 1 1
+GrMeas:HideResult Graph0 M:5 1
+GrMeas:ShowResult Graph0 M:5 2
+GrMeas:Select Graph0 M:5 2 1
+GrMeas:HideResult Graph0 M:5 2
+GrMeas:ShowResult Graph0 M:5 1
+GrMeas:Select Graph0 M:5 1 1
+GrMeas:HideResult Graph0 M:5 1
+GrMeas:ShowResult Graph0 M:5 2
+GrMeas:Select Graph0 M:5 2 1
+Graph:DSel
+GrMeas:Select Graph0 M:5 0
+GrMeas:MoveXLevel Graph0 M:5 0 -0.0038029048892771
+# M:6
+Graph:DSel
+GrMeas:Select Graph0 M:6 1 2
+GrMeas:MoveText Graph0 M:6 1 74 -66
+Graph:DSel
+Graph:DSel
+GrMeas:Select Graph0 M:6 1 1
+GrMeas:HideResult Graph0 M:6 1
+GrMeas:ShowResult Graph0 M:6 2
+GrMeas:Select Graph0 M:6 2 1
+Graph:DSel
+Graph:DSel
+Graph:DSel
+Graph:DSel
+Graph itemselect Signal9 add
+# Signal9
+GrMeas:AtX Graph0 Signal9 {} xyrangeVisible
+# M:7
+Graph:DSel
+GrMeas:Select Graph0 M:7 1 1
+GrMeas:HideResult Graph0 M:7 1
+GrMeas:ShowResult Graph0 M:7 2
+GrMeas:Select Graph0 M:7 2 1
+Graph:DSel
+GrMeas:Select Graph0 M:7 0
+GrMeas:MoveXLevel Graph0 M:7 0 -0.034930587569586
+# M:8
+Graph:DSel
+GrMeas:Select Graph0 M:8 1 1
+GrMeas:HideResult Graph0 M:8 1
+GrMeas:ShowResult Graph0 M:8 2
+GrMeas:Select Graph0 M:8 2 1
+Graph:DSel
+GrMeas:Select Graph0 M:8 2 2
+GrMeas:MoveText Graph0 M:8 2 43 -44
+Graph:DSel
+Graph itemselect AxisX(0) add
+# AxisX(0)
+Graph:DSel
+Graph:DSel
+GrMeas:Select Graph0 M:8 2 2
+GrMeas:MoveText Graph0 M:8 2 55 -38
+Graph:DSel
+GrMeas:Select Graph0 M:3 1 2
+GrMeas:MoveText Graph0 M:3 1 61 30
+Graph:DSel
+Graph itemselect AxisY(0,0) add
+# AxisY(0,0)
+Graph itemselect AxisY(0,0) add
+Graph axisconfig AxisY(0,0) -label {PMOS Subthreshold Swing (V/dec)}
+Graph:Select Graph0
+Graph:DSel
+Graph itemselect AxisY(1,0) add
+# AxisY(1,0)
+Graph:DSel
+Graph:Select Graph0
+Graph:DSel
+Graph itemselect Signal9 add
+# Signal9
+Graph sigconfig Signal9 -regswap 3
+Graph:DSel
+Graph itemselect AxisY(0,0) add
+# AxisY(0,0)
+Graph itemselect AxisY(0,0) add
+Graph:DSel
+Graph axisconfig AxisY(0,0) -label {PMOS Subthreshold Swing (V/dec)}
+Graph:Select Graph0
+Graph:DSel
+Graph itemselect AxisY(1,0) add
+# AxisY(1,0)
+Graph:DSel
+Graph axisconfig AxisY(1,0) -rang {0.0 0.6} -gridvis n -label {NMOS Subthreshold Swing (V/dec)} -scale lin -unitscale auto
+Graph config -legend none
+Graph:DSel
+Graph:Select Graph0
+Graph:DSel
+Graph:DSel
+Graph:DSel
+Graph:DSel
+Graph:DSel
+Graph:DSel
+Graph:DSel
+Graph:DSel
+Graph:ManipulateItem icursor draw0_text @282.0,95.0
+Graph itemcreate text 282.0 95.0 -tags draw0_text -font {-family {OF Helvetica} -size 12.0 -weight normal -slant roman -underline 0 -overstrike 0 -type outline} -fill pink -justify left -anchor nw -box 0 -bg {}
+# GrDraw0_text
+Graph:ManipulateItem insert GrDraw0_text insert {}
+Graph:ManipulateItem insert GrDraw0_text insert L
+Graph:ManipulateItem insert GrDraw0_text insert =
+Graph:ManipulateItem insert GrDraw0_text insert 4
+Graph:ManipulateItem insert GrDraw0_text insert 5
+Graph:ManipulateItem insert GrDraw0_text insert n
+Graph:ManipulateItem insert GrDraw0_text insert m
+Graph:ManipulateItem insert GrDraw0_text insert .
+Graph:ManipulateItem dchars GrDraw0_text 6
+Graph:ManipulateItem insert GrDraw0_text insert ,
+Graph:ManipulateItem insert GrDraw0_text insert { }
+Graph:ManipulateItem insert GrDraw0_text insert {}
+Graph:ManipulateItem insert GrDraw0_text insert W
+Graph:ManipulateItem insert GrDraw0_text insert =
+Graph:ManipulateItem insert GrDraw0_text insert 3
+Graph:ManipulateItem insert GrDraw0_text insert 6
+Graph:ManipulateItem insert GrDraw0_text insert 0
+Graph:ManipulateItem insert GrDraw0_text insert n
+Graph:ManipulateItem insert GrDraw0_text insert m
+Graph:ManipulateItem insert GrDraw0_text insert ,
+Graph:ManipulateItem insert GrDraw0_text insert { }
+Graph:ManipulateItem insert GrDraw0_text insert {}
+Graph:ManipulateItem insert GrDraw0_text insert T
+Graph:ManipulateItem dchars GrDraw0_text 17
+Graph:ManipulateItem insert GrDraw0_text insert {}
+Graph:ManipulateItem insert GrDraw0_text insert {}
+Graph:ManipulateItem insert GrDraw0_text insert T
+Graph:ManipulateItem insert GrDraw0_text insert =
+Graph:ManipulateItem insert GrDraw0_text insert 1
+Graph:ManipulateItem insert GrDraw0_text insert 1
+Graph:ManipulateItem insert GrDraw0_text insert 0
+Graph:ManipulateItem insert GrDraw0_text insert {}
+Graph:ManipulateItem insert GrDraw0_text insert C
+Graph:DSel 0
+Graph:ManipulateItem addtag selSet withtag GrDraw0_text
+Graph:ManipulateItem move selSet -1 -2
+Graph:ManipulateItem move selSet 0 -3
+Graph:ManipulateItem move selSet -1 -4
+Graph:ManipulateItem move selSet -1 -4
+Graph:ManipulateItem move selSet -1 -3
+Graph:ManipulateItem move selSet -1 -8
+Graph:ManipulateItem move selSet -2 -6
+Graph:ManipulateItem move selSet -1 -2
+Graph:ManipulateItem move selSet -1 -1
+Graph:ManipulateItem move selSet -1 -1
+Graph:ManipulateItem move selSet -1 -1
+Graph:ManipulateItem move selSet -2 -1
+Graph:ManipulateItem move selSet -2 -2
+Graph:ManipulateItem move selSet -2 -1
+Graph:ManipulateItem move selSet -1 0
+Graph:ManipulateItem move selSet -2 -1
+Graph:ManipulateItem move selSet -3 -2
+Graph:ManipulateItem move selSet -1 0
+Graph:ManipulateItem move selSet -3 -1
+Graph:ManipulateItem move selSet -2 -1
+Graph:ManipulateItem move selSet -1 -1
+Graph:ManipulateItem move selSet -2 0
+Graph:ManipulateItem move selSet -2 0
+Graph:ManipulateItem move selSet -1 -1
+Graph:ManipulateItem move selSet -1 0
+Graph:ManipulateItem move selSet -3 -1
+Graph:ManipulateItem move selSet -1 -1
+Graph:ManipulateItem move selSet -3 -1
+Graph:ManipulateItem move selSet -2 -2
+Graph:ManipulateItem move selSet -1 -1
+Graph:ManipulateItem move selSet -2 -1
+Graph:ManipulateItem move selSet 0 -1
+Graph:ManipulateItem move selSet -2 -1
+Graph:ManipulateItem move selSet -2 -2
+Graph:ManipulateItem move selSet -1 0
+Graph:ManipulateItem move selSet 0 -1
+Graph:ManipulateItem move selSet -1 0
+Graph:ManipulateItem move selSet -1 -1
+Graph:ManipulateItem move selSet -1 0
+Graph:ManipulateItem move selSet 0 -1
+Graph:ManipulateItem move selSet -1 0
+Graph:ManipulateItem move selSet 0 -1
+Graph:ManipulateItem move selSet -1 0
+Graph:ManipulateItem move selSet 0 -1
+Graph:ManipulateItem move selSet -1 0
+Graph:ManipulateItem move selSet 0 -1
+Graph:ManipulateItem move selSet -2 -1
+Graph:ManipulateItem move selSet -1 -1
+Graph:ManipulateItem move selSet -1 -1
+Graph:ManipulateItem move selSet -1 0
+Graph:ManipulateItem move selSet -1 0
+Graph:ManipulateItem move selSet 0 -1
+Graph:ManipulateItem move selSet 0 -1
+Graph config -font {-family {OF Helvetica} -size 12 -weight normal -slant roman -underline 0 -overstrike 0}
+Graph config -font {-family {OF Helvetica} -size 11 -weight normal -slant roman -underline 0 -overstrike 0}
+Graph:DSel
+Graph itemselect AxisX(0) add
+# AxisX(0)
+Graph:DSel
+Graph axisconfig AxisX(0) -rang {0.0 0.5} -gridvis n -label {Gate to Source Voltage (V)} -scale lin -unitscale auto
+Mdi:Resize 691 635
+Mdi:Move 5 5
+wm geometry .sigmgr._PF:1 231x341+690+601
+wm geometry .sigmgr._PF:1 231x341+719+603
+wm geometry .sigmgr._PF:1 231x341+743+602
+wm geometry .sigmgr._PF:1 231x341+757+602
+wm geometry .sigmgr._PF:1 231x341+791+601
+wm geometry .sigmgr._PF:1 231x341+826+596
+wm geometry .sigmgr._PF:1 231x341+871+590
+wm geometry .sigmgr._PF:1 231x341+884+588
+wm geometry .sigmgr._PF:1 231x341+922+584
+wm geometry .sigmgr._PF:1 231x341+959+582
+wm geometry .sigmgr._PF:1 231x341+983+577
+wm geometry .sigmgr._PF:1 231x341+1018+574
+wm geometry .sigmgr._PF:1 231x341+1045+568
+wm geometry .sigmgr._PF:1 231x341+1060+563
+wm geometry .sigmgr._PF:1 231x341+1069+560
+wm geometry .sigmgr._PF:1 231x341+1074+559
+wm geometry .sigmgr._PF:1 231x341+1085+556
+Mdi:Resize 709 650
+Mdi:Move 5 5
+.frame1.mdi.mdi1.work.graph0 save -file /home/class/niels538/cds_ncsu45/hw3/subthreshold.png -format png  -x 0 -y 0 -w 707 -h 646 -colormode color
+Graph:SaveGraph Graph0 /home/class/niels538/cds_ncsu45/hw3/subthreshold 0
+GrXY:NewGraph
+# Graph1
+Graph addsignal WF:24:1 -region 0 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill #ffd016 -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label (1/deriv(log10(par(-1*i1(m1)))) -yaxis 0 -tracehi 2 -bus {} -segdisp ll -monotonicdisp 0
+# Signal11
+GrMeas:AtX Graph0 Signal11 -0.076885290312611 xyrangeVisible
+# M:9
+GrMeas:AtX Graph0 Signal11 -0.0038029048892771 xyrangeVisible
+# M:10
+Graph addsignal WF:27:1 -region 1 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill yellow -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label (1/deriv(log10(i1(m0)))) -yaxis 0 -tracehi 2 -bus {} -segdisp ll -monotonicdisp 0
+# Signal12
+Graph itemselect all rem
+Graph itemselect Signal10 add
+# Signal10
+Graph itemselect Signal9 add
+# Signal9
+Graph delsignal selected
+Graph itemselect all rem
+Graph delsignal selected
+wm geometry .sigmgr._PF:1 231x341+1085+555
+wm geometry .sigmgr._PF:1 231x341+1079+544
+wm geometry .sigmgr._PF:1 231x341+1077+540
+wm geometry .sigmgr._PF:1 231x341+1072+530
+wm geometry .sigmgr._PF:1 231x341+1065+514
+wm geometry .sigmgr._PF:1 231x341+1062+502
+wm geometry .sigmgr._PF:1 231x341+1059+489
+wm geometry .sigmgr._PF:1 231x341+1048+462
+wm geometry .sigmgr._PF:1 231x341+1042+454
+wm geometry .sigmgr._PF:1 231x341+1038+445
+wm geometry .sigmgr._PF:1 231x341+1029+432
+wm geometry .sigmgr._PF:1 231x341+1020+411
+wm geometry .sigmgr._PF:1 231x341+995+370
+wm geometry .sigmgr._PF:1 231x341+995+354
+wm geometry .sigmgr._PF:1 231x341+977+345
+wm geometry .sigmgr._PF:1 231x341+977+336
+wm geometry .sigmgr._PF:1 231x341+959+327
+wm geometry .sigmgr._PF:1 231x341+952+324
+wm geometry .sigmgr._PF:1 231x341+943+321
+wm geometry .sigmgr._PF:1 231x341+940+321
+wm geometry .sigmgr._PF:1 231x341+940+322
+pf:read PF:21 i1(m0) par(-1*i1(m1)
+# WF:21:1 WF:21:2
+Graph addsignal {WF:21:1 WF:21:2} -region {new new} -yview {real(y) real(y)} -xview {real(x) real(x)} -tracehi {2 2}
+# Signal0 Signal1
+Graph addsignal WF:33:1 -region 0 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill #ffd016 -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label (1/deriv(log10(par(-1*i1(m1)))) -xaxis 1 -yaxis 0 -tracehi 2 -bus {} -segdisp y -monotonicdisp 0
+# Signal13
+GrMeas:AtX Graph0 Signal13 -0.076885290312611 xyrangeVisible
+# M:11
+GrMeas:AtX Graph0 Signal13 -0.0038029048892771 xyrangeVisible
+# M:12
+Graph addsignal WF:36:1 -region 1 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill yellow -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label (1/deriv(log10(i1(m0)))) -xaxis 1 -yaxis 0 -tracehi 2 -bus {} -segdisp y -monotonicdisp 0
+# Signal14
+Graph itemselect all rem
+Graph itemselect Signal11 add
+# Signal11
+Graph itemselect Signal12 add
+# Signal12
+Graph delsignal selected
+Graph addsignal WF:30:1 -region 0 -yview real(y) -xview real(x) -rainbow 0 -rbcolors {} -fill green -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label i1(m0) -xaxis 0 -yaxis 0 -tracehi 2 -bus {} -segdisp y -monotonicdisp 0
+# Signal2
+Graph addsignal WF:30:2 -region 1 -yview real(y) -xview real(x) -rainbow 0 -rbcolors {} -fill magenta -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label par(-1*i1(m1) -xaxis 0 -yaxis 0 -tracehi 2 -bus {} -segdisp y -monotonicdisp 0
+# Signal3
+Graph itemselect all rem
+Graph itemselect Signal0 add
+# Signal0
+Graph itemselect Signal1 add
+# Signal1
+Graph delsignal selected
+Graph addsignal WF:40:1 -region 0 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill #ffd016 -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label (1/deriv(log10(par(-1*i1(m1)))) -xaxis 1 -yaxis 0 -tracehi 2 -bus {} -segdisp y -monotonicdisp 0
+# Signal15
+GrMeas:AtX Graph0 Signal15 -0.076885290312611 xyrangeVisible
+# M:13
+GrMeas:AtX Graph0 Signal15 -0.0038029048892771 xyrangeVisible
+# M:14
+Graph addsignal WF:43:1 -region 1 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill yellow -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label (1/deriv(log10(i1(m0)))) -xaxis 1 -yaxis 0 -tracehi 2 -bus {} -segdisp y -monotonicdisp 0
+# Signal16
+Graph itemselect all rem
+Graph itemselect Signal13 add
+# Signal13
+Graph itemselect Signal14 add
+# Signal14
+Graph delsignal selected
+Graph addsignal WF:37:1 -region 0 -yview real(y) -xview real(x) -rainbow 0 -rbcolors {} -fill green -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label i1(m0) -xaxis 0 -yaxis 0 -tracehi 2 -bus {} -segdisp y -monotonicdisp 0
+# Signal4
+Graph addsignal WF:37:2 -region 1 -yview real(y) -xview real(x) -rainbow 0 -rbcolors {} -fill magenta -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label par(-1*i1(m1) -xaxis 0 -yaxis 0 -tracehi 2 -bus {} -segdisp y -monotonicdisp 0
+# Signal5
+Graph itemselect all rem
+Graph itemselect Signal2 add
+# Signal2
+Graph itemselect Signal3 add
+# Signal3
+Graph delsignal selected
+Graph:Select Graph1
+Graph:DSel
+Graph itemselect Signal5 add
+# Signal5
+Graph delsignal selected
+Graph:DSel
+Graph itemselect Signal4 add
+# Signal4
+Graph delsignal selected
+Graph:DSel
+pf:read PF:37 lv9(m1) lv9(m0)
+# WF:37:3 WF:37:4
+Graph addsignal {WF:37:3 WF:37:4} -region {new new} -yview {real(y) real(y)} -xview {real(x) real(x)} -tracehi {2 2}
+# Signal0 Signal1
+AimBarItem:Hide .aimCalc
+wm withdraw .aimCalcConstForm
+AimBarItem:Show .aimCalc
+Graph:DSel
+Graph:Select Graph1
+Graph:DSel
+Graph itemselect Signal1 add
+# Signal1
+Graph itemselect Signal0 add
+# Signal0
+GrMeas:AtX Graph1 Signal1 {} xyrangeVisible
+# M:0
+GrMeas:AtX Graph1 Signal0 {} xyrangeVisible
+# M:1
+Graph:DSel
+GrMeas:Select Graph1 M:0 0 1
+GrMeas:MovePoint Graph1 M:0 0 0.0 0.26675921736089
+Graph:DSel
+GrMeas:Select Graph1 M:1 0 1
+GrMeas:MovePoint Graph1 M:1 0 0.0 0.18153795960918
+AimCalc:ClearX
+AimCalc:ClearX
+AimCalc:ClearX
+Graph:Select Graph1
+Graph:DSel
+Graph itemselect Signal1 add
+# Signal1
+Graph:DSel
+Graph:Select Graph1
+Graph:DSel
+Graph itemselect AxisX(0) add
+# AxisX(0)
+Graph:DSel
+Graph:Select Graph1
+Graph:DSel
+Graph itemselect AxisX(0) add
+# AxisX(0)
+Graph:DSel
+Graph:Select Graph1
+Graph:DSel
+Graph itemselect AxisX(0) add
+# AxisX(0)
+Graph:DSel
+Graph:Select Graph1
+Graph:DSel
+Graph itemselect Signal1 add
+# Signal1
+Graph:DSel
+AimCalc:SwapXY
+AimCalc:Enter {(WF:37:4 -0.26676)/(sqrt(0.6+x)-sqrt(0.6))}
+AimCalc:GraphWaveform
+AimCalc:GraphWaveform
+AimCalc:GraphWaveform
+AimCalc:GraphWaveform
+Graph:Select Graph1
+Graph:DSel
+Graph itemselect AxisX(0) add
+# AxisX(0)
+Graph:DSel
+wm geometry .aimCalc 310x303+850+312
+wm geometry .aimCalc 310x303+856+312
+wm geometry .aimCalc 310x303+862+310
+wm geometry .aimCalc 310x303+868+308
+wm geometry .aimCalc 310x303+880+302
+wm geometry .aimCalc 310x303+896+297
+wm geometry .aimCalc 310x303+919+287
+wm geometry .aimCalc 310x303+933+280
+wm geometry .aimCalc 310x303+940+272
+wm geometry .aimCalc 310x303+940+269
+wm geometry .aimCalc 310x303+965+261
+wm geometry .aimCalc 310x303+973+259
+wm geometry .aimCalc 310x303+977+257
+wm geometry .aimCalc 310x303+991+254
+wm geometry .aimCalc 310x303+992+254
+wm geometry .aimCalc 310x303+993+254
+wm geometry .aimCalc 310x303+993+252
+wm geometry .aimCalc 310x303+993+251
+wm geometry .aimCalc 310x303+993+249
+wm geometry .aimCalc 310x303+992+246
+wm geometry .aimCalc 310x303+987+243
+wm geometry .aimCalc 310x303+983+242
+wm geometry .aimCalc 310x303+980+241
+wm geometry .aimCalc 310x303+975+240
+wm geometry .aimCalc 310x303+972+239
+wm geometry .aimCalc 310x303+967+239
+wm geometry .aimCalc 310x303+952+238
+wm geometry .aimCalc 310x303+940+239
+wm geometry .aimCalc 310x303+937+239
+wm geometry .aimCalc 310x303+931+239
+wm geometry .aimCalc 310x303+925+239
+wm geometry .aimCalc 310x303+920+239
+wm geometry .aimCalc 310x303+916+238
+wm geometry .aimCalc 310x303+916+237
+wm geometry .aimCalc 310x303+916+236
+wm geometry .aimCalc 310x303+916+235
+wm geometry .aimCalc 310x303+904+232
+wm geometry .aimCalc 310x303+904+230
+wm geometry .aimCalc 310x303+898+230
+wm geometry .aimCalc 310x303+882+230
+wm geometry .aimCalc 310x303+881+230
+wm geometry .aimCalc 310x303+880+230
+wm geometry .aimCalc 310x303+878+230
+wm geometry .aimCalc 310x303+875+231
+wm geometry .aimCalc 310x303+871+231
+wm geometry .aimCalc 310x303+865+232
+wm geometry .aimCalc 310x303+861+234
+wm geometry .aimCalc 310x303+861+235
+wm geometry .aimCalc 310x303+843+236
+wm geometry .aimCalc 310x303+841+236
+wm geometry .aimCalc 310x303+841+237
+AimCalc:GraphWaveform
+# Signal2
+AimCalc:ClearX
+AimCalc:ClearX
+AimCalc:ClearX
+AimCalc:Enter {$vbulk}
+AimCalc:GraphWaveform
+AimCalc:Enter {$vbulk(-)}
+AimCalc:ClearX
+AimCalc:ClearX
+AimCalc:ClearX
+Graph:Select Graph0
+Graph:Select Graph0
+Graph:DSel
+Graph itemselect AxisX(1) add
+# AxisX(1)
+Graph axisconfig AxisX(1) -range {-0.5 0.5 exact}
+Graph axisconfig {AxisX(1) AxisY(0,0) AxisY(1,0)} -range {all all all} -zoomed {0 0 0}
+Graph:DSel
+Graph:DSel
+Graph axisconfig {AxisX(1) AxisY(0,0) AxisY(1,0)} -range {all all all} -zoomed {0 0 0}
+Mdi:Move 79 190
+Graph:Select Graph1
+Graph:DSel
+Graph:DSel
+Graph:Select Graph0
+Graph:DSel
+Graph:Select Graph1
+Graph:DSel
+Mdi:FullSize
+Graph:DSel
+Graph:Select Graph1
+Graph:DSel
+Graph itemselect Signal2 add
+# Signal2
+Graph delsignal selected
+Graph:DSel
+Graph itemselect Signal1 add
+# Signal1
+Graph delsignal selected
+Graph:DSel
+Graph itemselect Signal0 add
+# Signal0
+Graph itemselect Signal0 add
+# Signal0
+Graph delsignal selected
+Graph:DSel
+Graph addsignal WF:49:1 -region 0 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill #ffd016 -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label (1/deriv(log10(par(-1*i1(m1)))) -xaxis 1 -yaxis 0 -tracehi 2 -bus {} -segdisp y -monotonicdisp 0
+# Signal17
+GrMeas:AtX Graph0 Signal17 -0.076885290312611 xyrangeVisible
+# M:15
+GrMeas:AtX Graph0 Signal17 -0.0038029048892771 xyrangeVisible
+# M:16
+Graph addsignal WF:52:1 -region 1 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill yellow -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label (1/deriv(log10(i1(m0)))) -xaxis 1 -yaxis 0 -tracehi 2 -bus {} -segdisp y -monotonicdisp 0
+# Signal18
+Graph itemselect all rem
+Graph itemselect Signal15 add
+# Signal15
+Graph itemselect Signal16 add
+# Signal16
+Graph delsignal selected
+Graph itemselect all rem
+Graph delsignal selected
+pf:read PF:46 par((lv9(m0)-0.26676)/(sqrt(0.6+vbulk)-sqrt(0.6))
+# WF:46:3
+Graph addsignal WF:46:3 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal0
+pf:read PF:46 par((lv9(m1)-0.18154)/(sqrt(0.6+vbulk)-sqrt(0.6))
+# WF:46:4
+Graph addsignal WF:46:4 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal1
+Graph:Select Graph1
+Graph:DSel
+Graph itemselect Signal0 add
+# Signal0
+Graph sigconfig Signal0 -regswap 3
+wm geometry .sigmgr 376x204+838+199
+wm geometry .sigmgr 376x204+841+201
+wm geometry .sigmgr 376x204+864+202
+wm geometry .sigmgr 376x204+874+202
+wm geometry .sigmgr 376x204+885+201
+wm geometry .sigmgr 376x204+895+200
+wm geometry .sigmgr 376x204+940+203
+wm geometry .sigmgr 376x204+966+205
+wm geometry .sigmgr 376x204+987+205
+wm geometry .sigmgr 376x204+997+205
+wm geometry .sigmgr 376x204+1002+205
+wm geometry .sigmgr 376x204+1039+205
+wm geometry .sigmgr 376x204+1040+213
+wm geometry .aimCalc 310x303+842+237
+wm geometry .aimCalc 310x303+843+237
+wm geometry .aimCalc 310x303+851+238
+wm geometry .aimCalc 310x303+864+239
+wm geometry .aimCalc 310x303+872+240
+wm geometry .aimCalc 310x303+928+244
+wm geometry .aimCalc 310x303+956+247
+wm geometry .aimCalc 310x303+971+249
+wm geometry .aimCalc 310x303+981+249
+wm geometry .aimCalc 310x303+986+250
+wm geometry .aimCalc 310x303+988+250
+Graph:DSel
+Graph:DSel
+Graph itemselect AxisY(1,0) add
+# AxisY(1,0)
+Graph:DSel
+Graph axisconfig AxisY(1,0) -rang {0.42 0.46} -gridvis n -label {NMOS GAMMA} -scale lin -unitscale auto
+Graph:Select Graph1
+Graph:DSel
+Graph itemselect AxisY(0,0) add
+# AxisY(0,0)
+Graph:DSel
+Graph axisconfig AxisY(0,0) -rang {0.35 0.38} -gridvis n -label {PMOS GAMMA} -scale lin -unitscale auto
+Graph:DSel
+Graph:Select Graph1
+Graph:DSel
+Graph:DSel
+Graph:DSel
+Graph:DSel
+Graph config -legend none
+Mdi:Resize 836 669
+Mdi:Move 0 0
+Graph config -font {-family {OF Helvetica} -size 12 -weight normal -slant roman -underline 0 -overstrike 0}
+Graph:DSel
+Graph:ManipulateItem icursor draw1_text @298.0,42.0
+Graph itemcreate text 298.0 42.0 -tags draw1_text -font {-family {OF Helvetica} -size 12.0 -weight normal -slant roman -underline 0 -overstrike 0 -type outline} -fill pink -justify left -anchor nw -box 0 -bg {}
+# GrDraw0_text
+Graph:ManipulateItem insert GrDraw0_text insert {}
+Graph:ManipulateItem insert GrDraw0_text insert L
+Graph:ManipulateItem insert GrDraw0_text insert =
+Graph:ManipulateItem insert GrDraw0_text insert 4
+Graph:ManipulateItem insert GrDraw0_text insert 4
+Graph:ManipulateItem insert GrDraw0_text insert 5
+Graph:ManipulateItem insert GrDraw0_text insert n
+Graph:ManipulateItem insert GrDraw0_text insert m
+Graph:ManipulateItem dchars GrDraw0_text 6
+Graph:ManipulateItem dchars GrDraw0_text 5
+Graph:ManipulateItem dchars GrDraw0_text 4
+Graph:ManipulateItem dchars GrDraw0_text 3
+Graph:ManipulateItem insert GrDraw0_text insert 5
+Graph:ManipulateItem insert GrDraw0_text insert n
+Graph:ManipulateItem insert GrDraw0_text insert m
+Graph:ManipulateItem insert GrDraw0_text insert ,
+Graph:ManipulateItem insert GrDraw0_text insert { }
+Graph:ManipulateItem insert GrDraw0_text insert {}
+Graph:ManipulateItem insert GrDraw0_text insert W
+Graph:ManipulateItem insert GrDraw0_text insert =
+Graph:ManipulateItem insert GrDraw0_text insert 3
+Graph:ManipulateItem insert GrDraw0_text insert 6
+Graph:ManipulateItem insert GrDraw0_text insert 0
+Graph:ManipulateItem insert GrDraw0_text insert n
+Graph:ManipulateItem insert GrDraw0_text insert m
+Graph:ManipulateItem insert GrDraw0_text insert ,
+Graph:ManipulateItem insert GrDraw0_text insert { }
+Graph:ManipulateItem insert GrDraw0_text insert {}
+Graph:ManipulateItem insert GrDraw0_text insert {}
+Graph:ManipulateItem insert GrDraw0_text insert V
+Graph:ManipulateItem insert GrDraw0_text insert =
+Graph:ManipulateItem insert GrDraw0_text insert { }
+Graph:ManipulateItem dchars GrDraw0_text 19
+Graph:ManipulateItem dchars GrDraw0_text 18
+Graph:ManipulateItem insert GrDraw0_text insert d
+Graph:ManipulateItem insert GrDraw0_text insert s
+Graph:ManipulateItem insert GrDraw0_text insert =
+Graph:ManipulateItem insert GrDraw0_text insert { }
+Graph:ManipulateItem dchars GrDraw0_text 21
+Graph:ManipulateItem insert GrDraw0_text insert 1
+Graph:ManipulateItem insert GrDraw0_text insert .
+Graph:ManipulateItem insert GrDraw0_text insert 1
+Graph:ManipulateItem insert GrDraw0_text insert {}
+Graph:ManipulateItem insert GrDraw0_text insert V
+Graph:ManipulateItem insert GrDraw0_text insert ,
+Graph:ManipulateItem insert GrDraw0_text insert { }
+Graph:ManipulateItem insert GrDraw0_text insert {}
+Graph:ManipulateItem insert GrDraw0_text insert T
+Graph:ManipulateItem insert GrDraw0_text insert =
+Graph:ManipulateItem insert GrDraw0_text insert 1
+Graph:ManipulateItem insert GrDraw0_text insert 1
+Graph:ManipulateItem insert GrDraw0_text insert 0
+Graph:ManipulateItem insert GrDraw0_text insert {}
+Graph:ManipulateItem insert GrDraw0_text insert C
+Graph:DSel 0
+Graph:DSel 0
+Graph:DSel 0
+Graph:ManipulateItem addtag selSet withtag GrDraw0_text
+Graph:ManipulateItem move selSet -3 0
+Graph:ManipulateItem move selSet -2 -1
+Graph:ManipulateItem move selSet -1 0
+Graph:ManipulateItem move selSet -4 0
+Graph:ManipulateItem move selSet -2 0
+Graph:ManipulateItem move selSet -3 -1
+Graph:ManipulateItem move selSet -1 -1
+Graph:ManipulateItem move selSet -1 -1
+Graph:ManipulateItem move selSet -1 -1
+Graph:ManipulateItem move selSet 0 -1
+Graph:ManipulateItem move selSet -1 0
+Graph:ManipulateItem move selSet -1 -1
+Graph:ManipulateItem move selSet -1 -3
+Graph:ManipulateItem move selSet 0 -1
+Graph:ManipulateItem move selSet -1 -2
+Graph:ManipulateItem move selSet 0 -1
+Graph:ManipulateItem move selSet 0 -1
+Graph:ManipulateItem move selSet 0 -1
+Graph:ManipulateItem move selSet 1 0
+Graph:ManipulateItem move selSet 0 1
+Graph:ManipulateItem move selSet 1 0
+Graph:ManipulateItem move selSet 1 1
+Graph:ManipulateItem move selSet 1 1
+Graph:ManipulateItem move selSet 1 0
+Graph:ManipulateItem move selSet 0 1
+Graph:ManipulateItem move selSet 1 0
+Graph:ManipulateItem move selSet 1 0
+Graph:ManipulateItem move selSet 0 1
+Graph:ManipulateItem move selSet 1 0
+Graph:ManipulateItem move selSet 0 1
+Graph:ManipulateItem move selSet 0 1
+Graph:ManipulateItem move selSet -1 0
+Graph:ManipulateItem move selSet -1 0
+Graph:ManipulateItem move selSet -1 0
+Graph:ManipulateItem move selSet -1 0
+Graph:ManipulateItem move selSet -2 0
+Graph:ManipulateItem move selSet 1 0
+Graph:ManipulateItem move selSet 0 1
+Graph:ManipulateItem move selSet 1 0
+Graph:ManipulateItem move selSet 0 1
+Graph:ManipulateItem move selSet 1 0
+Graph:DSel
+Graph itemselect AxisX(0) add
+# AxisX(0)
+Graph itemselect AxisX(0) add
+Graph:DSel
+Graph axisconfig AxisX(0) -rang {0.0 1.0} -gridvis n -label {Source to Bulk Voltage Magnitude (V)} -scale lin -unitscale auto
+Graph axisconfig {AxisX(0) AxisY(0,0) AxisY(1,0)} -gridvis {yes yes yes}
+Graph config -grid yes
+.frame1.mdi.mdi2.work.graph1 save -file /home/class/niels538/cds_ncsu45/hw3/gamma.png -format png  -x 0 -y 0 -w 834 -h 665 -colormode color
+Graph:SaveGraph Graph1 /home/class/niels538/cds_ncsu45/hw3/gamma 0
+GrXY:NewGraph
+# Graph2
+Graph addsignal WF:56:1 -region 0 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill #ffd016 -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label (1/deriv(log10(par(-1*i1(m1)))) -yaxis 0 -tracehi 2 -bus {} -segdisp y -monotonicdisp 0
+# Signal19
+GrMeas:AtX Graph0 Signal19 -0.076885290312611 xyrangeVisible
+# M:17
+GrMeas:AtX Graph0 Signal19 -0.0038029048892771 xyrangeVisible
+# M:18
+Graph addsignal WF:59:1 -region 1 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill yellow -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label (1/deriv(log10(i1(m0)))) -yaxis 0 -tracehi 2 -bus {} -segdisp y -monotonicdisp 0
+# Signal20
+Graph itemselect all rem
+Graph itemselect Signal17 add
+# Signal17
+Graph itemselect Signal18 add
+# Signal18
+Graph delsignal selected
+Graph itemselect all rem
+Graph itemselect Signal1 add
+# Signal1
+Graph itemselect Signal0 add
+# Signal0
+Graph delsignal selected
+Graph itemselect all rem
+Graph delsignal selected
+pf:read PF:53 lx18(m1) lx18(m0)
+# WF:53:3 WF:53:4
+Graph addsignal {WF:53:3 WF:53:4} -region {new new} -yview {real(y) real(y)} -xview {real(x) real(x)} -tracehi {2 2}
+# Signal0 Signal1
+Mdi:Resize 690 537
+Mdi:Move 63 63
+Graph:DSel
+Graph:Select Graph2
+Graph:DSel
+Graph addsignal WF:63:1 -region 0 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill #ffd016 -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label (1/deriv(log10(par(-1*i1(m1)))) -xaxis 2 -yaxis 0 -tracehi 2 -bus {} -segdisp y -monotonicdisp 0
+# Signal21
+GrMeas:AtX Graph0 Signal21 -0.076885290312611 xyrangeVisible
+# M:19
+GrMeas:AtX Graph0 Signal21 -0.0038029048892771 xyrangeVisible
+# M:20
+Graph addsignal WF:66:1 -region 1 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill yellow -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label (1/deriv(log10(i1(m0)))) -xaxis 2 -yaxis 0 -tracehi 2 -bus {} -segdisp y -monotonicdisp 0
+# Signal22
+Graph itemselect all rem
+Graph itemselect Signal19 add
+# Signal19
+Graph itemselect Signal20 add
+# Signal20
+Graph delsignal selected
+Graph delsignal selected
+# No items to delete.
+Graph addsignal WF:60:3 -region 0 -yview real(y) -xview real(x) -rainbow 0 -rbcolors {} -fill green -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label lx18(m1) -xaxis 0 -yaxis 0 -tracehi 2 -bus {} -segdisp y -monotonicdisp 0
+# Signal2
+Graph addsignal WF:60:2 -region 1 -yview real(y) -xview real(x) -rainbow 0 -rbcolors {} -fill magenta -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label lx18(m0) -xaxis 0 -yaxis 0 -tracehi 2 -bus {} -segdisp y -monotonicdisp 0
+# Signal3
+Graph itemselect all rem
+Graph itemselect Signal0 add
+# Signal0
+Graph itemselect Signal1 add
+# Signal1
+Graph delsignal selected
+Graph sigconfig Signal3 -segdisp ll
+Graph sigconfig Signal2 -segdisp ll
+Graph addsignal WF:70:1 -region 0 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill #ffd016 -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label (1/deriv(log10(par(-1*i1(m1)))) -xaxis 2 -yaxis 0 -tracehi 2 -bus {} -segdisp yy -monotonicdisp 0
+# Signal23
+GrMeas:AtX Graph0 Signal23 -0.076885290312611 xyrangeVisible
+# M:21
+GrMeas:AtX Graph0 Signal23 -0.0038029048892771 xyrangeVisible
+# M:22
+Graph addsignal WF:75:1 -region 1 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill yellow -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label (1/deriv(log10(i1(m0)))) -xaxis 2 -yaxis 0 -tracehi 2 -bus {} -segdisp yy -monotonicdisp 0
+# Signal24
+Graph itemselect all rem
+Graph itemselect Signal21 add
+# Signal21
+Graph itemselect Signal22 add
+# Signal22
+Graph delsignal selected
+Graph delsignal selected
+# No items to delete.
+Graph addsignal WF:67:3 -region 0 -yview real(y) -xview real(x) -rainbow 0 -rbcolors {} -fill green -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label lx18(m1) -xaxis 0 -yaxis 0 -tracehi 2 -bus {} -segdisp ll -monotonicdisp 0
+# Signal4
+Graph addsignal WF:67:2 -region 1 -yview real(y) -xview real(x) -rainbow 0 -rbcolors {} -fill magenta -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label lx18(m0) -xaxis 0 -yaxis 0 -tracehi 2 -bus {} -segdisp ll -monotonicdisp 0
+# Signal5
+Graph itemselect all rem
+Graph itemselect Signal2 add
+# Signal2
+Graph itemselect Signal3 add
+# Signal3
+Graph delsignal selected
+Graph sigconfig Signal5 -rainbow 1
+Graph sigconfig Signal4 -rainbow 1
+Graph:DSel
+Graph:Select Graph2
+Mdi:Resize 710 560
+Mdi:Move 63 63
+Graph:Select Graph1
+Graph:DSel
+Mdi:Iconify
+Graph:Select Graph2
+Graph:DSel
+Mdi:Move 102 12
+Mdi:FullSize
+Mdi:Resize 844 659
+Mdi:Move 0 0
+Graph config -font {-family {OF Helvetica} -size 12 -weight normal -slant roman -underline 0 -overstrike 0}
+Graph:DSel
+Graph itemselect AxisY(1,0) add
+# AxisY(1,0)
+Graph:DSel
+Graph axisconfig AxisY(1,0) -rang {0.0 200a} -gridvis y -label {NMOS Gate Capacitance (F)} -scale lin -unitscale auto
+Graph:Select Graph2
+Graph:DSel
+Graph itemselect AxisY(0,0) add
+# AxisY(0,0)
+Graph:DSel
+Graph axisconfig AxisY(0,0) -rang {0.0 200a} -gridvis y -label {PMOS Gate Capacitance (F)} -scale lin -unitscale auto
+Graph:Select Graph2
+Graph:DSel
+Graph itemselect AxisX(0) add
+# AxisX(0)
+Graph:DSel
+Graph:DSel
+Graph:DSel
+Graph:ManipulateItem icursor draw2_text @267.0,43.0
+Graph itemcreate text 267.0 43.0 -tags draw2_text -font {-family {OF Helvetica} -size 12.0 -weight normal -slant roman -underline 0 -overstrike 0 -type outline} -fill pink -justify left -anchor nw -box 0 -bg {}
+# GrDraw0_text
+Graph:ManipulateItem insert GrDraw0_text insert {}
+Graph:ManipulateItem insert GrDraw0_text insert L
+Graph:ManipulateItem insert GrDraw0_text insert =
+Graph:ManipulateItem insert GrDraw0_text insert 4
+Graph:ManipulateItem insert GrDraw0_text insert 5
+Graph:ManipulateItem insert GrDraw0_text insert n
+Graph:ManipulateItem insert GrDraw0_text insert m
+Graph:ManipulateItem insert GrDraw0_text insert .
+Graph:ManipulateItem insert GrDraw0_text insert ,
+Graph:ManipulateItem dchars GrDraw0_text 7
+Graph:ManipulateItem dchars GrDraw0_text 6
+Graph:ManipulateItem insert GrDraw0_text insert ,
+Graph:ManipulateItem insert GrDraw0_text insert { }
+Graph:ManipulateItem insert GrDraw0_text insert {}
+Graph:ManipulateItem insert GrDraw0_text insert W
+Graph:ManipulateItem insert GrDraw0_text insert =
+Graph:ManipulateItem insert GrDraw0_text insert 3
+Graph:ManipulateItem insert GrDraw0_text insert 6
+Graph:ManipulateItem insert GrDraw0_text insert 0
+Graph:ManipulateItem insert GrDraw0_text insert n
+Graph:ManipulateItem insert GrDraw0_text insert m
+Graph:ManipulateItem insert GrDraw0_text insert ,
+Graph:ManipulateItem insert GrDraw0_text insert { }
+Graph:ManipulateItem insert GrDraw0_text insert {}
+Graph:ManipulateItem insert GrDraw0_text insert V
+Graph:ManipulateItem insert GrDraw0_text insert d
+Graph:ManipulateItem insert GrDraw0_text insert s
+Graph:ManipulateItem insert GrDraw0_text insert =
+Graph:ManipulateItem insert GrDraw0_text insert 0
+Graph:ManipulateItem insert GrDraw0_text insert ,
+Graph:ManipulateItem insert GrDraw0_text insert 1
+Graph:ManipulateItem insert GrDraw0_text insert {}
+Graph:ManipulateItem insert GrDraw0_text insert V
+Graph:ManipulateItem dchars GrDraw0_text 24
+Graph:ManipulateItem dchars GrDraw0_text 23
+Graph:ManipulateItem dchars GrDraw0_text 22
+Graph:ManipulateItem insert GrDraw0_text insert {}
+Graph:ManipulateItem insert GrDraw0_text insert {}
+Graph:ManipulateItem insert GrDraw0_text insert {}
+Graph:ManipulateItem insert GrDraw0_text insert V
+Graph:ManipulateItem insert GrDraw0_text insert {}
+Graph:ManipulateItem insert GrDraw0_text insert &
+Graph:ManipulateItem insert GrDraw0_text insert 1
+Graph:ManipulateItem insert GrDraw0_text insert .
+Graph:ManipulateItem insert GrDraw0_text insert 1
+Graph:ManipulateItem insert GrDraw0_text insert {}
+Graph:ManipulateItem insert GrDraw0_text insert {}
+Graph:ManipulateItem insert GrDraw0_text insert V
+Graph:ManipulateItem dchars GrDraw0_text 27
+Graph:ManipulateItem dchars GrDraw0_text 26
+Graph:ManipulateItem insert GrDraw0_text insert 1
+Graph:ManipulateItem insert GrDraw0_text insert {}
+Graph:ManipulateItem insert GrDraw0_text insert V
+Graph:ManipulateItem insert GrDraw0_text insert ,
+Graph:ManipulateItem insert GrDraw0_text insert { }
+Graph:ManipulateItem insert GrDraw0_text insert {}
+Graph:ManipulateItem insert GrDraw0_text insert T
+Graph:ManipulateItem insert GrDraw0_text insert =
+Graph:ManipulateItem insert GrDraw0_text insert 1
+Graph:ManipulateItem insert GrDraw0_text insert 1
+Graph:ManipulateItem insert GrDraw0_text insert 0
+Graph:ManipulateItem insert GrDraw0_text insert {}
+Graph:ManipulateItem insert GrDraw0_text insert C
+Graph:DSel 0
+Graph:DSel 0
+Graph:DSel 0
+Graph:ManipulateItem addtag selSet withtag GrDraw0_text
+Graph:ManipulateItem move selSet 0 -2
+Graph:ManipulateItem move selSet -1 -1
+Graph:ManipulateItem move selSet 0 -1
+Graph:ManipulateItem move selSet -1 -1
+Graph:ManipulateItem move selSet -1 -2
+Graph:ManipulateItem move selSet 0 -1
+Graph:ManipulateItem move selSet -1 -1
+Graph:ManipulateItem move selSet -2 0
+Graph:ManipulateItem move selSet -1 0
+Graph:ManipulateItem move selSet -6 0
+Graph:ManipulateItem move selSet -25 -1
+Graph:ManipulateItem move selSet 1 0
+Graph:ManipulateItem move selSet 1 0
+Graph:ManipulateItem move selSet 1 0
+Graph:ManipulateItem move selSet 1 0
+Graph:ManipulateItem move selSet 1 0
+Graph:ManipulateItem move selSet 1 1
+Graph:ManipulateItem move selSet 1 0
+Graph:ManipulateItem move selSet 1 0
+Graph:ManipulateItem move selSet 1 0
+Graph:ManipulateItem move selSet 1 0
+Graph:ManipulateItem move selSet 1 0
+Graph:ManipulateItem move selSet 1 0
+Graph:ManipulateItem move selSet 1 0
+Graph:ManipulateItem move selSet 1 0
+Graph:ManipulateItem move selSet 1 0
+Graph:ManipulateItem move selSet 1 0
+Graph:ManipulateItem move selSet 1 0
+Graph:ManipulateItem move selSet 0 -1
+Graph:ManipulateItem move selSet 1 0
+Graph:ManipulateItem move selSet 1 0
+Graph:ManipulateItem move selSet 1 0
+Graph:ManipulateItem move selSet 1 0
+Graph:ManipulateItem move selSet 2 0
+Graph config -legend none
+Graph:DSel
+Graph itemselect AxisX(0) add
+# AxisX(0)
+Graph itemselect AxisX(0) add
+Graph:DSel
+Graph axisconfig AxisX(0) -rang {0.0 1.2} -gridvis y -label {Gate to Source Voltage} -scale lin -unitscale auto
+Mdi:Resize 806 659
+Mdi:Move 0 0
+Mdi:Resize 844 659
+Mdi:Move 0 0
+.frame1.mdi.mdi3.work.graph2 save -file /home/class/niels538/cds_ncsu45/hw3/gate_cap.png -format png  -x 0 -y 0 -w 842 -h 655 -colormode color
+Graph:SaveGraph Graph2 /home/class/niels538/cds_ncsu45/hw3/gate_cap 0
+Graph:DSel
+Graph itemselect AxisY(1,0) add
+# AxisY(1,0)
+Graph:Select Graph2
+Graph axisconfig AxisY(1,0) -scale log -range all
+Graph axisconfig AxisY(1,0) -scale log -range all
+Graph axisconfig AxisY(1,0) -scale linear -rang all
+Graph:DSel
+Graph:Select Graph2
+Graph:DSel
+Graph itemselect AxisX(0) add
+# AxisX(0)
+GrXY:NewGraph
+# Graph3
+Graph:DSel
+Graph addsignal WF:79:1 -region 0 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill #ffd016 -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label (1/deriv(log10(par(-1*i1(m1)))) -yaxis 0 -tracehi 2 -bus {} -segdisp yy -monotonicdisp 0
+# Signal25
+GrMeas:AtX Graph0 Signal25 -0.076885290312611 xyrangeVisible
+# M:23
+GrMeas:AtX Graph0 Signal25 -0.0038029048892771 xyrangeVisible
+# M:24
+Graph addsignal WF:82:1 -region 1 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill yellow -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label (1/deriv(log10(i1(m0)))) -yaxis 0 -tracehi 2 -bus {} -segdisp yy -monotonicdisp 0
+# Signal26
+Graph itemselect all rem
+Graph itemselect Signal23 add
+# Signal23
+Graph itemselect Signal24 add
+# Signal24
+Graph delsignal selected
+Graph delsignal selected
+# No items to delete.
+Graph addsignal WF:76:3 -region 0 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill green -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label lx18(m1) -yaxis 0 -tracehi 2 -bus {} -segdisp ll -monotonicdisp 0
+# Signal6
+Graph addsignal WF:76:2 -region 1 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill magenta -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label lx18(m0) -yaxis 0 -tracehi 2 -bus {} -segdisp ll -monotonicdisp 0
+# Signal7
+Graph itemselect all rem
+Graph itemselect Signal4 add
+# Signal4
+Graph itemselect Signal5 add
+# Signal5
+Graph delsignal selected
+Graph itemselect all rem
+Graph delsignal selected
+pf:read PF:76 i1(m0) par(-1*i1(m1)
+# WF:76:1 WF:76:4
+Graph addsignal {WF:76:1 WF:76:4} -region {new new} -yview {real(y) real(y)} -xview {real(x) real(x)} -tracehi {2 2}
+# Signal0 Signal1
+Mdi:FullSize
+Graph:DSel
+Graph:Select Graph3
+Graph:DSel
+Graph addsignal WF:86:1 -region 0 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill #ffd016 -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label (1/deriv(log10(par(-1*i1(m1)))) -yaxis 0 -tracehi 2 -bus {} -segdisp yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy -monotonicdisp 0
+# Signal27
+GrMeas:AtX Graph0 Signal27 -0.076885290312611 xyrangeVisible
+# M:25
+GrMeas:AtX Graph0 Signal27 -0.0038029048892771 xyrangeVisible
+# M:26
+Graph addsignal WF:89:1 -region 1 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill yellow -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label (1/deriv(log10(i1(m0)))) -yaxis 0 -tracehi 2 -bus {} -segdisp yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy -monotonicdisp 0
+# Signal28
+Graph itemselect all rem
+Graph itemselect Signal25 add
+# Signal25
+Graph itemselect Signal26 add
+# Signal26
+Graph delsignal selected
+Graph delsignal selected
+# No items to delete.
+Graph addsignal WF:83:3 -region 0 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill green -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label lx18(m1) -yaxis 0 -tracehi 2 -bus {} -segdisp yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy -monotonicdisp 0
+# Signal8
+Graph addsignal WF:83:2 -region 1 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill magenta -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label lx18(m0) -yaxis 0 -tracehi 2 -bus {} -segdisp yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy -monotonicdisp 0
+# Signal9
+Graph itemselect all rem
+Graph itemselect Signal6 add
+# Signal6
+Graph itemselect Signal7 add
+# Signal7
+Graph delsignal selected
+Graph addsignal WF:83:1 -region 0 -yview real(y) -xview real(x) -rainbow 0 -rbcolors {} -fill green -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label i1(m0) -yaxis 0 -tracehi 2 -bus {} -segdisp yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy -monotonicdisp 0
+# Signal2
+Graph addsignal WF:83:4 -region 1 -yview real(y) -xview real(x) -rainbow 0 -rbcolors {} -fill magenta -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label par(-1*i1(m1) -yaxis 0 -tracehi 2 -bus {} -segdisp yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy -monotonicdisp 0
+# Signal3
+Graph itemselect all rem
+Graph itemselect Signal0 add
+# Signal0
+Graph itemselect Signal1 add
+# Signal1
+Graph delsignal selected
+Graph:DSel
+Graph:Select Graph3
+Graph:DSel
+Graph addsignal WF:93:1 -region 0 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill #ffd016 -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label (1/deriv(log10(par(-1*i1(m1)))) -xaxis 4 -yaxis 0 -tracehi 2 -bus {} -segdisp yyyy -monotonicdisp 0
+# Signal29
+GrMeas:AtX Graph0 Signal29 -0.076885290312611 xyrangeVisible
+# M:27
+GrMeas:AtX Graph0 Signal29 -0.0038029048892771 xyrangeVisible
+# M:28
+Graph addsignal WF:96:1 -region 1 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill yellow -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label (1/deriv(log10(i1(m0)))) -xaxis 4 -yaxis 0 -tracehi 2 -bus {} -segdisp yyyy -monotonicdisp 0
+# Signal30
+Graph itemselect all rem
+Graph itemselect Signal27 add
+# Signal27
+Graph itemselect Signal28 add
+# Signal28
+Graph delsignal selected
+Graph delsignal selected
+# No items to delete.
+Graph addsignal WF:90:3 -region 0 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill green -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label lx18(m1) -xaxis 2 -yaxis 0 -tracehi 2 -bus {} -segdisp yyyy -monotonicdisp 0
+# Signal10
+Graph addsignal WF:90:2 -region 1 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill magenta -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label lx18(m0) -xaxis 2 -yaxis 0 -tracehi 2 -bus {} -segdisp yyyy -monotonicdisp 0
+# Signal11
+Graph itemselect all rem
+Graph itemselect Signal8 add
+# Signal8
+Graph itemselect Signal9 add
+# Signal9
+Graph delsignal selected
+Graph addsignal WF:90:1 -region 0 -yview real(y) -xview real(x) -rainbow 0 -rbcolors {} -fill green -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label i1(m0) -xaxis 1 -yaxis 0 -tracehi 2 -bus {} -segdisp yyyy -monotonicdisp 0
+# Signal4
+Graph addsignal WF:90:4 -region 1 -yview real(y) -xview real(x) -rainbow 0 -rbcolors {} -fill magenta -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label par(-1*i1(m1) -xaxis 1 -yaxis 0 -tracehi 2 -bus {} -segdisp yyyy -monotonicdisp 0
+# Signal5
+Graph itemselect all rem
+Graph itemselect Signal2 add
+# Signal2
+Graph itemselect Signal3 add
+# Signal3
+Graph delsignal selected
+Graph sigconfig Signal5 -segdisp llll
+Graph sigconfig Signal4 -segdisp llll
+Graph sigconfig Signal5 -rainbow 1
+Graph sigconfig Signal4 -rainbow 1
+Graph:Select Graph3
+Graph:DSel
+Graph itemselect Signal4 add
+# Signal4
+Graph sigconfig Signal4 -regswap 3
+Graph:DSel
+Graph itemselect AxisY(1,0) add
+# AxisY(1,0)
+Graph itemselect AxisY(1,0) add
+Graph:DSel
+Graph axisconfig AxisY(1,0) -rang {0.0 600u} -gridvis y -label {NMOS Drain Current} -scale lin -unitscale auto
+Graph:Select Graph3
+Graph:DSel
+Graph itemselect AxisY(0,0) add
+# AxisY(0,0)
+Graph:DSel
+Graph axisconfig AxisY(0,0) -rang {0.0 300u} -gridvis y -label {PMOS Drain Current} -scale lin -unitscale auto
+Graph config -font {-family {OF Helvetica} -size 12 -weight normal -slant roman -underline 0 -overstrike 0}
+Graph:Select Graph3
+Graph:DSel
+Graph itemselect AxisX(1) add
+# AxisX(1)
+Graph itemselect AxisX(1) add
+Graph:DSel
+Graph axisconfig AxisX(1) -rang {0.0 120.0} -gridvis y -label {Simulation Temperature (C)} -scale lin -unitscale auto
+Graph:Select Graph3
+Graph:DSel
+Graph itemselect AxisY(0,0) add
+# AxisY(0,0)
+Graph:DSel
+Graph axisconfig AxisY(0,0) -label {PMOS Drain Current (A)}
+Graph:Select Graph3
+Graph:DSel
+Graph itemselect AxisY(1,0) add
+# AxisY(1,0)
+Graph itemselect AxisY(1,0) add
+Graph:DSel
+Graph axisconfig AxisY(1,0) -rang {-30u 600u} -gridvis y -label {NMOS Drain Current (A)} -scale lin -unitscale auto
+Graph config -legend none
+Mdi:Resize 873 650
+Mdi:Move 0 0
+Graph:Select Graph3
+Graph:DSel
+Graph itemselect AxisX(1) add
+# AxisX(1)
+Graph:DSel
+Graph axisconfig AxisX(1) -rang {0.0 110 exact} -gridvis y -label {Simulation Temperature (C)} -scale lin -unitscale auto
+Graph:DSel
+Graph:Select Graph3
+Graph:DSel
+Graph:DSel
+Graph:DSel
+Graph:ManipulateItem icursor draw3_text @306.0,32.0
+Graph itemcreate text 306.0 32.0 -tags draw3_text -font {-family {OF Helvetica} -size 12.0 -weight normal -slant roman -underline 0 -overstrike 0 -type outline} -fill pink -justify left -anchor nw -box 0 -bg {}
+# GrDraw0_text
+Graph:ManipulateItem insert GrDraw0_text insert {}
+Graph:ManipulateItem insert GrDraw0_text insert D
+Graph:ManipulateItem dchars GrDraw0_text 0
+Graph:ManipulateItem insert GrDraw0_text insert {}
+Graph:ManipulateItem insert GrDraw0_text insert L
+Graph:ManipulateItem insert GrDraw0_text insert =
+Graph:ManipulateItem insert GrDraw0_text insert 4
+Graph:ManipulateItem insert GrDraw0_text insert 5
+Graph:ManipulateItem insert GrDraw0_text insert n
+Graph:ManipulateItem insert GrDraw0_text insert m
+Graph:ManipulateItem insert GrDraw0_text insert ,
+Graph:ManipulateItem insert GrDraw0_text insert { }
+Graph:ManipulateItem insert GrDraw0_text insert {}
+Graph:ManipulateItem insert GrDraw0_text insert W
+Graph:ManipulateItem insert GrDraw0_text insert =
+Graph:ManipulateItem insert GrDraw0_text insert 1
+Graph:ManipulateItem insert GrDraw0_text insert 3
+Graph:ManipulateItem insert GrDraw0_text insert 0
+Graph:ManipulateItem insert GrDraw0_text insert n
+Graph:ManipulateItem insert GrDraw0_text insert m
+Graph:ManipulateItem insert GrDraw0_text insert ,
+Graph:ManipulateItem insert GrDraw0_text insert { }
+Graph:ManipulateItem dchars GrDraw0_text 16
+Graph:ManipulateItem dchars GrDraw0_text 15
+Graph:DSel 0
+Graph:DSel 0
+Graph:DSel 0
+Graph:ManipulateItem addtag selSet withtag GrDraw0_text
+Graph:ManipulateItem move selSet 2 1
+Graph:ManipulateItem move selSet 2 0
+Graph:ManipulateItem move selSet 3 1
+Graph:ManipulateItem move selSet 3 0
+Graph:ManipulateItem move selSet 6 1
+Graph:ManipulateItem move selSet 4 0
+Graph:ManipulateItem move selSet 13 0
+Graph:ManipulateItem move selSet 14 -1
+Graph:ManipulateItem move selSet 11 0
+Graph:ManipulateItem move selSet 1 0
+Graph:ManipulateItem move selSet -1 0
+Graph:ManipulateItem move selSet 0 -1
+Graph:ManipulateItem move selSet -1 0
+Graph:ManipulateItem move selSet 0 -1
+Graph:ManipulateItem move selSet -1 0
+Graph:ManipulateItem move selSet -1 0
+Graph:ManipulateItem move selSet 0 -1
+Graph:ManipulateItem move selSet 1 1
+Graph:ManipulateItem move selSet 1 0
+Graph:ManipulateItem move selSet 1 0
+Graph:DSel
+Graph:DSel
+.frame1.mdi.mdi4.work.graph3 save -file /home/class/niels538/cds_ncsu45/hw3/temp.png -format png  -x 0 -y 0 -w 871 -h 646 -colormode color
+Graph:SaveGraph Graph3 /home/class/niels538/cds_ncsu45/hw3/temp 0
+Graph:Select Graph3
+Graph axisconfig AxisX(1) -range {-55.0 55.0 exact}
+Graph axisconfig {AxisX(1) AxisY(0,0) AxisY(1,0)} -range {all all all} -zoomed {0 0 0}
+GrXY:NewGraph
+# Graph4
+Graph:DSel
+Graph addsignal WF:100:1 -region 0 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill #ffd016 -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label (1/deriv(log10(par(-1*i1(m1)))) -yaxis 0 -tracehi 2 -bus {} -segdisp yyyy -monotonicdisp 0
+# Signal31
+GrMeas:AtX Graph0 Signal31 -0.076885290312611 xyrangeVisible
+# M:29
+GrMeas:AtX Graph0 Signal31 -0.0038029048892771 xyrangeVisible
+# M:30
+Graph addsignal WF:103:1 -region 1 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill yellow -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label (1/deriv(log10(i1(m0)))) -yaxis 0 -tracehi 2 -bus {} -segdisp yyyy -monotonicdisp 0
+# Signal32
+Graph itemselect all rem
+Graph itemselect Signal29 add
+# Signal29
+Graph itemselect Signal30 add
+# Signal30
+Graph delsignal selected
+Graph delsignal selected
+# No items to delete.
+Graph addsignal WF:97:3 -region 0 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill green -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label lx18(m1) -yaxis 0 -tracehi 2 -bus {} -segdisp yyyy -monotonicdisp 0
+# Signal12
+Graph addsignal WF:97:2 -region 1 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill magenta -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label lx18(m0) -yaxis 0 -tracehi 2 -bus {} -segdisp yyyy -monotonicdisp 0
+# Signal13
+Graph itemselect all rem
+Graph itemselect Signal10 add
+# Signal10
+Graph itemselect Signal11 add
+# Signal11
+Graph delsignal selected
+Graph addsignal WF:97:4 -region 0 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill magenta -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label par(-1*i1(m1) -yaxis 0 -tracehi 2 -bus {} -segdisp llll -monotonicdisp 0
+# Signal6
+Graph addsignal WF:97:1 -region 1 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill green -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label i1(m0) -yaxis 0 -tracehi 2 -bus {} -segdisp llll -monotonicdisp 0
+# Signal7
+Graph itemselect all rem
+Graph itemselect Signal5 add
+# Signal5
+Graph itemselect Signal4 add
+# Signal4
+Graph delsignal selected
+Graph itemselect all rem
+Graph delsignal selected
+pf:read PF:97 i1(m0) par(-1*i1(m1)
+# WF:97:1 WF:97:4
+Graph addsignal {WF:97:1 WF:97:4} -region {new new} -yview {real(y) real(y)} -xview {real(x) real(x)} -tracehi {2 2}
+# Signal0 Signal1
+Mdi:Resize 567 562
+Mdi:Move 92 92
+Mdi:Move 174 44
+Graph:Select Graph4
+Graph:DSel
+Graph itemselect AxisY(1,0) add
+# AxisY(1,0)
+Graph axisconfig AxisY(1,0) -scale log -range all
+Graph:DSel
+Graph itemselect AxisY(0,0) add
+# AxisY(0,0)
+Graph axisconfig AxisY(0,0) -scale log -range all
+Graph:DSel
+Graph itemselect Signal0 add
+# Signal0
+Graph sigconfig Signal0 -region 1 -rgnindex 1
+Graph:DSel
+Graph itemselect AxisY(0,1) add
+# AxisY(0,1)
+Graph axisconfig AxisY(0,1) -scale log -range all
+Graph:DSel
+Graph itemselect Signal0 add
+# Signal0
+Graph itemselect Signal0 add
+# Signal0
+Graph itemselect Signal0 add
+# Signal0
+Graph axisconfig AxisY(0,1) -scale log -gridvis yes -linticks {} -logticks {} -subticks 0 -label (Params) -digiview {} -lock no -slider no -range {902.39293815131p 118.26043919427u} -unitscale auto
+Graph:DSel
+Graph itemselect Signal1 add
+# Signal1
+Graph:Select Graph3
+GrXY:NewGraph
+# Graph5
+Graph:DSel
+Graph:Select Graph3
+Graph:Select Graph3
+GrXY:NewGraph
+# Graph6
+Graph:DSel
+pf:read PF:97 i1(m1) par(-1*i1(m1)
+# WF:97:5 WF:97:4
+Graph addsignal {WF:97:5 WF:97:4} -region {new new} -yview {real(y) real(y)} -xview {real(x) real(x)} -tracehi {2 2}
+# Signal0 Signal1
+Graph:Select Graph6
+Graph:DSel
+Graph itemselect Signal0 add
+# Signal0
+Graph delsignal selected
+Graph:DSel
+pf:read PF:97 i1(m0)
+# WF:97:1
+Graph addsignal WF:97:1 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal2
+Graph:Select Graph6
+Graph:DSel
+Graph itemselect Signal1 add
+# Signal1
+Graph:DSel
+Graph axisconfig AxisY(0,0) -range {49.936794400809u 60.431487195307u}
+Graph axisconfig AxisY(0,0) -scale linear -gridvis yes -linticks {} -logticks {} -subticks 0 -label (Params) -digiview {} -lock no -slider no -range {902.39293815131p 118.26043919427u} -unitscale auto
+Graph:DSel
+Graph itemselect Signal1 add
+# Signal1
+Graph sigconfig Signal1 -region 1 -rgnindex 1
+Graph:DSel
+Graph itemselect AxisY(0,0) add
+# AxisY(0,0)
+Graph axisconfig AxisY(0,0) -scale log -range all
+Graph:DSel
+Graph itemselect AxisY(0,1) add
+# AxisY(0,1)
+Graph axisconfig AxisY(0,1) -scale log -range all
+Graph axisconfig AxisY(0,1) -scale linear -gridvis yes -linticks {} -logticks {} -subticks 0 -label (A) -digiview {} -lock no -slider no -range {5.1810098433691n 416.40340350568u} -unitscale auto
+Graph axisconfig AxisY(0,1) -scale log -gridvis yes -linticks {} -logticks {} -subticks 0 -label (A) -digiview {} -lock no -slider no -range {5.1810098433691n 416.40340350568u} -unitscale auto
+Graph axisconfig AxisY(0,1) -scale linear -gridvis yes -linticks {} -logticks {} -subticks 0 -label (A) -digiview {} -lock no -slider no -range {5.1810098433691n 416.40340350568u} -unitscale auto
+Graph axisconfig AxisY(0,1) -scale log -gridvis yes -linticks {} -logticks {} -subticks 0 -label (A) -digiview {} -lock no -slider no -range {5.1810098433691n 416.40340350568u} -unitscale auto
+Graph axisconfig AxisY(0,1) -scale linear -gridvis yes -linticks {} -logticks {} -subticks 0 -label (A) -digiview {} -lock no -slider no -range {5.1810098433691n 416.40340350568u} -unitscale auto
+Graph:DSel
+Graph itemselect Signal1 add
+# Signal1
+Graph:DSel
+Graph:DSel
+Graph itemselect Signal2 add
+# Signal2
+Graph delsignal selected
+Graph:DSel
+Graph:DSel
+Graph:Select Graph3
+Graph:Select Graph3
+Mdi:Iconify
+Graph:Select Graph6
+Graph:DSel
+Mdi:Move 76 200
+Graph:Select Graph5
+Graph:DSel
+Mdi:Move 559 210
+Graph:DSel
+pf:read PF:97 i1(m0)
+# WF:97:1
+Graph addsignal WF:97:1 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal0
+Graph:DSel
+Graph:Select Graph5
+Mdi:Resize 490 385
+Mdi:Move 559 197
+Mdi:Move 353 154
+Graph:DSel
+Graph itemselect AxisY(0,0) add
+# AxisY(0,0)
+Graph axisconfig AxisY(0,0) -scale log -range all
+Graph config -font {-family {OF Helvetica} -size 12 -weight normal -slant roman -underline 0 -overstrike 0}
+Graph:DSel
+Graph:DSel
+Graph:DSel
+Graph:DSel
+Graph:Select Graph6
+Graph:Select Graph2
+GrXY:NewGraph
+# Graph7
+Graph addsignal WF:107:1 -region 0 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill #ffd016 -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label (1/deriv(log10(par(-1*i1(m1)))) -xaxis 5 -yaxis 0 -tracehi 2 -bus {} -segdisp yy -monotonicdisp 0
+# Signal33
+GrMeas:AtX Graph0 Signal33 -0.076885290312611 xyrangeVisible
+# M:31
+GrMeas:AtX Graph0 Signal33 -0.0038029048892771 xyrangeVisible
+# M:32
+Graph addsignal WF:110:1 -region 1 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill yellow -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label (1/deriv(log10(i1(m0)))) -xaxis 5 -yaxis 0 -tracehi 2 -bus {} -segdisp yy -monotonicdisp 0
+# Signal34
+Graph itemselect all rem
+Graph itemselect Signal31 add
+# Signal31
+Graph itemselect Signal32 add
+# Signal32
+Graph delsignal selected
+Graph delsignal selected
+# No items to delete.
+Graph addsignal WF:104:3 -region 0 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill green -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label lx18(m1) -xaxis 3 -yaxis 0 -tracehi 2 -bus {} -segdisp yy -monotonicdisp 0
+# Signal14
+Graph addsignal WF:104:2 -region 1 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill magenta -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label lx18(m0) -xaxis 3 -yaxis 0 -tracehi 2 -bus {} -segdisp yy -monotonicdisp 0
+# Signal15
+Graph itemselect all rem
+Graph itemselect Signal12 add
+# Signal12
+Graph itemselect Signal13 add
+# Signal13
+Graph delsignal selected
+Graph addsignal WF:104:4 -region 0 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill magenta -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label par(-1*i1(m1) -xaxis 2 -yaxis 0 -tracehi 2 -bus {} -segdisp yy -monotonicdisp 0
+# Signal8
+Graph addsignal WF:104:1 -region 1 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill green -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label i1(m0) -xaxis 2 -yaxis 0 -tracehi 2 -bus {} -segdisp yy -monotonicdisp 0
+# Signal9
+Graph itemselect all rem
+Graph itemselect Signal6 add
+# Signal6
+Graph itemselect Signal7 add
+# Signal7
+Graph delsignal selected
+Graph itemselect all rem
+Graph delsignal selected
+pf:read PF:104 lv9(m0) lv9(m1)
+# WF:104:5 WF:104:6
+Graph addsignal {WF:104:5 WF:104:6} -region {new new} -yview {real(y) real(y)} -xview {real(x) real(x)} -tracehi {2 2}
+# Signal0 Signal1
+Mdi:FullSize
+Graph:DSel
+Graph:Select Graph7
+Graph:DSel
+Graph addsignal WF:114:1 -region 0 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill #ffd016 -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label (1/deriv(log10(par(-1*i1(m1)))) -yaxis 0 -tracehi 2 -bus {} -segdisp yy -monotonicdisp 0
+# Signal35
+GrMeas:AtX Graph0 Signal35 -0.076885290312611 xyrangeVisible
+# M:33
+GrMeas:AtX Graph0 Signal35 -0.0038029048892771 xyrangeVisible
+# M:34
+Graph addsignal WF:117:1 -region 1 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill yellow -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label (1/deriv(log10(i1(m0)))) -yaxis 0 -tracehi 2 -bus {} -segdisp yy -monotonicdisp 0
+# Signal36
+Graph itemselect all rem
+Graph itemselect Signal33 add
+# Signal33
+Graph itemselect Signal34 add
+# Signal34
+Graph delsignal selected
+Graph delsignal selected
+# No items to delete.
+Graph addsignal WF:111:5 -region 0 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill green -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label lx18(m1) -yaxis 0 -tracehi 2 -bus {} -segdisp yy -monotonicdisp 0
+# Signal16
+Graph addsignal WF:111:4 -region 1 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill magenta -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label lx18(m0) -yaxis 0 -tracehi 2 -bus {} -segdisp yy -monotonicdisp 0
+# Signal17
+Graph itemselect all rem
+Graph itemselect Signal14 add
+# Signal14
+Graph itemselect Signal15 add
+# Signal15
+Graph delsignal selected
+Graph addsignal WF:111:6 -region 0 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill magenta -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label par(-1*i1(m1) -yaxis 0 -tracehi 2 -bus {} -segdisp yy -monotonicdisp 0
+# Signal10
+Graph addsignal WF:111:1 -region 1 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill green -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label i1(m0) -yaxis 0 -tracehi 2 -bus {} -segdisp yy -monotonicdisp 0
+# Signal11
+Graph itemselect all rem
+Graph itemselect Signal8 add
+# Signal8
+Graph itemselect Signal9 add
+# Signal9
+Graph delsignal selected
+Graph addsignal WF:111:2 -region 0 -yview real(y) -xview real(x) -rainbow 0 -rbcolors {} -fill green -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label lv9(m0) -yaxis 0 -tracehi 2 -bus {} -segdisp yy -monotonicdisp 0
+# Signal2
+Graph addsignal WF:111:3 -region 1 -yview real(y) -xview real(x) -rainbow 0 -rbcolors {} -fill magenta -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label lv9(m1) -yaxis 0 -tracehi 2 -bus {} -segdisp yy -monotonicdisp 0
+# Signal3
+Graph itemselect all rem
+Graph itemselect Signal0 add
+# Signal0
+Graph itemselect Signal1 add
+# Signal1
+Graph delsignal selected
+Graph:Select Graph7
+Graph:DSel
+Graph itemselect Signal2 add
+# Signal2
+Graph sigconfig Signal2 -regswap 3
+Graph:DSel
+Graph itemselect AxisY(1,0) add
+# AxisY(1,0)
+Graph itemselect AxisY(1,0) add
+Graph:DSel
+Graph axisconfig AxisY(1,0) -rang {0.2 0.5} -gridvis y -label {NMOS Threshold Voltage} -scale lin -unitscale auto
+Graph axisconfig AxisY(1,0) -rang {0.185 0.515} -gridvis y -label {NMOS Threshold Voltage (V)} -scale lin -unitscale auto
+Graph:Select Graph7
+Graph:DSel
+Graph itemselect AxisY(0,0) add
+# AxisY(0,0)
+Graph:DSel
+Graph axisconfig AxisY(0,0) -rang {0.1 0.4} -gridvis y -label {PMOS Threshold Voltage (V)} -scale lin -unitscale auto
+Graph config -font {-family {OF Helvetica} -size 12 -weight normal -slant roman -underline 0 -overstrike 0}
+Graph config -legend none
+Graph:DSel
+Graph:Select Graph7
+Graph:DSel
+Graph:DSel
+Graph:DSel
+Graph:ManipulateItem icursor draw4_text @306.0,42.0
+Graph itemcreate text 306.0 42.0 -tags draw4_text -font {-family {OF Helvetica} -size 12.0 -weight normal -slant roman -underline 0 -overstrike 0 -type outline} -fill pink -justify left -anchor nw -box 0 -bg {}
+# GrDraw0_text
+Graph:ManipulateItem insert GrDraw0_text insert {}
+Graph:ManipulateItem insert GrDraw0_text insert L
+Graph:ManipulateItem insert GrDraw0_text insert =
+Graph:ManipulateItem insert GrDraw0_text insert 4
+Graph:ManipulateItem insert GrDraw0_text insert 5
+Graph:ManipulateItem insert GrDraw0_text insert n
+Graph:ManipulateItem insert GrDraw0_text insert m
+Graph:ManipulateItem insert GrDraw0_text insert ,
+Graph:ManipulateItem insert GrDraw0_text insert { }
+Graph:ManipulateItem insert GrDraw0_text insert {}
+Graph:ManipulateItem insert GrDraw0_text insert W
+Graph:ManipulateItem insert GrDraw0_text insert -
+Graph:ManipulateItem dchars GrDraw0_text 9
+Graph:ManipulateItem insert GrDraw0_text insert -
+Graph:ManipulateItem dchars GrDraw0_text 9
+Graph:ManipulateItem insert GrDraw0_text insert =
+Graph:ManipulateItem insert GrDraw0_text insert 3
+Graph:ManipulateItem insert GrDraw0_text insert 6
+Graph:ManipulateItem insert GrDraw0_text insert 0
+Graph:ManipulateItem insert GrDraw0_text insert n
+Graph:ManipulateItem insert GrDraw0_text insert m
+Graph:ManipulateItem insert GrDraw0_text insert ,
+Graph:ManipulateItem insert GrDraw0_text insert { }
+Graph:ManipulateItem insert GrDraw0_text insert {}
+Graph:ManipulateItem insert GrDraw0_text insert V
+Graph:ManipulateItem insert GrDraw0_text insert d
+Graph:ManipulateItem insert GrDraw0_text insert s
+Graph:ManipulateItem insert GrDraw0_text insert =
+Graph:ManipulateItem insert GrDraw0_text insert 1
+Graph:ManipulateItem insert GrDraw0_text insert .
+Graph:ManipulateItem insert GrDraw0_text insert 1
+Graph:ManipulateItem insert GrDraw0_text insert {}
+Graph:ManipulateItem insert GrDraw0_text insert V
+Graph:ManipulateItem insert GrDraw0_text insert ,
+Graph:ManipulateItem insert GrDraw0_text insert { }
+Graph:ManipulateItem insert GrDraw0_text insert {}
+Graph:ManipulateItem insert GrDraw0_text insert T
+Graph:ManipulateItem insert GrDraw0_text insert =
+Graph:ManipulateItem insert GrDraw0_text insert 1
+Graph:ManipulateItem insert GrDraw0_text insert 1
+Graph:ManipulateItem insert GrDraw0_text insert 0
+Graph:ManipulateItem insert GrDraw0_text insert {}
+Graph:ManipulateItem insert GrDraw0_text insert C
+Graph:DSel 0
+Graph:DSel 0
+Graph:DSel 0
+Graph:ManipulateItem addtag selSet withtag GrDraw0_text
+Graph:ManipulateItem move selSet 0 -1
+Graph:ManipulateItem move selSet 0 -1
+Graph:ManipulateItem move selSet -1 -1
+Graph:ManipulateItem move selSet 0 -1
+Graph:ManipulateItem move selSet -1 -1
+Graph:ManipulateItem move selSet 0 -1
+Graph:ManipulateItem move selSet 0 -1
+Graph:ManipulateItem move selSet -1 -1
+Graph:ManipulateItem move selSet 0 -1
+Graph:ManipulateItem move selSet -1 -1
+Graph:ManipulateItem move selSet 0 -1
+Graph:ManipulateItem move selSet 0 1
+Graph:ManipulateItem move selSet 0 1
+Graph:ManipulateItem move selSet 0 1
+Graph:ManipulateItem move selSet 0 1
+Graph:DSel
+Graph itemselect AxisX(1) add
+# AxisX(1)
+Graph:DSel
+Graph axisconfig AxisX(1) -rang {0.0 1.2} -gridvis y -label {Drain to Source Voltage (V)} -scale lin -unitscale auto
+Graph:DSel
+Graph:Select Graph7
+Graph:DSel
+Graph:DSel
+Graph config -legend right
+Graph:DSel
+Graph itemselect Signal2 add
+# Signal2
+GrMeas:P2P Graph7 Signal2 Signal2 1 {{} {} {} {}} xyrangeVisible {X1,Y1 X2,Y2 DeltaX DeltaY Length Slope}
+# M:0
+Graph:DSel
+GrMeas:Select Graph7 M:0 0 1
+GrMeas:MoveDiffAnc1 Graph7 M:0 0 0.1824392152124 0.41117787536239
+Graph:DSel
+Graph itemselect Signal3 add
+# Signal3
+Graph itemselect Signal3 add
+# Signal3
+GrMeas:P2P Graph7 Signal3 Signal3 1 {{} {} {} {}} xyrangeVisible {X1,Y1 X2,Y2 DeltaX DeltaY Length Slope}
+# M:1
+Graph:DSel
+GrMeas:Select Graph7 M:1 0 1
+GrMeas:MoveDiffAnc1 Graph7 M:1 0 0.37512498434861 0.31842473728904
+Graph config -legend none
+Graph:DSel
+GrMeas:MoveText Graph7 M:1 0 -57.0 23.0
+Graph:DSel
+GrMeas:Select Graph7 M:1 0 1
+GrMeas:MoveDiffAnc1 Graph7 M:1 0 0.0 0.389265346275
+GrMeas:MoveDiffAnc2 Graph7 M:1 0 1.1000000118542 0.18153797800205
+Graph:DSel
+GrMeas:Select Graph7 M:0 0 1
+GrMeas:MoveDiffAnc1 Graph7 M:0 0 0.0 0.43989517069099
+GrMeas:MoveDiffAnc2 Graph7 M:0 0 1.1000000118542 0.26675922141288
+GrMeas:MoveText Graph7 M:0 0 -234.0 7.0
+Graph:DSel
+GrMeas:Select Graph7 M:1 0 1
+GrMeas:MoveText Graph7 M:1 0 -248.0 1.0
+Graph:DSel
+Graph:DSel
+Graph:DSel
+GrMeas:Select Graph7 M:1 0 1
+GrMeas:MoveDiffAnc2 Graph7 M:1 0 0.41637570634933 0.31063482190592
+GrMeas:MoveDiffAnc1 Graph7 M:1 0 1.1000000118542 0.18153797800205
+GrMeas:MoveDiffAnc2 Graph7 M:1 0 0.0 0.389265346275
+GrMeas:MoveDiffAnc2 Graph7 M:1 0 0.089810767775197 0.37230493441316
+GrMeas:MoveDiffAnc1 Graph7 M:1 0 0.065841941758194 0.37683135431353
+GrMeas:MoveDiffAnc2 Graph7 M:1 0 1.1000000118542 0.18153797800205
+GrMeas:MoveDiffAnc1 Graph7 M:1 0 0.0 0.389265346275
+Mdi:Resize 879 665
+Mdi:Move 0 0
+.frame1.mdi.mdi8.work.graph7 save -file /home/class/niels538/cds_ncsu45/hw3/dibl.png -format png  -x 0 -y 0 -w 877 -h 661 -colormode color
+Graph:SaveGraph Graph7 /home/class/niels538/cds_ncsu45/hw3/dibl 0
+Graph:DSel
+Graph:Select Graph7
+Graph:DSel
+Graph:Select Graph7
+Graph:DSel
+Graph itemselect AxisX(1) add
+# AxisX(1)
+Graph:DSel
+Graph addsignal WF:121:1 -region 0 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill #ffd016 -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label (1/deriv(log10(par(-1*i1(m1)))) -yaxis 0 -tracehi 2 -bus {} -segdisp y -monotonicdisp 0
+# Signal37
+GrMeas:AtX Graph0 Signal37 -0.076885290312611 xyrangeVisible
+# M:35
+GrMeas:AtX Graph0 Signal37 -0.0038029048892771 xyrangeVisible
+# M:36
+Graph addsignal WF:124:1 -region 1 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill yellow -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label (1/deriv(log10(i1(m0)))) -yaxis 0 -tracehi 2 -bus {} -segdisp y -monotonicdisp 0
+# Signal38
+Graph itemselect all rem
+Graph itemselect Signal35 add
+# Signal35
+Graph itemselect Signal36 add
+# Signal36
+Graph delsignal selected
+Graph delsignal selected
+# No items to delete.
+Graph addsignal WF:118:5 -region 0 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill green -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label lx18(m1) -yaxis 0 -tracehi 2 -bus {} -segdisp y -monotonicdisp 0
+# Signal18
+Graph addsignal WF:118:4 -region 1 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill magenta -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label lx18(m0) -yaxis 0 -tracehi 2 -bus {} -segdisp y -monotonicdisp 0
+# Signal19
+Graph itemselect all rem
+Graph itemselect Signal16 add
+# Signal16
+Graph itemselect Signal17 add
+# Signal17
+Graph delsignal selected
+Graph addsignal WF:118:6 -region 0 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill magenta -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label par(-1*i1(m1) -yaxis 0 -tracehi 2 -bus {} -segdisp y -monotonicdisp 0
+# Signal12
+Graph addsignal WF:118:1 -region 1 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill green -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label i1(m0) -yaxis 0 -tracehi 2 -bus {} -segdisp y -monotonicdisp 0
+# Signal13
+Graph itemselect all rem
+Graph itemselect Signal10 add
+# Signal10
+Graph itemselect Signal11 add
+# Signal11
+Graph delsignal selected
+Graph addsignal WF:118:3 -region 0 -yview real(y) -xview real(x) -rainbow 0 -rbcolors {} -fill magenta -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label lv9(m1) -yaxis 0 -tracehi 2 -bus {} -segdisp y -monotonicdisp 0
+# Signal4
+GrMeas:P2P Graph7 Signal4 Signal4 1 {0.0 0.389265346275 1.1000000118542 0.18153797800205} xyrangeVisible {X1,Y1 X2,Y2 DeltaX DeltaY Length Slope}
+# M:2
+Graph addsignal WF:118:2 -region 1 -yview real(y) -xview real(x) -rainbow 0 -rbcolors {} -fill green -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label lv9(m0) -yaxis 0 -tracehi 2 -bus {} -segdisp y -monotonicdisp 0
+# Signal5
+GrMeas:P2P Graph7 Signal5 Signal5 1 {0.0 0.43989517069099 1.1000000118542 0.26675922141288} xyrangeVisible {X1,Y1 X2,Y2 DeltaX DeltaY Length Slope}
+# M:3
+Graph itemselect all rem
+Graph itemselect Signal3 add
+# Signal3
+Graph itemselect Signal2 add
+# Signal2
+Graph delsignal selected
+Graph:Select Graph7
+Graph:DSel
+Graph itemselect AxisX(2) add
+# AxisX(2)
+Graph:DSel
+Graph addsignal WF:128:1 -region 0 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill #ffd016 -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label (1/deriv(log10(par(-1*i1(m1)))) -xaxis 7 -yaxis 0 -tracehi 2 -bus {} -segdisp y -monotonicdisp 0
+# Signal39
+GrMeas:AtX Graph0 Signal39 -0.076885290312611 xyrangeVisible
+# M:37
+GrMeas:AtX Graph0 Signal39 -0.0038029048892771 xyrangeVisible
+# M:38
+Graph addsignal WF:131:1 -region 1 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill yellow -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label (1/deriv(log10(i1(m0)))) -xaxis 7 -yaxis 0 -tracehi 2 -bus {} -segdisp y -monotonicdisp 0
+# Signal40
+Graph itemselect all rem
+Graph itemselect Signal37 add
+# Signal37
+Graph itemselect Signal38 add
+# Signal38
+Graph delsignal selected
+Graph delsignal selected
+# No items to delete.
+Graph addsignal WF:125:5 -region 0 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill green -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label lx18(m1) -xaxis 5 -yaxis 0 -tracehi 2 -bus {} -segdisp y -monotonicdisp 0
+# Signal20
+Graph addsignal WF:125:4 -region 1 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill magenta -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label lx18(m0) -xaxis 5 -yaxis 0 -tracehi 2 -bus {} -segdisp y -monotonicdisp 0
+# Signal21
+Graph itemselect all rem
+Graph itemselect Signal18 add
+# Signal18
+Graph itemselect Signal19 add
+# Signal19
+Graph delsignal selected
+Graph addsignal WF:125:6 -region 0 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill magenta -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label par(-1*i1(m1) -xaxis 4 -yaxis 0 -tracehi 2 -bus {} -segdisp y -monotonicdisp 0
+# Signal14
+Graph addsignal WF:125:1 -region 1 -yview real(y) -xview real(x) -rainbow 1 -rbcolors {green magenta cyan yellow #FF8000 #89ffbb #edbfff #0080FF #ffd016 #ff74bd} -fill green -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label i1(m0) -xaxis 4 -yaxis 0 -tracehi 2 -bus {} -segdisp y -monotonicdisp 0
+# Signal15
+Graph itemselect all rem
+Graph itemselect Signal12 add
+# Signal12
+Graph itemselect Signal13 add
+# Signal13
+Graph delsignal selected
+Graph addsignal WF:125:3 -region 0 -yview real(y) -xview real(x) -rainbow 0 -rbcolors {} -fill magenta -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label lv9(m1) -xaxis 2 -yaxis 0 -tracehi 2 -bus {} -segdisp y -monotonicdisp 0
+# Signal6
+GrMeas:P2P Graph7 Signal6 Signal6 1 {65.000007090148n 0.35010174383679 999.99997959012n 0.39268333029799 -  -} xyrangeVisible {X1,Y1 X2,Y2 DeltaX DeltaY Length Slope}
+# M:4
+Graph addsignal WF:125:2 -region 1 -yview real(y) -xview real(x) -rainbow 0 -rbcolors {} -fill green -linestyle - -width 1 -symbol {} -symwidth 10 -bar {} -barwidth 0 -baseline 0.0 -stipple {} -label lv9(m0) -xaxis 2 -yaxis 0 -tracehi 2 -bus {} -segdisp y -monotonicdisp 0
+# Signal7
+GrMeas:P2P Graph7 Signal7 Signal7 1 {59.999996707883n 0.39346077913798 999.99997934301n 0.4406836788396 -  -} xyrangeVisible {X1,Y1 X2,Y2 DeltaX DeltaY Length Slope}
+# M:5
+Graph itemselect all rem
+Graph itemselect Signal4 add
+# Signal4
+Graph itemselect Signal5 add
+# Signal5
+Graph delsignal selected
+Graph:DSel
+GrMeas:Select Graph7 M:4 0 1
+Graph delsignal selected
+Graph:DSel
+Graph:DSel
+Graph:DSel
+Graph:DSel
+GrMeas:Select Graph7 M:5 0 1
+Graph delsignal selected
+Graph:DSel
+Graph itemselect AxisX(2) add
+# AxisX(2)
+Graph axisconfig AxisX(2) -rang {0.0 350n} -gridvis y -label {Channel Length} -scale lin -unitscale auto
+Graph:DSel
+Graph:DSel
+Graph:DSel
+Graph:Select Graph7
+Graph:DSel
+Graph:DSel
+Graph:DSel
+Graph:DSel
+Graph:DSel 0
+Graph:ManipulateItem addtag selSet withtag GrDraw0_text
+Graph:DSel
+Graph:Select Graph7
+Graph:DSel
+Graph itemselect AxisX(2) add
+# AxisX(2)
+Graph:DSel
+Graph axisconfig AxisX(2) -rang {0.0 350n} -gridvis y -label {Channel Length (m)} -scale lin -unitscale auto
+Graph config -legend right
+Graph:Select Graph7
+Graph:DSel
+Graph itemselect Signal6 add
+# Signal6
+GrMeas:AtX Graph7 Signal6 {} xyrangeVisible
+# M:6
+Graph:DSel
+GrMeas:Select Graph7 M:6 0 1
+GrMeas:MovePoint Graph7 M:6 0 44.999998991736n 0.18153797800205
+Graph:DSel
+GrMeas:Select Graph7 M:6 0 2
+GrMeas:MoveText Graph7 M:6 0 78 4
+Graph:DSel
+Graph:DSel
+Graph itemselect Signal7 add
+# Signal7
+GrMeas:Threshold Graph7 Signal7 {} either xyrangeVisible
+# M:7
+Graph:DSel
+GrMeas:Select Graph7 M:7 0
+GrMeas:MoveYLevel Graph7 M:7 0 0.30385484518615
+# M:8
+Graph delsignal selected
+Graph delsignal selected
+Graph:DSel
+GrMeas:Select Graph7 M:8 0
+GrMeas:MoveYLevel Graph7 M:8 0 0.30385484518615
+# M:9
+Graph:DSel
+GrMeas:Select Graph7 M:9 0
+GrMeas:MoveYLevel Graph7 M:9 0 0.3014267984413
+# M:10
+Graph:DSel
+GrMeas:Select Graph7 M:10 1
+GrMeas:DelMfromMenu Graph7 M:10
+Graph:DSel
+Graph itemselect Signal7 add
+# Signal7
+GrMeas:AtX Graph7 Signal7 {} xyrangeVisible
+# M:11
+Graph:DSel
+GrMeas:Select Graph7 M:11 0 1
+GrMeas:MovePoint Graph7 M:11 0 44.999998991736n 0.26675922141288
+Graph:DSel
+GrMeas:Select Graph7 M:11 0 2
+GrMeas:MoveText Graph7 M:11 0 90 0
+Graph:DSel
+GrMeas:Select Graph7 M:11 0 1
+GrMeas:MoveText Graph7 M:11 0 80 1
+Graph itemselect Signal6 add
+# Signal6
+Graph itemselect Signal7 add
+# Signal7
+GrMeas:Threshold Graph7 Signal6 {} either xyrangeVisible
+# M:12
+GrMeas:Threshold Graph7 Signal7 {} either xyrangeVisible
+# M:13
+Graph:DSel
+GrMeas:Select Graph7 M:13 1
+Graph delsignal selected
+Graph:DSel
+GrMeas:Select Graph7 M:12 1
+Graph delsignal selected
+Graph:DSel
+Graph itemselect Signal7 add
+# Signal7
+GrMeas:AtX Graph7 Signal7 {} xyrangeVisible
+# M:14
+Graph:DSel
+GrMeas:Select Graph7 M:14 0 1
+GrMeas:MovePoint Graph7 M:14 0 300.00001772648n 0.44055036467077
+Graph:DSel
+GrMeas:Select Graph7 M:14 0 2
+GrMeas:MoveText Graph7 M:14 0 -59 43
+Graph:DSel
+Graph itemselect Signal6 add
+# Signal6
+GrMeas:AtX Graph7 Signal6 {} xyrangeVisible
+# M:15
+Graph:DSel
+GrMeas:Select Graph7 M:15 0 1
+GrMeas:MovePoint Graph7 M:15 0 300.00001772648n 0.39242430785438
+Graph:DSel
+GrMeas:Select Graph7 M:15 0 2
+GrMeas:MoveText Graph7 M:15 0 -89 47
+Graph:DSel
+Graph itemselect AxisX(2) add
+# AxisX(2)
+Graph axisconfig AxisX(2) -rang {45n 300 exact} -gridvis y -label {Channel Length (m)} -scale lin -unitscale auto
+Graph axisconfig AxisX(2) -rang {45n 300.0n exact} -gridvis y -label {Channel Length (m)} -scale lin -unitscale auto
+Graph config -legend none
+Graph:DSel
+GrMeas:Select Graph7 M:6 0 2
+GrMeas:MoveText Graph7 M:6 0 98 7
+Graph:DSel
+GrMeas:Select Graph7 M:11 0 1
+GrMeas:MoveText Graph7 M:11 0 83 7
+Graph:DSel 0
+Graph:ManipulateItem addtag selSet withtag GrDraw0_text
+Graph:ManipulateItem move selSet 0 -1
+Graph:ManipulateItem move selSet 1 0
+Graph:ManipulateItem move selSet 2 1
+Graph:ManipulateItem move selSet 2 0
+Graph:ManipulateItem move selSet 1 0
+Graph:ManipulateItem move selSet 1 1
+Graph:ManipulateItem move selSet 1 0
+Graph:ManipulateItem move selSet 1 -1
+Graph:ManipulateItem move selSet 2 0
+Graph:ManipulateItem move selSet 1 0
+Graph:ManipulateItem move selSet 0 -1
+Graph:ManipulateItem move selSet 1 0
+Graph:ManipulateItem move selSet 2 0
+Graph:ManipulateItem move selSet 1 0
+Graph:ManipulateItem move selSet 2 0
+Graph:ManipulateItem move selSet 1 0
+Graph:ManipulateItem move selSet 2 0
+Graph:ManipulateItem move selSet 1 0
+Graph:ManipulateItem move selSet 1 1
+Graph:ManipulateItem move selSet 1 0
+.frame1.mdi.mdi8.work.graph7 save -file /home/class/niels538/cds_ncsu45/hw3/short_channel.png -format png  -x 0 -y 0 -w 877 -h 661 -colormode color
